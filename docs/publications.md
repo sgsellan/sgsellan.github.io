@@ -109,7 +109,7 @@ a[href$=".pdf"]:after
 
 ### Journal Publications
 
-<div class="row publication">
+<!-- <div class="row publication">
     <div class="columns thumbnail">
       <img src=images/paper-thumbnails/breaking-bad.png>
     </div>
@@ -119,7 +119,7 @@ a[href$=".pdf"]:after
       <p class="venue">Under Submission</p>
       <p class="links"> <a>Paper (TBD)</a></p>
     </div>
-  </div>
+  </div> -->
 
 <div class="row publication">
     <div class="columns thumbnail">

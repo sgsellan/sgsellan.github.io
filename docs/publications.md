@@ -249,3 +249,4 @@ a[href$=".pdf"]:after
 <div class="row footer">
     html and css lifted and adapted from Yotam Gingold, with special thanks to Alec Jacobson</a>.
 </div>
+

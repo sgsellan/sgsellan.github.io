@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<style>
+@font-face { font-family: LB_R; src: url('../font/franklin-normal-500.ttf'); }
+@font-face { font-family: LB_RB; src: url('../font/LinBiolinum_RB.ttf'); }
+@font-face { font-family: LB_RI; src: url('../font/LinBiolinum_RI.ttf'); }
+@font-face { font-family: LB_C; src: url('../font/franklin-normal-500.ttf'); }
+@font-face { font-family: LL_R; src: url('../font/LinLibertine_R.ttf'); }
+@font-face { font-family: LL_RB; src: url('../font/LinLibertine_RB.ttf'); }
+@font-face { font-family: LL_RBI; src: url('../font/LinLibertine_RBI.ttf'); }
+@font-face { font-family: LL_RI; src: url('../font/LinLibertine_RI.ttf'); }
+@font-face { font-family: LL_RZ; src: url('../font/LinLibertine_RZ.ttf'); }
+@font-face { font-family: LL_RZI; src: url('../font/LinLibertine_RZI.ttf'); }
+@font-face { font-family: LL_D; src: url('../font/LinLibertine_DR.ttf'); }
+@font-face { font-family: Frutiger; src: url('../font/Frutiger_LT_45_Light.ttf'); }
+@font-face { font-family: Frutiger_it; src: url('../font/Frutiger_CE_46_Light_Italic.ttf'); }
+@font-face { font-family: Imperial; src: url('../font/georgia.ttf'); }
+@font-face { font-family: Imperial_it; src: url('../font/imperial-italic-500.ttf'); }
+/* title */
+h0 {font-family:"LB_C"; font-size:360%;margin:0; color:#191919;}
+h1 {font-family:"LB_C"; font-size:220%;margin:0; color:#191919;}
+h2 {font-family:"LB_RB"; font-size:150%; color:#191919;margin:0;margin-top:0.5em;}
+h3 {font-family:"Frutiger"; font-size:95%;margin-top:0.5em; text-align:justify; text-justify:inter-ideograph; line-height: 130%; color:#323232;}
+/* PAPER TITLE */
+h4 {font-family:"LB_R"; font-size:120%;margin:0; color:#191919;}
+h5 {font-family:"Frutiger"; font-size:95%;margin-top:0.0em; line-height: 130%; color:#323232;}
+h6 {font-family:"Frutiger_it"; font-size:95%;margin-top:0.0em; line-height: 130%; color:#323232;}
+
+/* horizontal line */
+hr  {background-color: #D1D0CE; border: none; height: 1px;}
+/* hyper link */
+a {font-family:"Frutiger"; color: #66c2a5; text-decoration:none;}
+</style>
+
+<head>
+<title>Silvia Sell&aacuten</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NEJZ98W16E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NEJZ98W16E');
+</script>
+</head>
+<body style="width:75%; margin-top: auto; margin-left:auto; margin-right:auto; padding: 30;>
+<height="30"><br>
+
+<h0 href="http://dgp.toronto.edu/~sgsellan/">Silvia Sell&aacuten </h0>
+
+<br>
+<br>
+<br>
+
+<hr>
+<h1> Rendering animations for SIGGRAPH papers</h1>
+<br>
+<br>
+<h3>Every few months, because of a deadline coming up, I find myself forgetting and having to look up these steps in old Slack threads and LaTeX comments. Also, it took me a long time to learn these steps because of the lack of a guide like this, so I write this in hopes it may help young students starting out.</h3>
+
+<h3>I will assume that you have a set of meshes in <code>.obj</code> format, with ordered names like <code>iteration-001.obj, iteration-002.obj, ... iteration-099.obj, iteration-100.obj</code>.</h3>
+<h3>
+<ol>
+  <li>Open Blender (you can use my <a href="template.blend" download>template file</a>).<br/><br/></li>
+  <li>Install the <a href="https://github.com/neverhood311/Stop-motion-OBJ">OBJ Sequence</a> Blender add-on.<br/><br/></li>
+  <li>In Blender, press SHIFT+a and choose Mesh->Mesh Sequence. Then, an empty object called "sequence" will appear in the scene. Select this object and go to Object Properties -> Mesh Sequence. Choose the root folder where your <code>.obj</code> files are, being careful to uncheck relative pathing (this is a bug in the Mesh Sequence Add-on). Then, in "file name", write a string which matches the beginning of the names of all meshes, like <code>iteration</code>. Finally, click "Load Mesh Sequence". This can take a few minutes if your meshes are many or very large.<br/><br/></li>
+  <li>In Output Properties->Dimensions, choose the dimensions of your animation in pixels (for example, 1920x1080px). In some versions of Blender, the "End" frame is set to 250 by default. This will make your "Baking" step much more expensive than necessary if your animation contains way less meshes, and you may miss the end of your animation if there are more than 250 meshes in your sequence. Make the "End" value the total number of meshes in your sequence (careful with 1-indexing and 0-indexing).<br/><br/></li>
+  <li>Now, finalize all the details of your scene. It is especially important that at this step, you pick the materials and shading information for your mesh sequence, since you will not be able to change it afterwards. At this point, I usually save a copy of my <code>.blend</code> file called <code>pre-bake.blend</code> so that I can go back to this step if I want to iterate on my result.<br/><br/></li>
+  <li>In Object Properties->Mesh Sequence, choose Smooth or Flat shading and click "Bake Mesh Sequence". Now, if you go to the "Animation" tab, you can press Play or drag the blue time bar to see the progression of your animation.<br/><br/></li>
+  <li>In Object Properties->Output, make sure your output directory is set to a known relative path like <code>//</code> or <code>//pngs/</code>. This is important, because some Blender make <code>/tmp/</code> by default and you may completely lose your renderings if you don't change this. Select "File Extensions", unselect "Cache Result", choose "File Format: PNG", "RGBA", "Color Depth: 8", "Compression: 15%", select "Image Sequence: Overwrite" and unselect "Image Sequence: Placeholders". Save and exit Blender.<br/><br/></li>
+  <li>Now, in the command line and in the same directory as your <code>.blend</code> file. Run <code>blender -b filename.blend -a</code>. This will take a while.<br/><br/></li>
+  <li>The rendering step will create a sequence of <code>.png</code> like <code>001.png, 002.png, ..., 099.png, 100.png</code>. These will be transparent, which doesn't look great for an animation, so we can preprocess these by running <code>mogrify -flatten *.png</code> (this assumes you've installed <a href="https://imagemagick.org/script/download.php">ImageMagick</a>, which in MacOS you can do with <code>brew install imagemagick</code>). <br/><br/></li>
+  <li>Put the images together into a video by running <code>ffmpeg -r framerate -f image2 -s 1920x1080 -i %04d.png -vcodec libx264 -crf 15 -pix_fmt yuv420p video.mp4</code>, substituting <code>framerate</code> with how many of the pngs you want per second (this assumes you've installed <a href="https://ffmpeg.org">ffempg</a>, which in MacOS you can do with <code>brew install ffmpeg</code>).<br/><br/></li>
+</ol>
+</h3>
+
+
+  </body>
+</html>

@@ -1,0 +1,28 @@
+The Toronto Geometry Colloquium presents...
+
+This week: (date and time), (speakers)
+Watch on youtube: (Youtube link)
+
+1. "(title)" by (speaker))
+Abstract:
+
+...
+
+Bio:
+
+...
+
+2. "(title)" by (speaker))
+Abstract:
+
+...
+
+Bio:
+
+...
+
+The Toronto Geometry Colloquium is a live weekly hour-long webseries showcasing geometry processing research. Topics range from computer science, mathematics, and engineering including 3D deep learning, computational fabrication, and computer graphics. The unique format of the Toronto Geometry Colloquium pairs a 10-min opener speaking about a recent work with a 40-min headliner giving a keynote-style address. Part of Toronto Geometry Colloquium's mission is to promote young researchers and showcase great geometry processing research by members of traditionally underrepresented communities. Talks are broadcast live and recordings are available thereafter.
+
+Twitter - https://twitter.com/GeometryToronto
+Youtube - https://www.youtube.com/channel/UCWBK_AH2d370JxmLJVpa9bA
+Discord - https://discord.gg/3Da36SueAb

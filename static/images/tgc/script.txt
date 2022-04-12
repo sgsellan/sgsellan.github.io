@@ -1,0 +1,27 @@
+(countdown)
+
+Otman: Hello everyone, welcome to the Toronto geometry colloquium. 
+
+Derek: This is a weekly webseries all about geometry processing. This colloquium aims at promoting young researchers and researchers from traditionally underrepresented communities. 
+
+Selena: Every week, we will have an opener talking about their cutting edge research for 10 minutes, followed by a headliner giving us a keynote presentation.
+
+Silvia:
+Today, we are thrilled to have Yifei Li as our opener to talk about differentiable cloth simulation and Joshuah Wolper to talk about particle-based simulation. If you have any questions for the speakers, you can write them in the youtube live chat. 
+
+Our first speaker today is Yifei Li, a PhD student at MIT. In the past, she has worked at Google, Meta and Activision Blizzard and got her Bachelor’s degree from Carnegie Mellon University. She is an MIT Presidential Fellow and her work focuses on simulation and computational design. I am reallly excited that she is joining us here today to talk about her fascinating work on cloth simulation, really one of those papers where you can stare at the animations for hours on end. Take it away, Yifei!.
+
+(Yifei presents)
+
+
+Thank you Yifei!. We will now move on to our headliner’s talk, and we’ll have a joint Q&A for both at the end. 
+
+Our headliner today is Joshuah Wolper. Dr Wolper got his PhD at the University of Pennsylvania, where he is now a postdoctoral researcher. He is nothing short of a personal and professional inspiration for me, which makes me particularly honoured that we get to host him today. His work on the Material Point Method, which we have featured before here, produces some of the most impressive animations I have ever seen, and I hope we get to see some today. He is also a positive examples of how PhDs are not just about specializing in one specific area, rather about getting many transferrable skills that he is now applying in his postdoc in what to many of us will seem like a completey different field. I hope we get to hear about some of this today too. Anyway, I won’t take more of your time, you can go ahead Dr Joshuah Wolper!
+
+(Joshuah presents)
+
+
+(Q&A)
+
+Thank you for coming everyone! Join us next Friday at 11 am Eastern time to hear from Manuel Oliveira and Sarka Sochorova! Have a nice weekend everyone!
+

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Bugs I often write in C&#43;&#43; - Silvia Sellán</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KB4LKK966Y');
+</script>
+<meta name="Description" content="PhD student at the University of Toronto"><meta property="og:title" content="Bugs I often write in C&#43;&#43;" />
+<meta property="og:description" content="Every time I try to code a project in C&#43;&#43; I run into the same bugs, and I keep forgetting how to solve them. So, I decided to write this list here for my own reference.
+Eigen initialization bug Symptoms: The code compiles and runs properly, but the output seems random and changes from one run to the next, despite the code being theoretically deterministic.
+Diagnosis: This happens because you am declaring a variable and calling it without initializing it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.silviasellan.com/cpp_bugs.html" /><meta property="og:image" content="https://www.silviasellan.com/images/art/rushmore.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-27T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.silviasellan.com/images/art/rushmore.png"/>
+
+<meta name="twitter:title" content="Bugs I often write in C&#43;&#43;"/>
+<meta name="twitter:description" content="Every time I try to code a project in C&#43;&#43; I run into the same bugs, and I keep forgetting how to solve them. So, I decided to write this list here for my own reference.
+Eigen initialization bug Symptoms: The code compiles and runs properly, but the output seems random and changes from one run to the next, despite the code being theoretically deterministic.
+Diagnosis: This happens because you am declaring a variable and calling it without initializing it."/>
+<meta name="application-name" content="Silvia Sellán">
+<meta name="apple-mobile-web-app-title" content="Silvia Sellán"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://www.silviasellan.com/cpp_bugs.html" /><link rel="prev" href="https://www.silviasellan.com/blender_figure.html" /><link rel="next" href="https://www.silviasellan.com/blender_compositing_compatibility.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Bugs I often write in C++",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.silviasellan.com\/cpp_bugs.html"
+        },"genre": "posts","wordcount":  676 ,
+        "url": "https:\/\/www.silviasellan.com\/cpp_bugs.html","datePublished": "2022-01-27T00:00:00+00:00","dateModified": "2022-01-27T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Silvia Sellán"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./publications.html"> Publications </a><a class="menu-item" href="./cv.html"> CV </a><a class="menu-item" href="./art.html"> Art? </a><a class="menu-item" href="./posts.html"> Blog </a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline"> Paper writing </a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing"> New students </a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank"> Food </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./publications.html" title="">Publications</a><a class="menu-item" href="./cv.html" title="">CV</a><a class="menu-item" href="./art.html" title="">Art?</a><a class="menu-item" href="./posts.html" title="">Blog</a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline">Paper writing</a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing">New students</a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank">Food</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Bugs I often write in C&#43;&#43;</h1><div class="content" id="content"><p>Every time I try to code a project in C++ I run into the same bugs, and I keep forgetting how to solve them. So, I decided to write this list here for my own reference.</p>
+<h3 id="eigen-initialization-bug">Eigen initialization bug</h3>
+<p><strong>Symptoms:</strong> The code compiles and runs properly, but the output seems random and changes from one run to the next, despite the code being theoretically deterministic.</p>
+<p><strong>Diagnosis:</strong> This happens because you am declaring a variable and calling it without initializing it. For example, <code>Eigen::Matrix&lt;int,3,5&gt; A;</code> will not create a matrix <code>A</code> of zeros, instead it will fill with entries with garbage from the computer&rsquo;s memory.</p>
+<p><strong>Treatment:</strong> Go variable by variable and ensure that it is being properly initialized after being declared. For example, instead of <code>Eigen::Matrix&lt;int,3,5&gt; A;</code>, write</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="o">&gt;</span> <span class="n">A</span><span class="p">;</span>
+<span class="n">A</span><span class="p">.</span><span class="n">setZero</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="linker-error">Linker error</h3>
+<p><strong>Symptoms:</strong> The code seems to compile well but breaks just at the end of the compilation process, returning an error like <code>ld: symbol(s) not found for architecture x86_64</code>.</p>
+<p><strong>Diagnosis:</strong> This happens because you are not compiling one of the source files you&rsquo;re using. For example, you wrote <code>main.cpp</code> which itself includes another function you wrote in <code>func.cpp</code>,<code>func.h</code>, but you are only compiling <code>main</code> and not <code>func</code>.</p>
+<p><strong>Treatment:</strong> If you are using CMake (and <code>func</code> is in a path that CMake checks for source code, e.g., <code>include/</code> or <code>/src</code> if you are using CMake best practices), remove all CMake cache and build the project again,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">rm -rf build
+mkdir build
+<span class="nb">cd</span> build
+cmake ../
+</code></pre></td></tr></table>
+</div>
+</div><p>If you are not using CMake (even though you should) and instead compiling by calling your compiler directly from the terminal like <code>gcc main.cpp -o main</code>, then add <code>func.cpp</code> to the source files being compiled by calling instead <code>gcc main.cpp func.cpp -o main</code>.</p>
+<h3 id="multiple-inclusions">Multiple inclusions</h3>
+<p><strong>Symptoms:</strong> Compiling fails with errors like <code>error: redefinition of ...</code> or <code>... included multiple times</code>.</p>
+<p><strong>Diagnosis:</strong> This happens because, when compiling, the compiler is reaching the same function or variable definition many times. For example, say we have a function <code>main.cpp</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="n">func</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">func2</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>which calls functions <code>func.cpp</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>with header file <code>func.h</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>and
+<code>func2.cpp</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>with header file <code>func2.h</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>When the compiler sees an <code>include</code> statement, it will literally just copy that file at that position in the code; and, of course, this works recursively. Therefore, since <code>main</code> is including <code>func.h</code> and <code>func2.h</code>, which in turn also includes <code>func.h</code>, when the compiler starts reading <code>main.cpp</code> and sees</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>it will interpret it as</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+<span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>and then</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+<span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>which recursively turns into</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+<span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+<span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Thus, even without knowing it, we were defining the same function twice to the compiler&rsquo;s eyes, and that makes it crash.</p>
+<p><strong>Treatment:</strong> The best way to be protected against this is always using <a href="https://en.wikipedia.org/wiki/Include_guard" target="_blank" rel="noopener noreffer">include guards</a>, a smart trick to ensure that the compiler will only enter the main text of each header file once. Basically, envelop <em>every</em> header file you ever write in an if statement like this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef UNIQUE_NAME
+</span><span class="cp">#define UNIQUE_NAME
+</span><span class="cp"></span>
+<span class="c1">// header code here
+</span><span class="c1"></span>
+<span class="cp">#endif
+</span></code></pre></td></tr></table>
+</div>
+</div><p>Make sure that <code>UNIQUE_NAME</code> is unique for each header file and it never shares a name with any file or variable or functions ever read by the compiler. For example, you can make them all caps and make sure you never write all caps variable or function names.</p>
+<p>So, in our example, we would make <code>func.h</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef FUNC
+</span><span class="cp">#define FUNC
+</span><span class="cp"></span><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+<span class="cp">#endif
+</span></code></pre></td></tr></table>
+</div>
+</div><p>and <code>func2.h</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef FUNC2
+</span><span class="cp">#define FUNC2
+</span><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+<span class="cp">#endif
+</span></code></pre></td></tr></table>
+</div>
+</div><p>By doing this, we avoid the compiler entering the same code twice and we avoid the error</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+            
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="./cpp_bugs.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./blender_figure.html" class="prev" rel="prev" title="Rendering a paper figure with Blender"><i class="fas fa-angle-left fa-fw"></i>Rendering a paper figure with Blender</a>
+            <a href="./blender_compositing_compatibility.html" class="next" rel="next" title="PSA: Update your compositing nodes for 3.0">PSA: Update your compositing nodes for 3.0<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"></div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script></body>
+</html>

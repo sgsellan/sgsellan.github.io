@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Rendering a paper figure with Blender - Silvia Sellán</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KB4LKK966Y');
+</script>
+<meta name="Description" content="PhD student at the University of Toronto"><meta property="og:title" content="Rendering a paper figure with Blender" />
+<meta property="og:description" content="There are a lot of great Blender tutorials online (e.g., the classic donut tutorial by Blender Guru), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films. Therefore they go into depth on how to model a shape, how to pick the best lighting, how to design a material, create textures, etc.
+These are really interesting topics, but they can be overwhelming if you are an academic and all you want is to render your object beautifully for a SIGGRAPH paper figure." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.silviasellan.com/blender_figure.html" /><meta property="og:image" content="https://www.silviasellan.com/images/art/rushmore.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-11T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.silviasellan.com/images/art/rushmore.png"/>
+
+<meta name="twitter:title" content="Rendering a paper figure with Blender"/>
+<meta name="twitter:description" content="There are a lot of great Blender tutorials online (e.g., the classic donut tutorial by Blender Guru), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films. Therefore they go into depth on how to model a shape, how to pick the best lighting, how to design a material, create textures, etc.
+These are really interesting topics, but they can be overwhelming if you are an academic and all you want is to render your object beautifully for a SIGGRAPH paper figure."/>
+<meta name="application-name" content="Silvia Sellán">
+<meta name="apple-mobile-web-app-title" content="Silvia Sellán"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://www.silviasellan.com/blender_figure.html" /><link rel="prev" href="https://www.silviasellan.com/phd_committee.html" /><link rel="next" href="https://www.silviasellan.com/cpp_bugs.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Rendering a paper figure with Blender",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.silviasellan.com\/blender_figure.html"
+        },"genre": "posts","wordcount":  2354 ,
+        "url": "https:\/\/www.silviasellan.com\/blender_figure.html","datePublished": "2021-11-11T00:00:00+00:00","dateModified": "2021-11-11T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Silvia Sellán"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./publications.html"> Publications </a><a class="menu-item" href="./cv.html"> CV </a><a class="menu-item" href="./art.html"> Art? </a><a class="menu-item" href="./posts.html"> Blog </a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline"> Paper writing </a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing"> New students </a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank"> Food </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./publications.html" title="">Publications</a><a class="menu-item" href="./cv.html" title="">CV</a><a class="menu-item" href="./art.html" title="">Art?</a><a class="menu-item" href="./posts.html" title="">Blog</a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline">Paper writing</a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing">New students</a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank">Food</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Rendering a paper figure with Blender</h1><div class="content" id="content"><p>There are a lot of great Blender tutorials online (e.g., the classic <a href="https://www.youtube.com/watch?v=TPrnSACiTJ4" target="_blank" rel="noopener noreffer">donut tutorial by Blender Guru</a>), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films. Therefore they go into depth on how to model a shape, how to pick the best lighting, how to design a material, create textures, etc.</p>
+<p>These are really interesting topics, but they can be overwhelming if you are an academic and all you want is to render your object beautifully for a SIGGRAPH paper figure. For this use case, there is way less documentation online (my labmate Derek&rsquo;s <a href="https://github.com/HTDerekLiu/BlenderToolbox" target="_blank" rel="noopener noreffer">Blender scripting toolbox</a> is a great exception), and in my experience this can lead to a lot of frustration especially when nearing deadlines, when one does not have the time or energy to learn a whole new aspect of the software just for a minor change in a paper figure. Mitigating that frustration is the goal of this guide.</p>
+<p>Also, one only needs to look through SIGGRAPH publications to see that all labs seem to have their own really polished &ldquo;paper-quality rendering&rdquo; pipeline, but unfortunately in my experience these mostly stay at the &ldquo;tricks of the trade&rdquo; level and aren&rsquo;t shared very widely (not out of malice, there just aren&rsquo;t many incentives for it). Another goal of this guide is to share my pipeline with people from other labs so that they (you) can hopefully learn something but also teach me something I am currently doing wrong or less efficiently (please <a href="mailto:sgsellan@cs.toronto.edu" rel="">email me!</a>).</p>
+<p>Anyway, here we go. Let&rsquo;s pretend you wrote a fancy new method in C++ or Matlab or Python that outputs a mesh called <code>output.obj</code>, and you want to render it to put it in a paper figure (if you want to make an animation for your paper video, please see my <a href="./blender_videos.html" rel="">other guide</a>).</p>
+<ol>
+<li>Open Blender (you can download it from <a href="https://www.blender.org" target="_blank" rel="noopener noreffer">here</a>). You&rsquo;ll see something like this</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/001.jpg"
+        data-srcset="images/blender-tutorial/001.jpg, images/blender-tutorial/001.jpg 1.5x, images/blender-tutorial/001.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/001.jpg"
+        title="images/blender-tutorial/001.jpg" /></p>
+<p>Before you do anything, go to Edit-&gt;Preferences, and on the <code>Keymap</code> section, pick Spacebar Action: <code>Search</code>. This will give you a very useful way of navigating the UI, instead of looking for each button you can just press spacebar and search for whatever is you&rsquo;re looking for. This is something Oded Stein taught me when I started using Blender and it will completely change how you use the software for the better.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/000.png"
+        data-srcset="images/blender-tutorial/000.png, images/blender-tutorial/000.png 1.5x, images/blender-tutorial/000.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/000.png"
+        title="images/blender-tutorial/000.png" /></p>
+<ol start="2">
+<li>Click on the cube on the middle of scene and then on the letter <code>X</code> to delete it, we won&rsquo;t be using it.</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/002.jpg"
+        data-srcset="images/blender-tutorial/002.jpg, images/blender-tutorial/002.jpg 1.5x, images/blender-tutorial/002.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/002.jpg"
+        title="images/blender-tutorial/002.jpg" /></p>
+<ol start="3">
+<li>Go to File-&gt;Import-&gt;.obj and select your <code>output.obj</code>. It should appear in the screen:</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/003.jpg"
+        data-srcset="images/blender-tutorial/003.jpg, images/blender-tutorial/003.jpg 1.5x, images/blender-tutorial/003.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/003.jpg"
+        title="images/blender-tutorial/003.jpg" /></p>
+<ol start="4">
+<li>Pan and move your view in the viewport until you have a good view of the object (the controls for this differ, but on my MacBook I use the trackpad with two fingers to pan, CMD + two fingers to zoom and SHIFT + two fingers to move the viewpoint).</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/004.jpg"
+        data-srcset="images/blender-tutorial/004.jpg, images/blender-tutorial/004.jpg 1.5x, images/blender-tutorial/004.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/004.jpg"
+        title="images/blender-tutorial/004.jpg" /></p>
+<ol start="5">
+<li>Then, use the spacebar and type &ldquo;Align Camera to view&rdquo;. Press ENTER and you should see the frame of a camera appear.</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/005.jpg"
+        data-srcset="images/blender-tutorial/005.jpg, images/blender-tutorial/005.jpg 1.5x, images/blender-tutorial/005.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/005.jpg"
+        title="images/blender-tutorial/005.jpg" />
+<img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/006.jpg"
+        data-srcset="images/blender-tutorial/006.jpg, images/blender-tutorial/006.jpg 1.5x, images/blender-tutorial/006.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/006.jpg"
+        title="images/blender-tutorial/006.jpg" /></p>
+<p>At this point, we can still move our view around and all we need to do is click on the camera icon on the top right of our scene to go back to this camera view:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/camera-icon.png"
+        data-srcset="images/blender-tutorial/camera-icon.png, images/blender-tutorial/camera-icon.png 1.5x, images/blender-tutorial/camera-icon.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/camera-icon.png"
+        title="images/blender-tutorial/camera-icon.png" /></p>
+<ol start="6">
+<li>Let&rsquo;s add a ground plane. To do this, we press Spacebar again and type &ldquo;Plane&rdquo;, choosing the mesh plane option.</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/007.jpg"
+        data-srcset="images/blender-tutorial/007.jpg, images/blender-tutorial/007.jpg 1.5x, images/blender-tutorial/007.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/007.jpg"
+        title="images/blender-tutorial/007.jpg" />
+<img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/008.jpg"
+        data-srcset="images/blender-tutorial/008.jpg, images/blender-tutorial/008.jpg 1.5x, images/blender-tutorial/008.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/008.jpg"
+        title="images/blender-tutorial/008.jpg" /></p>
+<p>Let&rsquo;s scale the plane so that it covers all the ground seen in the image. To do this we go to the object properties (clicking on the orange/yellow square icon on the bottom-right toolbar), and input values for the X and Y scale; for example, 20 for each</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/plane-scaling.png"
+        data-srcset="images/blender-tutorial/plane-scaling.png, images/blender-tutorial/plane-scaling.png 1.5x, images/blender-tutorial/plane-scaling.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/plane-scaling.png"
+        title="images/blender-tutorial/plane-scaling.png" /></p>
+<p>A good practice to have after we&rsquo;ve done a transformation like a translation, rotation and scaling and we are happy with it, is to &ldquo;apply it&rdquo;, i.e., lock it and make it permanent, turning a 1-by-1 scaled up plane into a 20-by-20 unscaled one. The difference is nuanced but it will be noticeable if you later use textures or physics. To do this we just use the spacebar and type &ldquo;Apply all transformations&rdquo;</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/transforms.png"
+        data-srcset="images/blender-tutorial/transforms.png, images/blender-tutorial/transforms.png 1.5x, images/blender-tutorial/transforms.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/transforms.png"
+        title="images/blender-tutorial/transforms.png" /></p>
+<p><strong>A note: Blender loves crashing on you and deleting your progress. Save your .blend file and do it often.</strong></p>
+<ol start="7">
+<li>Let&rsquo;s see how our figure is looking. Right now we are looking at our shape in the default viewmode, in which we can see the geometries of the objects on the scene but not their materials or lights. To see what our figure would look like rendered, on the top right of our viewport we can choose the &ldquo;Render preview&rdquo;, the right-most of the sphere-looking icons.</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/render-preview.png"
+        data-srcset="images/blender-tutorial/render-preview.png, images/blender-tutorial/render-preview.png 1.5x, images/blender-tutorial/render-preview.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/render-preview.png"
+        title="images/blender-tutorial/render-preview.png" /></p>
+<p>By default, you&rsquo;ll see something like this</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/009.jpg"
+        data-srcset="images/blender-tutorial/009.jpg, images/blender-tutorial/009.jpg 1.5x, images/blender-tutorial/009.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/009.jpg"
+        title="images/blender-tutorial/009.jpg" /></p>
+<p>This is using Blender&rsquo;s internal non-raytracing engine <em>Eeve</em>, which is really fast but can fail unexpectedly. Since we won&rsquo;t mind waiting a few minutes for our final render, we will switch to Blender&rsquo;s raytracing engine <em>Cycles</em>. To do this we go to &ldquo;Render properties&rdquo; on the menu on the right and under &ldquo;Render Engine&rdquo;, we choose <em>Cycles</em>.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/cycles.png"
+        data-srcset="images/blender-tutorial/cycles.png, images/blender-tutorial/cycles.png 1.5x, images/blender-tutorial/cycles.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/cycles.png"
+        title="images/blender-tutorial/cycles.png" /></p>
+<p>You&rsquo;ll notice the render takes much longer to complete and you can see it progress from really noisy to less noisy since it is using a real raytracer. Soon you&rsquo;ll get an image like this:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/010.jpg"
+        data-srcset="images/blender-tutorial/010.jpg, images/blender-tutorial/010.jpg 1.5x, images/blender-tutorial/010.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/010.jpg"
+        title="images/blender-tutorial/010.jpg" /></p>
+<p>Don&rsquo;t worry if it still looks quite a little grainy and noise, that&rsquo;s because we&rsquo;re looking at a preview. Blender will do many more samples when we ask it to render the image for real. But even from our preview, something is pretty obvious: both our shape and the ground have this chalk-like look, which is nothing but Blender&rsquo;s default material. We need to give our objects a material before we render them.</p>
+<ol start="8">
+<li>To choose a material for your object, you have three options: One, you can watch and listen through the many tutorials there are on Blender material shaders (e.g., <a href="https://youtu.be/moKFSMJwpmE" target="_blank" rel="noopener noreffer">this</a>); second, you can download the magnificent physically-realistic PBR Materials Add-on (follow its <a href="https://github.com/marcopavanello/pbr-materials" target="_blank" rel="noopener noreffer">guide</a> to learn how to use it, it&rsquo;s actually very simple); third, you can use one of the geometry-paper-friendly non-physically realistic materials I have already designed for this purpose (using guidance and advice from Hsueh-Ti Derek Liu, Oded Stein and the colormaps from Cynthia Brewer). We will follow this last option, which begins by downloading my Blender <a href="images/blender-tutorial/template.blend" rel="">template file</a>. Once you&rsquo;ve downloaded it, you don&rsquo;t even need to open the file. Instead, from your own file, go to File-&gt;Append.</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/append.png"
+        data-srcset="images/blender-tutorial/append.png, images/blender-tutorial/append.png 1.5x, images/blender-tutorial/append.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/append.png"
+        title="images/blender-tutorial/append.png" /></p>
+<p>Then, navigate to <code>template.blend</code>. Click on it and then navigate to <code>Material</code>. Select all the materials and click on <code>Append</code>. Then, all the materials from the template will be loaded into your own <code>.blend</code> file.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/append2.png"
+        data-srcset="images/blender-tutorial/append2.png, images/blender-tutorial/append2.png 1.5x, images/blender-tutorial/append2.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/append2.png"
+        title="images/blender-tutorial/append2.png" /></p>
+<p>Now, select your <code>output</code> object by clicking on it and go to <code>Material Properties</code> on the menu on the right of your viewport (the one with the red spherical symbol), where you&rsquo;ll see something like this:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/material.png"
+        data-srcset="images/blender-tutorial/material.png, images/blender-tutorial/material.png 1.5x, images/blender-tutorial/material.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/material.png"
+        title="images/blender-tutorial/material.png" /></p>
+<p>Click on the black-and-white spherical icon and select one of the new materials you&rsquo;ve appended:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/material2.png"
+        data-srcset="images/blender-tutorial/material2.png, images/blender-tutorial/material2.png 1.5x, images/blender-tutorial/material2.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/material2.png"
+        title="images/blender-tutorial/material2.png" /></p>
+<p>You&rsquo;ll see the render update with the new material:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/011.jpg"
+        data-srcset="images/blender-tutorial/011.jpg, images/blender-tutorial/011.jpg 1.5x, images/blender-tutorial/011.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/011.jpg"
+        title="images/blender-tutorial/011.jpg" /></p>
+<p>If you want, you can change the color by selecting &ldquo;Shader Editor in the bottom left&rdquo;</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/shader1.png"
+        data-srcset="images/blender-tutorial/shader1.png, images/blender-tutorial/shader1.png 1.5x, images/blender-tutorial/shader1.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/shader1.png"
+        title="images/blender-tutorial/shader1.png" /></p>
+<p>If you expand the bottom-most toolbar, you can see a node on the far left with a &ldquo;Color&rdquo; field from the color of the material. Just click on it to edit the base color used in the material (you don&rsquo;t need to understand what any of the other nodes are doing at this stage).</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/012.jpg"
+        data-srcset="images/blender-tutorial/012.jpg, images/blender-tutorial/012.jpg 1.5x, images/blender-tutorial/012.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/012.jpg"
+        title="images/blender-tutorial/012.jpg" /></p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/013.jpg"
+        data-srcset="images/blender-tutorial/013.jpg, images/blender-tutorial/013.jpg 1.5x, images/blender-tutorial/013.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/013.jpg"
+        title="images/blender-tutorial/013.jpg" /></p>
+<p>Let&rsquo;s minimize this node window again and go back to our render. The obvious thing that&rsquo;s wrong still is the ground. It doesn&rsquo;t have any material. In fact, most SIGGRAPH paper figures are transparent; they include shadows but the shadow is seen directly on the white paper background, instead of including a realistic ground texture or image. To obtain this effect we can click on the ground, go to Object Properties-&gt;Visibility and activate the &ldquo;Shadowcatcher&rdquo; option.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/shadow.png"
+        data-srcset="images/blender-tutorial/shadow.png, images/blender-tutorial/shadow.png 1.5x, images/blender-tutorial/shadow.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/shadow.png"
+        title="images/blender-tutorial/shadow.png" /></p>
+<p>But that&rsquo;s not all, we also need to go to &ldquo;Render Properties&rdquo; and under &ldquo;Film&rdquo;, activate the &ldquo;Transparent&rdquo; option. Only then will our render actually have no background.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/shadow2.png"
+        data-srcset="images/blender-tutorial/shadow2.png, images/blender-tutorial/shadow2.png 1.5x, images/blender-tutorial/shadow2.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/shadow2.png"
+        title="images/blender-tutorial/shadow2.png" /></p>
+<p>We&rsquo;ll see something like this, where the checkerboard pattern on the background is the clue meaning &ldquo;this part will be transparent in the final rendered image&rdquo;.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/014.jpg"
+        data-srcset="images/blender-tutorial/014.jpg, images/blender-tutorial/014.jpg 1.5x, images/blender-tutorial/014.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/014.jpg"
+        title="images/blender-tutorial/014.jpg" /></p>
+<p>Okay, so now we have decided all the materials involved in our figure. The only step we need is to decide on the sources of light that will be interacting with those materials.</p>
+<ol start="9">
+<li>To pick the lighting setup in our scene, you once again have the option of learning from artists who have created amazing free tutorials on how to set up a scene in Blender (e.g., <a href="https://youtu.be/cg1K_ZWB0Uw" target="_blank" rel="noopener noreffer">this</a>). You could also append the lighting setup from my template file in the same way we just did for the materials, which I don&rsquo;t claim is particularly good, just OK. The third option, which is the one I like the most, is to use one of Blender&rsquo;s existing real-world environment lighting maps or HDRis. To do this, let&rsquo;s go to the shader editor again:</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/shader1.png"
+        data-srcset="images/blender-tutorial/shader1.png, images/blender-tutorial/shader1.png 1.5x, images/blender-tutorial/shader1.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/shader1.png"
+        title="images/blender-tutorial/shader1.png" /></p>
+<p>and next to it, instead of &ldquo;Object&rdquo;, pick &ldquo;World&rdquo;.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/world.png"
+        data-srcset="images/blender-tutorial/world.png, images/blender-tutorial/world.png 1.5x, images/blender-tutorial/world.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/world.png"
+        title="images/blender-tutorial/world.png" /></p>
+<p>If you expand this window you&rsquo;ll see something like this</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/015.jpg"
+        data-srcset="images/blender-tutorial/015.jpg, images/blender-tutorial/015.jpg 1.5x, images/blender-tutorial/015.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/015.jpg"
+        title="images/blender-tutorial/015.jpg" /></p>
+<p>Now, we will add a <em>node</em> to this setup. But don&rsquo;t be scared, we don&rsquo;t actually need to understand much about nodes in Blender. Just use SHIFT-A (while your mouse hovers over the node window) click on &ldquo;Search&rdquo; and type &ldquo;Environment texture&rdquo;:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/hdr.png"
+        data-srcset="images/blender-tutorial/hdr.png, images/blender-tutorial/hdr.png 1.5x, images/blender-tutorial/hdr.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/hdr.png"
+        title="images/blender-tutorial/hdr.png" /></p>
+<p>Then, click to set up an Environment texture node and connect its &ldquo;Color&rdquo; output to the Background node &ldquo;Color&rdquo; input by click-dragging your mouse, to get this:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/hdr2.png"
+        data-srcset="images/blender-tutorial/hdr2.png, images/blender-tutorial/hdr2.png 1.5x, images/blender-tutorial/hdr2.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/hdr2.png"
+        title="images/blender-tutorial/hdr2.png" /></p>
+<p>(You may notice your render becomes pink-ish when you do this. This is fine)</p>
+<p>Now, click on &ldquo;Open&rdquo; in the Environment Texture node and navigate to <code>path/to/your/Blender.app/Contents/Resources/2.90/datafiles/studiolights/world/</code>. You&rsquo;ll find a bunch of <code>.exr</code> files there:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/exr.png"
+        data-srcset="images/blender-tutorial/exr.png, images/blender-tutorial/exr.png 1.5x, images/blender-tutorial/exr.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/exr.png"
+        title="images/blender-tutorial/exr.png" /></p>
+<p>Pick any one of these (I like the &ldquo;forest&rdquo; one) and click on &ldquo;Open Image&rdquo;. You&rsquo;ll see your render change, and include a more sophisticated lighting now. It is important at this point to remember to delete Blender&rsquo;s default directional light. To do this we can click on &ldquo;Light&rdquo; on the top right of our viewport and press <code>X</code> to delete it</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/sun.png"
+        data-srcset="images/blender-tutorial/sun.png, images/blender-tutorial/sun.png 1.5x, images/blender-tutorial/sun.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/sun.png"
+        title="images/blender-tutorial/sun.png" /></p>
+<p>Finally, our object with a great realistic lighting setup will look like this:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/016.jpg"
+        data-srcset="images/blender-tutorial/016.jpg, images/blender-tutorial/016.jpg 1.5x, images/blender-tutorial/016.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/016.jpg"
+        title="images/blender-tutorial/016.jpg" /></p>
+<p>Looks pretty good if you ask me!</p>
+<ol start="10">
+<li>You can now hyper-parameter-tune camera angles and positions as well as material parameters if you&rsquo;re more on the perfectionist side :) If we are happy with how it looks, we can render it by going to Render-&gt;Render Image on the top left. This step can take a while, depending on your computer&rsquo;s performance power.</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/render.png"
+        data-srcset="images/blender-tutorial/render.png, images/blender-tutorial/render.png 1.5x, images/blender-tutorial/render.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/render.png"
+        title="images/blender-tutorial/render.png" /></p>
+<p>But good things come to those who wait. Once it&rsquo;s done, you&rsquo;ll see something like this:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/render2.png"
+        data-srcset="images/blender-tutorial/render2.png, images/blender-tutorial/render2.png 1.5x, images/blender-tutorial/render2.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/render2.png"
+        title="images/blender-tutorial/render2.png" /></p>
+<p>You can save the image with Image-&gt;Save As, and feel free to paste it into your paper figure :) Congrats!</p>
+<br>
+<br>
+<br>
+<h1 id="tips-and-tricks">Tips and Tricks</h1>
+<h2 id="rendering-in-a-different-computer">Rendering in a different computer</h2>
+<p>If you choose to send your <code>.blend</code> file to another computer (for example, a lab server) to render, then it is important you also follow two extra steps. First, make sure to select &ldquo;File-&gt;External data-&gt;Automatically pack data into .blend&rdquo; (otherwise your other computer won&rsquo;t know where to look for the textures and objects in the scene). Also go to &ldquo;Output Properties&rdquo; and under &ldquo;Output&rdquo; make it a relative directory like <code>//</code> instead of the default <code>/tmp/</code>, or you risk losing your rendered images forever.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/output.png"
+        data-srcset="images/blender-tutorial/output.png, images/blender-tutorial/output.png 1.5x, images/blender-tutorial/output.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/output.png"
+        title="images/blender-tutorial/output.png" /></p>
+<h2 id="theres-too-much-shadow">&ldquo;There&rsquo;s too much shadow&rdquo;</h2>
+<p>Sometimes, your rendered image will have long shadows that don&rsquo;t allow you to use them well as transparent images in papers; or they have ambient lighting which leads to an almost undetectable shadow everywhere in the image, that becomes apparent only when you put it on a white background. You can solve this (as Oded Stein showed me) by re-mapping the alpha values in the Blender Compositor (see the &ldquo;Compositor&rdquo; tab in the top of your blender UI). Here&rsquo;s an example of the nodes in my <a href="images/blender-tutorial/template.blend" rel="">template file</a>&rsquo;s compositor. The top part does the shadow removal (play with the thresholds to get more/less shadow), while the bottom does standard image editing to avoid having to do it in another software.</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/compositing.png"
+        data-srcset="images/blender-tutorial/compositing.png, images/blender-tutorial/compositing.png 1.5x, images/blender-tutorial/compositing.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/compositing.png"
+        title="images/blender-tutorial/compositing.png" /></p>
+<h2 id="the-render-preview-takes-so-long">&ldquo;The render preview takes so long!&rdquo;</h2>
+<p>If, like me, you don&rsquo;t own a supercomputer with powerful graphics cards, it may be that refreshing a render preview can take a long time, especially the more textures and files you have in your scene. It can ruin the feeling of interactivity in the software: what I like most about rendering paper figures using the Blender UI is that you can change something in your scene and see how that affects the image, and iterate like that. One way of getting this immediate feedback without spending thousands of dollars in graphics cards is to use a really nice feature called &ldquo;Render Region&rdquo;. Basically, this relies on the fact that when you&rsquo;re iterating some aspect of your image, it is rare that you&rsquo;re really looking <em>everywhere</em> in the figure to evaluate your changes. For example, if I am playing with the material of the main object, I could just look at one part of it to iterate instead of asking the render to simulate all the shadows and other objects in the scene. See what I mean by choosing the &ldquo;Render Region&rdquo; option, which I do by pressing Spacebar and searching for it:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/render-region.png"
+        data-srcset="images/blender-tutorial/render-region.png, images/blender-tutorial/render-region.png 1.5x, images/blender-tutorial/render-region.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/render-region.png"
+        title="images/blender-tutorial/render-region.png" /></p>
+<p>Then, I drag my mouse to select a really tiny region of my render</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/render-region.jpg"
+        data-srcset="images/blender-tutorial/render-region.jpg, images/blender-tutorial/render-region.jpg 1.5x, images/blender-tutorial/render-region.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/render-region.jpg"
+        title="images/blender-tutorial/render-region.jpg" /></p>
+<p>I can them zoom in (CMD + Mouse Wheel in my Mac) and focus on the region I&rsquo;m rendering:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/render-region2.jpg"
+        data-srcset="images/blender-tutorial/render-region2.jpg, images/blender-tutorial/render-region2.jpg 1.5x, images/blender-tutorial/render-region2.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/render-region2.jpg"
+        title="images/blender-tutorial/render-region2.jpg" /></p>
+<p>Since now the preview is only rendering this tiny part of the figure, it will update much much faster when you change aspects in your scene; for example, the width of the wireframe:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/render-region3.jpg"
+        data-srcset="images/blender-tutorial/render-region3.jpg, images/blender-tutorial/render-region3.jpg 1.5x, images/blender-tutorial/render-region3.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/render-region3.jpg"
+        title="images/blender-tutorial/render-region3.jpg" /></p>
+<p><strong>Important:</strong> Make sure to remove your render region before you run the final render of your scene for your paper. I do this by Spacebar searching &ldquo;Clear Render Region&rdquo;. I have forgotten this step more times than I&rsquo;d like to admit :)</p>
+<br>
+<br>
+<h1 id="contribute">Contribute!</h1>
+<p>This blog post is a work in progress which I hope can be useful, especially to new students starting out in our field and writing their first publication. Feel free to contribute to this post by <a href="mailto:sgsellan@cs.toronto.edu" rel="">emailing me</a> suggestions and I&rsquo;ll be glad to properly credit you for any addition/correction.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+            
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="./blender_figure.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./phd_committee.html" class="prev" rel="prev" title="Preparing PhD Committee Meetings"><i class="fas fa-angle-left fa-fw"></i>Preparing PhD Committee Meetings</a>
+            <a href="./cpp_bugs.html" class="next" rel="next" title="Bugs I often write in C&#43;&#43;">Bugs I often write in C&#43;&#43;<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"></div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script></body>
+</html>

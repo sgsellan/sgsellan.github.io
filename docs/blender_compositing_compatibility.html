@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>PSA: Update your compositing nodes for 3.0 - Silvia Sellán</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KB4LKK966Y');
+</script>
+<meta name="Description" content="PhD student at the University of Toronto"><meta property="og:title" content="PSA: Update your compositing nodes for 3.0" />
+<meta property="og:description" content="For the most part, you can open and render your Blender 2.9 files using the new and improved Blender 3.0. You may want to do this because Blender 3.0&rsquo;s rendering is extremely improved from the previous versions or because you started a project on 2.9/2.8 and now want to continue it in 3.0. There is only one compatibility issue I have encountered, but it can completely destroy your render.
+Say your Blender 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.silviasellan.com/blender_compositing_compatibility.html" /><meta property="og:image" content="https://www.silviasellan.com/images/art/rushmore.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-03-03T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.silviasellan.com/images/art/rushmore.png"/>
+
+<meta name="twitter:title" content="PSA: Update your compositing nodes for 3.0"/>
+<meta name="twitter:description" content="For the most part, you can open and render your Blender 2.9 files using the new and improved Blender 3.0. You may want to do this because Blender 3.0&rsquo;s rendering is extremely improved from the previous versions or because you started a project on 2.9/2.8 and now want to continue it in 3.0. There is only one compatibility issue I have encountered, but it can completely destroy your render.
+Say your Blender 2."/>
+<meta name="application-name" content="Silvia Sellán">
+<meta name="apple-mobile-web-app-title" content="Silvia Sellán"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://www.silviasellan.com/blender_compositing_compatibility.html" /><link rel="prev" href="https://www.silviasellan.com/cpp_bugs.html" /><link rel="next" href="https://www.silviasellan.com/colloquium.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "PSA: Update your compositing nodes for 3.0",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.silviasellan.com\/blender_compositing_compatibility.html"
+        },"genre": "posts","wordcount":  235 ,
+        "url": "https:\/\/www.silviasellan.com\/blender_compositing_compatibility.html","datePublished": "2022-03-03T00:00:00+00:00","dateModified": "2022-03-03T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Silvia Sellán"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./publications.html"> Publications </a><a class="menu-item" href="./cv.html"> CV </a><a class="menu-item" href="./art.html"> Art? </a><a class="menu-item" href="./posts.html"> Blog </a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline"> Paper writing </a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing"> New students </a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank"> Food </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./publications.html" title="">Publications</a><a class="menu-item" href="./cv.html" title="">CV</a><a class="menu-item" href="./art.html" title="">Art?</a><a class="menu-item" href="./posts.html" title="">Blog</a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline">Paper writing</a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing">New students</a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank">Food</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">PSA: Update your compositing nodes for 3.0</h1><div class="content" id="content"><p>For the most part, you can open and render your Blender 2.9 files using the new
+and improved <a href="https://www.blender.org/download/" target="_blank" rel="noopener noreffer">Blender 3.0</a>. You may want to
+do this because Blender 3.0&rsquo;s rendering is extremely improved from the previous
+versions or because you started a project on 2.9/2.8 and now want to continue it
+in 3.0. There is only one compatibility issue I have encountered, but it can
+completely destroy your render.</p>
+<p>Say your Blender 2.8/2.9 file used compositing nodes, like <a href="images/blender-tutorial/template-old.blend" rel="">my Blender 2.9
+template paper figure file</a>. The
+compositing view in Blender 2.9 may look like this:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/compositing-29.jpg"
+        data-srcset="images/blender-tutorial/compositing-29.jpg, images/blender-tutorial/compositing-29.jpg 1.5x, images/blender-tutorial/compositing-29.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/compositing-29.jpg"
+        title="images/blender-tutorial/compositing-29.jpg" /></p>
+<p>As you can see, we are passing &ldquo;Noisy Image&rdquo; from our render to the &ldquo;Denoiser&rdquo;
+node. However, if we open this same file in Blender 3.0, we see the following:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/compositing-30-bad.jpg"
+        data-srcset="images/blender-tutorial/compositing-30-bad.jpg, images/blender-tutorial/compositing-30-bad.jpg 1.5x, images/blender-tutorial/compositing-30-bad.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/compositing-30-bad.jpg"
+        title="images/blender-tutorial/compositing-30-bad.jpg" /></p>
+<p>The &ldquo;Noisy Image&rdquo; output has disappeared! And therefore nothing is going into
+our &ldquo;Denoise&rdquo; node. This is (I think) because Blender 3.0 no longer does
+denoising as post-processing in the compositing step; instead, you can turn on
+&ldquo;Denoise&rdquo; in the Render Output panel. If we choose to render the image, we will
+get empty RGB channels, because no RGB channels are entering the denoiser:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/compositing-bad-render.png"
+        data-srcset="images/blender-tutorial/compositing-bad-render.png, images/blender-tutorial/compositing-bad-render.png 1.5x, images/blender-tutorial/compositing-bad-render.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/compositing-bad-render.png"
+        title="images/blender-tutorial/compositing-bad-render.png" /></p>
+<p>Fixing this is simple: just circunvent the denoising node and connect the
+&ldquo;Image&rdquo; output from the Render node with the &ldquo;Image&rdquo; input of the next node in
+the chain; in my case, the &ldquo;Bright/Contrast&rdquo; one:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/compositing-30-good.jpg"
+        data-srcset="images/blender-tutorial/compositing-30-good.jpg, images/blender-tutorial/compositing-30-good.jpg 1.5x, images/blender-tutorial/compositing-30-good.jpg 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/compositing-30-good.jpg"
+        title="images/blender-tutorial/compositing-30-good.jpg" /></p>
+<p>And we can render and composit to get the expected result:</p>
+<p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/blender-tutorial/compositing-good-render.png"
+        data-srcset="images/blender-tutorial/compositing-good-render.png, images/blender-tutorial/compositing-good-render.png 1.5x, images/blender-tutorial/compositing-good-render.png 2x"
+        data-sizes="auto"
+        alt="images/blender-tutorial/compositing-good-render.png"
+        title="images/blender-tutorial/compositing-good-render.png" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+            
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="./blender_compositing_compatibility.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./cpp_bugs.html" class="prev" rel="prev" title="Bugs I often write in C&#43;&#43;"><i class="fas fa-angle-left fa-fw"></i>Bugs I often write in C&#43;&#43;</a>
+            <a href="./colloquium.html" class="next" rel="next" title="Running a weekly virtual colloquium">Running a weekly virtual colloquium<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"></div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script></body>
+</html>

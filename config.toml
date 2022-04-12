@@ -6,7 +6,7 @@ uglyURLs = true
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
-title = "sSilvia Sellán"
+title = "Silvia Sellán"
 googleAnalytics = "G-KB4LKK966Y"
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"

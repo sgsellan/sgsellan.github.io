@@ -2,9 +2,9 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://www.silviasellan.com/arxiv_compressing.html</loc><lastmod>2022-03-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.silviasellan.com/posts.html</loc><lastmod>2022-03-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://www.silviasellan.com/</loc><lastmod>2022-03-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://www.silviasellan.com/arxiv_compressing.html</loc><lastmod>2022-03-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.silviasellan.com/posts.html</loc><lastmod>2022-03-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://www.silviasellan.com/</loc><lastmod>2022-03-30T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://www.silviasellan.com/colloquium.html</loc><lastmod>2022-03-19T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://www.silviasellan.com/blender_compositing_compatibility.html</loc><lastmod>2022-03-03T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://www.silviasellan.com/cpp_bugs.html</loc><lastmod>2022-01-27T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

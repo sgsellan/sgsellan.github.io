@@ -43,7 +43,7 @@ Undergraduate Research Intern
 
 ## Journal Publications
 
-<!-- **Breaking Bad: A Large-scale Fracture Object Dataset for 3D Geometric Shape Assembly**, 2022  
+<!-- **Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
 **Silvia Sellán\***, Yun-Chun Chen\*, Ziyi Wu\*, Animesh Garg, Alec Jacobson *(\*Joint First Authors)*   
 *Under submission* -->
 
@@ -220,14 +220,22 @@ María Cristina Masaveu Peterson Foundation
 
 ## Committee Service
 
-**CVPR Deep Learning for Geometric Computing**, 2022  
-*Organizing committee member*
+**ACM SIGGRAPH Women in Graphics Research Community Group**, 2022 - Present  
+*Executive Comittee Member*
 
 **SIGGRAPH Research Career Development Committee**, 2021 - Present  
 *Committee member (in undergraduate mentorship subcommittee)*
 
+**CVPR Deep Learning for Geometric Computing**, 2022  
+*Organizing committee member*
+
+**Women in Graphics Research (WiGRAPH)**, 2020-2022  
+*Executive Comittee Member*
+
 **ICCV Deep Learning for Geometric Computing**, 2021  
 *Program Comittee Member*
+
+
 
 ## Referee Service
 
@@ -379,11 +387,7 @@ Q \& A with WiGRAPH, written by Kate Salesin. [Archived version](https://www.wig
 
 ## Organizing
 
-**Summer Geometry Institute**, 2022   
-*Admissions committee member and session planning.*  
-Remote
-
-**Women in Graphics Research**, 2020 - Present   
+**ACM SIGGRAPH Women in Graphics Research Community group**, 2022 - Present  
 *Event Coordinator: Symposium on Geometry Processing.*  
 Remote
 
@@ -392,8 +396,16 @@ Remote
 Processing.*  
 Toronto, Canada
 
+**Summer Geometry Institute**, 2022   
+*Admissions committee member and session planning.*  
+Remote
+
 **CVPR Deep Learning for Geometric Computing**, 2022  
 *Organizing committee member*
+
+**Women in Graphics Research**, 2020 - 2022   
+*Event Coordinator: Symposium on Geometry Processing.*  
+Remote
 
 **SIGGRAPH Graduate Applications Mentorship Program**, 2021  
 *Founder and organizer.*  

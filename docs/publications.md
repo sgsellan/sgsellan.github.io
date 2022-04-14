@@ -114,7 +114,7 @@ a[href$=".pdf"]:after
       <img src=images/paper-thumbnails/breaking-bad.png>
     </div>
     <div class="columns large-10">
-      <p class="title">Breaking Bad: A Large-scale Fracture Object Dataset for 3D Geometric Shape Assembly</p>
+      <p class="title">Breaking Bad: A Dataset for Geometric Fracture and Reassembly</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Yun-Chun Chen*, Ziyi Wu*, Animesh Garg, Alec Jacobson</span> (*joint first authors)</p>
       <p class="venue">Under Submission</p>
       <p class="links"> <a>Paper (TBD)</a></p>

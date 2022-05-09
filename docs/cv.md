@@ -74,12 +74,12 @@ Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson
 **Silvia Sellán**  
 *Graduate School course to be presented at Eurographics SGP 2022*
 
-<!-- **Sex and Gender in the Computer Graphics Literature**, 2022  
+**Sex and Gender in the Computer Graphics Literature**, 2022  
 Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First Authors)*  
-*Under Submission* -->
+*SIGGRAPH Talk*
 
 **Geometry Processing programming in MATLAB with gptoolbox**, 2021  
-Hsueh-Ti Derek Liu, **Silvia Sellán**, Oded Stein  
+Hsueh-Ti Derek Liu\*, **Silvia Sellán\***, Oded Stein\* *(\*Joint First Authors)*    
 *Graduate School course presented at Eurographics SGP 2021*
 
 **Efficient and Robust Swept Volumes**, 2021  
@@ -241,7 +241,9 @@ María Cristina Masaveu Peterson Foundation
 
 **CVPR DLGC Technical Papers**, 2022
 
-**ACM SIGGRAPH**, 2022
+**ACM SIGGRAPH Technical Papers**, 2022
+
+**ACM SIGGRAPH Posters**, 2022
 
 **Eurographics Technical Papers**, 2021
 
@@ -265,6 +267,10 @@ María Cristina Masaveu Peterson Foundation
 *16 hours of paid work on processing graduate school applications*
 
 ## Talks Given
+
+**Sex and Gender in the Computer Graphics Literature**, August 2022  
+*SIGGRAPH Talk*  
+Virtual
 
 **Mesh Math and Beyond: An Introduction to Shape Representations**, July 2022  
 *Day-long tutorial at the MIT-ran Summer Geometry Institute (SGI)*  
@@ -478,7 +484,11 @@ During the summer of 2021, I planned, prepared and conducted a 6-hour long tutor
 *Volunteer mentoring of dozens of prospective Computer Graphics students from underrepresented groups with their graduate school application package and decisions. Successful applicant destinations include MIT, UCSD, University of Toronto, UBC and others.*  
 Remote
 
-**Canadian Black Scientists Network Youth Science Fair**, 2022   
+**Canada-Wide Science Fair**, Spring 2022   
+*Mentored two grade 11 students with their Science Fair project as part of UofT's [Pursue STEM](https://www.physics.utoronto.ca/physics-at-uoft/outreach/pursue-stem/)*  
+Toronto, Canada
+
+**Canadian Black Scientists Network Youth Science Fair**, Winter 2022   
 *Mentored two grade 11 students with their Science Fair project as part of UofT's [Pursue STEM](https://www.physics.utoronto.ca/physics-at-uoft/outreach/pursue-stem/)*  
 Toronto, Canada
 

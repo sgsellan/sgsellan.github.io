@@ -204,17 +204,17 @@ a[href$=".pdf"]:after
     </div>
   </div>
 
-  <!-- <div class="row publication">
+  <div class="row publication">
     <div class="columns thumbnail">
       <img src=images/paper-thumbnails/gender.jpg>
     </div>
     <div class="columns large-10">
       <p class="title">Sex and Gender in the Computer Graphics Literature</p>
       <p class="authors"><span class=notme>Ana Dodik*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Amanda Phillips, Theodore Kim</span> (*joint first authors)</p>
-      <p class="venue">Under Submission</p>
-      <p class="links"> <a>Abstract (TBD)</a> <a>Video (TBD)</a></p>
+      <p class="venue">SIGGRAPH Talk</p>
+      <p class="links"> <a>Extended abstract (TBD)</a> <a>Video (TBD)</a></p>
     </div>
-  </div> -->
+  </div>
 
   <div class="row publication">
     <div class="columns thumbnail">

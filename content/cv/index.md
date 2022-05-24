@@ -253,6 +253,8 @@ María Cristina Masaveu Peterson Foundation
 
 **ACM SIGGRAPH Posters**, 2022
 
+**Computer Aided Design Journal (CAD-J)**, 2022
+
 **Eurographics Technical Papers**, 2021
 
 **ACM Transactions on Graphics (ToG)**, 2021

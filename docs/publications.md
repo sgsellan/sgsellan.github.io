@@ -128,7 +128,7 @@ a[href$=".pdf"]:after
   <div class="columns large-10">
     <p class="title">Fracture Modes for Realtime Destruction</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme> Jack Luong, Leticia Mattos Da Silva, Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson</span></p>
-    <p class="venue">Accepted to TBD Journal</p>
+    <p class="venue">Accepted to TBD Journal, 2022</p>
     <p class="links"> <a href="pdf/papers/fracture-harmonics-preprint.pdf">High-resolution Preprint</a> <a href="https://arxiv.org/abs/2111.05249">Arxiv</a> <a href="https://github.com/sgsellan/fracture-modes">Code</a> <a href="video/paper-videos/fracture-modes.mp4">Video</a></p>
   </div>
 </div>
@@ -140,7 +140,7 @@ a[href$=".pdf"]:after
   <div class="columns large-10">
     <p class="title">Sex and Gender in the Computer Graphics Literature</p>
     <p class="authors"><span class=notme>Ana Dodik*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Amanda Phillips, Theodore Kim</span> (*joint first authors)</p>
-    <p class="venue">SIGGRAPH Talk</p>
+    <p class="venue">SIGGRAPH Talk, 2022</p>
     <p class="links"> <a>Extended abstract (TBD)</a> <a>Video (TBD)</a></p>
   </div>
 </div>
@@ -152,8 +152,8 @@ a[href$=".pdf"]:after
   <div class="columns large-10">
     <p class="title">Blender for Academic Papers</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span></p>
-    <p class="venue">SGP 2022 Course</p>
-    <p class="links"> <a href="./blender_figure.html">Step by step guide</a> <a href="https://research.siggraph.org/blog/guides/rendering-a-paper-figure-with-blender/">Step by step guide (SIGGRAPH-hosted mirror)</a> <a>Video (TBD)</a></p>
+    <p class="venue">Symposium on Geometry Processing (SGP) Course, 2022</p>
+    <p class="links"> <a href="./blender_figure.html">Guide</a> <a href="https://research.siggraph.org/blog/guides/rendering-a-paper-figure-with-blender/">Guide (SIGGRAPH mirror)</a> <a>Video (TBD)</a></p>
   </div>
 </div>
 
@@ -178,7 +178,7 @@ a[href$=".pdf"]:after
   <div class="columns large-10">
     <p class="title">Geometry Processing in Matlab using gptoolbox</p>
     <p class="authors"><span class=notme>Hsueh-Ti Derek Liu*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Oded Stein*</span> (*joint first authors)</p>
-    <p class="venue">SGP 2021 Course</p>
+    <p class="venue">Symposium on Geometry Processing (SGP) Course, 2021</p>
     <p class="links"> <a href="http://odedstein.com/projects/sgp-2021-gp-matlab-course/index.html">Project Page</a> <a href="https://youtu.be/NGathaVRyDA">Video Tutorial</a> <a href="https://github.com/odedstein/gp-matlab-tutorial">Github Tutorial</a></p>
   </div>
 </div>

@@ -162,7 +162,7 @@ a[href$=".pdf"]:after
     <p class="title">Blender for Academic Papers</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span></p>
     <p class="venue">Symposium on Geometry Processing (SGP) Course, 2022</p>
-    <p class="links"> <a href="./blender_figure.html">Step by step guide</a> <a href="https://research.siggraph.org/blog/guides/rendering-a-paper-figure-with-blender/">Step by step guide (SIGGRAPH-hosted mirror)</a> <a>Video (TBD)</a></p>
+    <p class="links"> <a href="./blender_figure.html">Guide</a> <a href="https://research.siggraph.org/blog/guides/rendering-a-paper-figure-with-blender/">Guide (SIGGRAPH mirror)</a> <a>Video (TBD)</a></p>
   </div>
 </div>
 

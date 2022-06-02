@@ -51,6 +51,10 @@ Undergraduate Research Intern
 
 ## Journal Publications
 
+<!-- **Stochastic Poisson Surface Reconstruction**, 2022  
+**Silvia Sellán**, Alec Jacobson  
+*Under submission* -->
+
 <!-- **Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
 **Silvia Sellán\***, Yun-Chun Chen\*, Ziyi Wu\*, Animesh Garg, Alec Jacobson *(\*Joint First Authors)*   
 *Under submission* -->

@@ -111,13 +111,26 @@ a[href$=".pdf"]:after
 
 <!-- <div class="row publication">
     <div class="columns thumbnail">
+      <img src=images/paper-thumbnails/stochastic-psr.jpeg>
+    </div>
+    <div class="columns large-10">
+      <p class="title">Stochastic Poisson Surface Reconstruction</p>
+      <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson</span></p>
+      <p class="venue">Under Submission</p>
+      <p class="links"> <a>Paper (TBD)</a></p>
+    </div>
+  </div> -->
+
+
+<!-- <div class="row publication">
+    <div class="columns thumbnail">
       <img src=images/paper-thumbnails/breaking-bad.png>
     </div>
     <div class="columns large-10">
       <p class="title">Breaking Bad: A Dataset for Geometric Fracture and Reassembly</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Yun-Chun Chen*, Ziyi Wu*, Animesh Garg, Alec Jacobson</span> (*joint first authors)</p>
       <p class="venue">Under Submission</p>
-      <p class="links"> <a>Paper (TBD)</a></p>
+      <p class="links"> <a>Paper (TBD)</a>  <a>Website (TBD)</a> </p>
     </div>
   </div> -->
 
@@ -139,9 +152,9 @@ a[href$=".pdf"]:after
   </div>
   <div class="columns large-10">
     <p class="title">Sex and Gender in the Computer Graphics Literature</p>
-    <p class="authors"><span class=notme>Ana Dodik*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Amanda Phillips, Theodore Kim</span> (*joint first authors)</p>
+    <p class="authors"><span class=notme>Ana Dodik*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Theodore Kim, Amanda Phillips</span> (*joint first authors)</p>
     <p class="venue">SIGGRAPH Talk, 2022</p>
-    <p class="links"> <a>Extended abstract (TBD)</a> <a>Video (TBD)</a></p>
+    <p class="links"> <a href="pdf/papers/gender-as-a-variable.pdf">Paper</a> <a href="pdf/papers/gender-as-a-variable-supplement.pdf">Supplement</a> <a href="http://arxiv.org/abs/2206.00480">Arxiv</a> <a href="">Talk (TBD)</a></p>
   </div>
 </div>
 

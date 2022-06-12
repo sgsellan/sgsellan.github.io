@@ -116,7 +116,7 @@ a[href$=".pdf"]:after
 
 <br>
 
-<!-- ### Journal Publications -->
+<!-- ### Conference & Journal Publications -->
 
 <!-- <div class="row publication">
     <div class="columns thumbnail">
@@ -131,24 +131,24 @@ a[href$=".pdf"]:after
   </div> -->
 
 
-<!-- <div class="row publication">
+<div class="row publication">
     <div class="columns thumbnail">
       <img src=images/paper-thumbnails/breaking-bad.png>
     </div>
     <div class="columns large-10">
       <p class="title">Breaking Bad: A Dataset for Geometric Fracture and Reassembly</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Yun-Chun Chen*, Ziyi Wu*, Animesh Garg, Alec Jacobson</span> (*joint first authors)</p>
-      <p class="venue">Under Submission</p>
-      <p class="links"> <a>Paper (TBD)</a>  <a>Website (TBD)</a> </p>
+      <p class="venue">Submitted to NeurIPS 2022</p>
+      <p class="links"> <a>Paper (TBD)</a>  <a href="">Arxiv (TBD)</a> <a href="https://breaking-bad-dataset.github.io">Website</a> <a href="https://doi.org/10.5683/SP3/LZNPKB">Dataset</a> </p>
     </div>
-  </div> -->
+  </div>
 
 <div class="row publication">
   <div class="columns thumbnail">
     <img src=images/paper-thumbnails/fracture-modes.jpg>
   </div>
   <div class="columns large-10">
-    <p class="title">Fracture Modes for Realtime Destruction</p>
+    <p class="title">Breaking Good: Fracture Modes for Realtime Destruction</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme> Jack Luong, Leticia Mattos Da Silva, Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson</span></p>
     <p class="venue">Accepted to TBD Journal, 2022</p>
     <p class="links"> <a href="pdf/papers/fracture-harmonics-preprint.pdf">High-resolution Preprint</a> <a href="https://arxiv.org/abs/2111.05249">Arxiv</a> <a href="https://github.com/sgsellan/fracture-modes">Code</a> <a href="video/paper-videos/fracture-modes.mp4">Video</a></p>

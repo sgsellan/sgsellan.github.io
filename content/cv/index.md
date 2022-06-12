@@ -49,20 +49,24 @@ Undergraduate Research Intern
 Undergraduate Research Intern  
 *Supervised by Prof. Alec Jacobson*
 
-## Journal Publications
+## Journal & Conference Publications
 
 <!-- **Stochastic Poisson Surface Reconstruction**, 2022  
 **Silvia Sellán**, Alec Jacobson  
 *Under submission* -->
 
-<!-- **Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
+**Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
 **Silvia Sellán\***, Yun-Chun Chen\*, Ziyi Wu\*, Animesh Garg, Alec Jacobson *(\*Joint First Authors)*   
-*Under submission* -->
+*Submitted to NeurIPS 2022*
 
-**Fracture Modes for Realtime Destruction**, 2022  
+**Breaking Good: Fracture Modes for Realtime Destruction**, 2022  
 **Silvia Sellán**, Jack Luong, Letticia Mattos Da Silva,  
 Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson  
 *Accepted to TBD journal*
+
+**Sex and Gender in the Computer Graphics Literature**, 2022  
+Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First Authors)*  
+*SIGGRAPH Talk*
 
 **Swept Volumes via Spacetime Numerical Continuation**, 2021  
 **Silvia Sellán**, Noam Aigerman, Alec Jacobson  
@@ -85,10 +89,6 @@ Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson
 **Blender for Geometry Processing Academic Papers**, 2022  
 **Silvia Sellán**  
 *Graduate School course to be presented at Eurographics SGP 2022*
-
-**Sex and Gender in the Computer Graphics Literature**, 2022  
-Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First Authors)*  
-*SIGGRAPH Talk*
 
 **Geometry Processing programming in MATLAB with gptoolbox**, 2021  
 Hsueh-Ti Derek Liu\*, **Silvia Sellán\***, Oded Stein\* *(\*Joint First Authors)*    
@@ -256,6 +256,8 @@ María Cristina Masaveu Peterson Foundation
 **ACM SIGGRAPH Technical Papers**, 2022
 
 **ACM SIGGRAPH Posters**, 2022
+
+**International Symposium on Robotics Research**, 2022
 
 **Computer Aided Design Journal (CAD-J)**, 2022
 

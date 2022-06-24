@@ -64,7 +64,7 @@ Undergraduate Research Intern
 Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson  
 *Accepted to TBD journal*
 
-**Sex and Gender in the Computer Graphics Literature**, 2022  
+**Sex and Gender in the Computer Graphics Research Literature**, 2022  
 Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First Authors)*  
 *SIGGRAPH Talk*
 

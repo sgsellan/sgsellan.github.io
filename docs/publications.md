@@ -151,7 +151,7 @@ a[href$=".pdf"]:after
     <img src=images/paper-thumbnails/gender.jpg>
   </div>
   <div class="columns large-10">
-    <p class="title">Sex and Gender in the Computer Graphics Literature</p>
+    <p class="title">Sex and Gender in the Computer Graphics Research Literature</p>
     <p class="authors"><span class=notme>Ana Dodik*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Theodore Kim, Amanda Phillips</span> (*joint first authors)</p>
     <p class="venue">SIGGRAPH Talk, 2022</p>
     <p class="links"> <a href="pdf/papers/gender-as-a-variable.pdf">Paper</a> <a href="pdf/papers/gender-as-a-variable-supplement.pdf">Supplement</a> <a href="http://arxiv.org/abs/2206.00480">Arxiv</a> <a href="">Talk (TBD)</a></p>

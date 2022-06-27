@@ -39,7 +39,7 @@ These are really interesting topics, but they can be overwhelming if you are an 
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.silviasellan.com\/blender_figure.html"
-        },"genre": "posts","wordcount":  2354 ,
+        },"genre": "posts","wordcount":  2359 ,
         "url": "https:\/\/www.silviasellan.com\/blender_figure.html","datePublished": "2021-11-11T00:00:00+00:00","dateModified": "2021-11-11T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -115,8 +115,13 @@ These are really interesting topics, but they can be overwhelming if you are an 
 <p>These are really interesting topics, but they can be overwhelming if you are an academic and all you want is to render your object beautifully for a SIGGRAPH paper figure. For this use case, there is way less documentation online (my labmate Derek&rsquo;s <a href="https://github.com/HTDerekLiu/BlenderToolbox" target="_blank" rel="noopener noreffer">Blender scripting toolbox</a> is a great exception), and in my experience this can lead to a lot of frustration especially when nearing deadlines, when one does not have the time or energy to learn a whole new aspect of the software just for a minor change in a paper figure. Mitigating that frustration is the goal of this guide.</p>
 <p>Also, one only needs to look through SIGGRAPH publications to see that all labs seem to have their own really polished &ldquo;paper-quality rendering&rdquo; pipeline, but unfortunately in my experience these mostly stay at the &ldquo;tricks of the trade&rdquo; level and aren&rsquo;t shared very widely (not out of malice, there just aren&rsquo;t many incentives for it). Another goal of this guide is to share my pipeline with people from other labs so that they (you) can hopefully learn something but also teach me something I am currently doing wrong or less efficiently (please <a href="mailto:sgsellan@cs.toronto.edu" rel="">email me!</a>).</p>
 <p>Anyway, here we go. Let&rsquo;s pretend you wrote a fancy new method in C++ or Matlab or Python that outputs a mesh called <code>output.obj</code>, and you want to render it to put it in a paper figure (if you want to make an animation for your paper video, please see my <a href="./blender_videos.html" rel="">other guide</a>).</p>
-<ol>
-<li>Open Blender (you can download it from <a href="https://www.blender.org" target="_blank" rel="noopener noreffer">here</a>). You&rsquo;ll see something like this</li>
+<ol start="0">
+<li>
+<p>Download my Blender <a href="images/blender-tutorial/template.blend" rel="">template file</a>.</p>
+</li>
+<li>
+<p>Open Blender (you can download it from <a href="https://www.blender.org" target="_blank" rel="noopener noreffer">here</a>). You&rsquo;ll see something like this</p>
+</li>
 </ol>
 <p><img
         class="lazyload"

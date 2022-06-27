@@ -9,6 +9,7 @@ Also, one only needs to look through SIGGRAPH publications to see that all labs 
 
 Anyway, here we go. Let's pretend you wrote a fancy new method in C++ or Matlab or Python that outputs a mesh called `output.obj`, and you want to render it to put it in a paper figure (if you want to make an animation for your paper video, please see my [other guide](./blender_videos.html)).
 
+0. Download my Blender [template file](images/blender-tutorial/template.blend).
 
 1. Open Blender (you can download it from [here](https://www.blender.org)). You'll see something like this
 

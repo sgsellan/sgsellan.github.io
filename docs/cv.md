@@ -54,7 +54,7 @@ Undergraduate Research Intern
 **Breaking Good: Fracture Modes for Realtime Destruction**, 2022  
 **Silvia Sellán**, Jack Luong, Letticia Mattos Da Silva,  
 Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson  
-*Accepted to TBD journal*
+*ACM Transactions on Graphics (to appear)*
 
 **Sex and Gender in the Computer Graphics Research Literature**, 2022  
 Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First Authors)*  

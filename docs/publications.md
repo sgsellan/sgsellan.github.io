@@ -142,7 +142,7 @@ a[href$=".pdf"]:after
     <p class="title">Breaking Good: Fracture Modes for Realtime Destruction</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme> Jack Luong, Leticia Mattos Da Silva, Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson</span></p>
     <p class="venue">ACM Transactions on Graphics (to appear), 2022</p>
-    <p class="links"> <a href="pdf/papers/fracture-harmonics.pdf">Paper</a> <a href="https://arxiv.org/abs/2111.05249">Arxiv</a> <a href="https://github.com/sgsellan/fracture-modes">Code</a> <a href="video/paper-videos/fracture-modes.mp4">Video</a></p>
+    <p class="links"> <a href="pdf/papers/fracture-harmonics.pdf">Paper</a> <a href="https://arxiv.org/abs/2111.05249">Arxiv</a> <a href="https://github.com/sgsellan/fracture-modes">Code</a> <a href="https://youtu.be/YCbHxbFEgFk">Video</a></p>
   </div>
 </div>
 

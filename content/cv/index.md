@@ -279,6 +279,9 @@ María Cristina Masaveu Peterson Foundation
 **DGP Working Group on Fostering a Safe and Inclusive Workplace**, 2022  
 *Member*
 
+**DCS Grad program talk for Ukranian undergraduate visiting students**, 2022  
+*Panelist*
+
 **Graduate Applications Triager**, 2021  
 *16 hours of paid work on processing graduate school applications*
 

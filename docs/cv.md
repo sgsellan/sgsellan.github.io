@@ -22,7 +22,7 @@ B.Sc. in Mathematics
 ## Experience
 
 **Yale University**, 2022  
-Consultant  
+Research Consultant  
 *Work carried out with Prof. Theodore Kim*
 
 **Adobe Inc.**, May 2020 - December 2020  

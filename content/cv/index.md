@@ -53,7 +53,7 @@ Undergraduate Research Intern
 
 <!-- **Stochastic Poisson Surface Reconstruction**, 2022  
 **Silvia Sellán**, Alec Jacobson  
-*Under submission* -->
+*ACM Transactions on Graphics (Proc. SIGGRAPH Asia)* -->
 
 **Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
 **Silvia Sellán\***, Yun-Chun Chen\*, Ziyi Wu\*, Animesh Garg, Alec Jacobson *(\*Joint First Authors)*   
@@ -62,7 +62,7 @@ Undergraduate Research Intern
 **Breaking Good: Fracture Modes for Realtime Destruction**, 2022  
 **Silvia Sellán**, Jack Luong, Letticia Mattos Da Silva,  
 Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson  
-*ACM Transactions on Graphics (to appear)*
+*ACM Transactions on Graphics (to be presented at SIGGRAPH Asia)*
 
 **Sex and Gender in the Computer Graphics Research Literature**, 2022  
 Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First Authors)*  

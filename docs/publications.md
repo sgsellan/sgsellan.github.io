@@ -116,8 +116,8 @@ a[href$=".pdf"]:after
     <div class="columns large-10">
       <p class="title">Stochastic Poisson Surface Reconstruction</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson</span></p>
-      <p class="venue">Under Submission</p>
-      <p class="links"> <a>Paper (TBD)</a></p>
+      <p class="venue">ACM Transactions on Graphics (Proc. SIGGRAPH Asia)</p>
+      <p class="links"> <a href="https://arxiv.org/abs/2206.15236">Arxiv</a> <a>Paper (TBD)</a><a>Code (TBD)</a> <a>Talk (TBD)</a> </p>
     </div>
   </div> -->
 
@@ -141,7 +141,7 @@ a[href$=".pdf"]:after
   <div class="columns large-10">
     <p class="title">Breaking Good: Fracture Modes for Realtime Destruction</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme> Jack Luong, Leticia Mattos Da Silva, Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson</span></p>
-    <p class="venue">ACM Transactions on Graphics (to appear), 2022</p>
+    <p class="venue">ACM Transactions on Graphics (to be presented at SIGGRAPH Asia), 2022</p>
     <p class="links"> <a href="pdf/papers/fracture-harmonics.pdf">Paper</a> <a href="https://arxiv.org/abs/2111.05249">Arxiv</a> <a href="https://github.com/sgsellan/fracture-modes">Code</a> <a href="https://youtu.be/0k_tEk34nJQ">Video</a></p>
   </div>
 </div>
@@ -154,7 +154,7 @@ a[href$=".pdf"]:after
     <p class="title">Sex and Gender in the Computer Graphics Research Literature</p>
     <p class="authors"><span class=notme>Ana Dodik*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Theodore Kim, Amanda Phillips</span> (*joint first authors)</p>
     <p class="venue">SIGGRAPH Talk, 2022</p>
-    <p class="links"> <a href="pdf/papers/gender-as-a-variable.pdf">Paper</a> <a href="pdf/papers/gender-as-a-variable-supplement.pdf">Supplement</a> <a href="http://arxiv.org/abs/2206.00480">Arxiv</a> <a href="">Talk (TBD)</a></p>
+    <p class="links"> <a href="pdf/papers/gender-as-a-variable.pdf">Paper</a> <a href="pdf/papers/gender-as-a-variable-supplement.pdf">Supplement</a> <a href="http://arxiv.org/abs/2206.00480">Arxiv</a> <a href="https://dl.acm.org/doi/10.1145/3532836.3536227">ACM</a> <a href="">Talk (TBD)</a></p>
   </div>
 </div>
 
@@ -240,13 +240,13 @@ a[href$=".pdf"]:after
 
 <div class="row publication">
   <div class="columns thumbnail">
-    <img src=images/paper-thumbnails/gpytoolbox.png>
+    <img src=images/paper-thumbnails/gplogo.png>
   </div>
   <div class="columns large-10">
     <p class="title">Gpytoolbox</p>
-    <p class="authors"><span class=me>Silvia Sell&aacuten</span></p>
+    <p class="authors"><span class=me>Silvia Sell&aacuten</span>, Oded Stein</p>
     <p class="venue">A Python geometry processing toolbox</p>
-    <p class="links"> <a href="https://github.com/sgsellan/gpytoolbox">Code</a>  <a href="https://github.com/sgsellan/python-project-with-gpytoolbox">Project template</a></p>
+    <p class="links"> <a href="https://github.com/sgsellan/gpytoolbox">Code</a>  <a href="https://github.com/sgsellan/python-project-with-gpytoolbox">Website</a></p>
   </div>
 </div>
 
@@ -258,7 +258,7 @@ a[href$=".pdf"]:after
     <p class="title">Botsch-Kobbelt Local Remesher</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span></p>
     <p class="venue">A C++ and Python remeshing library</p>
-    <p class="links"> <a href="https://github.com/sgsellan/botsch-kobbelt-remesher-libigl">Code</a></p>
+    <p class="links"> <a href="https://gpytoolbox.org">Code</a></p>
   </div>
 </div>
 

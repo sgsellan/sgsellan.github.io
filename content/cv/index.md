@@ -127,13 +127,13 @@ Inventors: **Silvia Sellán**, Noam Aigerman, Alec Jacobson
 ## Software
 
 **Geometry Processing in Matlab tutorial**  
-Co-Author
+Author
 
 **gptoolbox - Geometry Processing Toolbox**  
 Contributor
 
 **gpytoolbox - A Python Geometry Processing Toolbox**  
-Sole author
+Author
 
 **libigl - A Simple C++ Geometry Processing Library**  
 Contributor

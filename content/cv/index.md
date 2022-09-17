@@ -51,13 +51,13 @@ Undergraduate Research Intern
 
 ## Journal & Conference Publications
 
-<!-- **Stochastic Poisson Surface Reconstruction**, 2022  
+**Stochastic Poisson Surface Reconstruction**, 2022  
 **Silvia Sellán**, Alec Jacobson  
-*ACM Transactions on Graphics (Proc. SIGGRAPH Asia)* -->
+*ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*
 
 **Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
 **Silvia Sellán\***, Yun-Chun Chen\*, Ziyi Wu\*, Animesh Garg, Alec Jacobson *(\*Joint First Authors)*   
-*Submitted to NeurIPS 2022*
+*NeurIPS Datasets and Benchmarks*
 
 **Breaking Good: Fracture Modes for Realtime Destruction**, 2022  
 **Silvia Sellán**, Jack Luong, Letticia Mattos Da Silva,  
@@ -88,7 +88,7 @@ Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First
 
 **Blender for Geometry Processing Academic Papers**, 2022  
 **Silvia Sellán**  
-*Graduate School course to be presented at Eurographics SGP 2022*
+*Graduate School course presented at Eurographics SGP 2022*
 
 **Geometry Processing programming in MATLAB with gptoolbox**, 2021  
 Hsueh-Ti Derek Liu\*, **Silvia Sellán\***, Oded Stein\* *(\*Joint First Authors)*    
@@ -273,6 +273,9 @@ María Cristina Masaveu Peterson Foundation
 
 ## Departmental Service
 
+**Faculty of Arts and Science Graduate Diversity Working Group**, 2022 
+*Invited Member*
+
 **Dean's Advisory Search Committee - Department Chair, Computer Science**, 2021 - 2022  
 *Invited Member*
 
@@ -289,7 +292,7 @@ María Cristina Masaveu Peterson Foundation
 
 **Sex and Gender in the Computer Graphics Literature**, August 2022  
 *SIGGRAPH Talk*  
-Virtual
+Vancouver, Canada
 
 **Mesh Math and Beyond: An Introduction to Shape Representations**, July 2022  
 *Day-long tutorial at the MIT-ran Summer Geometry Institute (SGI)*  
@@ -417,9 +420,13 @@ Q \& A with WiGRAPH, written by Kate Salesin. [Archived version](https://www.wig
 Remote
 
 **Toronto Geometry Colloquium**, 2020 - Present   
-*Founder, organizer and art director for a series of talk on Geometry
+*Founder, organizer and art director for a series of talks on Geometry
 Processing.*  
 Toronto, Canada
+
+**SIGGRAPH Graduate Applications Mentorship Program**, 2022  
+*Founder and organizer.*  
+Remote
 
 **Summer Geometry Institute**, 2022   
 *Admissions committee member and session planning.*  

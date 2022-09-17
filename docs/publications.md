@@ -109,17 +109,17 @@ a[href$=".pdf"]:after
 
 <!-- ### Conference & Journal Publications -->
 
-<!-- <div class="row publication">
+<div class="row publication">
     <div class="columns thumbnail">
-      <img src=images/paper-thumbnails/stochastic-psr.jpeg>
+      <img src=images/paper-thumbnails/stochastic-psr.jpg>
     </div>
     <div class="columns large-10">
       <p class="title">Stochastic Poisson Surface Reconstruction</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson</span></p>
-      <p class="venue">ACM Transactions on Graphics (Proc. SIGGRAPH Asia)</p>
-      <p class="links"> <a href="https://arxiv.org/abs/2206.15236">Arxiv</a> <a>Paper (TBD)</a><a>Code (TBD)</a> <a>Talk (TBD)</a> </p>
+      <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2022</p>
+      <p class="links"> <a href="https://arxiv.org/abs/2206.15236">Arxiv</a> <a>Paper (TBD)</a> <a>Code (TBD)</a> <a>Talk (TBD)</a> </p>
     </div>
-  </div> -->
+  </div>
 
 
 <div class="row publication">
@@ -129,8 +129,8 @@ a[href$=".pdf"]:after
     <div class="columns large-10">
       <p class="title">Breaking Bad: A Dataset for Geometric Fracture and Reassembly</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Yun-Chun Chen*, Ziyi Wu*, Animesh Garg, Alec Jacobson</span> (*joint first authors)</p>
-      <p class="venue">Submitted to NeurIPS 2022</p>
-      <p class="links"> <a>Preprint (TBD)</a> <a href="https://breaking-bad-dataset.github.io">Website</a> <a href="https://doi.org/10.5683/SP3/LZNPKB">Dataset</a> </p>
+      <p class="venue">NeurIPS Datasets and Benchmarks, 2022</p>
+      <p class="links"><a href="https://openreview.net/forum?id=mJWt6pOcHNy">Preprint</a> <a>Paper (TBD)</a> <a href="https://breaking-bad-dataset.github.io">Website</a> <a href="https://doi.org/10.5683/SP3/LZNPKB">Dataset</a> </p>
     </div>
   </div>
 
@@ -154,7 +154,7 @@ a[href$=".pdf"]:after
     <p class="title">Sex and Gender in the Computer Graphics Research Literature</p>
     <p class="authors"><span class=notme>Ana Dodik*</span>, <span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Theodore Kim, Amanda Phillips</span> (*joint first authors)</p>
     <p class="venue">SIGGRAPH Talk, 2022</p>
-    <p class="links"> <a href="pdf/papers/gender-as-a-variable.pdf">Paper</a> <a href="pdf/papers/gender-as-a-variable-supplement.pdf">Supplement</a> <a href="http://arxiv.org/abs/2206.00480">Arxiv</a> <a href="https://dl.acm.org/doi/10.1145/3532836.3536227">ACM</a> <a href="">Talk (TBD)</a></p>
+    <p class="links"> <a href="pdf/papers/gender-as-a-variable.pdf">Paper</a> <a href="pdf/papers/gender-as-a-variable-supplement.pdf">Supplement</a> <a href="http://arxiv.org/abs/2206.00480">Arxiv</a> <a href="https://dl.acm.org/doi/10.1145/3532836.3536227">ACM</a> <a href="https://youtu.be/GOn3-P6KZ9E">Talk</a></p>
   </div>
 </div>
 

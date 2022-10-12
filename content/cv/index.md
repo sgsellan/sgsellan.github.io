@@ -251,6 +251,8 @@ María Cristina Masaveu Peterson Foundation
 
 ## Referee Service
 
+**Eurographics Technical Papers**, 2022
+
 **CVPR DLGC Technical Papers**, 2022
 
 **ACM SIGGRAPH Technical Papers**, 2022
@@ -289,6 +291,51 @@ María Cristina Masaveu Peterson Foundation
 *16 hours of paid work on processing graduate school applications*
 
 ## Talks Given
+
+
+**Title TBD**, March 2023  
+*UCLA and CalTech's *Grundfest Memorial Lecture*, invited by Profs. Achuta Kadambi and Katie Bowman*  
+Virtual
+
+**Breaking Good: Fracture Modes for Realtime Simulation**, December 2022  
+*SIGGRAPH Asia Technical Papers talk*  
+Daegu, Korea
+
+**Sex and Gender in the Computer Graphics literature**, November 2022  
+*Queer in AI @ NeurIPS workshop*  
+New Orleans, U.S.
+
+**Sex and Gender in the Computer Graphics literature**, November 2022  
+*UNC Chapel Hill Computer Vision seminar invited by Professor Roni Sengupta*  
+Virtual
+
+**Uncertain Surface Reconstruction**, November 2022  
+*John Hopkins University Computer Graphics Seminar hosted by Prof. Misha Kazhdan*  
+Baltimore, U.S.
+
+**Uncertain Surface Reconstruction**, November 2022  
+*Columbia University Computer Graphics Seminar hosted by Prof. Changxi Zheng*  
+New York City, U.S.
+
+**Uncertain Surface Reconstruction**, November 2022  
+*NYU Computer Graphics Seminar hosted by Prof. Daniele Panozzo*  
+New York City, U.S.
+
+**Uncertain Surface Reconstruction**, November 2022  
+*MIT Computer Graphics Seminar hosted by Prof. Justin Solomon*  
+Cambridge, U.S.
+
+**Moving fast, breaking things, and putting them back together**, November 2022  
+*Inaugural Yale *Rising Stars* seminar hosted by Prof. Theodore Kim*  
+New Haven, U.S.
+
+**Moving fast, breaking things, and putting them back together**, November 2022  
+*Engineering and Applied Science Forum*  
+Virtual
+
+**Blender for academic papers**, October 2022  
+*Toronto Geometry and Architecture Summit*  
+Toronto, Canada
 
 **Sex and Gender in the Computer Graphics Literature**, August 2022  
 *SIGGRAPH Talk*  

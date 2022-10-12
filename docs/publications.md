@@ -117,7 +117,7 @@ a[href$=".pdf"]:after
       <p class="title">Stochastic Poisson Surface Reconstruction</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson</span></p>
       <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2022</p>
-      <p class="links"> <a href="pdf/papers/stochastic-psr.pdf">Paper</a> <a href="pdf/papers/stochastic-psr-lr.pdf">Paper (low resolution)</a> <a href="https://arxiv.org/abs/2206.15236">Arxiv</a> <a>Code (TBD)</a> <a>Talk (TBD)</a> </p>
+      <p class="links"> <a href="pdf/papers/stochastic-psr.pdf">Paper</a> <a href="pdf/papers/stochastic-psr-lr.pdf">Paper (low resolution)</a> <a href="https://arxiv.org/abs/2206.15236">Arxiv</a> <a href="https://www.dgp.toronto.edu/projects/stochastic-psr/">Project Page</a> <a>Code (TBD)</a> <a>Talk (TBD)</a> </p>
     </div>
   </div>
 
@@ -142,7 +142,7 @@ a[href$=".pdf"]:after
     <p class="title">Breaking Good: Fracture Modes for Realtime Destruction</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme> Jack Luong, Leticia Mattos Da Silva, Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson</span></p>
     <p class="venue">ACM Transactions on Graphics (to be presented at SIGGRAPH Asia), 2022</p>
-    <p class="links"> <a href="pdf/papers/fracture-harmonics.pdf">Paper</a> <a href="https://arxiv.org/abs/2111.05249">Arxiv</a> <a href="https://github.com/sgsellan/fracture-modes">Code</a> <a href="https://youtu.be/0k_tEk34nJQ">Video</a></p>
+    <p class="links"> <a href="pdf/papers/fracture-harmonics.pdf">Paper</a> <a href="https://arxiv.org/abs/2111.05249">Arxiv</a> <a href="https://github.com/sgsellan/fracture-modes">Code</a> <a href="https://youtu.be/0k_tEk34nJQ">Video</a> <a href="https://www.dgp.toronto.edu/projects/breaking-good/">Project Page</a></p>
   </div>
 </div>
 

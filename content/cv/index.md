@@ -329,6 +329,10 @@ Cambridge, U.S.
 *Inaugural Yale *Rising Stars* seminar hosted by Prof. Theodore Kim*  
 New Haven, U.S.
 
+**Uncertain Surface Reconstruction**, November 2022  
+*Dartmouth Computer Graphics Seminar hosted by Prof. Wojciech Jarosz*  
+Hanover, U.S.
+
 **Moving fast, breaking things, and putting them back together**, November 2022  
 *Engineering and Applied Science Forum*  
 Virtual

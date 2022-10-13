@@ -258,7 +258,7 @@ a[href$=".pdf"]:after
     <p class="title">Botsch-Kobbelt Local Remesher</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span></p>
     <p class="venue">A C++ and Python remeshing library</p>
-    <p class="links"> <a href="https://gpytoolbox.org">Code</a></p>
+    <p class="links"> <a href="https://github.com/sgsellan/botsch-kobbelt-remesher-libigl">Code</a></p>
   </div>
 </div>
 

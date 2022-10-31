@@ -146,6 +146,10 @@ Contributor
 Natural Sciences and Engineering Research Council of Canada (NSERC)  
 *150,000 CAD award given only to 166 graduate students across all of Canada and across all academic disciplines*
 
+**Connaught International Scholarship for Doctoral Students**, 2022  
+University of Toronto Department of Computer Science    
+*A 10,000 CAD award designed to assist graduate units in recruiting and supporting top international students*
+
 **Adobe Research Fellowship**, 2022  
 Adobe Research   
 *10,000 USD award given only to ten graduate students worldwide.*

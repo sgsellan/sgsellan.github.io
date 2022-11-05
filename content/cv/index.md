@@ -329,7 +329,7 @@ New York City, U.S.
 *MIT Computer Graphics Seminar hosted by Prof. Justin Solomon*  
 Cambridge, U.S.
 
-**Moving fast, breaking things, and putting them back together**, November 2022  
+**Uncertain Surface Reconstruction**, November 2022  
 *Inaugural Yale *Rising Stars* seminar hosted by Prof. Theodore Kim*  
 New Haven, U.S.
 

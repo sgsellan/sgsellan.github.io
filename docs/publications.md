@@ -129,7 +129,8 @@ a[href$=".pdf"]:after
     <div class="columns large-10">
       <p class="title">Breaking Bad: A Dataset for Geometric Fracture and Reassembly</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten*</span>, <span class=notme>Yun-Chun Chen*, Ziyi Wu*, Animesh Garg, Alec Jacobson</span> (*joint first authors)</p>
-      <p class="venue">NeurIPS 2022</p>
+      <p class="venue">Proceedings of Neural Information Processing Systems (NeurIPS) 2022</p>
+      <p class="authors">Featured (previously known as "Oral") paper</p>
       <p class="links"><a href="pdf/papers/breaking-bad.pdf">Paper</a> <a href="https://breaking-bad-dataset.github.io">Project Page</a>
     </div>
   </div>

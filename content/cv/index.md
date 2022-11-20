@@ -57,7 +57,8 @@ Undergraduate Research Intern
 
 **Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
 **Silvia Sellán\***, Yun-Chun Chen\*, Ziyi Wu\*, Animesh Garg, Alec Jacobson *(\*Joint First Authors)*   
-*NeurIPSs*
+*Proceedings of Neural Information Processing Systems (NeurIPS)*  
+Featured (previously known as "Oral") paper
 
 **Breaking Good: Fracture Modes for Realtime Destruction**, 2022  
 **Silvia Sellán**, Jack Luong, Letticia Mattos Da Silva,  

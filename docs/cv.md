@@ -294,39 +294,64 @@ María Cristina Masaveu Peterson Foundation
 *UCLA and CalTech's *Grundfest Memorial Lecture*, invited by Profs. Achuta Kadambi and Katie Bowman*  
 Virtual
 
-**Breaking Good: Fracture Modes for Realtime Simulation**, December 2022  
+
+**Stochastic Poisson Surface Reconstruction**, December 2022  
 *SIGGRAPH Asia Technical Papers talk*  
-Daegu, Korea
+Daegu, South Korea
+
+**Breaking Good: Fracture Modes for Realtime Destruction**, December 2022  
+*SIGGRAPH Asia Technical Papers talk*  
+Daegu, South Korea
+
+**Breaking Bad: A Dataset for Geometric Fracture Reassembly**, December 2022  
+*NeurIPS featured (oral) talk*  
+New Orleans, U.S.
 
 **Sex and Gender in the Computer Graphics literature**, November 2022  
 *Queer in AI @ NeurIPS workshop*  
 New Orleans, U.S.
 
+**"Geometry +": Uncertain Surface Reconstruction**, November 2022  
+*University of Montreal Computer Graphics Seminar hosted by Prof. Mikhail Bessmeltsev*  
+Montreal, Canada
+
+**"Geometry +": Moving fast, breaking things and putting them back together**, November 2022  
+*Invited talk at Ubisoft La Forge*  
+Montreal, Canada
+
+**"Geometry +": Moving fast, breaking things and putting them back together**, November 2022  
+*McGill University Computer Graphics Seminar hosted by Prof. Paul Kry*  
+Montreal, Canada
+
 **Sex and Gender in the Computer Graphics literature**, November 2022  
 *UNC Chapel Hill Computer Vision seminar invited by Professor Roni Sengupta*  
 Virtual
 
-**Uncertain Surface Reconstruction**, November 2022  
+**Virtual Bodies that Matter: A trans researcher's career in computer graphics**, November 2022  
+*Georgewotn University's Gender, Film and Media Studies seminar, hosted by Prof. Amanda Phillips*  
+Washington, D.C., U.S.
+
+**"Geometry +": Uncertain Surface Reconstruction**, November 2022  
 *John Hopkins University Computer Graphics Seminar hosted by Prof. Misha Kazhdan*  
 Baltimore, U.S.
 
-**Uncertain Surface Reconstruction**, November 2022  
+**"Geometry +": Uncertain Surface Reconstruction**, November 2022  
 *Columbia University Computer Graphics Seminar hosted by Prof. Changxi Zheng*  
 New York City, U.S.
 
-**Uncertain Surface Reconstruction**, November 2022  
+**"Geometry +": Uncertain Surface Reconstruction**, November 2022  
 *NYU Computer Graphics Seminar hosted by Prof. Daniele Panozzo*  
 New York City, U.S.
 
-**Uncertain Surface Reconstruction**, November 2022  
+**"Geometry +": Uncertain Surface Reconstruction**, November 2022  
 *MIT Computer Graphics Seminar hosted by Prof. Justin Solomon*  
 Cambridge, U.S.
 
-**Uncertain Surface Reconstruction**, November 2022  
+**"Geometry +": Uncertain Surface Reconstruction**, November 2022  
 *Inaugural Yale *Rising Stars* seminar hosted by Prof. Theodore Kim*  
 New Haven, U.S.
 
-**Uncertain Surface Reconstruction**, November 2022  
+**"Geometry +": Uncertain Surface Reconstruction**, November 2022  
 *Dartmouth Computer Graphics Seminar hosted by Prof. Wojciech Jarosz*  
 Hanover, U.S.
 

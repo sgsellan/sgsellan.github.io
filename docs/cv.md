@@ -235,11 +235,14 @@ María Cristina Masaveu Peterson Foundation
 **SIGGRAPH Research Career Development Committee**, 2021 - Present  
 *Committee member (in undergraduate mentorship subcommittee)*
 
-**CVPR Deep Learning for Geometric Computing**, 2022  
+**CVPR Deep Learning for Geometric Computing**, 2023  
 *Organizing committee member*
 
 **Women in Graphics Research (WiGRAPH)**, 2020-2022  
 *Executive Comittee Member*
+
+**CVPR Deep Learning for Geometric Computing**, 2022  
+*Organizing committee member*
 
 **ICCV Deep Learning for Geometric Computing**, 2021  
 *Program Comittee Member*

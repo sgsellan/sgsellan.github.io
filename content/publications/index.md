@@ -126,7 +126,7 @@ a[href$=".pdf"]:after
       <p class="title">Stochastic Poisson Surface Reconstruction</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson</span></p>
       <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2022</p>
-      <p class="links"> <a href="pdf/papers/stochastic-psr.pdf">Paper</a> <a href="pdf/papers/stochastic-psr-lr.pdf">Paper (low resolution)</a> <a href="https://www.dgp.toronto.edu/projects/stochastic-psr/">Project Page</a> <a href="https://gpytoolbox.org/poisson_surface_reconstruction/">Code</a></p>
+      <p class="links"> <a href="pdf/papers/stochastic-psr.pdf">Paper</a> <a href="pdf/papers/stochastic-psr-lr.pdf">Paper (low resolution)</a> <a href="https://www.dgp.toronto.edu/projects/stochastic-psr/">Project Page</a> <a href="https://gpytoolbox.org/0.0.3/poisson_surface_reconstruction/">Code</a></p>
     </div>
   </div>
 

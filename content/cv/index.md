@@ -243,6 +243,9 @@ María Cristina Masaveu Peterson Foundation
 **SIGGRAPH Research Career Development Committee**, 2021 - Present  
 *Committee member (in undergraduate mentorship subcommittee)*
 
+**Summer Geometry Initiative**, 2023  
+*Steering Committee member*
+
 **CVPR Deep Learning for Geometric Computing**, 2023  
 *Organizing committee member*
 

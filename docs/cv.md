@@ -254,6 +254,10 @@ María Cristina Masaveu Peterson Foundation
 
 ## Referee Service
 
+**IEEE Transactions on Pattern Analysis and Machine Intelligence**, 2023
+
+**The Visual Computer (TVCJ)**, 2023
+
 **Eurographics Technical Papers**, 2022
 
 **CVPR DLGC Technical Papers**, 2022
@@ -300,6 +304,9 @@ María Cristina Masaveu Peterson Foundation
 *UCLA and CalTech's *Grundfest Memorial Lecture*, invited by Profs. Achuta Kadambi and Katie Bowman*  
 Virtual
 
+**"Geometry +": Moving fast, breaking things and putting them back together**, February 2023  
+*Vector Institute Endless Summer School: NeurIPS 2022 Highlights*  
+Toronto, Canada
 
 **Stochastic Poisson Surface Reconstruction**, December 2022  
 *SIGGRAPH Asia Technical Papers talk*  

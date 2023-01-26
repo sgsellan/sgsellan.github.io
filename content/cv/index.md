@@ -237,6 +237,9 @@ María Cristina Masaveu Peterson Foundation
 
 ## Committee Service
 
+**CVPR Deep Learning for Geometric Computing**, 2023  
+*Organizing committee member*
+
 **ACM SIGGRAPH Women in Graphics Research Community Group**, 2022 - Present  
 *Executive Comittee Member*
 
@@ -245,9 +248,6 @@ María Cristina Masaveu Peterson Foundation
 
 **Summer Geometry Initiative**, 2023  
 *Steering Committee member*
-
-**CVPR Deep Learning for Geometric Computing**, 2023  
-*Organizing committee member*
 
 **Women in Graphics Research (WiGRAPH)**, 2020-2022  
 *Executive Comittee Member*

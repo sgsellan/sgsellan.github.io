@@ -147,6 +147,10 @@ Contributor
 Natural Sciences and Engineering Research Council of Canada (NSERC)  
 *150,000 CAD award given only to 166 graduate students across all of Canada and across all academic disciplines*
 
+**Beatrice "Trixie" Worsley Graduate Scholarship in Computer Science**, 2023  
+University of Toronto Department of Computer Science    
+*4,000 CAD award given to a student who has taken an active role in promoting the role of women in Computer Science*
+
 **Connaught International Scholarship for Doctoral Students**, 2022  
 University of Toronto Department of Computer Science    
 *A 10,000 CAD award designed to assist graduate units in recruiting and supporting top international students*

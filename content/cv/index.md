@@ -266,6 +266,8 @@ María Cristina Masaveu Peterson Foundation
 
 ## Referee Service
 
+**ACM SIGGRAPH Technical Papers**, 2023
+
 **IEEE Transactions on Pattern Analysis and Machine Intelligence**, 2023
 
 **The Visual Computer (TVCJ)**, 2023

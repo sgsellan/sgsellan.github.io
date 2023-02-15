@@ -250,6 +250,9 @@ María Cristina Masaveu Peterson Foundation
 **SIGGRAPH Research Career Development Committee**, 2021 - Present  
 *Committee member (in undergraduate mentorship subcommittee)*
 
+**Eurographics Symposium on Geometry Processing (SGP)**, 2023  
+*International Program Committee member*
+
 **Summer Geometry Initiative**, 2023  
 *Steering Committee member*
 
@@ -265,6 +268,8 @@ María Cristina Masaveu Peterson Foundation
 
 
 ## Referee Service
+
+**Eurographics Symposium on Geometry Processing (SGP)**, 2023
 
 **ACM SIGGRAPH Technical Papers**, 2023
 

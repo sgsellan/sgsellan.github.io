@@ -4,7 +4,15 @@
         <link>https://www.silviasellan.com/posts.html</link>
         <description>All Posts | Silvia Sellán</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sgsellan@cs.toronto.edu (Silvia Sellán)</managingEditor>
-            <webMaster>sgsellan@cs.toronto.edu (Silvia Sellán)</webMaster><lastBuildDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.silviasellan.com/posts.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>sgsellan@cs.toronto.edu (Silvia Sellán)</webMaster><lastBuildDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.silviasellan.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines </title>
+    <link>https://www.silviasellan.com/gpytoolbox-2d-prototyping.html</link>
+    <pubDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://www.silviasellan.com/gpytoolbox-2d-prototyping.html</guid>
+    <description><![CDATA[Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
+1  pip install gpytoolbox   Gpytoolbox shines when it comes to letting you test out your research ideas on simple 2D geometry before you commit to more complex three-dimensional examples and elaborately optimized implementations. Often, our final algorithm will use triangle meshes to represent surfaces in 3D. This means that, when prototyping in 2D, we will work with its equivalent: curves built by connecting flat segments (edges), which are usually called polylines.]]></description>
+</item><item>
     <title>Compressing a massive TeX folder for submitting to arxiv</title>
     <link>https://www.silviasellan.com/arxiv_compressing.html</link>
     <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
@@ -76,13 +84,5 @@ In the last five days alone, I have gotten four emails asking for advice about a
     <author>Author</author>
     <guid>https://www.silviasellan.com/gender_question.html</guid>
     <description><![CDATA[In my years in academia as the only trans person in the roomTM, I have often been asked for or volunteered my advice on how to ask for people&rsquo;s name and gender on official forms like conference surveys, program registrations or award applications. I tend to always reply with a version of the same answer, so in the interest of my own reference and that of rooms without any trans people in them, I post it publicly here.]]></description>
-</item><item>
-    <title>Rendering an animation with Blender</title>
-    <link>https://www.silviasellan.com/blender_videos.html</link>
-    <pubDate>Sun, 24 Jan 2021 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://www.silviasellan.com/blender_videos.html</guid>
-    <description><![CDATA[Every few months, because of a deadline coming up, I find myself forgetting and having to look up these steps in old Slack threads and LaTeX comments. Also, it took me a long time to learn these steps because of the lack of a guide like this, so I write this in hopes it may help young students starting out.
-I will assume that you have a set of meshes in .]]></description>
 </item></channel>
 </rss>

@@ -311,9 +311,13 @@ María Cristina Masaveu Peterson Foundation
 ## Talks Given
 
 <!-- TO DO DOUBLE CHECK WITH PDF -->
-**Title TBD**, March 2023  
+**Uncertain Surface Reconstruction**, March 2023  
 *UCLA and CalTech's *Grundfest Memorial Lecture*, invited by Profs. Achuta Kadambi and Katie Bowman*  
 Virtual
+
+**Research in Geometry Processing**, February 2023   
+*University of Toronto Undergraduate Graphics Club*  
+Toronto, Canada
 
 **"Geometry +": Moving fast, breaking things and putting them back together**, February 2023  
 *Vector Institute Endless Summer School: NeurIPS 2022 Highlights*  

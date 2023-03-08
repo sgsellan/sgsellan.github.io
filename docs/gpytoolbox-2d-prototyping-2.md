@@ -1,8 +1,5 @@
----
-title: "Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines"
-date: 2023-03-04
-draft: false
----
+# Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines
+
 
 [*Gpytoolbox* version 0.1.0](https://gpytoolbox.org/0.1.0/) has just been released!! You can install it directly through `pip`:
 

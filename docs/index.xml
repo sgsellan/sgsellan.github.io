@@ -15,6 +15,15 @@
     <description><![CDATA[Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
 1  pip install gpytoolbox   Gpytoolbox shines when it comes to letting you test out your research ideas on simple 2D geometry before you commit to more complex three-dimensional examples and elaborately optimized implementations. Often, our final algorithm will use triangle meshes to represent surfaces in 3D. This means that, when prototyping in 2D, we will work with its equivalent: curves built by connecting flat segments (edges), which are usually called polylines.]]></description>
 </item><item>
+    <title>Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines</title>
+    <link>https://www.silviasellan.com/gpytoolbox-2d-prototyping-2.html</link>
+    <pubDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://www.silviasellan.com/gpytoolbox-2d-prototyping-2.html</guid>
+    <description><![CDATA[Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
+1  pip install gpytoolbox   This is the second in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
+In the last tutorial, we saw how to load simple two-dimensional polylines into Python using gpytoolbox to quickly test our research code on.]]></description>
+</item><item>
     <title>Compressing a massive TeX folder for submitting to arxiv</title>
     <link>https://www.silviasellan.com/arxiv_compressing.html</link>
     <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
@@ -79,12 +88,5 @@ It came at a strange time, though, as we were getting daily reminders of the his
     <guid>https://www.silviasellan.com/vanier_scholarship.html</guid>
     <description><![CDATA[In 2021, I won a Vanier Canada Graduate Scholarship. Out of 190 total eligible NSERC applicants, I was ranked 43, with scores of 6.50 in Academic Excellence, 6.25 in Research Potential and 7.00 in Leadership (I don&rsquo;t really know a lot about what these numbers mean). NSERC gave out of 55 scholarships, so I got one.
 In the last five days alone, I have gotten four emails asking for advice about applying, so out of desire to (1) avoid redundancy and (2) not help only those who dare or are encouraged enough to email me, I am posting my answer here.]]></description>
-</item><item>
-    <title>Silvia, how would you ask about name and gender in this form?</title>
-    <link>https://www.silviasellan.com/gender_question.html</link>
-    <pubDate>Sun, 04 Jul 2021 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://www.silviasellan.com/gender_question.html</guid>
-    <description><![CDATA[In my years in academia as the only trans person in the roomTM, I have often been asked for or volunteered my advice on how to ask for people&rsquo;s name and gender on official forms like conference surveys, program registrations or award applications. I tend to always reply with a version of the same answer, so in the interest of my own reference and that of rooms without any trans people in them, I post it publicly here.]]></description>
 </item></channel>
 </rss>

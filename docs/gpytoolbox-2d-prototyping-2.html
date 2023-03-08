@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines - Silvia Sellán</title><script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KB4LKK966Y');
+</script>
+<meta name="Description" content="PhD student at the University of Toronto"><meta property="og:title" content="Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines" />
+<meta property="og:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
+1  pip install gpytoolbox   This is the second in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
+In the last tutorial, we saw how to load simple two-dimensional polylines into Python using gpytoolbox to quickly test our research code on." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.silviasellan.com/gpytoolbox-2d-prototyping-2.html" /><meta property="og:image" content="https://www.silviasellan.com/images/art/rushmore.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-04T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.silviasellan.com/images/art/rushmore.png"/>
+
+<meta name="twitter:title" content="Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines"/>
+<meta name="twitter:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
+1  pip install gpytoolbox   This is the second in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
+In the last tutorial, we saw how to load simple two-dimensional polylines into Python using gpytoolbox to quickly test our research code on."/>
+<meta name="application-name" content="Silvia Sellán">
+<meta name="apple-mobile-web-app-title" content="Silvia Sellán"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="./site.webmanifest"><link rel="canonical" href="https://www.silviasellan.com/gpytoolbox-2d-prototyping-2.html" /><link rel="prev" href="https://www.silviasellan.com/arxiv_compressing.html" /><link rel="next" href="https://www.silviasellan.com/gpytoolbox-2d-prototyping.html" /><link rel="stylesheet" href="./lib/normalize/normalize.min.css"><link rel="stylesheet" href="./css/style.min.css"><link rel="stylesheet" href="./lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="./lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.silviasellan.com\/gpytoolbox-2d-prototyping-2.html"
+        },"genre": "posts","wordcount":  442 ,
+        "url": "https:\/\/www.silviasellan.com\/gpytoolbox-2d-prototyping-2.html","datePublished": "2023-03-04T00:00:00+00:00","dateModified": "2023-03-04T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Silvia Sellán"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="./publications.html"> Publications </a><a class="menu-item" href="./cv.html"> CV </a><a class="menu-item" href="./art.html"> Art? </a><a class="menu-item" href="./posts.html"> Blog </a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline"> Paper writing </a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing"> New students </a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank"> Food </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="./" title="Silvia Sellán">Silvia Sellán</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="./publications.html" title="">Publications</a><a class="menu-item" href="./cv.html" title="">CV</a><a class="menu-item" href="./art.html" title="">Art?</a><a class="menu-item" href="./posts.html" title="">Blog</a><a class="menu-item" href="./siggraph_submission_resources.html" title="A compiled list of resources to help with your paper deadline">Paper writing</a><a class="menu-item" href="./grad_school.html" title="Resources for students considering starting in Geometry Processing">New students</a><a class="menu-item" href="https://pritirrecetas.github.io/en/" title="Food Blog" rel="noopener noreffer" target="_blank">Food</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines</h1><div class="content" id="content"><p><a href="https://gpytoolbox.org/0.1.0/" target="_blank" rel="noopener noreffer"><em>Gpytoolbox</em> version 0.1.0</a> has just been released!! You can install it directly through <code>pip</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pip install gpytoolbox
+</code></pre></td></tr></table>
+</div>
+</div><p>This is the second in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries <a href="https://www.silviasellan.com/posts.html" target="_blank" rel="noopener noreffer">here</a>. Today, we are looking at how to compute distances to 2D polylines.</p>
+<p>In the last tutorial, we saw how to load simple two-dimensional polylines into Python using gpytoolbox to quickly test our research code on. The reason for using polylines as a shape representation is that they are the 2D equivalent to the very common 3D representation of triangle meshes. However, meshes are not the only way we represent geometry. In the next tutorials, we will see how to convert our 2D polylines into other representations.</p>
+<p>One very common shape representation is <em>point clouds</em>, or unordered sets of points in space. This is the format in which most real-world geometry is captured; for example, by the scanner on an autonomous car. If we are testing a research idea that will work on point clouds, we may want a good way of generating 2D point clouds. We can do this by sampling random points on a polyline using Gpytoolbox&rsquo;s <code>random_points_on_mesh</code>:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Let&#39;s begin by loading the image into a polyline</span>
+<span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">png2poly</span><span class="p">,</span> <span class="n">edge_indices</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;switzerland.png&#34;</span><span class="p">)</span>
+<span class="n">vertices</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="n">edge_indices</span><span class="p">(</span><span class="n">vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/gpytoolbox-tutorial/tutorial-2d-prototyping_24_0.png"
+        data-srcset="images/gpytoolbox-tutorial/tutorial-2d-prototyping_24_0.png, images/gpytoolbox-tutorial/tutorial-2d-prototyping_24_0.png 1.5x, images/gpytoolbox-tutorial/tutorial-2d-prototyping_24_0.png 2x"
+        data-sizes="auto"
+        alt="images/gpytoolbox-tutorial/tutorial-2d-prototyping_24_0.png"
+        title="png" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Now, call random_points_on_mesh to generate a point cloud</span>
+<span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">random_points_on_mesh</span>
+<span class="n">point_cloud</span> <span class="o">=</span> <span class="n">random_points_on_mesh</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">point_cloud</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/gpytoolbox-tutorial/tutorial-2d-prototyping_25_0.png"
+        data-srcset="images/gpytoolbox-tutorial/tutorial-2d-prototyping_25_0.png, images/gpytoolbox-tutorial/tutorial-2d-prototyping_25_0.png 1.5x, images/gpytoolbox-tutorial/tutorial-2d-prototyping_25_0.png 2x"
+        data-sizes="auto"
+        alt="images/gpytoolbox-tutorial/tutorial-2d-prototyping_25_0.png"
+        title="png" /></p>
+<p>Et voilà! A beautifully neutral point cloud. For some applications, we may not be content with a point cloud; instead, we may want to generate an <em>oriented</em> point cloud where each point is also endowed with a direction perpendicular to the surface at that point. This is also an easy representation to get using gpytoolbox: since all the points fall on some flat edge, we need only know <em>which</em> edge and rotate it by ninety degrees. This is what the <code>return_indices</code> parameter in <code>random_points_on_mesh</code> is for:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">point_cloud</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">random_points_on_mesh</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">return_indices</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># What are the edges that the points are on?</span>
+<span class="n">edge_vectors</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">edges</span><span class="p">[</span><span class="n">I</span><span class="p">,</span><span class="mi">0</span><span class="p">],:]</span> <span class="o">-</span> <span class="n">vertices</span><span class="p">[</span><span class="n">edges</span><span class="p">[</span><span class="n">I</span><span class="p">,</span><span class="mi">1</span><span class="p">],:]</span>
+<span class="c1"># Rotate the edge vectors by 90 degrees</span>
+<span class="n">edge_vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="n">edge_vectors</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">edge_vectors</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]]])</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+<span class="c1"># Normalize the edge vectors so they have unit norm</span>
+<span class="n">normal_vectors</span> <span class="o">=</span> <span class="n">edge_vectors</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">edge_vectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span><span class="kc">None</span><span class="p">]</span>
+<span class="c1"># Plot the point cloud and normals</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">point_cloud</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">point_cloud</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">point_cloud</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">normal_vectors</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">normal_vectors</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="./svg/loading.min.svg"
+        data-src="images/gpytoolbox-tutorial/tutorial-2d-prototyping_27_0.png"
+        data-srcset="images/gpytoolbox-tutorial/tutorial-2d-prototyping_27_0.png, images/gpytoolbox-tutorial/tutorial-2d-prototyping_27_0.png 1.5x, images/gpytoolbox-tutorial/tutorial-2d-prototyping_27_0.png 2x"
+        data-sizes="auto"
+        alt="images/gpytoolbox-tutorial/tutorial-2d-prototyping_27_0.png"
+        title="png" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+            
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="./gpytoolbox-2d-prototyping-2.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="./">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="./arxiv_compressing.html" class="prev" rel="prev" title="Compressing a massive TeX folder for submitting to arxiv"><i class="fas fa-angle-left fa-fw"></i>Compressing a massive TeX folder for submitting to arxiv</a>
+            <a href="./gpytoolbox-2d-prototyping.html" class="next" rel="next" title="Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines ">Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines <i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"></div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="./lib/katex/katex.min.css"><link rel="stylesheet" href="./lib/katex/copy-tex.min.css"><script type="text/javascript" src="./lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="./lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="./lib/lunr/lunr.min.js"></script><script type="text/javascript" src="./lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="./lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="./lib/katex/katex.min.js"></script><script type="text/javascript" src="./lib/katex/auto-render.min.js"></script><script type="text/javascript" src="./lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="./lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="./js/theme.min.js"></script></body>
+</html>

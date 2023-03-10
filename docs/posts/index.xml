@@ -22,6 +22,15 @@
 1  pip install gpytoolbox   This is the second in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
 In the last tutorial, we saw how to load simple two-dimensional polylines into Python using gpytoolbox to quickly test our research code on.]]></description>
 </item><item>
+    <title>Quick 2D prototyping with Gpytoolbox III: Distances to 2D polylines</title>
+    <link>https://www.silviasellan.com/gpytoolbox-2d-prototyping-3.html</link>
+    <pubDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://www.silviasellan.com/gpytoolbox-2d-prototyping-3.html</guid>
+    <description><![CDATA[Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
+1  pip install gpytoolbox   This is the third in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
+There are many reasons why you may want to compute the minimum distance from a given point in 2D to a polyline: for example, to guide sampling or as a stopping criterion in iterative algorithms.]]></description>
+</item><item>
     <title>Compressing a massive TeX folder for submitting to arxiv</title>
     <link>https://www.silviasellan.com/arxiv_compressing.html</link>
     <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
@@ -78,13 +87,5 @@ When it is your time to prepare a PhD Qualifying Exam or PhD Yearly Checkpoint, 
     <description><![CDATA[Today, September 30th 2021, marks the first National Day for Truth and Reconciliation.
 A few months ago, I was awarded an NSERC Vanier Graduate Scholarship. I felt incredibly honoured that, less than two years after arriving in this country, the Canadian government was making a choice to bet on my research and spend hard-earned Canadian taxpayer’s money on me.
 It came at a strange time, though, as we were getting daily reminders of the historical and present systemic neglect, erasure and discrimination faced by Indigenous people in Canada.]]></description>
-</item><item>
-    <title>My application for the Vanier Canada Graduate Scholarship</title>
-    <link>https://www.silviasellan.com/vanier_scholarship.html</link>
-    <pubDate>Mon, 09 Aug 2021 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://www.silviasellan.com/vanier_scholarship.html</guid>
-    <description><![CDATA[In 2021, I won a Vanier Canada Graduate Scholarship. Out of 190 total eligible NSERC applicants, I was ranked 43, with scores of 6.50 in Academic Excellence, 6.25 in Research Potential and 7.00 in Leadership (I don&rsquo;t really know a lot about what these numbers mean). NSERC gave out of 55 scholarships, so I got one.
-In the last five days alone, I have gotten four emails asking for advice about applying, so out of desire to (1) avoid redundancy and (2) not help only those who dare or are encouraged enough to email me, I am posting my answer here.]]></description>
 </item></channel>
 </rss>

@@ -10,6 +10,8 @@ draft: false
 
 - Chair mesh: [chair.obj](images/blender-tutorial/chair.obj)
 
+- Dog mesh: [dog.obj](images/blender-tutorial/dog.obj)
+
 - Static design exercise: 
   - [g.obj](images/blender-tutorial/g.obj) 
   - [g-decimated.obj](images/blender-tutorial/g-decimated.obj) 
@@ -53,6 +55,8 @@ draft: false
 - Keyframing object
 - Keyframing camera
 - Pivoting camera
+- Following curve: modifier "follow curve", place camera at origin
+- Change lights??
 - Sequences: laplacian smoothing
 - Sequences: stop motion OBJs add-on
 - *Examples: Glass, swept volume carving*

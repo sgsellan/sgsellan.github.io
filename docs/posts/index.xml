@@ -12,6 +12,7 @@
     <guid>https://www.silviasellan.com/blender_course.html</guid>
     <description><![CDATA[Resources:   Template file: template.blend
   Chair mesh: chair.obj
+  Dog mesh: dog.obj
   Static design exercise:
  g.obj g-decimated.obj i.obj i-decimated.obj    Animation exercise:
  xwing-face.abc xwing-right.abc    Scripting exercise:

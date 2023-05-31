@@ -4,7 +4,19 @@
         <link>https://www.silviasellan.com/posts.html</link>
         <description>All Posts | Silvia Sellán</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sgsellan@cs.toronto.edu (Silvia Sellán)</managingEditor>
-            <webMaster>sgsellan@cs.toronto.edu (Silvia Sellán)</webMaster><lastBuildDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.silviasellan.com/posts.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>sgsellan@cs.toronto.edu (Silvia Sellán)</webMaster><lastBuildDate>Mon, 29 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://www.silviasellan.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>Graphics Interface Course: Blender for Academic papers</title>
+    <link>https://www.silviasellan.com/blender_course.html</link>
+    <pubDate>Mon, 29 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://www.silviasellan.com/blender_course.html</guid>
+    <description><![CDATA[Resources:   Template file: template.blend
+  Chair mesh: chair.obj
+  Static design exercise:
+ g.obj g-decimated.obj i.obj i-decimated.obj    Animation exercise:
+ xwing-face.abc xwing-right.abc    Scripting exercise:
+ groundtruth.obj point_cloud.ply      ]]></description>
+</item><item>
     <title>Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines </title>
     <link>https://www.silviasellan.com/gpytoolbox-2d-prototyping.html</link>
     <pubDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</pubDate>
@@ -78,14 +90,5 @@ These are really interesting topics, but they can be overwhelming if you are an 
     <guid>https://www.silviasellan.com/phd_committee.html</guid>
     <description><![CDATA[In my experience, PhD Committee Meetings are an obscure, secretive part of the PhD requirements. One reason for this is that they vary greatly from student to student and discipline to discipline. Still, it is undeniably yet another way in which people without family/friends in academia are gatekept away from it.
 When it is your time to prepare a PhD Qualifying Exam or PhD Yearly Checkpoint, it is likely you have never even seen what one looks like before, since they are private events, and have to rely on asking around for examples of successful ones.]]></description>
-</item><item>
-    <title>National Day for Truth and Reconciliation</title>
-    <link>https://www.silviasellan.com/truth_and_reconciliation.html</link>
-    <pubDate>Thu, 30 Sep 2021 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://www.silviasellan.com/truth_and_reconciliation.html</guid>
-    <description><![CDATA[Today, September 30th 2021, marks the first National Day for Truth and Reconciliation.
-A few months ago, I was awarded an NSERC Vanier Graduate Scholarship. I felt incredibly honoured that, less than two years after arriving in this country, the Canadian government was making a choice to bet on my research and spend hard-earned Canadian taxpayer’s money on me.
-It came at a strange time, though, as we were getting daily reminders of the historical and present systemic neglect, erasure and discrimination faced by Indigenous people in Canada.]]></description>
 </item></channel>
 </rss>

@@ -46,6 +46,15 @@ In the last tutorial, we saw how to load simple two-dimensional polylines into P
 1  pip install gpytoolbox   This is the third in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
 There are many reasons why you may want to compute the minimum distance from a given point in 2D to a polyline: for example, to guide sampling or as a stopping criterion in iterative algorithms.]]></description>
 </item><item>
+    <title>Rendering static images and animations programatically using Blender scripts</title>
+    <link>https://www.silviasellan.com/blender_course_scripting.html</link>
+    <pubDate>Sun, 29 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://www.silviasellan.com/blender_course_scripting.html</guid>
+    <description><![CDATA[Introduction: showing scripting screen in GUI Let&rsquo;s open any Blender file, like our template file, and let&rsquo;s fine-tune it a little bit; for example, by changing the main object&rsquo;s position.
+We can now navigate to the scripting window by clicking on the top right, next to compositing, to find something like this
+If we look closely at the console of the left, we can see a history of all the recent commands that have been applied to this file through its user interface.]]></description>
+</item><item>
     <title>Compressing a massive TeX folder for submitting to arxiv</title>
     <link>https://www.silviasellan.com/arxiv_compressing.html</link>
     <pubDate>Wed, 30 Mar 2022 00:00:00 &#43;0000</pubDate>
@@ -85,13 +94,5 @@ Diagnosis: This happens because you am declaring a variable and calling it witho
     <guid>https://www.silviasellan.com/blender_figure.html</guid>
     <description><![CDATA[There are a lot of great Blender tutorials online (e.g., the classic donut tutorial by Blender Guru), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films. Therefore they go into depth on how to model a shape, how to pick the best lighting, how to design a material, create textures, etc.
 These are really interesting topics, but they can be overwhelming if you are an academic and all you want is to render your object beautifully for a SIGGRAPH paper figure.]]></description>
-</item><item>
-    <title>Preparing PhD Committee Meetings</title>
-    <link>https://www.silviasellan.com/phd_committee.html</link>
-    <pubDate>Thu, 07 Oct 2021 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://www.silviasellan.com/phd_committee.html</guid>
-    <description><![CDATA[In my experience, PhD Committee Meetings are an obscure, secretive part of the PhD requirements. One reason for this is that they vary greatly from student to student and discipline to discipline. Still, it is undeniably yet another way in which people without family/friends in academia are gatekept away from it.
-When it is your time to prepare a PhD Qualifying Exam or PhD Yearly Checkpoint, it is likely you have never even seen what one looks like before, since they are private events, and have to rely on asking around for examples of successful ones.]]></description>
 </item></channel>
 </rss>

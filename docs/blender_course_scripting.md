@@ -1,4 +1,6 @@
-# GI 2023 Blender Course IV: Rendering static images and animations programatically using Blender scripts
+# Rendering static images and animations programatically using Blender scripts
+
+
 
 
 
@@ -685,9 +687,9 @@ mesh = render_utility.plot_our_mesh(path_to_mesh)
 render_utility.render_scene(image_path,cam)
 ```
 
-### Leveraging render-specific module to make a new figure
+#### Leveraging render-specific module to make a new figure
 
-If, for example, I want to make a new script comparing three objs in `comparison/`,
+If, for example, I want to make a new script comparing three objs ([ours](images/blender-tutorial/ours.obj), [theirs](images/blender-tutorial/theirs.obj) and [the input](images/blender-tutorial/input.obj)) in `comparison/`,
 ```
 dir/  
 └── BlenderToolbox/  
@@ -751,5 +753,19 @@ Et voilà!
 ![](images/blender-gi-course/scripting-21.png)
 
 ![](images/blender-gi-course/scripting-22.png)
+
+#### Point cloud
+
+We only need to add this to `misc.py`:
+
+```python
+def plot_point_cloud(path,radius=0.003,color=ourcolor,rotation=(90,0,0)):
+    mesh = bt.readMesh(path, (0,0,0), rotation, scale=(1,1,1))
+    # # set material 
+    ptColor = bt.colorObj(color, 0.5, 1.3, 1.0, 0.0, 0.0)
+    ptSize = radius
+    bt.setMat_pointCloud(mesh, ptColor, ptSize)
+    return mesh
+```
 
 #### *Exercise: slices*

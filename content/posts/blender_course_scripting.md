@@ -1,10 +1,12 @@
 ---
-title: "GI 2023 Blender Course IV: Rendering static images and animations programatically using Blender scripts"
-date: 2023-05-29
-draft: true
+title: "Rendering static images and animations programatically using Blender scripts"
+date: 2022-05-29
+draft: false
 hiddenFromHomePage: true
 hiddenFromSearch: true
 ---
+
+
 
 
 #### Introduction: showing scripting screen in GUI

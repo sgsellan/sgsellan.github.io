@@ -8,7 +8,13 @@ hiddenFromSearch: true
 
 ## Resources:
 
+
+
 - Template file: [template.blend](images/blender-tutorial/template.blend)
+
+- Easy PBR add-on: [download](https://codeofart.gumroad.com/l/EasyPBR)
+
+- Stop motion OBJ add-on: [download](https://github.com/neverhood311/Stop-motion-OBJ)
 
 - Chair mesh: [chair.obj](images/blender-tutorial/chair.obj)
 

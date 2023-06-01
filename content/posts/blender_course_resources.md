@@ -1,7 +1,9 @@
 ---
-title: "Graphics Interface Course: Blender for Academic papers"
+title: "GI 2023 Blender Course I: Resources"
 date: 2023-05-29
 draft: false
+hiddenFromHomePage: true
+hiddenFromSearch: true
 ---
 
 ## Resources:

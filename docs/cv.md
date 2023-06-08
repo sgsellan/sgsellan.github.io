@@ -311,6 +311,51 @@ María Cristina Masaveu Peterson Foundation
 ## Talks Given
 
 <!-- TO DO DOUBLE CHECK WITH PDF -->
+
+**"Geometry +": Uncertain Surface Reconstruction**, June 2023  
+*INRIA*  
+Nancy, France
+
+**"Geometry +": Uncertain Surface Reconstruction**, June 2023  
+*INRIA*  
+Lyon, France
+
+**"Geometry +": Uncertain Surface Reconstruction**, June 2023  
+*Adobe Research*  
+London, U.K.
+
+**"Geometry +": Uncertain Surface Reconstruction**, June 2023  
+*UCL*  
+London, U.K.
+
+**"Geometry +": Uncertain Surface Reconstruction**, June 2023  
+*UBC Computer Graphics Seminar hosted by Prof. Alla Sheffer*  
+Vancouver, Canada
+
+**"Geometry +": Uncertain Surface Reconstruction**, June 2023  
+*SFU Computer Vision Seminar hosted by Prof. Andrea Tagliasacchi*  
+Vancouver, Canada
+
+**"Geometry +": Uncertain Surface Reconstruction**, May 2023  
+*EPFL Computer Graphics Seminar hosted by Prof. Mark Pauly*  
+Lausanne, Switzerland
+
+**"Geometry +": Uncertain Surface Reconstruction**, May 2023  
+*University of Milan Computer Graphics Seminar hosted by Prof. Marco Tarini*  
+Lausanne, Switzerland
+
+**"Geometry +": Uncertain Surface Reconstruction**, May 2023  
+*ETH Zürich Computer Graphics Seminar hosted by Prof. Olga Sorkine-Hornung*  
+Zürich, Switzerland
+
+**"Geometry +": Moving fast, breaking things, and putting them back together**, April 2023  
+*University of Southern California Computer Graphics Seminar hosted by Prof. Oded Stein*  
+Los Angeles, U.S.
+
+**"Geometry +": Uncertain Surface Reconstruction**, April 2023  
+*University of Waterloo Computer Graphics Seminar hosted by Prof. Craig Kaplan*  
+Waterloo, Canada
+
 **Uncertain Surface Reconstruction**, March 2023  
 *UCLA and CalTech's *Grundfest Memorial Lecture*, invited by Profs. Achuta Kadambi and Katie Bowman*  
 Virtual

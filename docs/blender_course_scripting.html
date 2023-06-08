@@ -114,7 +114,9 @@ If we look closely at the console of the left, we can see a history of all the r
 </div>
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">Rendering static images and animations programatically using Blender scripts</h1><div class="content" id="content"><h4 id="introduction-showing-scripting-screen-in-gui">Introduction: showing scripting screen in GUI</h4>
-<p>Let&rsquo;s open any Blender file, like <a href="images/blender-tutorial/template.blend" rel="">our template file</a>, and let&rsquo;s fine-tune it a little bit; for example, by changing the main object&rsquo;s position.</p>
+<p>Let&rsquo;s open any Blender file, like <a href="images/blender-tutorial/template.blend" rel="">our template
+file</a>, and let&rsquo;s fine-tune it a little
+bit; for example, by changing the main object&rsquo;s position.</p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -123,7 +125,8 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-0.jpeg"
         title="images/blender-gi-course/scripting-0.jpeg" /></p>
-<p>We can now navigate to the <em>scripting</em> window by clicking on the top right, next to <em>compositing</em>, to find something like this</p>
+<p>We can now navigate to the <em>scripting</em> window by clicking on the top right, next
+to <em>compositing</em>, to find something like this</p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -132,10 +135,23 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-1.jpeg"
         title="images/blender-gi-course/scripting-1.jpeg" /></p>
-<p>If we look closely at the console of the left, we can see a history of all the recent commands that have been applied to this file through its user interface. In this case, we see one command that corresponds to moving the main object in the scene.</p>
-<p>Of course, as computer scientists, it may not be surprising for us to see that all the actions we take in Blender&rsquo;s graphical interface correspond to executing specific programatic commands. However, what is special about Blender is that these commands are in an accessible, readable programming language (python) and they are exposed such that anyone can learn them and write their own Blender scripts. This option is most attractive to us as academics: often, we want to render two objects with the exact same rendering setup (e.g., for a comparison) or we may want to update a paper figures after a chage in our method by simply re-running a script, without having to resort to hours of GUI manipulation.</p>
+<p>If we look closely at the console of the left, we can see a history of all the
+recent commands that have been applied to this file through its user interface.
+In this case, we see one command that corresponds to moving the main object in
+the scene.</p>
+<p>Of course, as computer scientists, it may not be surprising for us to see that
+all the actions we take in Blender&rsquo;s graphical interface correspond to executing
+specific programatic commands. However, what is special about Blender is that
+these commands are in an accessible, readable programming language (python) and
+they are exposed such that anyone can learn them and write their own Blender
+scripts. This option is most attractive to us as academics: often, we want to
+render two objects with the exact same rendering setup (e.g., for a comparison)
+or we may want to update a paper figures after a chage in our method by simply
+re-running a script, without having to resort to hours of GUI manipulation.</p>
 <h4 id="blender-toolbox-clone">Blender toolbox, clone</h4>
-<p>The <em>best</em> way to start scripting on Blender is with the help of <a href="" rel="">Hsueh-Ti Derek Liu</a>&rsquo;s own <a href="https://github.com/HTDerekLiu/BlenderToolbox" target="_blank" rel="noopener noreffer">Blender toolbox</a>. We can clone it by running</p>
+<p>The <em>best</em> way to start scripting on Blender is with the help of <a href="" rel="">Hsueh-Ti Derek
+Liu</a>&rsquo;s own <a href="https://github.com/HTDerekLiu/BlenderToolbox" target="_blank" rel="noopener noreffer">Blender toolbox</a>. We
+can clone it by running</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -144,7 +160,9 @@ If we look closely at the console of the left, we can see a history of all the r
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/HTDerekLiu/BlenderToolbox.git
 </code></pre></td></tr></table>
 </div>
-</div><p>Some of the aspects of this tutorial will rely on specific hardcoded paths, so let us from now on assume that our directory structure looks like this for some master directory <code>dir</code>:</p>
+</div><p>Some of the aspects of this tutorial will rely on specific hardcoded paths, so
+let us from now on assume that our directory structure looks like this for some
+master directory <code>dir</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -156,7 +174,8 @@ If we look closely at the console of the left, we can see a history of all the r
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="first-steps-imports-and-initialize-scene-saving-file">First steps: imports and initialize scene, saving file</h4>
-<p>To start writing our first Blender script, we will create a new file called <code>render.py</code> and store it in <code>dir</code>:</p>
+<p>To start writing our first Blender script, we will create a new file called
+<code>render.py</code> and store it in <code>dir</code>:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -169,7 +188,8 @@ If we look closely at the console of the left, we can see a history of all the r
 └── render.py
 </code></pre></td></tr></table>
 </div>
-</div><p>Our file <code>render.py</code> will start with some basic library imports (<em>tip: watch out for the differences in capitalization of &ldquo;toolbox&rdquo;</em>).</p>
+</div><p>Our file <code>render.py</code> will start with some basic library imports (<em>tip: watch out
+for the differences in capitalization of &ldquo;toolbox&rdquo;</em>).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -186,7 +206,10 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>We can now validate that our library import works by executing <code>render.py</code>. A common mistake here is to attempt to run it using your own local installation of python (e.g., by running <code>python render.py</code> or <code>python3 render.py</code>). Instead, we need to execute it through Blender&rsquo;s python installation, by running</p>
+</div><p>We can now validate that our library import works by executing <code>render.py</code>. A
+common mistake here is to attempt to run it using your own local installation of
+python (e.g., by running <code>python render.py</code> or <code>python3 render.py</code>). Instead, we
+need to execute it through Blender&rsquo;s python installation, by running</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -195,7 +218,11 @@ If we look closely at the console of the left, we can see a history of all the r
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/your/path/to/blender --background --python render.py
 </code></pre></td></tr></table>
 </div>
-</div><p>where it should be noted that the path is to the blender binary, not the application. For example, on my MacBook, the path is <code>/Applications/Blender.app/Contents/MacOS/Blender</code>. Since we will often use this command, it can be useful to define a shorthand alias; for example, in my <code>~/.bash_profile</code> I have added</p>
+</div><p>where it should be noted that the path is to the blender binary, not the
+application. For example, on my MacBook, the path is
+<code>/Applications/Blender.app/Contents/MacOS/Blender</code>. Since we will often use this
+command, it can be useful to define a shorthand alias; for example, in my
+<code>~/.bash_profile</code> I have added</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -218,7 +245,9 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>which allows me to use <code>blender</code> to refer to the whole path above, and <code>blender-python</code> to add the <code>--background --python</code> options. Then, we can just do</p>
+</div><p>which allows me to use <code>blender</code> to refer to the whole path above, and
+<code>blender-python</code> to add the <code>--background --python</code> options. Then, we can just
+do</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -227,8 +256,12 @@ If we look closely at the console of the left, we can see a history of all the r
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">blender-python render.py
 </code></pre></td></tr></table>
 </div>
-</div><p>Command line aliases can be a little tricky, so if this does not work for you, do not fret. Just swap <code>blender-python</code> for <code>/your/path/to/blender --background --python</code> in all that follows.</p>
-<p>Alright! Hopefully our imports worked and <code>render.py</code> executed without issues. We can now start creating our Blender file programatically. Our first step will be to initialize a scene with a given resolution. We could do this by adding this after the imports:</p>
+</div><p>Command line aliases can be a little tricky, so if this does not work for you,
+do not fret. Just swap <code>blender-python</code> for <code>/your/path/to/blender --background --python</code> in all that follows.</p>
+<p>Alright! Hopefully our imports worked and <code>render.py</code> executed without issues.
+We can now start creating our Blender file programatically. Our first step will
+be to initialize a scene with a given resolution. We could do this by adding
+this after the imports:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -241,7 +274,9 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>In practice, it can be useful to have a parameter <code>mult</code> that we can use to easily alternate between the low resolutions we tend to use for prototyping and the high ones for final figure versions:</p>
+</div><p>In practice, it can be useful to have a parameter <code>mult</code> that we can use to
+easily alternate between the low resolutions we tend to use for prototyping and
+the high ones for final figure versions:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -288,7 +323,11 @@ If we look closely at the console of the left, we can see a history of all the r
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="save-file">Save file</h4>
-<p>Hopefully, running <code>blender-python render.py</code> on the script above does not return any errors. This means it has succesfully initialized a blender scene; however, it can be hard to validate that it has done so correctly. A good way of doing this is by adding a last instruction at the end of <code>render.py</code> to save the scene into a <code>.blend</code> Blender file:</p>
+<p>Hopefully, running <code>blender-python render.py</code> on the script above does not
+return any errors. This means it has succesfully initialized a blender scene;
+however, it can be hard to validate that it has done so correctly. A good way of
+doing this is by adding a last instruction at the end of <code>render.py</code> to save the
+scene into a <code>.blend</code> Blender file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -355,7 +394,8 @@ If we look closely at the console of the left, we can see a history of all the r
 └── test.blend
 </code></pre></td></tr></table>
 </div>
-</div><p>If we open it, we will indeed see an empty scene; and if we go to the render paramaters, we will see the expected 100 by 100 resolution:</p>
+</div><p>If we open it, we will indeed see an empty scene; and if we go to the render
+paramaters, we will see the expected 100 by 100 resolution:</p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -365,7 +405,9 @@ If we look closely at the console of the left, we can see a history of all the r
         alt="images/blender-gi-course/scripting-2.jpeg"
         title="images/blender-gi-course/scripting-2.jpeg" /></p>
 <h4 id="read-mesh">Read mesh</h4>
-<p>Let&rsquo;s now import the object we want to render. We can do this with <code>bt.readMesh</code>. For example, let us assume that we have a mesh called <code>dog.obj</code> (<a href="images/blender-tutorial/dog.obj" rel="">here</a>&rsquo;s a good one!) in our directory</p>
+<p>Let&rsquo;s now import the object we want to render. We can do this with
+<code>bt.readMesh</code>. For example, let us assume that we have a mesh called <code>dog.obj</code>
+(<a href="images/blender-tutorial/dog.obj" rel="">here</a>&rsquo;s a good one!) in our directory</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -399,7 +441,11 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>It can be hard to come up with the correct location and translation without any visual cues. Instead of trying to do that, I recommend starting by making them zero, as above. Then, if we make sure to place the call to <code>readMesh</code> <em>before</em> the call to <code>save_mainfile</code>, we can run <code>blender-python render.py</code> and open the resulting <code>test.blend</code>:</p>
+</div><p>It can be hard to come up with the correct location and translation without any
+visual cues. Instead of trying to do that, I recommend starting by making them
+zero, as above. Then, if we make sure to place the call to <code>readMesh</code> <em>before</em>
+the call to <code>save_mainfile</code>, we can run <code>blender-python render.py</code> and open the
+resulting <code>test.blend</code>:</p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -408,7 +454,8 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-3.jpeg"
         title="images/blender-gi-course/scripting-3.jpeg" /></p>
-<p>Then, we can use the GUI to find a good orientation, which in this case is <code>(90,0,0)</code></p>
+<p>Then, we can use the GUI to find a good orientation, which in this case is
+<code>(90,0,0)</code></p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -417,7 +464,8 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-4.jpeg"
         title="images/blender-gi-course/scripting-4.jpeg" /></p>
-<p>and update that rotation in our script, such that <code>render.py</code> now looks like this:</p>
+<p>and update that rotation in our script, such that <code>render.py</code> now looks like
+this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -473,7 +521,9 @@ If we look closely at the console of the left, we can see a history of all the r
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="camera">Camera</h3>
-<p>Once we have imported the object, the next critical element we need to take an image of it is a camera. In a similar way to how we set up the mesh, we will import the camera with zero rotation and translation</p>
+<p>Once we have imported the object, the next critical element we need to take an
+image of it is a camera. In a similar way to how we set up the mesh, we will
+import the camera with zero rotation and translation</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -572,7 +622,8 @@ If we look closely at the console of the left, we can see a history of all the r
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="render-with-command-line">Render with command line</h4>
-<p>Alright! We have an object and a camera: that&rsquo;s the minimal set we need to render a picture. We can do it with one last line of code:</p>
+<p>Alright! We have an object and a camera: that&rsquo;s the minimal set we need to
+render a picture. We can do it with one last line of code:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -656,7 +707,8 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>If we now run <code>blender-python render.py</code>, we will get a new image in our directory</p>
+</div><p>If we now run <code>blender-python render.py</code>, we will get a new image in our
+directory</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -684,9 +736,11 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-8.png"
         title="images/blender-gi-course/scripting-8.png" /></p>
-<p>It is very dark! And the reason is obvious: we have not added any lights yet. Let&rsquo;s do just that.</p>
+<p>It is very dark! And the reason is obvious: we have not added any lights yet.
+Let&rsquo;s do just that.</p>
 <h4 id="lights-ambient-sun-three-point">Lights: ambient, sun, three point</h4>
-<p>The Blender Toolbox gives us many different lighting options. For example, the simplest light one can add is a sun:</p>
+<p>The Blender Toolbox gives us many different lighting options. For example, the
+simplest light one can add is a sun:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -704,7 +758,11 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-9.png"
         title="images/blender-gi-course/scripting-9.png" /></p>
-<p>Sharp shadows can be very aesthetically pleasing; however, they are generally not recommended for our research purposes, since they the shaded areas are so dark that they obscure the shape&rsquo;s geometric detail. A way of getting around this is to add a soft <em>ambient</em> light, which adds brightness to every part of the scene to avoid extremely dark areas:</p>
+<p>Sharp shadows can be very aesthetically pleasing; however, they are generally
+not recommended for our research purposes, since they the shaded areas are so
+dark that they obscure the shape&rsquo;s geometric detail. A way of getting around
+this is to add a soft <em>ambient</em> light, which adds brightness to every part of
+the scene to avoid extremely dark areas:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -724,8 +782,13 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-10.png"
         title="images/blender-gi-course/scripting-10.png" /></p>
-<p>As expected, an ambient light avoids the extremely dark areas of the object, but it does so at the cost of over-lighting the areas that were exposed to the sun light, washing over some of the geometric detail.</p>
-<p>A better choice for a lighting setup is the classic photographic technique called <a href="https://en.wikipedia.org/wiki/Three-point_lighting" target="_blank" rel="noopener noreffer">three point lighting</a>, which we can also fortunately use with the Blender Toolbox:</p>
+<p>As expected, an ambient light avoids the extremely dark areas of the object, but
+it does so at the cost of over-lighting the areas that were exposed to the sun
+light, washing over some of the geometric detail.</p>
+<p>A better choice for a lighting setup is the classic photographic technique
+called <a href="https://en.wikipedia.org/wiki/Three-point_lighting" target="_blank" rel="noopener noreffer">three point
+lighting</a>, which we can also
+fortunately use with the Blender Toolbox:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -734,7 +797,8 @@ If we look closely at the console of the left, we can see a history of all the r
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># parameters are intuitive, but it&#39;s worth fine-tuning</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>If we now open the generated <code>blend</code> file, we see something like this, with the three point lights of differing intensities:</p>
+</div><p>If we now open the generated <code>blend</code> file, we see something like this, with the
+three point lights of differing intensities:</p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -743,7 +807,10 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-11.jpeg"
         title="images/blender-gi-course/scripting-11.jpeg" /></p>
-<p>In a <em>proper</em> three-point lighting setup, the camera is near the strongest light, slightly angled towards the second strongest light. This orientation is a key part of why this lighting setup works, so we will need to change the position of the camera and object accordingly:</p>
+<p>In a <em>proper</em> three-point lighting setup, the camera is near the strongest
+light, slightly angled towards the second strongest light. This orientation is a
+key part of why this lighting setup works, so we will need to change the
+position of the camera and object accordingly:</p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -845,7 +912,12 @@ If we look closely at the console of the left, we can see a history of all the r
         alt="images/blender-gi-course/scripting-13.png"
         title="images/blender-gi-course/scripting-13.png" /></p>
 <h4 id="material-color-singlecolor-material-plastic-transparent-metal-glass-honey">Material: color, singlecolor material, plastic, transparent, metal, glass, honey</h4>
-<p>Okay! We&rsquo;re getting somewhere. The only essential step left is to give our shape a nice material, so that it does not look like it is made out of grey chalk. The Blender Toolbox <em>shines</em> at making it easy to add amazing-looking materials. The specifics will depend on each material but, broadly speaking, applying a material works in two steps: first, defining the color (e.g, &ldquo;blue&rdquo;) and, second, assinging the mesh a material with said color (e.g., &ldquo;blue plastic&rdquo;).</p>
+<p>Okay! We&rsquo;re getting somewhere. The only essential step left is to give our shape
+a nice material, so that it does not look like it is made out of grey chalk. The
+Blender Toolbox <em>shines</em> at making it easy to add amazing-looking materials. The
+specifics will depend on each material but, broadly speaking, applying a
+material works in two steps: first, defining the color (e.g, &ldquo;blue&rdquo;) and,
+second, assinging the mesh a material with said color (e.g., &ldquo;blue plastic&rdquo;).</p>
 <p>The first part is common to most materials:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -857,7 +929,8 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">mesh_rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>The second part, for a plastic material, looks like this (make sure to have this code execute after <code>mesh</code> has been imported):</p>
+</div><p>The second part, for a plastic material, looks like this (make sure to have this
+code execute after <code>mesh</code> has been imported):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -959,7 +1032,8 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>we produce this rendered image (now using <code>mult=10</code> to appreciate more nuanced distinctions):</p>
+</div><p>we produce this rendered image (now using <code>mult=10</code> to appreciate more nuanced
+distinctions):</p>
 <p><img
         class="lazyload"
         src="./svg/loading.min.svg"
@@ -968,7 +1042,8 @@ If we look closely at the console of the left, we can see a history of all the r
         data-sizes="auto"
         alt="images/blender-gi-course/scripting-14.png"
         title="images/blender-gi-course/scripting-14.png" /></p>
-<p>There are many other materials supported by BlenderToolbox. My favourite one is <code>singleColor</code>, which one can obtain with</p>
+<p>There are many other materials supported by BlenderToolbox. My favourite one is
+<code>singleColor</code>, which one can obtain with</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -989,8 +1064,12 @@ If we look closely at the console of the left, we can see a history of all the r
         alt="images/blender-gi-course/scripting-15.png"
         title="images/blender-gi-course/scripting-15.png" /></p>
 <p>I know. Beautiful. Gracious.</p>
-<p>Unfortunately, there seems to be some compatibility issue with this function and the newest version of Blender; therefore, you may encounter an error if attempting to run the above (I generally recommend using Blender 3.0 precisely because of this).</p>
-<p>There are other useful materials; for example, one I use a lot is the <code>transparent</code> one:</p>
+<p>Unfortunately, there seems to be some compatibility issue with this function and
+the newest version of Blender; therefore, you may encounter an error if
+attempting to run the above (I generally recommend using Blender 3.0 precisely
+because of this).</p>
+<p>There are other useful materials; for example, one I use a lot is the
+<code>transparent</code> one:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1044,7 +1123,10 @@ If we look closely at the console of the left, we can see a history of all the r
         alt="images/blender-gi-course/scripting-18.png"
         title="images/blender-gi-course/scripting-18.png" /></p>
 <h4 id="vertex-values">Vertex values</h4>
-<p>Often, we don&rsquo;t just want to render a shape with a single color, but we want to use colors to convey some scalar information defined on each vertex or face of the object. This is a very common situation, which one can also render using the Blender Toolbox.</p>
+<p>Often, we don&rsquo;t just want to render a shape with a single color, but we want to
+use colors to convey some scalar information defined on each vertex or face of
+the object. This is a very common situation, which one can also render using the
+Blender Toolbox.</p>
 <p>Let&rsquo;s open a new file, <code>scalar_data.py</code>,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1066,7 +1148,8 @@ If we look closely at the console of the left, we can see a history of all the r
 └── image.png
 </code></pre></td></tr></table>
 </div>
-</div><p>and use it to write some simple per-vertex data on our mesh and save it to a numpy file (you may need to <code>pip install gpytoolbox</code>):</p>
+</div><p>and use it to write some simple per-vertex data on our mesh and save it to a
+numpy file (you may need to <code>pip install gpytoolbox</code>):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1085,7 +1168,8 @@ If we look closely at the console of the left, we can see a history of all the r
 <span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Now, if we run <code>python scalard_data.py</code> (with your own python! not Blender&rsquo;s!), a new <code>vertex_data.npy</code> file should be generated:</p>
+</div><p>Now, if we run <code>python scalard_data.py</code> (with your own python! not Blender&rsquo;s!),
+a new <code>vertex_data.npy</code> file should be generated:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1108,7 +1192,9 @@ If we look closely at the console of the left, we can see a history of all the r
 └── image.png  
 </code></pre></td></tr></table>
 </div>
-</div><p>In <code>render.py</code>, we can read this file to build a material with per-vertex colors. The setup is slightly convoluted, but since we only really need it for this specific use-case there isn&rsquo;t much need to understand it at depth:</p>
+</div><p>In <code>render.py</code>, we can read this file to build a material with per-vertex
+colors. The setup is slightly convoluted, but since we only really need it for
+this specific use-case there isn&rsquo;t much need to understand it at depth:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1251,7 +1337,11 @@ If we look closely at the console of the left, we can see a history of all the r
         title="images/blender-gi-course/scripting-19.png" /></p>
 <!-- #### Final render -->
 <h4 id="rendering-specific-python-module">Rendering-specific python module</h4>
-<p>We iterated a lot and tried many different things to converge on a good rendering style that we like. Using scripts instead of the blender GUI means that we can now amortize all that work and save our choices in a way that&rsquo;s consistent across all our paper figures. To do this, I like to use a directory structure like this:</p>
+<p>We iterated a lot and tried many different things to converge on a good
+rendering style that we like. Using scripts instead of the blender GUI means
+that we can now amortize all that work and save our choices in a way that&rsquo;s
+consistent across all our paper figures. To do this, I like to use a directory
+structure like this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1280,7 +1370,8 @@ If we look closely at the console of the left, we can see a history of all the r
 └── image.png  
 </code></pre></td></tr></table>
 </div>
-</div><p>Here&rsquo;s what <code>render_utility/__init__.py</code> looks like (this is just a file that tells <code>python</code> that this is a module):</p>
+</div><p>Here&rsquo;s what <code>render_utility/__init__.py</code> looks like (this is just a file that
+tells <code>python</code> that this is a module):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1289,7 +1380,8 @@ If we look closely at the console of the left, we can see a history of all the r
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="o">*</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>and, on the other hand, here&rsquo;s what <code>misc.py</code> can look like, containing all our general rendering functionality:</p>
+</div><p>and, on the other hand, here&rsquo;s what <code>misc.py</code> can look like, containing all our
+general rendering functionality:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1406,7 +1498,10 @@ If we look closely at the console of the left, we can see a history of all the r
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="leveraging-render-specific-module-to-make-a-new-figure">Leveraging render-specific module to make a new figure</h4>
-<p>If, for example, I want to make a new script comparing three objs (<a href="images/blender-tutorial/ours.obj" rel="">ours</a>, <a href="images/blender-tutorial/theirs.obj" rel="">theirs</a> and <a href="images/blender-tutorial/input.obj" rel="">the input</a>) in <code>comparison/</code>,</p>
+<p>If, for example, I want to make a new script comparing three objs
+(<a href="images/blender-tutorial/ours.obj" rel="">ours</a>,
+<a href="images/blender-tutorial/theirs.obj" rel="">theirs</a> and <a href="images/blender-tutorial/input.obj" rel="">the
+input</a>) in <code>comparison/</code>,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1

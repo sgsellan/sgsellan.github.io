@@ -142,7 +142,7 @@ Now, we will add a *node* to this setup. But don't be scared, we don't actually 
   
   (You may notice your render becomes pink-ish when you do this. This is fine)
   
-  Now, click on "Open" in the Environment Texture node and navigate to `path/to/your/Blender.app/Contents/Resources/2.90/datafiles/studiolights/world/`. You'll find a bunch of `.exr` files there:
+  Now, click on "Open" in the Environment Texture node and navigate to `path/to/your/Blender.app/Contents/Resources/<version>/datafiles/studiolights/world/` (in Windows, I've been told the path should be `<path-to-your-Blender-installation-location>\Blender Foundation\Blender<version>\<version>\datafiles\world\`). You'll find a bunch of `.exr` files there:
 
   ![](images/blender-tutorial/exr.png)
   

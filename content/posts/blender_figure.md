@@ -1,6 +1,6 @@
 ---
-title: "Rendering a paper figure with Blender"
-date: 2021-11-11
+title: "Blender Course I: Rendering a paper figure with Blender"
+date: 2020-11-11
 draft: false
 ---
 

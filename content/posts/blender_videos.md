@@ -1,5 +1,5 @@
 ---
-title: "Rendering an animation with Blender"
+title: "Blender Course II: Rendering an animation with Blender"
 date: 2021-01-24
 draft: false
 ---

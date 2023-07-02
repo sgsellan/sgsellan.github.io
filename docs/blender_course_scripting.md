@@ -1,4 +1,4 @@
-# Rendering static images and animations programatically using Blender scripts
+# Blender Course III: Rendering static images and animations programatically using Blender scripts
 
 
 

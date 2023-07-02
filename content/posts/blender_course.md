@@ -1,5 +1,8 @@
-# Blender for Academic Papers
-
+---
+title: "Blender for Academic Papers"
+date: 2023-05-29
+draft: false
+---
 
 Over the past three years, I have been learning more and more about using Blender to generate results for academic papers in Computer Graphics. At the same time, I have been sharing what I have learned in different venues and formats: internally with my colleagues, as aP course, as a text guide, a video or an interactive tutorial. As of July 2023, the last version of this was my 3-hour workshop at Graphics Interface 2023 in Victoria, Canada. In preparing for this workshop, I updated, reformatted and extended my previous publicaly available guides and combined them into a single course.
 

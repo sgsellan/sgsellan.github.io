@@ -176,7 +176,8 @@ a[href$=".pdf"]:after
     <p class="title">Blender for Academic Papers</p>
     <p class="authors"><span class=me>Silvia Sell&aacuten</span></p>
     <p class="venue">Symposium on Geometry Processing (SGP) Course, 2022</p>
-    <p class="links"> <a href="./blender_figure.html">Guide</a> <a href="https://research.siggraph.org/blog/guides/rendering-a-paper-figure-with-blender/">Guide (SIGGRAPH mirror)</a> <a href="https://youtu.be/cw88Y36qgDg">Video tutorial</a></p>
+    <p class="venue">Graphics Interface (GI) Workshop, 2023</p>
+    <p class="links"> <a href="./blender_course.html">Course</a></p>
   </div>
 </div>
 

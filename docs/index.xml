@@ -7,20 +7,12 @@
             <webMaster>sgsellan@cs.toronto.edu (Silvia Sellán)</webMaster><lastBuildDate>Mon, 29 May 2023 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://www.silviasellan.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>GI 2023 Blender Course I: Resources</title>
-    <link>https://www.silviasellan.com/blender_course_resources.html</link>
+    <title>Blender for Academic Papers</title>
+    <link>https://www.silviasellan.com/blender_course.html</link>
     <pubDate>Mon, 29 May 2023 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://www.silviasellan.com/blender_course_resources.html</guid>
-    <description><![CDATA[Resources:   Template file: template.blend
-  Easy PBR add-on: download
-  Stop motion OBJ add-on: download
-  Chair mesh: chair.obj
-  Dog mesh: dog.obj
-  Static design exercise:
- g.obj g-decimated.obj i.obj i-decimated.obj    Animation exercise:
- xwing-face.abc xwing-right.abc    Scripting exercise:
- groundtruth.obj point_cloud.ply      ]]></description>
+    <guid>https://www.silviasellan.com/blender_course.html</guid>
+    <description><![CDATA[Over the past three years, I have been learning more and more about using Blender to generate results for academic papers in Computer Graphics. At the same time, I have been sharing what I have learned in different venues and formats: internally with my colleagues, as aP course, as a text guide, a video or an interactive tutorial. As of July 2023, the last version of this was my 3-hour workshop at Graphics Interface 2023 in Victoria, Canada.]]></description>
 </item><item>
     <title>Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines </title>
     <link>https://www.silviasellan.com/gpytoolbox-2d-prototyping.html</link>
@@ -48,7 +40,7 @@ In the last tutorial, we saw how to load simple two-dimensional polylines into P
 1  pip install gpytoolbox   This is the third in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
 There are many reasons why you may want to compute the minimum distance from a given point in 2D to a polyline: for example, to guide sampling or as a stopping criterion in iterative algorithms.]]></description>
 </item><item>
-    <title>Rendering static images and animations programatically using Blender scripts</title>
+    <title>Blender Course III: Rendering static images and animations programatically using Blender scripts</title>
     <link>https://www.silviasellan.com/blender_course_scripting.html</link>
     <pubDate>Sun, 29 May 2022 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
@@ -89,12 +81,12 @@ Say your Blender 2.]]></description>
 Eigen initialization bug Symptoms: The code compiles and runs properly, but the output seems random and changes from one run to the next, despite the code being theoretically deterministic.
 Diagnosis: This happens because you am declaring a variable and calling it without initializing it.]]></description>
 </item><item>
-    <title>Rendering a paper figure with Blender</title>
-    <link>https://www.silviasellan.com/blender_figure.html</link>
-    <pubDate>Thu, 11 Nov 2021 00:00:00 &#43;0000</pubDate>
+    <title>Preparing PhD Committee Meetings</title>
+    <link>https://www.silviasellan.com/phd_committee.html</link>
+    <pubDate>Thu, 07 Oct 2021 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
-    <guid>https://www.silviasellan.com/blender_figure.html</guid>
-    <description><![CDATA[There are a lot of great Blender tutorials online (e.g., the classic donut tutorial by Blender Guru), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films. Therefore they go into depth on how to model a shape, how to pick the best lighting, how to design a material, create textures, etc.
-These are really interesting topics, but they can be overwhelming if you are an academic and all you want is to render your object beautifully for a SIGGRAPH paper figure.]]></description>
+    <guid>https://www.silviasellan.com/phd_committee.html</guid>
+    <description><![CDATA[In my experience, PhD Committee Meetings are an obscure, secretive part of the PhD requirements. One reason for this is that they vary greatly from student to student and discipline to discipline. Still, it is undeniably yet another way in which people without family/friends in academia are gatekept away from it.
+When it is your time to prepare a PhD Qualifying Exam or PhD Yearly Checkpoint, it is likely you have never even seen what one looks like before, since they are private events, and have to rely on asking around for examples of successful ones.]]></description>
 </item></channel>
 </rss>

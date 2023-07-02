@@ -1,9 +1,9 @@
 ---
-title: "Rendering static images and animations programatically using Blender scripts"
+title: "Blender Course III: Rendering static images and animations programatically using Blender scripts"
 date: 2022-05-29
 draft: false
-hiddenFromHomePage: true
-hiddenFromSearch: true
+hiddenFromHomePage: false
+hiddenFromSearch: false
 ---
 
 

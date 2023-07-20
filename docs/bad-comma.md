@@ -20,3 +20,7 @@ The claim about revision requests is similarly disproven (emphasis mine):
 In other words, the paper is not claiming that non-native-English-speaker-written papers are more likely to be requested a revision; rather, than when they are asked to, they are more often at the same time requested to improve their English writing. Once again, probably not that surprising either (I say as a non-native-English-speaker who has often gotten this review comment before).
 
 In other words, what were two somewhat expected observations become, when filtered through the eyes of irresponsible scientific communication (be it by Phys Org or whoever provided this text to them), two outrageously false facts that can be repeated to drive engagement on the Internet. The system works!
+
+P.S.: Don't worry, it's fact checked and proofread!
+
+![](images/bad-comma/physorg-screenshot.png)

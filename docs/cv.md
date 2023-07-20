@@ -243,6 +243,9 @@ María Cristina Masaveu Peterson Foundation
 *Committee member (in undergraduate mentorship subcommittee)*
 
 **Eurographics Symposium on Geometry Processing (SGP)**, 2023  
+*Session Chair: Representation and Learning*
+
+**Eurographics Symposium on Geometry Processing (SGP)**, 2023  
 *International Program Committee member*
 
 **Summer Geometry Initiative**, 2023  

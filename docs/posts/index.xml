@@ -12,6 +12,14 @@
     <guid>https://www.silviasellan.com/blender_course.html</guid>
     <description><![CDATA[Over the past three years, I have been learning more and more about using Blender to generate results for academic papers in Computer Graphics. At the same time, I have been sharing what I have learned in different venues and formats: internally with my colleagues, as aP course, as a text guide, a video or an interactive tutorial. As of July 2023, the last version of this was my 3-hour workshop at Graphics Interface 2023 in Victoria, Canada.]]></description>
 </item><item>
+    <title>On how important a comma (and responsible scientific communication) can be</title>
+    <link>https://www.silviasellan.com/bad-comma.html</link>
+    <pubDate>Mon, 29 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://www.silviasellan.com/bad-comma.html</guid>
+    <description><![CDATA[I recently came accross this great paper by Tatsuya Amano and colleagues on the effects that being a non-native English speaker can have on one&rsquo;s scientific success. It is a good exploratory study of a topic I have unfortunately thought about often, and I recommend reading it in full.
+Unfortunately, the authors have suffered the misfortune of being featured in this Phys.org article (which, to be fair to Phys.org, seems to come from a PLOS Biology press release), which states the following:]]></description>
+</item><item>
     <title>Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines </title>
     <link>https://www.silviasellan.com/gpytoolbox-2d-prototyping.html</link>
     <pubDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</pubDate>
@@ -78,13 +86,5 @@ Say your Blender 2.]]></description>
     <description><![CDATA[Every time I try to code a project in C++ I run into the same bugs, and I keep forgetting how to solve them. So, I decided to write this list here for my own reference.
 Eigen initialization bug Symptoms: The code compiles and runs properly, but the output seems random and changes from one run to the next, despite the code being theoretically deterministic.
 Diagnosis: This happens because you am declaring a variable and calling it without initializing it.]]></description>
-</item><item>
-    <title>Preparing PhD Committee Meetings</title>
-    <link>https://www.silviasellan.com/phd_committee.html</link>
-    <pubDate>Thu, 07 Oct 2021 00:00:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>https://www.silviasellan.com/phd_committee.html</guid>
-    <description><![CDATA[In my experience, PhD Committee Meetings are an obscure, secretive part of the PhD requirements. One reason for this is that they vary greatly from student to student and discipline to discipline. Still, it is undeniably yet another way in which people without family/friends in academia are gatekept away from it.
-When it is your time to prepare a PhD Qualifying Exam or PhD Yearly Checkpoint, it is likely you have never even seen what one looks like before, since they are private events, and have to rely on asking around for examples of successful ones.]]></description>
 </item></channel>
 </rss>

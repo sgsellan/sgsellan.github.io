@@ -193,8 +193,10 @@ paramaters, we will see the expected 100 by 100 resolution:
 #### Read mesh
 
 Let's now import the object we want to render. We can do this with
-`bt.readMesh`. For example, let us assume that we have a mesh called `dog.obj`
-([here](images/blender-tutorial/dog.obj)'s a good one!) in our directory
+`bt.readMesh`. For example, let us assume that we have a mesh called `dog.obj` in our directory (I am using [this](images/blender-tutorial/dog.obj) amazing dog mesh designed by the magnificent [Josh Holinaty](https://holinaty.com)):
+
+<!-- ([here](images/blender-tutorial/dog.obj)'s a good one!) in our directory -->
+
 ```
 dir/  
 └── BlenderToolbox/  

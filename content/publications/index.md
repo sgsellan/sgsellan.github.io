@@ -119,6 +119,54 @@ a[href$=".pdf"]:after
 <!-- ### Conference & Journal Publications -->
 
 <div class="row publication">
+  <div class="columns thumbnail">
+    <img src=images/paper-thumbnails/reach.png>
+  </div>
+  <div class="columns large-10">
+    <p class="title">Bayes' Rays: Bayes’ Rays: Uncertainty Quantification for Neural Radiance Fields</p>
+    <p class="authors"><span class=notme>Lily Goli, </span><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson, Andrea Tagliasacchi</span></p>
+    <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
+    <p class="links"> <a href="">Paper</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+  </div>
+</div>
+
+<div class="row publication">
+    <div class="columns thumbnail">
+      <img src=images/paper-thumbnails/reach.png>
+    </div>
+    <div class="columns large-10">
+      <p class="title">Reach for the Spheres: Tangency-Aware Surface Reconstruction of SDFs</p>
+      <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Christopher Batty, Oded Stein</span></p>
+      <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
+      <p class="links"> <a href="pdf/papers/reach-for-the-spheres.pdf">Paper</a> <a href="pdf/papers/reach-for-the-spheres-low-res.pdf">Paper (low res)</a> <a href="https://odedstein.com/projects/reach-for-the-spheres/">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+    </div>
+  </div>
+
+  <div class="row publication">
+    <div class="columns thumbnail">
+      <img src=images/paper-thumbnails/reach.png>
+    </div>
+    <div class="columns large-10">
+      <p class="title">Constructive Solid Geometry on Neural Signed Distance Fields</p>
+      <p class="authors"><span class=notme>Zoë Marschner, </span><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Hsueh-Ti Derek Liu, Alec Jacobson</span></p>
+      <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
+      <p class="links"> <a href="">Paper (TBD)</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+    </div>
+  </div>
+
+<div class="row publication">
+    <div class="columns thumbnail">
+      <img src=images/paper-thumbnails/reach.png>
+    </div>
+    <div class="columns large-10">
+      <p class="title">Neural Stochastic Poisson Surface Reconstruction</p>
+      <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson</span></p>
+      <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
+      <p class="links"> <a href="">Paper (TBD)</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+    </div>
+  </div>
+
+<div class="row publication">
     <div class="columns thumbnail">
       <img src=images/paper-thumbnails/stochastic-psr.jpg>
     </div>

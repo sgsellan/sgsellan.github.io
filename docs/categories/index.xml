@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on My New Hugo Site</title>
-    <link>http://example.org/categories/</link>
-    <description>Recent content in Categories on My New Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - Silvia Sellán</title>
+        <link>https://www.silviasellan.com/categories.html</link>
+        <description>Categories - Category - Silvia Sellán</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sgsellan@cs.toronto.edu (Silvia Sellán)</managingEditor>
+            <webMaster>sgsellan@cs.toronto.edu (Silvia Sellán)</webMaster><atom:link href="https://www.silviasellan.com/categories.html" rel="self" type="application/rss+xml" /></channel>
 </rss>

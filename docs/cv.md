@@ -43,6 +43,22 @@ Undergraduate Research Intern
 
 ## Journal & Conference Publications
 
+**Bayes' Rays: Uncertainty Quantification for Neural Radiance Fields**, 2023  
+Lily Goli, Cody Reading, **Silvia Sellán**, Alec Jacobson, Andrea Tagliasacchi  
+*TBD*
+
+**Reach For the Spheres: Tangency-aware surface reconstruction of SDFs**, 2023  
+**Silvia Sellán**, Christopher Batty, Oded Stein  
+*ACM Transactions on Graphics (Proc. SIGGRAPH Asia*
+
+**Constructive Solid Geometry on Neural Signed Distance Fields**, 2023  
+Zoë Marschner, **Silvia Sellán**, Hsueh-Ti Derek Liu, Alec Jacobson  
+*ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*
+
+**Neural Stochastic Poisson Surface Reconstruction**, 2023  
+**Silvia Sellán**, Alec Jacobson  
+*ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*
+
 **Stochastic Poisson Surface Reconstruction**, 2022  
 **Silvia Sellán**, Alec Jacobson  
 *ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*

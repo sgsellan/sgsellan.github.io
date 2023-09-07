@@ -51,7 +51,7 @@ Undergraduate Research Intern
 
 ## Journal & Conference Publications
 
-**Bayes' Rays: Bayes’ Rays: Uncertainty Quantification for Neural Radiance Fields**, 2023  
+**Bayes' Rays: Uncertainty Quantification for Neural Radiance Fields**, 2023  
 Lily Goli, Cody Reading, **Silvia Sellán**, Alec Jacobson, Andrea Tagliasacchi  
 *TBD*
 

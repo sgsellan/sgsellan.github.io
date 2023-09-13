@@ -138,7 +138,7 @@ a[href$=".pdf"]:after
       <p class="title">Reach for the Spheres: Tangency-Aware Surface Reconstruction of SDFs</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Christopher Batty, Oded Stein</span></p>
       <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
-      <p class="links"> <a href="pdf/papers/reach-for-the-spheres.pdf">Paper</a> <a href="pdf/papers/reach-for-the-spheres-low-res.pdf">Paper (low res)</a> <a href="https://odedstein.com/projects/reach-for-the-spheres/">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+      <p class="links"> <a href="pdf/papers/reach-for-the-spheres.pdf">Paper</a> <a href="pdf/papers/reach-for-the-spheres-low-res.pdf">Paper (low res)</a> <a href="https://odedstein.com/projects/reach-for-the-spheres/">Project Page</a> <a href="">Code (TBD)</a></p>
     </div>
   </div>
 

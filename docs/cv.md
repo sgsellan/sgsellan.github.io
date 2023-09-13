@@ -49,7 +49,7 @@ Lily Goli, Cody Reading, **Silvia Sellán**, Alec Jacobson, Andrea Tagliasacchi
 
 (11) **Reach For the Spheres: Tangency-aware surface reconstruction of SDFs**, 2023  
 **Silvia Sellán**, Christopher Batty, Oded Stein  
-*ACM Transactions on Graphics (Proc. SIGGRAPH Asia*
+*ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*
 
 (10) **Constructive Solid Geometry on Neural Signed Distance Fields**, 2023  
 Zoë Marschner, **Silvia Sellán**, Hsueh-Ti Derek Liu, Alec Jacobson  
@@ -94,6 +94,14 @@ Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First
 *Computer Graphics Forum (presented at Eurographics SGP 2019)*
 
 ## Other Publications
+
+**Geometry Synthesis for Critical Applications**, 2023  
+**Silvia Sellán**  
+*SIGGRAPH Asia Doctoral Consortium*
+
+**Geometry Synthesis for Critical Applications**, 2023  
+**Silvia Sellán**  
+*ICCV Doctoral Consortium*
 
 **Blender for Geometry Processing Academic Papers**, 2022  
 **Silvia Sellán**  
@@ -154,6 +162,14 @@ Contributor
 **Vanier Canada Doctoral Scholarship**, 2021-2024  
 Natural Sciences and Engineering Research Council of Canada (NSERC)  
 *150,000 CAD award given only to 166 graduate students across all of Canada and across all academic disciplines*
+
+**EECS Rising Stars**, 2023  
+Funding to attend the yearly Academic Career Workshop in EECS    
+*Travel funding*
+
+**Ernst Abbe Grant**, 2023  
+Funding to attend the Heidelberg Laureate Forum    
+*Travel funding*
 
 **Beatrice "Trixie" Worsley Graduate Scholarship in Computer Science**, 2023  
 University of Toronto Department of Computer Science    

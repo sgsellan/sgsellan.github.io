@@ -51,53 +51,53 @@ Undergraduate Research Intern
 
 ## Journal & Conference Publications
 
-**Bayes' Rays: Uncertainty Quantification for Neural Radiance Fields**, 2023  
+(12) **Bayes' Rays: Uncertainty Quantification for Neural Radiance Fields**, 2023  
 Lily Goli, Cody Reading, **Silvia Sellán**, Alec Jacobson, Andrea Tagliasacchi  
 *TBD*
 
-**Reach For the Spheres: Tangency-aware surface reconstruction of SDFs**, 2023  
+(11) **Reach For the Spheres: Tangency-aware surface reconstruction of SDFs**, 2023  
 **Silvia Sellán**, Christopher Batty, Oded Stein  
 *ACM Transactions on Graphics (Proc. SIGGRAPH Asia*
 
-**Constructive Solid Geometry on Neural Signed Distance Fields**, 2023  
+(10) **Constructive Solid Geometry on Neural Signed Distance Fields**, 2023  
 Zoë Marschner, **Silvia Sellán**, Hsueh-Ti Derek Liu, Alec Jacobson  
 *ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*
 
-**Neural Stochastic Poisson Surface Reconstruction**, 2023  
+(9) **Neural Stochastic Screened Poisson Reconstruction**, 2023  
 **Silvia Sellán**, Alec Jacobson  
 *ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*
 
-**Stochastic Poisson Surface Reconstruction**, 2022  
+(8) **Stochastic Poisson Surface Reconstruction**, 2022  
 **Silvia Sellán**, Alec Jacobson  
 *ACM Transactions on Graphics (Proc. SIGGRAPH Asia)*
 
-**Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
+(7) **Breaking Bad: A Dataset for Geometric Fracture and Reassembly**, 2022  
 **Silvia Sellán\***, Yun-Chun Chen\*, Ziyi Wu\*, Animesh Garg, Alec Jacobson *(\*Joint First Authors)*   
 *Proceedings of Neural Information Processing Systems (NeurIPS)*  
 Featured (previously known as "Oral") paper
 
-**Breaking Good: Fracture Modes for Realtime Destruction**, 2022  
+(6) **Breaking Good: Fracture Modes for Realtime Destruction**, 2022  
 **Silvia Sellán**, Jack Luong, Letticia Mattos Da Silva,  
 Aravind Ramakrishnan, Yuchuan Yang, Alec Jacobson  
 *ACM Transactions on Graphics (to be presented at SIGGRAPH Asia)*
 
-**Sex and Gender in the Computer Graphics Research Literature**, 2022  
+(5) **Sex and Gender in the Computer Graphics Research Literature**, 2022  
 Ana Dodik\*, **Silvia Sellán\***, Theodore Kim, Amanda Phillips *(\*Joint First Authors)*  
 *SIGGRAPH Talk*
 
-**Swept Volumes via Spacetime Numerical Continuation**, 2021  
+(4) **Swept Volumes via Spacetime Numerical Continuation**, 2021  
 **Silvia Sellán**, Noam Aigerman, Alec Jacobson  
 *ACM Transactions On Graphics (Proc. SIGGRAPH)*
 
-**Opening and Closing Surfaces**, 2020  
+(3) **Opening and Closing Surfaces**, 2020  
 **Silvia Sellán**, Jacob Kesten, Ang Yan Sheng, Alec Jacobson  
 *ACM Transactions On Graphics (Proc. SIGGRAPH Asia)*
 
-**Developability of Heightfields via Rank Minimization**, 2020  
+(2) **Developability of Heightfields via Rank Minimization**, 2020  
 **Silvia Sellán**, Noam Aigerman, Alec Jacobson  
 *ACM Transactions On Graphics (Proc. SIGGRAPH)*
 
-**Solid Geometry Processing on Deconstructed Domains**, 2019  
+(1) **Solid Geometry Processing on Deconstructed Domains**, 2019  
 **Silvia Sellán**, Herng Yi Cheng, Yuming Ma, Mitchell Dembowski, Alec Jacobson  
 *Computer Graphics Forum (presented at Eurographics SGP 2019)*
 

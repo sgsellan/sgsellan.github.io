@@ -114,10 +114,10 @@ a[href$=".pdf"]:after
     <img src=images/paper-thumbnails/bayes-rays.jpg>
   </div>
   <div class="columns large-10">
-    <p class="title">Bayes' Rays: Bayes’ Rays: Uncertainty Quantification for Neural Radiance Fields</p>
-    <p class="authors"><span class=notme>Lily Goli, </span><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson, Andrea Tagliasacchi</span></p>
+    <p class="title">Bayes' Rays: Uncertainty Quantification for Neural Radiance Fields</p>
+    <p class="authors"><span class=notme>Lily Goli, Cody Reading, </span><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson, Andrea Tagliasacchi</span></p>
     <p class="venue">2023</p>
-    <p class="links"> <a href="https://arxiv.org/abs/2309.03185">Paper</a> <a href="https://bayesrays.github.io">Project Page</a> <a href="">Code (TBD)</a></p>
+    <p class="links"> <a href="https://arxiv.org/abs/2309.03185">Paper</a> <a href="https://bayesrays.github.io">Project Page</a> <a href="https://github.com/BayesRays/BayesRays/tree/main">Code</a></p>
   </div>
 </div>
 
@@ -150,10 +150,10 @@ a[href$=".pdf"]:after
       <img src=images/paper-thumbnails/neural-spsr.jpg>
     </div>
     <div class="columns large-10">
-      <p class="title">Neural Stochastic Poisson Surface Reconstruction</p>
+      <p class="title">Neural Stochastic Screened Poisson Reconstruction</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Alec Jacobson</span></p>
       <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
-      <p class="links"> <a href="">Paper (TBD)</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+      <p class="links"> <a href="pdf/papers/neural-stochastic-psr.pdf">Paper</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
     </div>
   </div>
 

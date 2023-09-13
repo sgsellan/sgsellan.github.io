@@ -21,6 +21,7 @@ If we look closely at the console of the left, we can see a history of all the r
 <meta property="og:url" content="https://www.silviasellan.com/blender_course_scripting.html" /><meta property="og:image" content="https://www.silviasellan.com/images/art/rushmore.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-29T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-05-29T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.silviasellan.com/images/art/rushmore.png"/>
 
@@ -156,8 +157,8 @@ can clone it by running</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/HTDerekLiu/BlenderToolbox.git
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/HTDerekLiu/BlenderToolbox.git
+</code></pre></td></tr></table>
 </div>
 </div><p>Some of the aspects of this tutorial will rely on specific hardcoded paths, so
 let us from now on assume that our directory structure looks like this for some
@@ -168,9 +169,9 @@ master directory <code>dir</code>:</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+</code></pre></td></tr></table>
 </div>
 </div><h4 id="first-steps-imports-and-initialize-scene-saving-file">First steps: imports and initialize scene, saving file</h4>
 <p>To start writing our first Blender script, we will create a new file called
@@ -182,10 +183,10 @@ master directory <code>dir</code>:</p>
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render.py
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py
+</code></pre></td></tr></table>
 </div>
 </div><p>Our file <code>render.py</code> will start with some basic library imports (<em>tip: watch out
 for the differences in capitalization of &ldquo;toolbox&rdquo;</em>).</p>
@@ -198,12 +199,12 @@ for the differences in capitalization of &ldquo;toolbox&rdquo;</em>).</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>We can now validate that our library import works by executing <code>render.py</code>. A
 common mistake here is to attempt to run it using your own local installation of
@@ -214,8 +215,8 @@ need to execute it through Blender&rsquo;s python installation, by running</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">/your/path/to/blender --background --python render.py
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/your/path/to/blender --background --python render.py
+</code></pre></td></tr></table>
 </div>
 </div><p>where it should be noted that the path is to the blender binary, not the
 application. For example, on my MacBook, the path is
@@ -234,15 +235,15 @@ command, it can be useful to define a shorthand alias; for example, in my
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">blender</span><span class="o">=</span><span class="s1">&#39;/Applications/Blender.app/Contents/MacOS/Blender&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="k">function</span> blender-python<span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;-q&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;--quiet&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="cl">        blender --background --python <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> 1&gt; /dev/null
-</span></span><span class="line"><span class="cl">    <span class="k">else</span>
-</span></span><span class="line"><span class="cl">        blender --background --python <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">blender</span><span class="o">=</span><span class="s1">&#39;/Applications/Blender.app/Contents/MacOS/Blender&#39;</span>
+<span class="k">function</span> blender-python<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;-q&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;--quiet&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+        blender --background --python <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> 1&gt; /dev/null
+    <span class="k">else</span>
+        blender --background --python <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>which allows me to use <code>blender</code> to refer to the whole path above, and
 <code>blender-python</code> to add the <code>--background --python</code> options. Then, we can just
@@ -252,8 +253,8 @@ do</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">blender-python render.py
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">blender-python render.py
+</code></pre></td></tr></table>
 </div>
 </div><p>Command line aliases can be a little tricky, so if this does not work for you,
 do not fret. Just swap <code>blender-python</code> for <code>/your/path/to/blender --background --python</code> in all that follows.</p>
@@ -268,10 +269,10 @@ this after the imports:</p>
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>In practice, it can be useful to have a parameter <code>mult</code> that we can use to
 easily alternate between the low resolutions we tend to use for prototyping and
@@ -285,12 +286,12 @@ the high ones for final figure versions:</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Our <code>render.py</code> should look like this now:</p>
 <div class="highlight"><div class="chroma">
@@ -308,18 +309,18 @@ the high ones for final figure versions:</p>
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><h4 id="save-file">Save file</h4>
 <p>Hopefully, running <code>blender-python render.py</code> on the script above does not
@@ -333,9 +334,9 @@ scene into a <code>.blend</code> Blender file:</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Our <code>render.py</code> should look like this now:</p>
 <div class="highlight"><div class="chroma">
@@ -359,24 +360,24 @@ scene into a <code>.blend</code> Blender file:</p>
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># boring imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># initialize shape</span>
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># save to blend file</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Our directory will now be populated with a <code>test.blend</code> file:</p>
 <div class="highlight"><div class="chroma">
@@ -387,11 +388,11 @@ scene into a <code>.blend</code> Blender file:</p>
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render.py  
-</span></span><span class="line"><span class="cl">└── test.blend
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── test.blend
+</code></pre></td></tr></table>
 </div>
 </div><p>If we open it, we will indeed see an empty scene; and if we go to the render
 paramaters, we will see the expected 100 by 100 resolution:</p>
@@ -416,12 +417,12 @@ paramaters, we will see the expected 100 by 100 resolution:</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render.py  
-</span></span><span class="line"><span class="cl">└── test.blend  
-</span></span><span class="line"><span class="cl">└── dog.obj
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── test.blend  
+└── dog.obj
+</code></pre></td></tr></table>
 </div>
 </div><p>In that case, we can read it with</p>
 <div class="highlight"><div class="chroma">
@@ -433,12 +434,12 @@ paramaters, we will see the expected 100 by 100 resolution:</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>It can be hard to come up with the correct location and translation without any
 visual cues. Instead of trying to do that, I recommend starting by making them
@@ -493,31 +494,31 @@ this:</p>
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># boring imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># initialize shape</span>
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># read mesh</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># save to blend file</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><h3 id="camera">Camera</h3>
 <p>Once we have imported the object, the next critical element we need to take an
@@ -531,11 +532,11 @@ import the camera with zero rotation and translation</p>
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># add camera</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>then open the generated <code>test.blend</code>:</p>
 <p><img
@@ -589,36 +590,36 @@ import the camera with zero rotation and translation</p>
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># boring imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># initialize shape</span>
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># read mesh</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add camera</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># save to blend file</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><h4 id="render-with-command-line">Render with command line</h4>
 <p>Alright! We have an object and a camera: that&rsquo;s the minimal set we need to
@@ -629,9 +630,9 @@ render a picture. We can do it with one last line of code:</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>such that our full <code>render.py</code> looks like this:</p>
 <div class="highlight"><div class="chroma">
@@ -671,40 +672,40 @@ render a picture. We can do it with one last line of code:</p>
 </span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># boring imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># initialize shape</span>
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># read mesh</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add camera</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># render</span>
-</span></span><span class="line"><span class="cl"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># save to blend file</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>If we now run <code>blender-python render.py</code>, we will get a new image in our
 directory</p>
@@ -718,13 +719,13 @@ directory</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render.py  
-</span></span><span class="line"><span class="cl">└── test.blend  
-</span></span><span class="line"><span class="cl">└── dog.obj  
-</span></span><span class="line"><span class="cl">└── image.png
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── test.blend  
+└── dog.obj  
+└── image.png
+</code></pre></td></tr></table>
 </div>
 </div><p>which, for now, looks like this (generated with <code>mult=5</code>):</p>
 <p><img
@@ -745,8 +746,8 @@ simplest light one can add is a sun:</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">light</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setLight_sun</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># 45 is the angle, 1.0 is the brightness</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">light</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setLight_sun</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># 45 is the angle, 1.0 is the brightness</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>A sunlight generally results in very sharp shadows:</p>
 <p><img
@@ -768,9 +769,9 @@ the scene to avoid extremely dark areas:</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">light</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setLight_sun</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span><span class="mf">1.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.2 is the &#34;strength&#34; (from 0:black to 1:white)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">light</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setLight_sun</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.2 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>This is the rendered output we get:</p>
 <p><img
@@ -793,8 +794,8 @@ fortunately use with the Blender Toolbox:</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># parameters are intuitive, but it&#39;s worth fine-tuning</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># parameters are intuitive, but it&#39;s worth fine-tuning</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>If we now open the generated <code>blend</code> file, we see something like this, with the
 three point lights of differing intensities:</p>
@@ -861,45 +862,45 @@ position of the camera and object accordingly:</p>
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># boring imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># initialize shape</span>
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># read mesh</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add camera</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add light</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># render</span>
-</span></span><span class="line"><span class="cl"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># save to blend file</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># add light</span>
+<span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>and produces a much more satisfying shape:</p>
 <p><img
@@ -924,9 +925,9 @@ second, assinging the mesh a material with said color (e.g., &ldquo;blue plastic
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mesh_rgba</span> <span class="o">=</span> <span class="p">(</span><span class="mf">178.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">223.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">138.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># rgba</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">mesh_rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">mesh_rgba</span> <span class="o">=</span> <span class="p">(</span><span class="mf">178.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">223.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">138.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># rgba</span>
+<span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">mesh_rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>The second part, for a plastic material, looks like this (make sure to have this
 code execute after <code>mesh</code> has been imported):</p>
@@ -935,8 +936,8 @@ code execute after <code>mesh</code> has been imported):</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>If we add these lines to <code>render.py</code>, which would then look like this:</p>
 <div class="highlight"><div class="chroma">
@@ -986,50 +987,50 @@ code execute after <code>mesh</code> has been imported):</p>
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># boring imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># initialize shape</span>
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># read mesh</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># material</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rgba</span> <span class="o">=</span> <span class="p">(</span><span class="mf">178.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">223.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">138.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># rgba</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">mesh_rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add camera</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add light</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># render</span>
-</span></span><span class="line"><span class="cl"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># save to blend file</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># material</span>
+<span class="n">mesh_rgba</span> <span class="o">=</span> <span class="p">(</span><span class="mf">178.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">223.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">138.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># rgba</span>
+<span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">mesh_rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># add light</span>
+<span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>we produce this rendered image (now using <code>mult=10</code> to appreciate more nuanced
 distinctions):</p>
@@ -1049,9 +1050,9 @@ distinctions):</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">AO</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># ambient occlusion</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_singleColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">,</span><span class="n">AO</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">AO</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># ambient occlusion</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_singleColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">,</span><span class="n">AO</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>and looks like this:</p>
 <p><img
@@ -1074,8 +1075,8 @@ because of this).</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_transparent</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_transparent</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p><img
         class="lazyload"
@@ -1092,9 +1093,9 @@ because of this).</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">AO</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># ambient occlusion</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_metal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span> <span class="n">AO</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">AO</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># ambient occlusion</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_metal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span> <span class="n">AO</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p><img
         class="lazyload"
@@ -1110,8 +1111,8 @@ because of this).</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_glass</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_glass</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p><img
         class="lazyload"
@@ -1138,14 +1139,14 @@ Blender Toolbox.</p>
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render.py  
-</span></span><span class="line"><span class="cl">└── scalar_data.py  
-</span></span><span class="line"><span class="cl">└── test.blend  
-</span></span><span class="line"><span class="cl">└── dog.obj  
-</span></span><span class="line"><span class="cl">└── image.png
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── scalar_data.py  
+└── test.blend  
+└── dog.obj  
+└── image.png
+</code></pre></td></tr></table>
 </div>
 </div><p>and use it to write some simple per-vertex data on our mesh and save it to a
 numpy file (you may need to <code>pip install gpytoolbox</code>):</p>
@@ -1159,13 +1160,13 @@ numpy file (you may need to <code>pip install gpytoolbox</code>):</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">gpytoolbox</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">v</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">gpytoolbox</span><span class="o">.</span><span class="n">read_mesh</span><span class="p">(</span><span class="s1">&#39;dog.obj&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">vertex_data</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">gpytoolbox</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">v</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">gpytoolbox</span><span class="o">.</span><span class="n">read_mesh</span><span class="p">(</span><span class="s1">&#39;dog.obj&#39;</span><span class="p">)</span>
+<span class="n">vertex_data</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Now, if we run <code>python scalard_data.py</code> (with your own python! not Blender&rsquo;s!),
 a new <code>vertex_data.npy</code> file should be generated:</p>
@@ -1181,15 +1182,15 @@ a new <code>vertex_data.npy</code> file should be generated:</p>
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render.py  
-</span></span><span class="line"><span class="cl">└── scalar_data.py  
-</span></span><span class="line"><span class="cl">└── vertex_data.npy  
-</span></span><span class="line"><span class="cl">└── test.blend  
-</span></span><span class="line"><span class="cl">└── dog.obj  
-</span></span><span class="line"><span class="cl">└── image.png  
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── scalar_data.py  
+└── vertex_data.npy  
+└── test.blend  
+└── dog.obj  
+└── image.png  
+</code></pre></td></tr></table>
 </div>
 </div><p>In <code>render.py</code>, we can read this file to build a material with per-vertex
 colors. The setup is slightly convoluted, but since we only really need it for
@@ -1202,11 +1203,11 @@ this specific use-case there isn&rsquo;t much need to understand it at depth:</p
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">vertex_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setMeshScalars</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_color_with_data</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">([],</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_VColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color_with_data</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">vertex_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setMeshScalars</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
+<span class="n">mesh_color_with_data</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">([],</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_VColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color_with_data</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Our <code>render.py</code> would therefore look like</p>
 <div class="highlight"><div class="chroma">
@@ -1268,62 +1269,62 @@ this specific use-case there isn&rsquo;t much need to understand it at depth:</p
 </span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># boring imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># initialize shape</span>
-</span></span><span class="line"><span class="cl"><span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl"><span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># read mesh</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># material</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># commented all the materials we tried</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # mesh_rgba = (178.0/255.0,223.0/255.0,138.0/255.0,1.0) # rgba</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # mesh_color = bt.colorObj(mesh_rgba) # &#34;blender&#34; color</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # bt.setMat_plastic(mesh,mesh_color)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # AO = 1.0</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # bt.setMat_singleColor(mesh,mesh_color,AO)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # bt.setMat_transparent(mesh, mesh_color, 0.5, 0.2)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # AO = 1.0 # ambient occlusion</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # bt.setMat_metal(mesh, mesh_color, AO, 0.9)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># # bt.setMat_glass(mesh, mesh_color,0.1)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># per-vertex colors</span>
-</span></span><span class="line"><span class="cl"><span class="n">vertex_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setMeshScalars</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh_color_with_data</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">([],</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_VColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color_with_data</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add camera</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># add light</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># render</span>
-</span></span><span class="line"><span class="cl"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># save to blend file</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># material</span>
+<span class="c1"># commented all the materials we tried</span>
+<span class="c1"># # mesh_rgba = (178.0/255.0,223.0/255.0,138.0/255.0,1.0) # rgba</span>
+<span class="c1"># # mesh_color = bt.colorObj(mesh_rgba) # &#34;blender&#34; color</span>
+<span class="c1"># # bt.setMat_plastic(mesh,mesh_color)</span>
+<span class="c1"># # AO = 1.0</span>
+<span class="c1"># # bt.setMat_singleColor(mesh,mesh_color,AO)</span>
+<span class="c1"># # bt.setMat_transparent(mesh, mesh_color, 0.5, 0.2)</span>
+<span class="c1"># # AO = 1.0 # ambient occlusion</span>
+<span class="c1"># # bt.setMat_metal(mesh, mesh_color, AO, 0.9)</span>
+<span class="c1"># # bt.setMat_glass(mesh, mesh_color,0.1)</span>
+<span class="c1"># per-vertex colors</span>
+<span class="n">vertex_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setMeshScalars</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
+<span class="n">mesh_color_with_data</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">([],</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_VColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color_with_data</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># add light</span>
+<span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>and produce this:</p>
 <p><img
@@ -1356,18 +1357,18 @@ structure like this:</p>
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render_utility/  
-</span></span><span class="line"><span class="cl">└─────── __init__.py  
-</span></span><span class="line"><span class="cl">└─────── misc.py  
-</span></span><span class="line"><span class="cl">└── render.py  
-</span></span><span class="line"><span class="cl">└── scalar_data.py  
-</span></span><span class="line"><span class="cl">└── vertex_data.npy  
-</span></span><span class="line"><span class="cl">└── test.blend  
-</span></span><span class="line"><span class="cl">└── dog.obj  
-</span></span><span class="line"><span class="cl">└── image.png  
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render_utility/  
+└─────── __init__.py  
+└─────── misc.py  
+└── render.py  
+└── scalar_data.py  
+└── vertex_data.npy  
+└── test.blend  
+└── dog.obj  
+└── image.png  
+</code></pre></td></tr></table>
 </div>
 </div><p>Here&rsquo;s what <code>render_utility/__init__.py</code> looks like (this is just a file that
 tells <code>python</code> that this is a module):</p>
@@ -1376,8 +1377,8 @@ tells <code>python</code> that this is a module):</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="o">*</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>and, on the other hand, here&rsquo;s what <code>misc.py</code> can look like, containing all our
 general rendering functionality:</p>
@@ -1424,46 +1425,46 @@ general rendering functionality:</p>
 </span><span class="lnt">39
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># basic imports</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># blender toolbox</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># base blender python functionality</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">bpy</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># cbrewer</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardred</span> <span class="o">=</span> <span class="p">(</span><span class="mf">228.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">26.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">28.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardblue</span> <span class="o">=</span> <span class="p">(</span><span class="mf">55.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">126.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">184.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># blue</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardgreen</span> <span class="o">=</span> <span class="p">(</span><span class="mf">77.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">175.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">74.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># green</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardpurple</span> <span class="o">=</span> <span class="p">(</span><span class="mf">152.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">78.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">163.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># purple</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardorange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">127.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">0.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># orange</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardyellow</span> <span class="o">=</span> <span class="p">(</span><span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">51.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># yellow</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardbrown</span> <span class="o">=</span> <span class="p">(</span><span class="mf">166.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">86.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">40.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># brown</span>
-</span></span><span class="line"><span class="cl"><span class="n">hardpink</span> <span class="o">=</span> <span class="p">(</span><span class="mf">247.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">129.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">191.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># pink</span>
-</span></span><span class="line"><span class="cl"><span class="n">grey</span> <span class="o">=</span> <span class="p">(</span><span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># grey</span>
-</span></span><span class="line"><span class="cl"><span class="n">softblue</span> <span class="o">=</span> <span class="p">(</span><span class="mf">191.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">211.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">230.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># light blue</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">ourcolor</span> <span class="o">=</span> <span class="n">hardgreen</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">setup_scene</span><span class="p">(</span><span class="n">mult</span><span class="p">,</span><span class="n">cam_position</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">resolution</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
-</span></span><span class="line"><span class="cl">    <span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution</span><span class="p">,</span><span class="n">resolution</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">mult</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_position</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">cam</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span> <span class="o">=</span> <span class="n">ourcolor</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">location</span><span class="p">,</span><span class="n">rotation</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
-</span></span><span class="line"><span class="cl">    <span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">mesh</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">render_scene</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># basic imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span class="c1"># blender toolbox</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+<span class="c1"># base blender python functionality</span>
+<span class="kn">import</span> <span class="nn">bpy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># cbrewer</span>
+<span class="n">hardred</span> <span class="o">=</span> <span class="p">(</span><span class="mf">228.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">26.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">28.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">hardblue</span> <span class="o">=</span> <span class="p">(</span><span class="mf">55.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">126.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">184.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># blue</span>
+<span class="n">hardgreen</span> <span class="o">=</span> <span class="p">(</span><span class="mf">77.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">175.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">74.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># green</span>
+<span class="n">hardpurple</span> <span class="o">=</span> <span class="p">(</span><span class="mf">152.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">78.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">163.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># purple</span>
+<span class="n">hardorange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">127.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">0.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># orange</span>
+<span class="n">hardyellow</span> <span class="o">=</span> <span class="p">(</span><span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">51.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># yellow</span>
+<span class="n">hardbrown</span> <span class="o">=</span> <span class="p">(</span><span class="mf">166.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">86.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">40.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># brown</span>
+<span class="n">hardpink</span> <span class="o">=</span> <span class="p">(</span><span class="mf">247.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">129.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">191.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># pink</span>
+<span class="n">grey</span> <span class="o">=</span> <span class="p">(</span><span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># grey</span>
+<span class="n">softblue</span> <span class="o">=</span> <span class="p">(</span><span class="mf">191.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">211.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">230.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># light blue</span>
+
+<span class="n">ourcolor</span> <span class="o">=</span> <span class="n">hardgreen</span>
+
+<span class="k">def</span> <span class="nf">setup_scene</span><span class="p">(</span><span class="n">mult</span><span class="p">,</span><span class="n">cam_position</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">):</span>
+    <span class="n">resolution</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution</span><span class="p">,</span><span class="n">resolution</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">mult</span><span class="p">)</span>
+    <span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_position</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">()</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">cam</span>
+
+<span class="k">def</span> <span class="nf">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span> <span class="o">=</span> <span class="n">ourcolor</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)):</span>
+    <span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">location</span><span class="p">,</span><span class="n">rotation</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mesh</span>
+
+<span class="k">def</span> <span class="nf">render_scene</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">):</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Then, our <code>render.py</code> can just be:</p>
 <div class="highlight"><div class="chroma">
@@ -1482,19 +1483,19 @@ general rendering functionality:</p>
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">render_utility</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">10</span><span class="p">,(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">70</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">render_utility</span>
+
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">10</span><span class="p">,(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">70</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">))</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><h4 id="leveraging-render-specific-module-to-make-a-new-figure">Leveraging render-specific module to make a new figure</h4>
 <p>If, for example, I want to make a new script comparing three objs
@@ -1520,22 +1521,22 @@ input</a>) in <code>comparison/</code>,</p>
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">dir/  
-</span></span><span class="line"><span class="cl">└── BlenderToolbox/  
-</span></span><span class="line"><span class="cl">└── render_utility/  
-</span></span><span class="line"><span class="cl">└─────── __init__.py  
-</span></span><span class="line"><span class="cl">└─────── misc.py  
-</span></span><span class="line"><span class="cl">└── comparison/  
-</span></span><span class="line"><span class="cl">└─────── ours.obj  
-</span></span><span class="line"><span class="cl">└─────── input.obj  
-</span></span><span class="line"><span class="cl">└─────── theirs.obj  
-</span></span><span class="line"><span class="cl">└── render.py  
-</span></span><span class="line"><span class="cl">└── scalar_data.py  
-</span></span><span class="line"><span class="cl">└── vertex_data.npy  
-</span></span><span class="line"><span class="cl">└── test.blend  
-</span></span><span class="line"><span class="cl">└── dog.obj  
-</span></span><span class="line"><span class="cl">└── image.png  
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render_utility/  
+└─────── __init__.py  
+└─────── misc.py  
+└── comparison/  
+└─────── ours.obj  
+└─────── input.obj  
+└─────── theirs.obj  
+└── render.py  
+└── scalar_data.py  
+└── vertex_data.npy  
+└── test.blend  
+└── dog.obj  
+└── image.png  
+</code></pre></td></tr></table>
 </div>
 </div><p>all I need to add is a new render file called <code>render_comparison.py</code>:</p>
 <div class="highlight"><div class="chroma">
@@ -1577,42 +1578,42 @@ input</a>) in <code>comparison/</code>,</p>
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
-</span></span><span class="line"><span class="cl"><span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">render_utility</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_our_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/ours.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_their_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/theirs.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">path_to_input_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/input.obj&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">our_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/ours_image.png&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">input_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/input_image.png&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">their_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/their_image.png&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">plot_input_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">plot_their_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># ours</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path_to_our_mesh</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">our_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># input</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">plot_input_mesh</span><span class="p">(</span><span class="n">path_to_input_mesh</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">input_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># theirs</span>
-</span></span><span class="line"><span class="cl"><span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">plot_their_mesh</span><span class="p">(</span><span class="n">path_to_their_mesh</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">their_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">render_utility</span>
+
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">path_to_our_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/ours.obj&#39;</span>
+<span class="n">path_to_their_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/theirs.obj&#39;</span>
+<span class="n">path_to_input_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/input.obj&#39;</span>
+<span class="n">our_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/ours_image.png&#39;</span>
+<span class="n">input_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/input_image.png&#39;</span>
+<span class="n">their_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/their_image.png&#39;</span>
+
+<span class="k">def</span> <span class="nf">plot_input_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">plot_their_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
+
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+
+<span class="c1"># ours</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path_to_our_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">our_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># input</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">plot_input_mesh</span><span class="p">(</span><span class="n">path_to_input_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">input_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># theirs</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">plot_their_mesh</span><span class="p">(</span><span class="n">path_to_their_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">their_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>Et voilà!</p>
 <p><img
@@ -1652,14 +1653,14 @@ input</a>) in <code>comparison/</code>,</p>
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">plot_point_cloud</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.003</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">ourcolor</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">rotation</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># # set material </span>
-</span></span><span class="line"><span class="cl">    <span class="n">ptColor</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ptSize</span> <span class="o">=</span> <span class="n">radius</span>
-</span></span><span class="line"><span class="cl">    <span class="n">bt</span><span class="o">.</span><span class="n">setMat_pointCloud</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">ptColor</span><span class="p">,</span> <span class="n">ptSize</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">mesh</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">plot_point_cloud</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.003</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">ourcolor</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)):</span>
+    <span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">rotation</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="c1"># # set material </span>
+    <span class="n">ptColor</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">ptSize</span> <span class="o">=</span> <span class="n">radius</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setMat_pointCloud</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">ptColor</span><span class="p">,</span> <span class="n">ptSize</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mesh</span>
+</code></pre></td></tr></table>
 </div>
 </div><h4 id="exercise-slices"><em>Exercise: slices</em></h4>
 </div><div class="post-footer" id="post-footer">

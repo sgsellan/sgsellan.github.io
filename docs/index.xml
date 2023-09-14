@@ -28,7 +28,7 @@ Unfortunately, the authors have suffered the misfortune of being featured in thi
     <author>Author</author>
     <guid>https://www.silviasellan.com/gpytoolbox-2d-prototyping.html</guid>
     <description><![CDATA[Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
-1  pip install gpytoolbox   Gpytoolbox shines when it comes to letting you test out your research ideas on simple 2D geometry before you commit to more complex three-dimensional examples and elaborately optimized implementations. Often, our final algorithm will use triangle meshes to represent surfaces in 3D. This means that, when prototyping in 2D, we will work with its equivalent: curves built by connecting flat segments (edges), which are usually called polylines.]]></description>
+1 pip install gpytoolbox Gpytoolbox shines when it comes to letting you test out your research ideas on simple 2D geometry before you commit to more complex three-dimensional examples and elaborately optimized implementations. Often, our final algorithm will use triangle meshes to represent surfaces in 3D. This means that, when prototyping in 2D, we will work with its equivalent: curves built by connecting flat segments (edges), which are usually called polylines.]]></description>
 </item><item>
     <title>Quick 2D prototyping with Gpytoolbox II: Sampling 2D polylines</title>
     <link>https://www.silviasellan.com/gpytoolbox-2d-prototyping-2.html</link>
@@ -36,7 +36,7 @@ Unfortunately, the authors have suffered the misfortune of being featured in thi
     <author>Author</author>
     <guid>https://www.silviasellan.com/gpytoolbox-2d-prototyping-2.html</guid>
     <description><![CDATA[Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
-1  pip install gpytoolbox   This is the second in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
+1 pip install gpytoolbox This is the second in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
 In the last tutorial, we saw how to load simple two-dimensional polylines into Python using gpytoolbox to quickly test our research code on.]]></description>
 </item><item>
     <title>Quick 2D prototyping with Gpytoolbox III: Distances to 2D polylines</title>
@@ -45,7 +45,7 @@ In the last tutorial, we saw how to load simple two-dimensional polylines into P
     <author>Author</author>
     <guid>https://www.silviasellan.com/gpytoolbox-2d-prototyping-3.html</guid>
     <description><![CDATA[Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
-1  pip install gpytoolbox   This is the third in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
+1 pip install gpytoolbox This is the third in a series of blogposts highlighting features of our newly released library. You can find rest of the blog entries here. Today, we are looking at how to compute distances to 2D polylines.
 There are many reasons why you may want to compute the minimum distance from a given point in 2D to a polyline: for example, to guide sampling or as a stopping criterion in iterative algorithms.]]></description>
 </item><item>
     <title>Blender Course III: Rendering static images and animations programatically using Blender scripts</title>
@@ -63,7 +63,7 @@ If we look closely at the console of the left, we can see a history of all the r
     <author>Author</author>
     <guid>https://www.silviasellan.com/arxiv_compressing.html</guid>
     <description><![CDATA[I keep forgetting how to do this well, and most of the tricks I find if I just google don&rsquo;t work for me. So, future Silvia, here&rsquo;s what you do:
- Run pip install arxiv-latex-cleaner Run arxiv_latex_cleaner --compress_pdf path/to/tex/folder Compress the new folder path/to/tex/folder-ArXiv and upload that to ArXiv  ]]></description>
+Run pip install arxiv-latex-cleaner Run arxiv_latex_cleaner --compress_pdf path/to/tex/folder Compress the new folder path/to/tex/folder-ArXiv and upload that to ArXiv ]]></description>
 </item><item>
     <title>Running a weekly virtual colloquium</title>
     <link>https://www.silviasellan.com/colloquium.html</link>

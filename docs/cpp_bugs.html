@@ -21,7 +21,6 @@ Diagnosis: This happens because you am declaring a variable and calling it witho
 <meta property="og:url" content="https://www.silviasellan.com/cpp_bugs.html" /><meta property="og:image" content="https://www.silviasellan.com/images/art/rushmore.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-01-27T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-01-27T00:00:00+00:00" />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.silviasellan.com/images/art/rushmore.png"/>
 
@@ -41,7 +40,7 @@ Diagnosis: This happens because you am declaring a variable and calling it witho
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.silviasellan.com\/cpp_bugs.html"
-        },"genre": "posts","wordcount":  676 ,
+        },"genre": "posts","wordcount":  684 ,
         "url": "https:\/\/www.silviasellan.com\/cpp_bugs.html","datePublished": "2022-01-27T00:00:00+00:00","dateModified": "2022-01-27T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -124,9 +123,9 @@ Diagnosis: This happens because you am declaring a variable and calling it witho
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="o">&gt;</span> <span class="n">A</span><span class="p">;</span>
-<span class="n">A</span><span class="p">.</span><span class="n">setZero</span><span class="p">();</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="o">&gt;</span> <span class="n">A</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">.</span><span class="n">setZero</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="linker-error">Linker error</h3>
 <p><strong>Symptoms:</strong> The code seems to compile well but breaks just at the end of the compilation process, returning an error like <code>ld: symbol(s) not found for architecture x86_64</code>.</p>
@@ -140,11 +139,11 @@ Diagnosis: This happens because you am declaring a variable and calling it witho
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">rm -rf build
-mkdir build
-<span class="nb">cd</span> build
-cmake ../
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rm -rf build
+</span></span><span class="line"><span class="cl">mkdir build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">cmake ../
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>If you are not using CMake (even though you should) and instead compiling by calling your compiler directly from the terminal like <code>gcc main.cpp -o main</code>, then add <code>func.cpp</code> to the source files being compiled by calling instead <code>gcc main.cpp func.cpp -o main</code>.</p>
 <h3 id="multiple-inclusions">Multiple inclusions</h3>
@@ -161,14 +160,14 @@ cmake ../
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-    <span class="n">func</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">func2</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">func</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">func2</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>which calls functions <code>func.cpp</code></p>
 <div class="highlight"><div class="chroma">
@@ -177,9 +176,9 @@ cmake ../
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>with header file <code>func.h</code>:</p>
 <div class="highlight"><div class="chroma">
@@ -187,8 +186,8 @@ cmake ../
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>and
 <code>func2.cpp</code></p>
@@ -198,9 +197,9 @@ cmake ../
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>with header file <code>func2.h</code>:</p>
 <div class="highlight"><div class="chroma">
@@ -209,9 +208,9 @@ cmake ../
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>When the compiler sees an <code>include</code> statement, it will literally just copy that file at that position in the code; and, of course, this works recursively. Therefore, since <code>main</code> is including <code>func.h</code> and <code>func2.h</code>, which in turn also includes <code>func.h</code>, when the compiler starts reading <code>main.cpp</code> and sees</p>
 <div class="highlight"><div class="chroma">
@@ -220,9 +219,9 @@ cmake ../
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>it will interpret it as</p>
 <div class="highlight"><div class="chroma">
@@ -231,9 +230,9 @@ cmake ../
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>and then</p>
 <div class="highlight"><div class="chroma">
@@ -243,10 +242,10 @@ cmake ../
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>which recursively turns into</p>
 <div class="highlight"><div class="chroma">
@@ -256,10 +255,10 @@ cmake ../
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Thus, even without knowing it, we were defining the same function twice to the compiler&rsquo;s eyes, and that makes it crash.</p>
 <p><strong>Treatment:</strong> The best way to be protected against this is always using <a href="https://en.wikipedia.org/wiki/Include_guard" target="_blank" rel="noopener noreffer">include guards</a>, a smart trick to ensure that the compiler will only enter the main text of each header file once. Basically, envelop <em>every</em> header file you ever write in an if statement like this:</p>
@@ -273,13 +272,13 @@ cmake ../
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef UNIQUE_NAME
-</span><span class="cp">#define UNIQUE_NAME
-</span><span class="cp"></span>
-<span class="c1">// header code here
-</span><span class="c1"></span>
-<span class="cp">#endif
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifndef UNIQUE_NAME
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define UNIQUE_NAME
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// header code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Make sure that <code>UNIQUE_NAME</code> is unique for each header file and it never shares a name with any file or variable or functions ever read by the compiler. For example, you can make them all caps and make sure you never write all caps variable or function names.</p>
 <p>So, in our example, we would make <code>func.h</code></p>
@@ -291,11 +290,11 @@ cmake ../
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef FUNC
-</span><span class="cp">#define FUNC
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#endif
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifndef FUNC
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define FUNC
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>and <code>func2.h</code></p>
 <div class="highlight"><div class="chroma">
@@ -307,12 +306,12 @@ cmake ../
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef FUNC2
-</span><span class="cp">#define FUNC2
-</span><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#endif
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifndef FUNC2
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define FUNC2
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>By doing this, we avoid the compiler entering the same code twice and we avoid the error</p>
 </div><div class="post-footer" id="post-footer">

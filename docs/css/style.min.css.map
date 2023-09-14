@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "/Users/sgsellan/Dropbox/projects/website",
+	"sourceRoot": "/Users/silviasellan/Dropbox/projects/website",
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/css/_variables.scss",

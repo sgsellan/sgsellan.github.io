@@ -150,7 +150,7 @@ a[href$=".pdf"]:after
       <p class="title">Constructive Solid Geometry on Neural Signed Distance Fields</p>
       <p class="authors"><span class=notme>Zoë Marschner, </span><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Hsueh-Ti Derek Liu, Alec Jacobson</span></p>
       <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
-      <p class="links"> <a href="">Paper (TBD)</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+      <p class="links"> <a href="https://www.dgp.toronto.edu/~hsuehtil/pdf/csg_on_neural_sdfs.pdf">Paper</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
     </div>
   </div>
 

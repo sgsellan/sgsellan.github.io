@@ -41,7 +41,7 @@ Diagnosis: This happens because you am declaring a variable and calling it witho
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/www.silviasellan.com\/cpp_bugs.html"
-        },"genre": "posts","wordcount":  676 ,
+        },"genre": "posts","wordcount":  806 ,
         "url": "https:\/\/www.silviasellan.com\/cpp_bugs.html","datePublished": "2022-01-27T00:00:00+00:00","dateModified": "2022-01-27T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -315,6 +315,37 @@ cmake ../
 </span></code></pre></td></tr></table>
 </div>
 </div><p>By doing this, we avoid the compiler entering the same code twice and we avoid the error</p>
+<h3 id="apple-sdk-mismatch">Apple SDK mismatch</h3>
+<p><strong>Symptoms:</strong> The code compiles successfully, but when ran returns an error that references the Apple command line tools, like:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:402:114: error: function does not return string type
+- (nullable instancetype)initWithCString:(const char *)nullTerminatedCString encoding:(NSStringEncoding)encoding NS_FORMAT_ARGUMENT(1);
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                     ^                  ~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:103:48: note: expanded from macro &#39;NS_FORMAT_ARGUMENT&#39;
+        #define NS_FORMAT_ARGUMENT(A) __attribute__ ((format_arg(A)))
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Diagnosis:</strong> This (I think!) happens because there is a mismatch between the versions of your operating system and the Apple Command Line Tools. This is caused by Apple itself sometimes (i.e., having the latest version of both does not necessarily solve this).</p>
+<p><strong>Treatment:</strong> I solve this by specifying a different compiler, by adding</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">set(CMAKE_CXX_COMPILER &#34;/usr/bin/g++&#34;)
+set(CMAKE_C_COMPILER &#34;/usr/bin/gcc&#34;)
+</code></pre></td></tr></table>
+</div>
+</div><p>to my <code>CMakeLists.txt</code>. I am not really sure why this fixes this, but it does :shrug:</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

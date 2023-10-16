@@ -116,3 +116,23 @@ void func2(int a)
 ```
 By doing this, we avoid the compiler entering the same code twice and we avoid the error
 
+### Apple SDK mismatch
+
+**Symptoms:** The code compiles successfully, but when ran returns an error that references the Apple command line tools, like:
+
+```
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:402:114: error: function does not return string type
+- (nullable instancetype)initWithCString:(const char *)nullTerminatedCString encoding:(NSStringEncoding)encoding NS_FORMAT_ARGUMENT(1);
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                     ^                  ~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:103:48: note: expanded from macro 'NS_FORMAT_ARGUMENT'
+        #define NS_FORMAT_ARGUMENT(A) __attribute__ ((format_arg(A)))
+```
+
+**Diagnosis:** This (I think!) happens because there is a mismatch between the versions of your operating system and the Apple Command Line Tools. This is caused by Apple itself sometimes (i.e., having the latest version of both does not necessarily solve this).
+
+**Treatment:** I solve this by specifying a different compiler, by adding 
+```
+set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+set(CMAKE_C_COMPILER "/usr/bin/gcc")
+```
+to my `CMakeLists.txt`. I am not really sure why this fixes this, but it does :shrug:

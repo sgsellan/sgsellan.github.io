@@ -138,7 +138,7 @@ a[href$=".pdf"]:after
       <p class="title">Reach for the Spheres: Tangency-Aware Surface Reconstruction of SDFs</p>
       <p class="authors"><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Christopher Batty, Oded Stein</span></p>
       <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
-      <p class="links"> <a href="pdf/papers/reach-for-the-spheres.pdf">Paper</a> <a href="pdf/papers/reach-for-the-spheres-low-res.pdf">Paper (low res)</a> <a href="https://odedstein.com/projects/reach-for-the-spheres/">Project Page</a> <a href="">Code (TBD)</a></p>
+      <p class="links"> <a href="pdf/papers/reach-for-the-spheres.pdf">Paper</a> <a href="pdf/papers/reach-for-the-spheres-low-res.pdf">Paper (low res)</a> <a href="https://odedstein.com/projects/reach-for-the-spheres/">Project Page</a> <a href="https://github.com/sgsellan/reach-for-the-spheres">Code</a></p>
     </div>
   </div>
 
@@ -150,7 +150,7 @@ a[href$=".pdf"]:after
       <p class="title">Constructive Solid Geometry on Neural Signed Distance Fields</p>
       <p class="authors"><span class=notme>Zoë Marschner, </span><span class=me>Silvia Sell&aacuten</span>, <span class=notme>Hsueh-Ti Derek Liu, Alec Jacobson</span></p>
       <p class="venue">ACM Transactions on Graphics (SIGGRAPH Asia), 2023</p>
-      <p class="links"> <a href="https://www.dgp.toronto.edu/~hsuehtil/pdf/csg_on_neural_sdfs.pdf">Paper</a> <a href="">Project Page (TBD)</a> <a href="">Code (TBD)</a></p>
+      <p class="links"> <a href="https://www.dgp.toronto.edu/~hsuehtil/pdf/csg_on_neural_sdfs.pdf">Paper</a> <a href="http://zoemarschner.com/research/csg_on_neural_sdfs">Project Page</a> <a href="">Code (TBD)</a></p>
     </div>
   </div>
 

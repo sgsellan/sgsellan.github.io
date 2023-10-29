@@ -1,0 +1,14 @@
+name: "Breaking Bad:\\A Dataset for Geometric Fracture and Reassembly"
+date: 2022-12-02
+venue: 'NeurIPS 2022'
+authors:
+  - Silvia Sellán*
+  - Yun-Chun Chen*
+  - Ziyi Wu*
+  - Animesh Garg
+  - Alec Jacobson (*joint first authors)
+image: '/images/paper-thumbnails/breaking-bad.jpg'
+link: https://breaking-bad-dataset.github.io/
+pdflink: '/pdf/papers/breaking-bad.pdf'
+codelink: https://github.com/sgsellan/fracture-modes#dataset
+description: ''

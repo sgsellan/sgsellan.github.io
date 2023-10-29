@@ -1,0 +1,14 @@
+name: "Solid Geometry Processing on Deconstructed Domains"
+date: 2019-06
+venue: 'ACM / Eurographics Symposium on Geometry Processing'
+authors:
+  - Silvia Sellán
+  - Herng Yi Cheng
+  - Yuming Ma
+  - Mitchell Dembowski
+  - Alec Jacobson
+image: '/images/paper-thumbnails/overlapping.jpg'
+link: hhttps://www.dgp.toronto.edu/projects/deconstructed-domains/
+pdflink: '/pdf/papers/overlapping.pdf'
+codelink: https://github.com/sgsellan/solid-geometry-processing-on-deconstructed-domains
+description: ''

@@ -1,0 +1,15 @@
+name: "Breaking Good: Fracture Modes for Realtime Destruction"
+date: 2022-12-01
+venue: 'SIGGRAPH Asia 2022'
+authors:
+  - Silvia Sellán
+  - Jack Luong
+  - Leticia Mattos Da Silva
+  - Aravind Ramakrishnan
+  - Yuchuan Yang
+  - Alec Jacobson
+image: '/images/paper-thumbnails/breaking-good.jpg'
+link: https://www.dgp.toronto.edu/projects/breaking-good/
+pdflink: '/pdf/papers/breaking-good.pdf'
+codelink: https://github.com/sgsellan/fracture-modes
+description: ''

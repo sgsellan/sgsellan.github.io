@@ -1,0 +1,12 @@
+name: "Swept Volumes via Spacetime Numerical Continuation"
+date: 2021-06
+venue: 'SIGGRAPH 2021'
+authors:
+  - Silvia Sellán
+  - Noam Aigerman
+  - Alec Jacobson
+image: '/images/paper-thumbnails/swept-volumes.jpg'
+link: https://www.dgp.toronto.edu/projects/swept-volumes/
+pdflink: '/pdf/papers/swept-volumes.pdf'
+codelink: https://github.com/sgsellan/swept-volumes
+description: ''

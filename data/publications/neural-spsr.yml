@@ -1,0 +1,11 @@
+name: "Neural Stochastic Screened Poisson Reconstruction"
+date: 2023-12-02
+venue: 'SIGGRAPH Asia 2023'
+authors:
+  - Silvia Sellán
+  - Alec Jacobson
+image: '/images/paper-thumbnails/neural-spsr.jpg'
+# link: https://zoemarschner.com/research/csg_on_neural_sdfs
+pdflink: '/pdf/papers/neural-stochastic-psr.pdf'
+# codelink: TBD
+description: ''

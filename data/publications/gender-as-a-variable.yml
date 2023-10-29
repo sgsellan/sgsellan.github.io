@@ -1,0 +1,13 @@
+name: "Sex and Gender in the Computer Graphics Research Literature"
+date: 2022-06
+venue: 'SIGGRAPH Talk 2022'
+authors:
+  - Ana Dodik*
+  - Silvia Sellán*
+  - Amanda Phillips
+  - Theodore Kim
+image: '/images/paper-thumbnails/gender.jpg'
+link: https://gender-in-graphics.github.io
+pdflink: '/pdf/papers/gender-as-a-variable.pdf'
+# codelink: https://gpytoolbox.org/0.2.0/poisson_surface_reconstruction/
+description: ''

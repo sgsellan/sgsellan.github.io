@@ -1,0 +1,14 @@
+name: "Bayes' Rays: \\ Tangency-Aware Surface Reconstruction of SDFs"
+date: 2024-01
+venue: 'TBD'
+authors:
+  - Lily Goli
+  - Cody Reading
+  - Silvia Sellán
+  - Alec Jacobson
+  - Andrea Tagliasacchi
+image: '/images/paper-thumbnails/bayes-rays.jpg'
+link: https://bayesrays.github.io
+pdflink: '/pdf/papers/bayes-rays.pdf'
+codelink: https://github.com/BayesRays/BayesRays/tree/main
+description: 'We introduce a post-hoc framework to evaluate uncertainty in any pre-trained NeRF without modifying the training process. Our method establishes a volumetric uncertainty field using spatial perturbations and a Bayesian Laplace approximation. We derive our algorithm statistically and highlight its superior performance in key metrics and NeRF-related applications.'

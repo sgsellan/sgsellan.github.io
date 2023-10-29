@@ -1,0 +1,12 @@
+name: "Developability of Heightfields via Rank Minimization"
+date: 2020-06
+venue: 'SIGGRAPH 2020'
+authors:
+  - Silvia Sellán
+  - Noam Aigerman
+  - Alec Jacobson
+image: '/images/paper-thumbnails/developables.jpg'
+link: https://www.dgp.toronto.edu/projects/compressed-developables/
+pdflink: '/pdf/papers/compressed-developables.pdf'
+codelink: https://github.com/sgsellan/developability-of-heightfields.git
+description: ''

@@ -1,0 +1,12 @@
+name: "Reach for the Spheres: \\ Tangency-Aware Surface Reconstruction of SDFs"
+date: 2023-12-03
+venue: 'SIGGRAPH Asia 2023'
+authors: 
+  - Silvia Sellán
+  - Christopher Batty
+  - Oded Stein
+image: '/images/paper-thumbnails/reach-for-the-spheres.jpg'
+link: https://odedstein.com/projects/reach-for-the-spheres/
+pdflink: '/pdf/papers/reach-for-the-spheres.pdf'
+codelink: https://gpytoolbox.org/0.2.0/reach_for_the_spheres/
+description: 'An improved algorithm for isosurfacing of discrete signed distance fields (SDFs) that explicitly interprets each sample point as a sphere to which the surface must lie tangent. Especially at low grid resolutions, it can recover significantly more detail than marching cubes and Neural Dual Contouring.'

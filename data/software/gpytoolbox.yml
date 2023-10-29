@@ -1,0 +1,9 @@
+name: "Gpytoolbox: A Python geometry processing toolbox"
+date: 2023-06
+venue: 'ACM / Eurographics SGP, Graphics Interface'
+authors:
+  - Silvia Sellán
+  - Oded Stein
+image: '/images/software-thumbnails/gpytoolbox.jpg'
+link: https://gpytoolbox.org/0.2.0/
+description: ''

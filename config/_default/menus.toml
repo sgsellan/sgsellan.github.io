@@ -6,7 +6,7 @@
 
   [[main]]
   name = "Blog"
-  weight = 200
+  weight = 600
   identifier = "blog"
   url = "/post/"
 
@@ -17,13 +17,19 @@
   url = "/publications/"
 
   [[main]]
-  name = "About"
+  name = "Teaching"
   weight = 400
-  identifier = "about"
-  url = "/about/"
+  identifier = "teaching"
+  url = "/teaching/"
 
   [[main]]
-  name = "Contact"
+  name = "Software"
+  weight = 500
+  identifier = "software"
+  url = "/software/"
+
+  [[main]]
+  name = "Food"
   weight = 600
-  identifier = "contact"
-  url = "/contact/"
+  identifier = "food"
+  url = "https://www.pritirrecetas.com/en/"

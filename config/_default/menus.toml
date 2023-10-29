@@ -8,7 +8,7 @@
   name = "Blog"
   weight = 600
   identifier = "blog"
-  url = "/post/"
+  url = "/posts/"
 
   [[main]]
   name = "Publications"

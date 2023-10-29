@@ -4,13 +4,13 @@ date: 2023-05-29
 draft: false
 ---
 
-I recently came accross this [great paper](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002184) by Tatsuya Amano and colleagues on the effects that being a non-native English speaker can have on one's scientific success. It is a good exploratory study of a topic I have unfortunately thought about often, and I recommend reading it in full.
+I recently came across this [great paper](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002184) by Tatsuya Amano and colleagues on the effects that being a non-native English speaker can have on one's scientific success. It is a good exploratory study of a topic I have unfortunately thought about often, and I recommend reading it in full.
 
 Unfortunately, the authors have suffered the misfortune of being featured in [this Phys.org article](https://phys.org/news/2023-07-non-native-english-speaker-science.html?fbclidarticl=IwAR1AasKMrE1LaLP3LjtdEJPCKPEN74Qjhg-FrlBFDAwnk_fBurbu7HGj3a0) (which, to be fair to Phys.org, seems to come from a [PLOS Biology press release](https://www.eurekalert.org/news-releases/995037#:~:text=Papers%20written%20by%20non%2Dnative,not%20confident%20communicating%20in%20English.)), which states the following:
 
 > Papers written by non-native English speakers are 2.5 times more likely to be rejected and 12.5 times more likely to receive a request for revision, simply due to the written English.
 
-Wow! This is a very surprising statement. People who don't speak English as a first language are more than twice as likely to be rejected from scientific journals? What an extraoirdinary claim. _So extraordinary_, in fact, that anyone's skepticism should be awoken by it. Is this actually what the scientists found? Let's look at [the paper](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002184):
+Wow! This is a very surprising statement. People who don't speak English as a first language are more than twice as likely to be rejected from scientific journals? What an extraordinary claim. _So extraordinary_, in fact, that anyone's skepticism should be awoken by it. Is this actually what the scientists found? Let's look at [the paper](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002184):
 
 > Non-native English speakers, especially those of low English proficiency nationalities, are more likely to have their papers rejected by journals due to English writing
 

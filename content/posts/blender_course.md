@@ -20,4 +20,4 @@ In 2022, I gave an earlier version of this tutorial as a video course at the Sym
 
 ## Other
 
-- [Here](./blender_compositing_compatibility.html)'s a note about a common bug that occurse when upgrading from Blender 2.9 to 3.0.
+- [Here](./blender_compositing_compatibility.html)'s a note about a common bug that occurs when upgrading from Blender 2.9 to 3.0.

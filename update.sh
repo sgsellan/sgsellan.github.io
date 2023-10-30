@@ -15,4 +15,4 @@ hugo
 # commit and push
 git add --all
 git commit -m "update"
-git push origin master
+git push

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Featureds on Silvia Sellán</title>
+    <link>https://www.silviasellan.com/featured/</link>
+    <description>Recent content in Featureds on Silvia Sellán</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.silviasellan.com/featured/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I&#39;m looking for a job!</title>
+      <link>https://www.silviasellan.com/featured/2023-11-15-job-search/</link>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/featured/2023-11-15-job-search/</guid>
+      
+        <description>Let me know if you have any leads on tenure-track CS faculty positions!</description>
+      
+    </item>
+    
+    <item>
+      <title>Meet me at SIGGRAPH Asia!</title>
+      <link>https://www.silviasellan.com/featured/2023-10-29-siggraph-asia/</link>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/featured/2023-10-29-siggraph-asia/</guid>
+      
+        <description>What a conference!</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,4 +1,5 @@
 baseURL = "https://www.silviasellan.com"
+publishDir = "docs/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Silvia Sellán"

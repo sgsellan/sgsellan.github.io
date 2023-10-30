@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Silvia Sellán</title>
+    <link>https://www.silviasellan.com/projects/</link>
+    <description>Recent content in Projects on Silvia Sellán</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://www.silviasellan.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blender for Academic Papers</title>
+      <link>https://www.silviasellan.com/projects/blender-for-academic-papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/projects/blender-for-academic-papers/</guid>
+      
+        <description>Over the past three years, I have been learning more and more about using Blender to generate results for academic papers in Computer Graphics.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mesh Math and Beyond</title>
+      <link>https://www.silviasellan.com/projects/sgi-shape-representations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/projects/sgi-shape-representations/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Neural Stochastic Screened Poisson Reconstruction</title>
+      <link>https://www.silviasellan.com/projects/neural-stochastic-screened-psr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/projects/neural-stochastic-screened-psr/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

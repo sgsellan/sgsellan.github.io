@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    Silvia Sellán
+        |
+        Blender Course III: Rendering static images and animations programatically using Blender scripts
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.91.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Silvia Sellán" />
+  <meta
+    name="description"
+    content="Fifth-year PhD Candidate specializing in Computer Graphics at the University of Toronto. Vanier Doctoral Scholar, Adobe Research Fellow and EECS Rising Star. Interested in quantifying the statistical uncertainty inherent in many Graphics and Vision tasks."
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.f0f769a339f98c7718c477ee7007d9ca7ee98f9b6d06e08e988602bb2340c951.css"
+      integrity="sha256-8Pdpozn5jHcYxHfucAfZyn7pj5ttBuCOmIYCuyNAyVE="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://www.silviasellan.com/posts/blender_course_scripting/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.4c31f3cf7e8e609c897dba88aecac0e8db1ebb4e5c841d3f9ffb01d463973678.js"
+      integrity="sha256-TDHzz36OYJyJfbqIrsrA6Nseu05chB0/n/sB1GOXNng="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.silviasellan.com/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Blender Course III: Rendering static images and animations programatically using Blender scripts"/>
+<meta name="twitter:description" content="Introduction: showing scripting screen in GUI Let&rsquo;s open any Blender file, like our template file, and let&rsquo;s fine-tune it a little bit; for example, by changing the main object&rsquo;s position."/>
+
+
+
+  
+  <meta property="og:title" content="Blender Course III: Rendering static images and animations programatically using Blender scripts" />
+<meta property="og:description" content="Introduction: showing scripting screen in GUI Let&rsquo;s open any Blender file, like our template file, and let&rsquo;s fine-tune it a little bit; for example, by changing the main object&rsquo;s position." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.silviasellan.com/posts/blender_course_scripting/" /><meta property="og:image" content="https://www.silviasellan.com/images/site-feature-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-29T00:00:00+00:00" /><meta property="og:site_name" content="Silvia Sellán" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Blender Course III: Rendering static images and animations programatically using Blender scripts",
+        "headline": "Blender Course III: Rendering static images and animations programatically using Blender scripts",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Introduction: showing scripting screen in GUI Let\u0026rsquo;s open any Blender file, like our template file, and let\u0026rsquo;s fine-tune it a little bit; for example, by changing the main object\u0026rsquo;s position.
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.silviasellan.com\/posts\/blender_course_scripting\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-05-29T00:00:00.00Z",
+        "datePublished": "2022-05-29T00:00:00.00Z",
+        "dateModified": "2022-05-29T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Silvia Sellán",
+            "url": "https://www.silviasellan.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/www.silviasellan.com\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://www.silviasellan.com/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/www.silviasellan.com\/posts\/blender_course_scripting\/",
+        "wordCount" : "3233",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/portrait.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Silvia Sellán</a>
+        </div>
+      
+      
+        <div class="sidebar__introduction-description-new"><em class="fas fa-star"></em>
+          <span class="sidebar__introduction-new-text">On the Faculty Job Market! </span><em class="fas fa-star"></em>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Fifth-year PhD Candidate specializing in Computer Graphics at the University of Toronto. Vanier Doctoral Scholar, Adobe Research Fellow and EECS Rising Star. Interested in quantifying the statistical uncertainty inherent in many Graphics and Vision tasks.</p>
+      </div>
+      
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://twitter.com/sellan_s"
+            target="_blank"
+            rel="noopener me"
+            aria-label="twitter"
+            title="twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:sgsellan@cs.toronto.edu"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Silvia Sellán
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header">
+
+<div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/publications/"
+              
+              title=""
+              >Publications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/teaching/"
+              
+              title=""
+              >Teaching</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/software/"
+              
+              title=""
+              >Software</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/cv/"
+              
+              title=""
+              >CV</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts/"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="https://www.pritirrecetas.com/en/"
+              
+                target="_blank" rel="noopener noreferrer"
+              
+              title=""
+              >Food</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Blender Course III: Rendering Static Images and Animations Programatically Using Blender Scripts</h1>
+      <h4 id="introduction-showing-scripting-screen-in-gui">Introduction: showing scripting screen in GUI</h4>
+<p>Let&rsquo;s open any Blender file, like <a href="/images/blender-tutorial/template.blend">our template
+file</a>, and let&rsquo;s fine-tune it a little
+bit; for example, by changing the main object&rsquo;s position.</p>
+<p><img src="/images/blender-gi-course/scripting-0.jpeg" alt=""></p>
+<p>We can now navigate to the <em>scripting</em> window by clicking on the top right, next
+to <em>compositing</em>, to find something like this</p>
+<p><img src="/images/blender-gi-course/scripting-1.jpeg" alt=""></p>
+<p>If we look closely at the console of the left, we can see a history of all the
+recent commands that have been applied to this file through its user interface.
+In this case, we see one command that corresponds to moving the main object in
+the scene.</p>
+<p>Of course, as computer scientists, it may not be surprising for us to see that
+all the actions we take in Blender&rsquo;s graphical interface correspond to executing
+specific programatic commands. However, what is special about Blender is that
+these commands are in an accessible, readable programming language (python) and
+they are exposed such that anyone can learn them and write their own Blender
+scripts. This option is most attractive to us as academics: often, we want to
+render two objects with the exact same rendering setup (e.g., for a comparison)
+or we may want to update a paper figures after a chage in our method by simply
+re-running a script, without having to resort to hours of GUI manipulation.</p>
+<h4 id="blender-toolbox-clone">Blender toolbox, clone</h4>
+<p>The <em>best</em> way to start scripting on Blender is with the help of <a href="">Hsueh-Ti Derek
+Liu</a>&rsquo;s own <a href="https://github.com/HTDerekLiu/BlenderToolbox">Blender toolbox</a>. We
+can clone it by running</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/HTDerekLiu/BlenderToolbox.git
+</code></pre></div><p>Some of the aspects of this tutorial will rely on specific hardcoded paths, so
+let us from now on assume that our directory structure looks like this for some
+master directory <code>dir</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+</code></pre></div><h4 id="first-steps-imports-and-initialize-scene-saving-file">First steps: imports and initialize scene, saving file</h4>
+<p>To start writing our first Blender script, we will create a new file called
+<code>render.py</code> and store it in <code>dir</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py
+</code></pre></div><p>Our file <code>render.py</code> will start with some basic library imports (<em>tip: watch out
+for the differences in capitalization of &ldquo;toolbox&rdquo;</em>).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+</code></pre></div><p>We can now validate that our library import works by executing <code>render.py</code>. A
+common mistake here is to attempt to run it using your own local installation of
+python (e.g., by running <code>python render.py</code> or <code>python3 render.py</code>). Instead, we
+need to execute it through Blender&rsquo;s python installation, by running</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">/your/path/to/blender --background --python render.py
+</code></pre></div><p>where it should be noted that the path is to the blender binary, not the
+application. For example, on my MacBook, the path is
+<code>/Applications/Blender.app/Contents/MacOS/Blender</code>. Since we will often use this
+command, it can be useful to define a shorthand alias; for example, in my
+<code>~/.bash_profile</code> I have added</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">alias</span> <span class="nv">blender</span><span class="o">=</span><span class="s1">&#39;/Applications/Blender.app/Contents/MacOS/Blender&#39;</span>
+<span class="k">function</span> blender-python<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;-q&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;--quiet&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+        blender --background --python <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> 1&gt; /dev/null
+    <span class="k">else</span>
+        blender --background --python <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+</code></pre></div><p>which allows me to use <code>blender</code> to refer to the whole path above, and
+<code>blender-python</code> to add the <code>--background --python</code> options. Then, we can just
+do</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">blender-python render.py
+</code></pre></div><p>Command line aliases can be a little tricky, so if this does not work for you,
+do not fret. Just swap <code>blender-python</code> for <code>/your/path/to/blender --background --python</code> in all that follows.</p>
+<p>Alright! Hopefully our imports worked and <code>render.py</code> executed without issues.
+We can now start creating our Blender file programatically. Our first step will
+be to initialize a scene with a given resolution. We could do this by adding
+this after the imports:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">)</span>
+</code></pre></div><p>In practice, it can be useful to have a parameter <code>mult</code> that we can use to
+easily alternate between the low resolutions we tend to use for prototyping and
+the high ones for final figure versions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+</code></pre></div><p>Our <code>render.py</code> should look like this now:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+</code></pre></div><h4 id="save-file">Save file</h4>
+<p>Hopefully, running <code>blender-python render.py</code> on the script above does not
+return any errors. This means it has succesfully initialized a blender scene;
+however, it can be hard to validate that it has done so correctly. A good way of
+doing this is by adding a last instruction at the end of <code>render.py</code> to save the
+scene into a <code>.blend</code> Blender file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><p>Our <code>render.py</code> should look like this now:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><p>Our directory will now be populated with a <code>test.blend</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── test.blend
+</code></pre></div><p>If we open it, we will indeed see an empty scene; and if we go to the render
+paramaters, we will see the expected 100 by 100 resolution:</p>
+<p><img src="/images/blender-gi-course/scripting-2.jpeg" alt=""></p>
+<h4 id="read-mesh">Read mesh</h4>
+<p>Let&rsquo;s now import the object we want to render. We can do this with
+<code>bt.readMesh</code>. For example, let us assume that we have a mesh called <code>dog.obj</code> in our directory (I am using <a href="/images/blender-tutorial/dog.obj">this</a> amazing dog mesh designed by the magnificent <a href="https://holinaty.com">Josh Holinaty</a>):</p>
+<!-- ([here](/images/blender-tutorial/dog.obj)'s a good one!) in our directory -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── test.blend  
+└── dog.obj
+</code></pre></div><p>In that case, we can read it with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+</code></pre></div><p>It can be hard to come up with the correct location and translation without any
+visual cues. Instead of trying to do that, I recommend starting by making them
+zero, as above. Then, if we make sure to place the call to <code>readMesh</code> <em>before</em>
+the call to <code>save_mainfile</code>, we can run <code>blender-python render.py</code> and open the
+resulting <code>test.blend</code>:</p>
+<p><img src="/images/blender-gi-course/scripting-3.jpeg" alt=""></p>
+<p>Then, we can use the GUI to find a good orientation, which in this case is
+<code>(90,0,0)</code></p>
+<p><img src="/images/blender-gi-course/scripting-4.jpeg" alt=""></p>
+<p>and update that rotation in our script, such that <code>render.py</code> now looks like
+this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><h3 id="camera">Camera</h3>
+<p>Once we have imported the object, the next critical element we need to take an
+image of it is a camera. In a similar way to how we set up the mesh, we will
+import the camera with zero rotation and translation</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+</code></pre></div><p>then open the generated <code>test.blend</code>:</p>
+<p><img src="/images/blender-gi-course/scripting-5.jpeg" alt=""></p>
+<p>We can now move the camera until the optimal position is found</p>
+<p><img src="/images/blender-gi-course/scripting-7.jpeg" alt=""></p>
+<p>and update our <code>render.py</code> accordingly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><h4 id="render-with-command-line">Render with command line</h4>
+<p>Alright! We have an object and a camera: that&rsquo;s the minimal set we need to
+render a picture. We can do it with one last line of code:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+</code></pre></div><p>such that our full <code>render.py</code> looks like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">75</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><p>If we now run <code>blender-python render.py</code>, we will get a new image in our
+directory</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── test.blend  
+└── dog.obj  
+└── image.png
+</code></pre></div><p>which, for now, looks like this (generated with <code>mult=5</code>):</p>
+<p><img src="/images/blender-gi-course/scripting-8.png" alt=""></p>
+<p>It is very dark! And the reason is obvious: we have not added any lights yet.
+Let&rsquo;s do just that.</p>
+<h4 id="lights-ambient-sun-three-point">Lights: ambient, sun, three point</h4>
+<p>The Blender Toolbox gives us many different lighting options. For example, the
+simplest light one can add is a sun:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">light</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setLight_sun</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># 45 is the angle, 1.0 is the brightness</span>
+</code></pre></div><p>A sunlight generally results in very sharp shadows:</p>
+<p><img src="/images/blender-gi-course/scripting-9.png" alt=""></p>
+<p>Sharp shadows can be very aesthetically pleasing; however, they are generally
+not recommended for our research purposes, since they the shaded areas are so
+dark that they obscure the shape&rsquo;s geometric detail. A way of getting around
+this is to add a soft <em>ambient</em> light, which adds brightness to every part of
+the scene to avoid extremely dark areas:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">light</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setLight_sun</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">),</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.2 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+</code></pre></div><p>This is the rendered output we get:</p>
+<p><img src="/images/blender-gi-course/scripting-10.png" alt=""></p>
+<p>As expected, an ambient light avoids the extremely dark areas of the object, but
+it does so at the cost of over-lighting the areas that were exposed to the sun
+light, washing over some of the geometric detail.</p>
+<p>A better choice for a lighting setup is the classic photographic technique
+called <a href="https://en.wikipedia.org/wiki/Three-point_lighting">three point
+lighting</a>, which we can also
+fortunately use with the Blender Toolbox:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># parameters are intuitive, but it&#39;s worth fine-tuning</span>
+</code></pre></div><p>If we now open the generated <code>blend</code> file, we see something like this, with the
+three point lights of differing intensities:</p>
+<p><img src="/images/blender-gi-course/scripting-11.jpeg" alt=""></p>
+<p>In a <em>proper</em> three-point lighting setup, the camera is near the strongest
+light, slightly angled towards the second strongest light. This orientation is a
+key part of why this lighting setup works, so we will need to change the
+position of the camera and object accordingly:</p>
+<p><img src="/images/blender-gi-course/scripting-12.jpeg" alt=""></p>
+<p>Our <code>render.py</code> thus looks like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># add light</span>
+<span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><p>and produces a much more satisfying shape:</p>
+<p><img src="/images/blender-gi-course/scripting-13.png" alt=""></p>
+<h4 id="material-color-singlecolor-material-plastic-transparent-metal-glass-honey">Material: color, singlecolor material, plastic, transparent, metal, glass, honey</h4>
+<p>Okay! We&rsquo;re getting somewhere. The only essential step left is to give our shape
+a nice material, so that it does not look like it is made out of grey chalk. The
+Blender Toolbox <em>shines</em> at making it easy to add amazing-looking materials. The
+specifics will depend on each material but, broadly speaking, applying a
+material works in two steps: first, defining the color (e.g, &ldquo;blue&rdquo;) and,
+second, assinging the mesh a material with said color (e.g., &ldquo;blue plastic&rdquo;).</p>
+<p>The first part is common to most materials:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">mesh_rgba</span> <span class="o">=</span> <span class="p">(</span><span class="mf">178.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">223.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">138.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># rgba</span>
+<span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">mesh_rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
+</code></pre></div><p>The second part, for a plastic material, looks like this (make sure to have this
+code execute after <code>mesh</code> has been imported):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
+</code></pre></div><p>If we add these lines to <code>render.py</code>, which would then look like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># material</span>
+<span class="n">mesh_rgba</span> <span class="o">=</span> <span class="p">(</span><span class="mf">178.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">223.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">138.0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># rgba</span>
+<span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">mesh_rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># add light</span>
+<span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><p>we produce this rendered image (now using <code>mult=10</code> to appreciate more nuanced
+distinctions):</p>
+<p><img src="/images/blender-gi-course/scripting-14.png" alt=""></p>
+<p>There are many other materials supported by BlenderToolbox. My favourite one is
+<code>singleColor</code>, which one can obtain with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">AO</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># ambient occlusion</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_singleColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">,</span><span class="n">AO</span><span class="p">)</span>
+</code></pre></div><p>and looks like this:</p>
+<p><img src="/images/blender-gi-course/scripting-15.png" alt=""></p>
+<p>I know. Beautiful. Gracious.</p>
+<p>Unfortunately, there seems to be some compatibility issue with this function and
+the newest version of Blender; therefore, you may encounter an error if
+attempting to run the above (I generally recommend using Blender 3.0 precisely
+because of this).</p>
+<p>There are other useful materials; for example, one I use a lot is the
+<code>transparent</code> one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_transparent</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/blender-gi-course/scripting-16.png" alt=""></p>
+<p><code>metal</code> is also very cool:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">AO</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># ambient occlusion</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_metal</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span> <span class="n">AO</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/blender-gi-course/scripting-17.png" alt=""></p>
+<p>and <code>glass</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">bt</span><span class="o">.</span><span class="n">setMat_glass</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">mesh_color</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/blender-gi-course/scripting-18.png" alt=""></p>
+<h4 id="vertex-values">Vertex values</h4>
+<p>Often, we don&rsquo;t just want to render a shape with a single color, but we want to
+use colors to convey some scalar information defined on each vertex or face of
+the object. This is a very common situation, which one can also render using the
+Blender Toolbox.</p>
+<p>Let&rsquo;s open a new file, <code>scalar_data.py</code>,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── scalar_data.py  
+└── test.blend  
+└── dog.obj  
+└── image.png
+</code></pre></div><p>and use it to write some simple per-vertex data on our mesh and save it to a
+numpy file (you may need to <code>pip install gpytoolbox</code>):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">gpytoolbox</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">v</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">gpytoolbox</span><span class="o">.</span><span class="n">read_mesh</span><span class="p">(</span><span class="s1">&#39;dog.obj&#39;</span><span class="p">)</span>
+<span class="n">vertex_data</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
+</code></pre></div><p>Now, if we run <code>python scalard_data.py</code> (with your own python! not Blender&rsquo;s!),
+a new <code>vertex_data.npy</code> file should be generated:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render.py  
+└── scalar_data.py  
+└── vertex_data.npy  
+└── test.blend  
+└── dog.obj  
+└── image.png  
+</code></pre></div><p>In <code>render.py</code>, we can read this file to build a material with per-vertex
+colors. The setup is slightly convoluted, but since we only really need it for
+this specific use-case there isn&rsquo;t much need to understand it at depth:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">vertex_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setMeshScalars</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
+<span class="n">mesh_color_with_data</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">([],</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_VColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color_with_data</span><span class="p">)</span>
+</code></pre></div><p>Our <code>render.py</code> would therefore look like</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># boring imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">bpy</span><span class="o">,</span> <span class="nn">bmesh</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_file_path</span><span class="p">,</span><span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+
+<span class="c1"># initialize shape</span>
+<span class="n">mult</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># make this 1-5 for fast, 10-15 for final paper</span>
+<span class="n">resolution_x</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">resolution_y</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+<span class="n">numSamples</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span> <span class="c1"># no need to understand what this does yet</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution_x</span><span class="p">,</span><span class="n">resolution_y</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="n">numSamples</span><span class="p">)</span>
+
+<span class="c1"># read mesh</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">mesh_location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">mesh_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)</span>
+<span class="n">mesh_scale</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">,</span><span class="n">mesh_location</span><span class="p">,</span><span class="n">mesh_rotation</span><span class="p">,</span><span class="n">mesh_scale</span><span class="p">)</span>
+
+<span class="c1"># material</span>
+<span class="c1"># commented all the materials we tried</span>
+<span class="c1"># # mesh_rgba = (178.0/255.0,223.0/255.0,138.0/255.0,1.0) # rgba</span>
+<span class="c1"># # mesh_color = bt.colorObj(mesh_rgba) # &#34;blender&#34; color</span>
+<span class="c1"># # bt.setMat_plastic(mesh,mesh_color)</span>
+<span class="c1"># # AO = 1.0</span>
+<span class="c1"># # bt.setMat_singleColor(mesh,mesh_color,AO)</span>
+<span class="c1"># # bt.setMat_transparent(mesh, mesh_color, 0.5, 0.2)</span>
+<span class="c1"># # AO = 1.0 # ambient occlusion</span>
+<span class="c1"># # bt.setMat_metal(mesh, mesh_color, AO, 0.9)</span>
+<span class="c1"># # bt.setMat_glass(mesh, mesh_color,0.1)</span>
+<span class="c1"># per-vertex colors</span>
+<span class="n">vertex_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;vertex_data.npy&#39;</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setMeshScalars</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">vertex_data</span><span class="p">)</span>
+<span class="n">mesh_color_with_data</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">([],</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setMat_VColor</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color_with_data</span><span class="p">)</span>
+
+<span class="c1"># add camera</span>
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+
+<span class="c1"># add light</span>
+<span class="c1"># light = bt.setLight_sun((45,45,45),1.0)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span> <span class="c1"># 0.05 is the &#34;strength&#34; (from 0:black to 1:white)</span>
+
+<span class="c1"># render</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+<span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># save to blend file</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">wm</span><span class="o">.</span><span class="n">save_mainfile</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">save_path</span><span class="p">)</span>
+</code></pre></div><p>and produce this:</p>
+<p><img src="/images/blender-gi-course/scripting-19.png" alt=""></p>
+<!-- #### Final render -->
+<h4 id="rendering-specific-python-module">Rendering-specific python module</h4>
+<p>We iterated a lot and tried many different things to converge on a good
+rendering style that we like. Using scripts instead of the blender GUI means
+that we can now amortize all that work and save our choices in a way that&rsquo;s
+consistent across all our paper figures. To do this, I like to use a directory
+structure like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render_utility/  
+└─────── __init__.py  
+└─────── misc.py  
+└── render.py  
+└── scalar_data.py  
+└── vertex_data.npy  
+└── test.blend  
+└── dog.obj  
+└── image.png  
+</code></pre></div><p>Here&rsquo;s what <code>render_utility/__init__.py</code> looks like (this is just a file that
+tells <code>python</code> that this is a module):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">.misc</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div><p>and, on the other hand, here&rsquo;s what <code>misc.py</code> can look like, containing all our
+general rendering functionality:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># basic imports</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span class="c1"># blender toolbox</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;..&#39;</span><span class="p">,</span> <span class="s1">&#39;BlenderToolbox&#39;</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">BlenderToolBox</span> <span class="k">as</span> <span class="nn">bt</span>
+<span class="c1"># base blender python functionality</span>
+<span class="kn">import</span> <span class="nn">bpy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># cbrewer</span>
+<span class="n">hardred</span> <span class="o">=</span> <span class="p">(</span><span class="mf">228.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">26.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">28.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">hardblue</span> <span class="o">=</span> <span class="p">(</span><span class="mf">55.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">126.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">184.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># blue</span>
+<span class="n">hardgreen</span> <span class="o">=</span> <span class="p">(</span><span class="mf">77.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">175.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">74.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># green</span>
+<span class="n">hardpurple</span> <span class="o">=</span> <span class="p">(</span><span class="mf">152.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">78.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">163.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># purple</span>
+<span class="n">hardorange</span> <span class="o">=</span> <span class="p">(</span><span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">127.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">0.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># orange</span>
+<span class="n">hardyellow</span> <span class="o">=</span> <span class="p">(</span><span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">255.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">51.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># yellow</span>
+<span class="n">hardbrown</span> <span class="o">=</span> <span class="p">(</span><span class="mf">166.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">86.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">40.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># brown</span>
+<span class="n">hardpink</span> <span class="o">=</span> <span class="p">(</span><span class="mf">247.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">129.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">191.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># pink</span>
+<span class="n">grey</span> <span class="o">=</span> <span class="p">(</span><span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">128.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># grey</span>
+<span class="n">softblue</span> <span class="o">=</span> <span class="p">(</span><span class="mf">191.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">211.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">230.0</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span> <span class="c1"># light blue</span>
+
+<span class="n">ourcolor</span> <span class="o">=</span> <span class="n">hardgreen</span>
+
+<span class="k">def</span> <span class="nf">setup_scene</span><span class="p">(</span><span class="n">mult</span><span class="p">,</span><span class="n">cam_position</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">):</span>
+    <span class="n">resolution</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">mult</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">blenderInit</span><span class="p">(</span><span class="n">resolution</span><span class="p">,</span><span class="n">resolution</span><span class="p">,</span><span class="n">numSamples</span><span class="o">=</span><span class="mi">100</span><span class="o">*</span><span class="n">mult</span><span class="p">)</span>
+    <span class="n">cam</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">setCamera_from_UI</span><span class="p">(</span><span class="n">cam_position</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setLight_threePoints</span><span class="p">()</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setLight_ambient</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">cam</span>
+
+<span class="k">def</span> <span class="nf">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span> <span class="o">=</span> <span class="n">ourcolor</span><span class="p">,</span> <span class="n">location</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">)):</span>
+    <span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">location</span><span class="p">,</span><span class="n">rotation</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">mesh_color</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">rgba</span><span class="p">)</span> <span class="c1"># &#34;blender&#34; color</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setMat_plastic</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span><span class="n">mesh_color</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mesh</span>
+
+<span class="k">def</span> <span class="nf">render_scene</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">):</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">renderImage</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">cam</span><span class="p">)</span>
+</code></pre></div><p>Then, our <code>render.py</code> can just be:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">render_utility</span>
+
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">path_to_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/dog.obj&#39;</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/test.blend&#39;</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/image.png&#39;</span>
+
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">10</span><span class="p">,(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">),(</span><span class="mi">70</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">110</span><span class="p">))</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path_to_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+</code></pre></div><h4 id="leveraging-render-specific-module-to-make-a-new-figure">Leveraging render-specific module to make a new figure</h4>
+<p>If, for example, I want to make a new script comparing three objs
+(<a href="/images/blender-tutorial/ours.obj">ours</a>,
+<a href="/images/blender-tutorial/theirs.obj">theirs</a> and <a href="/images/blender-tutorial/input.obj">the
+input</a>) in <code>comparison/</code>,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">dir/  
+└── BlenderToolbox/  
+└── render_utility/  
+└─────── __init__.py  
+└─────── misc.py  
+└── comparison/  
+└─────── ours.obj  
+└─────── input.obj  
+└─────── theirs.obj  
+└── render.py  
+└── scalar_data.py  
+└── vertex_data.npy  
+└── test.blend  
+└── dog.obj  
+└── image.png  
+</code></pre></div><p>all I need to add is a new render file called <code>render_comparison.py</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">render_utility</span>
+
+<span class="n">this_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+<span class="n">path_to_our_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/ours.obj&#39;</span>
+<span class="n">path_to_their_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/theirs.obj&#39;</span>
+<span class="n">path_to_input_mesh</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/comparison/input.obj&#39;</span>
+<span class="n">our_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/ours_image.png&#39;</span>
+<span class="n">input_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/input_image.png&#39;</span>
+<span class="n">their_image_path</span> <span class="o">=</span> <span class="n">this_file_path</span> <span class="o">+</span> <span class="s1">&#39;/their_image.png&#39;</span>
+
+<span class="k">def</span> <span class="nf">plot_input_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">plot_their_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">rgba</span><span class="o">=</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.0</span><span class="p">))</span>
+
+<span class="n">cam_location</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">cam_rotation</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">125</span><span class="p">)</span>
+
+<span class="c1"># ours</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">plot_our_mesh</span><span class="p">(</span><span class="n">path_to_our_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">our_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># input</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">plot_input_mesh</span><span class="p">(</span><span class="n">path_to_input_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">input_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+
+<span class="c1"># theirs</span>
+<span class="n">cam</span> <span class="o">=</span> <span class="n">render_utility</span><span class="o">.</span><span class="n">setup_scene</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">cam_location</span><span class="p">,</span><span class="n">cam_rotation</span><span class="p">)</span>
+<span class="n">mesh</span> <span class="o">=</span> <span class="n">plot_their_mesh</span><span class="p">(</span><span class="n">path_to_their_mesh</span><span class="p">)</span>
+<span class="n">render_utility</span><span class="o">.</span><span class="n">render_scene</span><span class="p">(</span><span class="n">their_image_path</span><span class="p">,</span><span class="n">cam</span><span class="p">)</span>
+</code></pre></div><p>Et voilà!</p>
+<p><img src="/images/blender-gi-course/scripting-20.png" alt=""></p>
+<p><img src="/images/blender-gi-course/scripting-21.png" alt=""></p>
+<p><img src="/images/blender-gi-course/scripting-22.png" alt=""></p>
+<h4 id="point-cloud">Point cloud</h4>
+<p>We only need to add this to <code>misc.py</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">plot_point_cloud</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">radius</span><span class="o">=</span><span class="mf">0.003</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">ourcolor</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)):</span>
+    <span class="n">mesh</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">readMesh</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">rotation</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="c1"># # set material </span>
+    <span class="n">ptColor</span> <span class="o">=</span> <span class="n">bt</span><span class="o">.</span><span class="n">colorObj</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+    <span class="n">ptSize</span> <span class="o">=</span> <span class="n">radius</span>
+    <span class="n">bt</span><span class="o">.</span><span class="n">setMat_pointCloud</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">ptColor</span><span class="p">,</span> <span class="n">ptSize</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mesh</span>
+</code></pre></div><h4 id="exercise-slices"><em>Exercise: slices</em></h4>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Silvia Sellán
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

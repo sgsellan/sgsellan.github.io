@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    Silvia Sellán
+        |
+        Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines 
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.91.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Silvia Sellán" />
+  <meta
+    name="description"
+    content="Fifth-year PhD Candidate specializing in Computer Graphics at the University of Toronto. Vanier Doctoral Scholar, Adobe Research Fellow and EECS Rising Star. Interested in quantifying the statistical uncertainty inherent in many Graphics and Vision tasks."
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.f0f769a339f98c7718c477ee7007d9ca7ee98f9b6d06e08e988602bb2340c951.css"
+      integrity="sha256-8Pdpozn5jHcYxHfucAfZyn7pj5ttBuCOmIYCuyNAyVE="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://www.silviasellan.com/posts/gpytoolbox-2d-prototyping/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
+    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.4c31f3cf7e8e609c897dba88aecac0e8db1ebb4e5c841d3f9ffb01d463973678.js"
+      integrity="sha256-TDHzz36OYJyJfbqIrsrA6Nseu05chB0/n/sB1GOXNng="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.silviasellan.com/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines "/>
+<meta name="twitter:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:"/>
+
+
+
+  
+  <meta property="og:title" content="Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines " />
+<meta property="og:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.silviasellan.com/posts/gpytoolbox-2d-prototyping/" /><meta property="og:image" content="https://www.silviasellan.com/images/site-feature-image.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-04T00:00:00+00:00" /><meta property="og:site_name" content="Silvia Sellán" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines ",
+        "headline": "Quick 2D prototyping with Gpytoolbox I: Generating 2D polylines ",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
+
+
+      
+
+
+    ",
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/www.silviasellan.com\/posts\/gpytoolbox-2d-prototyping\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Silvia Sellán"
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-03-04T00:00:00.00Z",
+        "datePublished": "2023-03-04T00:00:00.00Z",
+        "dateModified": "2023-03-04T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Silvia Sellán",
+            "url": "https://www.silviasellan.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/www.silviasellan.com\/favicons\/favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+        
+        "https://www.silviasellan.com/images/site-feature-image.png"
+
+
+      
+      ]
+
+    ,
+        "url" : "https:\/\/www.silviasellan.com\/posts\/gpytoolbox-2d-prototyping\/",
+        "wordCount" : "1019",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/portrait.jpg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Silvia Sellán</a>
+        </div>
+      
+      
+        <div class="sidebar__introduction-description-new"><em class="fas fa-star"></em>
+          <span class="sidebar__introduction-new-text">On the Faculty Job Market! </span><em class="fas fa-star"></em>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Fifth-year PhD Candidate specializing in Computer Graphics at the University of Toronto. Vanier Doctoral Scholar, Adobe Research Fellow and EECS Rising Star. Interested in quantifying the statistical uncertainty inherent in many Graphics and Vision tasks.</p>
+      </div>
+      
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://twitter.com/sellan_s"
+            target="_blank"
+            rel="noopener me"
+            aria-label="twitter"
+            title="twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:sgsellan@cs.toronto.edu"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Silvia Sellán
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header">
+
+<div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/publications/"
+              
+              title=""
+              >Publications</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/teaching/"
+              
+              title=""
+              >Teaching</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/software/"
+              
+              title=""
+              >Software</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/cv/"
+              
+              title=""
+              >CV</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts/"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="https://www.pritirrecetas.com/en/"
+              
+                target="_blank" rel="noopener noreferrer"
+              
+              title=""
+              >Food</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Quick 2D Prototyping With Gpytoolbox I: Generating 2D Polylines </h1>
+      <p><a href="https://gpytoolbox.org/0.1.0/"><em>Gpytoolbox</em> version 0.1.0</a> has just been released!! You can install it directly through <code>pip</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pip install gpytoolbox
+</code></pre></div><p><em>Gpytoolbox</em> shines when it comes to letting you test out your research ideas on simple 2D geometry before you commit to more complex three-dimensional examples and elaborately optimized implementations. Often, our final algorithm will use triangle meshes to represent surfaces in 3D. This means that, when prototyping in 2D, we will work with its equivalent: curves built by connecting flat segments (<em>edges</em>), which are usually called <strong>polylines</strong>.</p>
+<p>In code, polylines are often represented by a matrix of sorted <em>vertex</em> coordinates $V\in\mathbb{R}^{n\times 2}$. Each row contains the coordinates of a single vertex $v_i$, and the $i$-th edge is obtained by connecting the $i$-th vertex to the $i+1$-th vertex.</p>
+<p>To make a simple polyline of a circle, <code>gpytoolbox</code> provides a simple wrapper:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">regular_circle_polyline</span>
+<span class="n">vertices</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">regular_circle_polyline</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># 20 vertices</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># We can plot our polyline using matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_4_0.png" alt="png"></p>
+<p>&hellip;but circles are a very special class of shapes, which are very simple and have a high degree of symmetry. Also, they are very boring to look at. We can get more interesting geometry by using my favourite Gpytoolbox function, <a href="https://gpytoolbox.org/0.1.0/png2poly/"><code>png2poly</code></a>, which reads polylines from <code>.png</code> files you can draw yourself or download from the internet. For example, I drew <a href="https://github.com/sgsellan/gpytoolbox/blob/main/test/unit_tests_data/illustrator.png">this picture</a> on Adobe Illustrator. I can easily load it into Python using <code>png2poly</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">png2poly</span>
+<span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;illustrator.png&#34;</span><span class="p">)</span>
+</code></pre></div><p><code>poly</code> now contains a list with every connected polyline in the png file. In our case, this list has four entries:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">))</span>
+</code></pre></div><pre><code>4
+</code></pre>
+<p>This may seem counterintuitive, but it makes sense if you think about it for a bit. Since the lines in our png file are so thick, <code>png2poly</code> is duplicating them: it finds one line for the transition from white to red and another one for the one from red to white; then again for white to blue and blue to white. We can visualize all of them:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_10_0.png" alt="png"></p>
+<p>Often, we are interested in only one of these components, so let&rsquo;s just make our vertex matrix be the first entry in the list:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">vertices</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_12_0.png" alt="png"></p>
+<p>A really rich source of interesting 2D geometry that I really like to use is maps. For example, in many of my papers you&rsquo;ll find this Vietnam polyline that comes from <a href="https://github.com/sgsellan/gpytoolbox/blob/main/test/unit_tests_data/vietnam.png">this</a> png file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;vietnam.png&#34;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-b&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_14_0.png" alt="png"></p>
+<p>You might be wondering: what happens if I want a shape with more than one connected component? For example, consider this map of Hawaii:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;hawaii.png&#34;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;There are &#34;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)),</span> <span class="s2">&#34; connected polylines in the image.&#34;</span><span class="p">)</span>
+<span class="c1"># We can plot them in a loop</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></div><pre><code>There are  8  connected polylines in the image.
+</code></pre>
+<p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_16_1.png" alt="png"></p>
+<p>To combine all the islands into a single polyline, we can can concatenate all the vertices and use an edge list <code>EC</code> that stores which vertices are connected. For a single connected component, this edge list is simple: the first vertex connects to the second vertex, the second vertex connects to the third, etc.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Consider the first island</span>
+<span class="n">first_island_vertices</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># Edge indices</span>
+<span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">edge_indices</span>
+<span class="n">first_island_edges</span> <span class="o">=</span> <span class="n">edge_indices</span><span class="p">(</span><span class="n">first_island_vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># The &#39;closed&#39; argument tells the function to connect the last vertex to the first one</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first_island_edges</span><span class="p">)</span>
+</code></pre></div><pre><code>[[  0   1]
+ [  1   2]
+ [  2   3]
+ [  3   4]
+ [  4   5]
+ [  5   6]
+ [  6   7]
+ [  7   8]
+ [  8   9]
+ [  9  10]
+ [ 10  11]
+ [ 11  12]
+ [ 12  13]
+ [ 13  14]
+ [ 14  15]
+ [ 15  16]
+ [ 16  17]
+ [ 17  18]
+ [ 18  19]
+ [ 19  20]
+ [ 20  21]
+ [ 21  22]
+ [ 22  23]
+ [ 23  24]
+ [ 24  25]
+ [ 25  26]
+ [ 26  27]
+ [ 27  28]
+ [ 28  29]
+ [ 29  30]
+ [ 30  31]
+ [ 31  32]
+ [ 32  33]
+ [ 33  34]
+ [ 34  35]
+ [ 35  36]
+ [ 36  37]
+ [ 37  38]
+ [ 38  39]
+ [ 39  40]
+ [ 40  41]
+ [ 41  42]
+ [ 42  43]
+ [ 43  44]
+ [ 44  45]
+ [ 45  46]
+ [ 46  47]
+ [ 47  48]
+ [ 48  49]
+ [ 49  50]
+ [ 50  51]
+ [ 51  52]
+ [ 52  53]
+ [ 53  54]
+ [ 54  55]
+ [ 55  56]
+ [ 56  57]
+ [ 57  58]
+ [ 58  59]
+ [ 59  60]
+ [ 60  61]
+ [ 61  62]
+ [ 62  63]
+ [ 63  64]
+ [ 64  65]
+ [ 65  66]
+ [ 66  67]
+ [ 67  68]
+ [ 68  69]
+ [ 69  70]
+ [ 70  71]
+ [ 71  72]
+ [ 72  73]
+ [ 73  74]
+ [ 74  75]
+ [ 75  76]
+ [ 76  77]
+ [ 77  78]
+ [ 78  79]
+ [ 79  80]
+ [ 80  81]
+ [ 81  82]
+ [ 82  83]
+ [ 83  84]
+ [ 84  85]
+ [ 85  86]
+ [ 86  87]
+ [ 87  88]
+ [ 88  89]
+ [ 89  90]
+ [ 90  91]
+ [ 91  92]
+ [ 92  93]
+ [ 93  94]
+ [ 94  95]
+ [ 95  96]
+ [ 96  97]
+ [ 97  98]
+ [ 98  99]
+ [ 99 100]
+ [100 101]
+ [101 102]
+ [102 103]
+ [103 104]
+ [104 105]
+ [105 106]
+ [106   0]]
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># We can plot the island by looping over the edges:</span>
+<span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">first_island_edges</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">first_island_vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">first_island_vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_19_0.png" alt="png"></p>
+<p>We can now combine all the islands into a single polyline, while specifying the edges:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">vertices</span> <span class="o">=</span> <span class="n">first_island_vertices</span>
+<span class="n">edges</span> <span class="o">=</span> <span class="n">first_island_edges</span>
+<span class="c1"># Loop over all islands</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)):</span>
+    <span class="n">vertices_i</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">edges_i</span> <span class="o">=</span> <span class="n">edge_indices</span><span class="p">(</span><span class="n">vertices_i</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># Concatenate the vertices and edges</span>
+    <span class="n">edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">edges</span><span class="p">,</span> <span class="n">edges_i</span> <span class="o">+</span> <span class="n">vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">vertices</span><span class="p">,</span> <span class="n">vertices_i</span><span class="p">))</span>
+    
+</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Plot the result, edge by edge</span>
+<span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_22_0.png" alt="png"></p>
+</div>
+    <div class="post__footer">
+      
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Silvia Sellán
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
+    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

@@ -12,7 +12,7 @@ enableEmoji = true
 enableRobotsTXT = true
 
 # Google Analytics
-# oogleAnalytics = "UA-123-45"
+googleAnalytics = "G-KB4LKK966Y"
 
 # Syntax highlighting
 pygmentsUseClasses = true   

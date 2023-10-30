@@ -9,7 +9,12 @@ pdflatex cv.tex
 cd ../../../
 # call hugo
 hugo
+cd themes/anatole/
+git add --all
+git commit --all -m "update"
+git push
+cd ../..
 # commit and push
 git add --all
-git commit -m "update"
+git commit --all -m "update"
 git push

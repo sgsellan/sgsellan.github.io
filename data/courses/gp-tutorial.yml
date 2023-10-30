@@ -7,4 +7,4 @@ authors:
   - Oded Stein*
 image: '/images/course-thumbnails/gp-tutorial.jpg'
 link: https://github.com/odedstein/gp-matlab-tutorial
-description: ''
+description: 'A tutorial teaching the basics of geometry processing in MATLAB using the gptoolbox library. '

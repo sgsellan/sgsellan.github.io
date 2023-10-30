@@ -1,0 +1,15 @@
+name: "Blender for Academic Papers"
+sessions:
+  - venue: Graphics Interface
+    description: Invited Course
+    where: Victoria (Canada)
+    when: June 2023
+  - venue: Geometry and Architecture Summit
+    description: Invited Talk
+    where: Toronto (Canada)
+    when: October 2022
+  - venue: ACM / Eurographics SGP
+    description: Invited Course
+    where: Virtual
+    when: June 2022
+order: 19

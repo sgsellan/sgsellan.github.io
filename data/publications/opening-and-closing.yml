@@ -10,4 +10,4 @@ image: '/images/paper-thumbnails/opening-and-closing.jpg'
 link: https://www.dgp.toronto.edu/projects/opening-and-closing-surfaces/
 pdflink: '/pdf/papers/opening-and-closing-surfaces.pdf'
 codelink: https://github.com/sgsellan/opening-and-closing-surfaces.git
-description: ''
+description: 'We propose a new type of curvature flow inspired by the mathematical morphology opening and closing operations. Our surface-only curvature-based flow moves the surface selectively in areas that should be repositioned. In our triangle mesh discretization, vertices in regions unaffected by the opening or closing will remain exactly in place and do not affect our method''s complexity, which is output-sensitive.'

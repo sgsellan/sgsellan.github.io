@@ -12,4 +12,4 @@ image: '/images/paper-thumbnails/breaking-good.jpg'
 link: https://www.dgp.toronto.edu/projects/breaking-good/
 pdflink: '/pdf/papers/breaking-good.pdf'
 codelink: https://github.com/sgsellan/fracture-modes
-description: ''
+description: 'Drawing a direct analogy with the well-studied vibration or elastic modes, we introduce an object''s fracture modes, which constitute its preferred or most natural ways of breaking. Any realtime impact can be projected onto our modes to obtain impact-dependent fracture patterns without the need for any online crack propagation simulation.'

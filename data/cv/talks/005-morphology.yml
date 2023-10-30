@@ -1,0 +1,19 @@
+name: "Opening and Closing Surfaces"
+sessions:
+  - venue: ACM SIGGRAPH Asia
+    description: Technical Paper presentation
+    where: Virtual (originally Daegu)
+    when: December 2020
+  - venue: Epic Games
+    description: hosted by Dr. Ryan Schmidt
+    where: Virtual
+    when: November 2020
+  - venue: Fields Institute Undergraduate Summer Research Program
+    description: End-of-summer research talk
+    where: Toronto (Canada)
+    when: August 2017
+  - venue: University of Toronto DCS Summer Research Program
+    description: Mid-summer research talk
+    where: Toronto (Canada)
+    when: July 2017
+order: 5

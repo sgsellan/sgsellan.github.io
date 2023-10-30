@@ -1,6 +1,6 @@
 name: "Solid Geometry Processing on Deconstructed Domains"
 date: 2019-06
-venue: 'ACM / Eurographics Symposium on Geometry Processing'
+venue: 'ACM / Eurographics Symposium on Geometry Processing 2019'
 authors:
   - Silvia Sellán
   - Herng Yi Cheng
@@ -8,7 +8,7 @@ authors:
   - Mitchell Dembowski
   - Alec Jacobson
 image: '/images/paper-thumbnails/overlapping.jpg'
-link: hhttps://www.dgp.toronto.edu/projects/deconstructed-domains/
+link: https://www.dgp.toronto.edu/projects/deconstructed-domains/
 pdflink: '/pdf/papers/overlapping.pdf'
 codelink: https://github.com/sgsellan/solid-geometry-processing-on-deconstructed-domains
-description: ''
+description: 'Rather than create a single volumetric mesh for an entire shape, we advocate for solid geometry processing on the overlapping solid subdomains that compose it combined with algebraic coupling. We demonstrate the superiority of this method through empirical convergence tests and qualitative applications to solid geometry processing on a variety of popular second-order and fourth-order partial differential equations.'

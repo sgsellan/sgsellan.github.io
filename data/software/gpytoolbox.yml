@@ -6,4 +6,4 @@ authors:
   - Oded Stein
 image: '/images/software-thumbnails/gpytoolbox.jpg'
 link: https://gpytoolbox.org/0.2.0/
-description: ''
+description: 'A library of general geometry processing Python research utility functions, including basic procedural meshes, differential geometric operators, bounding volume hierarchies and surface reconstruction from point clouds and SDFs.'

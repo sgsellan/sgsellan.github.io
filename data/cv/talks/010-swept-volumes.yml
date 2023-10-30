@@ -1,0 +1,19 @@
+name: "A Deep Dive into Implicit Swept Volumes"
+sessions:
+  - venue: University of Toronto Undergraduate Graphics Club
+    description: Invited Talk
+    where: Toronto (Canada)
+    when: March 2022
+  - venue: INRIA MFX research seminar
+    description: hosted by Prof. Sylvain Lefebvre
+    where: Virtual
+    when: June 2021
+  - venue: MIT Graphics research seminar
+    description: hosted by Prof. Justin Solomon
+    where: Virtual
+    when: June 2021
+  - venue: GraphQUON
+    description: Technical presentation
+    where: Virtual
+    when: December 2020
+order: 10

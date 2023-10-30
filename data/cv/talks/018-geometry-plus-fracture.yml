@@ -1,0 +1,23 @@
+name: "Geometry +: Moving Fast, Breaking Things and Putting Them Back Together"
+sessions:
+  - venue: University of Southern California Graphics seminar
+    description: hosted by Prof. Oded Stein
+    where: Los Angeles (United States)
+    when: April 2023
+  - venue: McGill University Graphics seminar
+    description: hosted by Prof. Oded Stein
+    where: Montréal (Québec)
+    when: November 2022
+  - venue: Ubisoft research seminar
+    description: hosted by the LaForge team
+    where: Montréal (Québec)
+    when: November 2022
+  - venue: Yale University Rising Stars seminar
+    description: hosted by Prof. Theodore Kim
+    where: New Haven (United States)
+    when: November 2022
+  - venue: Engineering and Applied Science Forum
+    description: hosted by the EASF team
+    where: Virtual
+    when: November 2022
+order: 18

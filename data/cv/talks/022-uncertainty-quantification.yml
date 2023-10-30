@@ -1,0 +1,11 @@
+name: Uncertainty Quantification in 3D Geometric Synthesis
+sessions:
+  - venue: Brown University Graphics seminar
+    description: hosted by Prof. Daniel Ritchie
+    where: Virtual
+    when: October 2023
+  - venue: Banff International Research Station 3D Generative Modeling Workshop
+    description: Invited talk
+    where: Banff (Canada)
+    when: July 2023
+order: 22

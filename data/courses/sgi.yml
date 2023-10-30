@@ -4,5 +4,5 @@ venue: 'Summer Geometry Initiative'
 authors:
   - Silvia Sellán
 image: '/images/course-thumbnails/sgi-course.jpg'
-link: 
-description: ''
+link: https://www.silviasellan.com/projects/sgi-shape-representations/
+description: 'A course covering the different ways in which 2D and 3D geometry can be stored: from splines to meshes to point clouds and Signed Distance Functions (including a brief mention of Taylor Swift!). This course is aimed at undergraduate students with no prior experience with Computer Science at all, and only a minimal background in calculus.'

@@ -1,0 +1,7 @@
+name: "An Introduction to GP Programming in MATLAB with Gptoolbox"
+sessions:
+  - venue: ACM / Eurographics SGP
+    description: Invited Course
+    where: Virtual
+    when: July 2021
+order: 8

@@ -1,0 +1,11 @@
+name: "Developability of Heightfields via Rank Minimization"
+sessions:
+  - venue: Toronto Geometry Colloquium
+    description: Opener talk for Prof. Olga Sorkine-Hornung
+    where: Virtual
+    when: October 2020
+  - venue: SIGGRAPH 2020
+    description: Technical Paper presentation
+    where: Virtual (originally Washington, D.C.)
+    when: August 2020
+order: 4

@@ -6,7 +6,7 @@ venue: >
     ACM / Eurographics Symposium on Geometry Processing 2022
 
     SIGGRAPH Research and Career Development Committee 
-# teaser: '/images/project-teasers/neural-spsr.jpg'
+teaser: '/images/project-teasers/blender.jpg'
 # teaser_caption: 'We use a neural network to quantify the reconstruction uncertainty in Poisson Surface Reconstruction (center left), allowing us to efficiently select next sensor positions (center right) and update the reconstruction upon capturing data (right).'
 # abstract: 'Reconstructing a surface from a point cloud is an underdetermined problem. We use a neural network to study and quantify this reconstruction uncertainty under a Poisson smoothness prior. Our algorithm addresses the main limitations of existing work and can be fully integrated into the 3D scanning pipeline, from obtaining an initial reconstruction to deciding on the next best sensor position and updating the reconstruction upon capturing more data.'
 authors:
@@ -31,7 +31,7 @@ hidesidebar: true
 hidenavbar: true
 ---
 
-Over the past three years, I have been learning more and more about using Blender to generate results for academic papers in Computer Graphics. At the same time, I have been sharing what I have learned in different venues and formats: internally with my colleagues, as aP course, as a text guide, a video or an interactive tutorial. As of July 2023, the last version of this was my 3-hour workshop at Graphics Interface 2023 in Victoria, Canada. In preparing for this workshop, I updated, reformatted and extended my previous publicaly available guides and combined them into a single course.
+Over the past three years, I have been learning more and more about using Blender to generate results for academic papers in Computer Graphics. At the same time, I have been sharing what I have learned in different venues and formats: internally with my colleagues, as an SGP course, as a text guide, a video or an interactive tutorial. As of July 2023, the last version of this was my 3-hour workshop at Graphics Interface 2023 in Victoria, Canada. In preparing for this workshop, I updated, reformatted and extended my previous publicaly available guides and combined them into a single course.
 
 ## Full, updated course
 

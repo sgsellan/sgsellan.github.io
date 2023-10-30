@@ -1,0 +1,7 @@
+name: "Swept Volumes via Spacetime Numerical Continuation"
+sessions:
+  - venue: ACM SIGGRAPH
+    description: Technical Paper presentation
+    where: Virtual (originally Los Angeles)
+    when: August 2021
+order: 9

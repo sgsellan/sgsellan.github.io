@@ -1,0 +1,79 @@
+name: "Geometry +: Uncertain Surface Reconstruction"
+sessions:
+  - venue: École polytechnique Graphics seminar
+    description: hosted by Prof. Maks Ovsjanikov
+    where: Paris (France)
+    when: July 2023
+  - venue: INRIA seminar
+    description: hosted by Profs. Bruno Lévy and Sylvain Lefebvre
+    where: Nancy (France)
+    when: June 2023
+  - venue: CNRS seminar
+    description: hosted by Dr. Julie Digne
+    where: Lyon (France)
+    when: June 2023
+  - venue: University of Navarra Graphics and Vision seminar
+    description: hosted by Prof. Asier Marzo
+    where: Pamplona (Navarra)
+    when: June 2023
+  - venue: University of Edinburgh Geometry seminar
+    description: hosted by Prof. Amir Vaxman
+    where: Edinburgh (Scotland)
+    when: June 2023
+  - venue: Adobe Research seminar
+    description: hosted by Dr. Valentin Deschaintre
+    where: London (England)
+    when: June 2023
+  - venue: University College London Vision seminar
+    description: hosted by Prof. Kaan Akşit
+    where: London (England)
+    when: June 2023
+  - venue: University of British Columbia Graphics seminar
+    description: hosted by Prof. Alla Sheffer
+    where: Vancouver (Canada)
+    when: June 2023
+  - venue: Simon Fraser University Vision seminar
+    description: hosted by Prof. Andrea Tagliasacchi
+    where: Vancouver (Canada)
+    when: June 2023
+  - venue: EPFL Graphics seminar
+    description: hosted by Prof. Mark Pauly
+    where: Lausanne (Switzerland)
+    when: May 2023
+  - venue: ETH Graphics seminar
+    description: hosted by Prof. Olga Sorkine-Hornung
+    where: Zürich (Switzerland)
+    when: May 2023
+  - venue: University of Waterloo Graphics seminar
+    description: hosted by Prof. Craig Kaplan
+    where: Waterloo (Canada)
+    when: April 2023
+  - venue: University of Montreal Graphics seminar
+    description: hosted by Prof. Mikhail Bessmeltsev
+    where: Montréal (Québec)
+    when: November 2022
+  - venue: Johns Hopkins Graphics seminar
+    description: hosted by Prof. Misha Kazhdan
+    where: Baltimore (United States)
+    when: November 2022
+  - venue: Columbia University Graphics seminar
+    description: hosted by Prof. Changxi Zheng
+    where: New York City (United States)
+    when: November 2022
+  - venue: New York University Graphics seminar
+    description: hosted by Prof. Daniele Panozzo
+    where: New York City (United States)
+    when: November 2022
+  - venue: MIT Graphics seminar
+    description: hosted by Prof. Justin Solomon
+    where: Cambridge (United States)
+    when: November 2022
+  - venue: Dartmouth Graphics and Rendering seminar
+    description: hosted by Prof. Wojciech Jarosz
+    where: Hanover (United States)
+    when: November 2022
+  - venue: TomatoGRAPH
+    description: Technical Talk
+    where: Toronto (Canada)
+    when: December 2021
+order: 21

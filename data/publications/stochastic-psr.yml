@@ -8,4 +8,4 @@ image: '/images/paper-thumbnails/stochastic-psr.jpg'
 link: https://www.dgp.toronto.edu/projects/stochastic-psr/
 pdflink: '/pdf/papers/stochastic-psr.pdf'
 codelink: https://gpytoolbox.org/0.2.0/poisson_surface_reconstruction/
-description: ''
+description: 'We introduce a statistical extension of the classic Poisson Surface Reconstruction algorithm for recovering shapes from 3D point clouds. Instead of outputting an implicit function, we represent the reconstructed shape as a modified Gaussian Process. This perspective improves PSR''s integration into the online scanning process, broadens its application realm, and opens the door to other lines of research such as applying task-specific priors.'

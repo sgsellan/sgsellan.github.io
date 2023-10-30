@@ -1,0 +1,15 @@
+name: "Developable Surfaces: A Case Study in Discrete Differential Geometry"
+sessions:
+  - venue: Lancaster University Pure Mathematics Postgraduate Forum
+    description: Invited Talk
+    where: Virtual
+    when: March 2021
+  - venue: Technion research seminar
+    description: hosted by Prof. Mirela Ben-Chen
+    where: Virtual
+    when: December 2020
+  - venue: Carnegie Mellon University Geometry seminar
+    description: hosted by Prof. Keenan Crane
+    where: Virtual
+    when: November 2020
+order: 7

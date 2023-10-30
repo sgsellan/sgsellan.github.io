@@ -8,4 +8,4 @@ image: '/images/paper-thumbnails/neural-spsr.jpg'
 link: https://www.silviasellan.com/projects/neural-stochastic-screened-psr/
 pdflink: '/pdf/papers/neural-stochastic-psr.pdf'
 # codelink: TBD
-description: ''
+description: 'We use a neural network to study and quantify point cloud surface reconstruction uncertainty under a Poisson smoothness prior. Our algorithm addresses the main limitations of existing work and can be fully integrated into the 3D scanning pipeline, from obtaining an initial reconstruction to deciding on the next best sensor position and updating the reconstruction upon capturing more data.'

@@ -29,6 +29,12 @@
   url = "/software/"
 
   [[main]]
+  name = "CV"
+  weight = 550
+  identifier = "cv"
+  url = "/cv/"
+
+  [[main]]
   name = "Food"
   weight = 600
   identifier = "food"

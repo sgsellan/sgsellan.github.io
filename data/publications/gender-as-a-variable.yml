@@ -9,5 +9,5 @@ authors:
 image: '/images/paper-thumbnails/gender.jpg'
 link: https://gender-in-graphics.github.io
 pdflink: '/pdf/papers/gender-as-a-variable.pdf'
-# codelink: https://gpytoolbox.org/0.2.0/poisson_surface_reconstruction/
-description: ''
+codelink: https://gender-in-graphics.github.io
+description: 'We survey the treatment of sex and gender in the Computer Graphics research literature from an algorithmic fairness perspective. We conclude current trends on the use of gender in our research community are scientifically incorrect and constitute a form of algorithmic bias with potential harmful effects. We propose ways of addressing these trends as technical limitations.'

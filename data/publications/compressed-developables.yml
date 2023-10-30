@@ -9,4 +9,4 @@ image: '/images/paper-thumbnails/developables.jpg'
 link: https://www.dgp.toronto.edu/projects/compressed-developables/
 pdflink: '/pdf/papers/compressed-developables.pdf'
 codelink: https://github.com/sgsellan/developability-of-heightfields.git
-description: ''
+description: 'We propose an algorithm to approximate heightfield surfaces with piecewise-developable (isometric to the plane) patches. Our algorithm builds on our observation that developability can be phrased as a minimal rank constraint on the heightfield''s Hessian, leading to a convex optimization problem.'

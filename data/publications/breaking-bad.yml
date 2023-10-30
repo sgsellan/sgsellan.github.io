@@ -11,4 +11,4 @@ image: '/images/paper-thumbnails/breaking-bad.jpg'
 link: https://breaking-bad-dataset.github.io/
 pdflink: '/pdf/papers/breaking-bad.pdf'
 codelink: https://github.com/sgsellan/fracture-modes#dataset
-description: ''
+description: 'We introduce a large-scale dataset of fractured objects, which serves as a benchmark that enables the study of fractured object reassembly and presents new challenges for geometric shape understanding.'

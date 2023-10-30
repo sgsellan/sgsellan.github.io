@@ -1,0 +1,15 @@
+name: "Sex and Gender in the Computer Graphics Literature"
+sessions:
+  - venue: Queer in AI @ NeurIPS workshop
+    description: Invited Talk
+    where: New Orleans (United States)
+    when: November 2022
+  - venue: UNC Chapel Hill
+    description: hosted by Prof. Roni Sengupta
+    where: New Orleans (United States)
+    when: November 2022
+  - venue: ACM SIGGRAPH
+    description: Talk presentation
+    where: Vancouver (Canada)
+    when: August 2022
+order: 11

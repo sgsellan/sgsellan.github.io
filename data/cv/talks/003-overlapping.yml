@@ -1,0 +1,23 @@
+name: "Solid Geometry Processing on Deconstructed Domains"
+sessions:
+  - venue: Stanford University Graphics seminar
+    description: hosted by Prof. Doug James
+    where: Stanford (United States)
+    when: October 2019
+  - venue: ACM / Eurographics SGP
+    description: Technical Paper presentation
+    where: Milan (Italy)
+    when: July 2019
+  - venue: Toronto-Montreal Area Graphics workshop
+    description: Technical talk
+    where: Toronto (Canada)
+    when: December 2017
+  - venue: Fields Institute Undergraduate Summer Research Program
+    description: End-of-summer research talk
+    where: Toronto (Canada)
+    when: August 2017
+  - venue: University of Toronto DCS Summer Research Program
+    description: Mid-summer research talk
+    where: Toronto (Canada)
+    when: July 2017
+order: 3

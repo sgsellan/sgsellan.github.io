@@ -9,4 +9,4 @@ image: '/images/paper-thumbnails/swept-volumes.jpg'
 link: https://www.dgp.toronto.edu/projects/swept-volumes/
 pdflink: '/pdf/papers/swept-volumes.pdf'
 codelink: https://github.com/sgsellan/swept-volumes
-description: ''
+description: 'We propose a novel method to compute the region of space covered by an object as it moves along a trajectory. Compared to other methods, our approach is not restricted to a limited class of shapes or trajectories, is extremely robust, and its asymptotic complexity is an order lower than standards used in the industry, enabling its use in applications such as modeling, constructive solid geometry, and path planning.'

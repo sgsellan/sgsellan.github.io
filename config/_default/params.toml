@@ -8,6 +8,7 @@ description = "Fifth-year PhD Candidate specializing in Computer Graphics at the
 profilePicture = "images/portrait.jpg"
 keywords = ""
 favicon = "favicons/"
+cvdir = "https://www.silviasellan.com/pdf/cv/cv.pdf"
 # example ["css/custom.css"]
 customCss = []
 # example ["js/custom.js"]

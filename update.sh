@@ -5,9 +5,6 @@ cd static/pdf/cv/
 python write_tex_data.py
 # compile tex to pdf
 pdflatex cv.tex
-# a few times
-pdflatex cv.tex
-pdflatex cv.tex
 # go back to root dir
 cd ../../../
 # call hugo

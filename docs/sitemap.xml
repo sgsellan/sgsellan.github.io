@@ -74,6 +74,8 @@
     <loc>https://www.silviasellan.com/posts/grad_school/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.silviasellan.com/projects/art/</loc>
+  </url><url>
     <loc>https://www.silviasellan.com/projects/blender-for-academic-papers/</loc>
   </url><url>
     <loc>https://www.silviasellan.com/categories/</loc>
@@ -84,9 +86,13 @@
   </url><url>
     <loc>https://www.silviasellan.com/projects/neural-stochastic-screened-psr/</loc>
   </url><url>
+    <loc>https://www.silviasellan.com/projects/paper-writing/</loc>
+  </url><url>
     <loc>https://www.silviasellan.com/projects/</loc>
   </url><url>
     <loc>https://www.silviasellan.com/publications/</loc>
+  </url><url>
+    <loc>https://www.silviasellan.com/publications_compressed/</loc>
   </url><url>
     <loc>https://www.silviasellan.com/series/</loc>
   </url><url>
@@ -95,5 +101,7 @@
     <loc>https://www.silviasellan.com/tags/</loc>
   </url><url>
     <loc>https://www.silviasellan.com/teaching/</loc>
+  </url><url>
+    <loc>https://www.silviasellan.com/projects/new-students/</loc>
   </url>
 </urlset>

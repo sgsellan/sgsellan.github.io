@@ -14,7 +14,7 @@
   name = "Publications"
   weight = 300
   identifier = "publications"
-  url = "/publications/"
+  url = "/publications_compressed/"
 
   [[main]]
   name = "Teaching"
@@ -39,3 +39,30 @@
   weight = 600
   identifier = "food"
   url = "https://www.pritirrecetas.com/en/"
+
+
+  [[main]]
+  name = "Other"
+  weight = 700
+  identifier = "other"
+
+  [[main]]
+  name = "Paper Writing"
+  weight = 710
+  identifier = "paper-writing"
+  url = "/projects/paper-writing/"
+  parent = "other"  
+
+  [[main]]
+  name = "New Students"
+  weight = 720
+  identifier = "new-students"
+  url = "/projects/new-students/"
+  parent = "other"
+
+  [[main]]
+  name = "Art?"
+  weight = 730
+  identifier = "art"
+  url = "/projects/art/"
+  parent = "other"

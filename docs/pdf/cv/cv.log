@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.1.23)  30 OCT 2023 20:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2022.1.23)  30 OCT 2023 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -500,6 +500,9 @@ Package zref Info: New property: posy on input line 83.
 Package zref Info: New property: linegoal on input line 39.
 \LNGL@unique=\count337
 \LNGL@tempdim=\dimen175
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
 ))
 (./cv.aux)
 \openout1 = `cv.aux'.
@@ -603,26 +606,26 @@ Package layouts Warning: Layout scale set to 0.5 on input line 3.
 
 (./header.tex
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 4.
+(Font)              scaled to size 20.74pt on input line 5.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 4.
+(Font)              scaled to size 20.74pt on input line 5.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 7.
+(Font)              scaled to size 10.0pt on input line 8.
 <uoft-logo.png, id=1, 1027.84pt x 368.37625pt>
 File: uoft-logo.png Graphic file (type png)
 <use uoft-logo.png>
-Package pdftex.def Info: uoft-logo.png  used on input line 17.
+Package pdftex.def Info: uoft-logo.png  used on input line 18.
 (pdftex.def)             Requested size: 187.81454pt x 67.311pt.
 )
-Overfull \hbox (18.4pt too wide) in paragraph at lines 1--6
+Overfull \hbox (18.4pt too wide) in paragraph at lines 2--6
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--6
+Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
 
@@ -655,17 +658,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
@@ -705,9 +710,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
  []
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 13--13
 
  []
@@ -767,12 +770,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
 
  []
 
-) [3] (./sections/referee_service.tex
+) (./sections/referee_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
 
-
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -1010,25 +1013,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
 ) [9] (./cv.aux) ) 
 Here is how much of TeX's memory you used:
- 11264 strings out of 480608
- 180224 string characters out of 5903630
- 469460 words of memory out of 5000000
- 26926 multiletter control sequences out of 15000+600000
+ 11276 strings out of 480608
+ 180524 string characters out of 5903630
+ 468668 words of memory out of 5000000
+ 26934 multiletter control sequences out of 15000+600000
  548903 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,14n,104p,953b,697s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 70i,14n,104p,953b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/libertine
 /lbtn_kijugd.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/libertine/
 lbtn_oexx6f.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/libertine/l
@@ -1036,7 +1039,7 @@ btn_lyu3x3.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/libertine
 /LinLibertineT.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/liber
 tine/LinLibertineTB.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
 libertine/LinLibertineTI.pfb>
-Output written on cv.pdf (9 pages, 346719 bytes).
+Output written on cv.pdf (9 pages, 346611 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

@@ -91,9 +91,10 @@ Main text font &  \f@size pt \f@family \\
 
 
 
-
+\usepackage{needspace}
 
 \newcommand{\cvsectiontitle}[1]{%
+\needspace{3\baselineskip} % Ensures there's space for at least 3 lines (can adjust as needed)
 \sectionskip
   { \color{color1} \Large{  \bf #1}\qquad \centerrule} % Section title
   \smallskip

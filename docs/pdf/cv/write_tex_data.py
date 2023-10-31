@@ -32,7 +32,7 @@ def process_directory(directory, is_feedback=False):
                 cv_data[dir_name] = []
             
             cv_data[dir_name].append(file_data)
-            cv_data[dir_name].sort(key=lambda x: (str(x.get('order', float('inf'))),
+            cv_data[dir_name].sort(key=lambda x: (str(x.get('order', float('inf'))).zfill(3),
                                                   str(x.get('date', x.get('dates', float('inf'))))), reverse=True)
 
 # Loop over each directory in the CV directory

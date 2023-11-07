@@ -1,5 +1,7 @@
 ---
 title: 'CV'
+aliases:
+  - /cv.html
 draft: false
 description: 'Humble brag!'
 name: Silvia Sellán

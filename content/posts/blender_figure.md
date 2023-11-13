@@ -2,6 +2,8 @@
 title: "Blender Course I: Rendering a paper figure with Blender"
 date: 2020-11-11
 draft: false
+aliases:
+  - /blender_figure.html
 ---
 
 There are a lot of great Blender tutorials online (e.g., the classic [donut tutorial by Blender Guru](https://www.youtube.com/watch?v=TPrnSACiTJ4)), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films. Therefore they go into depth on how to model a shape, how to pick the best lighting, how to design a material, create textures, etc.

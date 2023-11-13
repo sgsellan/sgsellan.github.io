@@ -2,6 +2,8 @@
 title: "National Day for Truth and Reconciliation"
 date: 2021-09-30
 draft: false
+aliases:
+  - /truth_and_reconciliation.html
 ---
 
 Today, September 30th 2021, marks the first [National Day for Truth and Reconciliation](https://www.canada.ca/en/canadian-heritage/campaigns/national-day-truth-reconciliation.html).

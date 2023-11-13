@@ -2,6 +2,8 @@
 title: "Thinking about going to graduate school?"
 date: 2020-08-01
 draft: false
+aliases:
+  - /grad_school.html
 ---
 The process of applying to graduate school can be overwhelming, especially given how opaque and expensive it can be, especially if you are not from North America. I have been asked for advice many times on this so, <i>while I make it clear I don't consider myself an expert on this topic nor do I claim to have all the (or, really, any of) the answers</i>, I've decided to gather some resources that may help you if you're thinking about applying:  
 - As part of the <a href="https://research.siggraph.org">SIGGRAPH Research Career Development Committee</a>, I am organizing a new mentoring program to help students apply for graduate school positions in Computer Graphics by pairing them with experienced graduate students in our field. If you're reading this in Fall 2021, you can sign up <a href="https://forms.gle/UX5dQ8uPtAHtJswW8">here</a>. If time has passed as it inexorably does and it is no longer Fall 2021, you can stay up to date on future programs <a href="https://twitter.com/siggraphmentors">by following our Twitter account</a>.

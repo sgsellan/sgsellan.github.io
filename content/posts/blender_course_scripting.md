@@ -4,6 +4,8 @@ date: 2022-05-29
 draft: false
 hiddenFromHomePage: false
 hiddenFromSearch: false
+aliases:
+  - /blender_course_scripting.html
 ---
 
 

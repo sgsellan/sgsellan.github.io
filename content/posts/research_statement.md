@@ -2,6 +2,8 @@
 title: "My PhD application research statement"
 date: 2020-08-02
 draft: false
+aliases:
+  - /research_statement.html
 ---
 
 I am committed to making the PhD application process more open and clearer to new students, since it is my view that the unnecessary opaqueness of the status quo mostly serves to discourage minorities from applying and to preserve power in the hands of elites. Therefore, I share below the personal statement I used when applying to graduate school in 2018, in hopes it may help someone down the road. I added some comments in square brackets to explain my intended purpose for each section.

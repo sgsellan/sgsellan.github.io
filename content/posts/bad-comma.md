@@ -2,6 +2,8 @@
 title: "On how important a comma (and responsible scientific communication) can be"
 date: 2023-05-29
 draft: false
+aliases:
+  - /bad_comma.html
 ---
 
 I recently came across this [great paper](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002184) by Tatsuya Amano and colleagues on the effects that being a non-native English speaker can have on one's scientific success. It is a good exploratory study of a topic I have unfortunately thought about often, and I recommend reading it in full.

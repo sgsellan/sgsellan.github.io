@@ -2,6 +2,8 @@
 title: "Preparing PhD Committee Meetings"
 date: 2021-10-07
 draft: false
+aliases:
+  - /phd_committee.html
 ---
 
 In my experience, PhD Committee Meetings are an obscure, secretive part of the PhD requirements. One reason for this is that they vary greatly from student to student and discipline to discipline. Still, it is undeniably yet another way in which people without family/friends in academia are gatekept away from it. 

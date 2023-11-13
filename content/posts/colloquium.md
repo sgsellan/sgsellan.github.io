@@ -4,6 +4,8 @@ date: 2022-03-19
 description: A guide to running a weekly virtual colloquium
 summary: A guide to running a weekly virtual colloquium
 draft: false
+aliases:
+  - /colloquium.html
 ---
 <style>
 img{

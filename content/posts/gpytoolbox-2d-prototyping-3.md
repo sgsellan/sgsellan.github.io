@@ -2,6 +2,8 @@
 title: "Quick 2D prototyping with Gpytoolbox III: Distances to 2D polylines"
 date: 2023-03-04
 draft: false
+aliases:
+  - /gpytoolbox-2d-prototyping-3.html
 ---
 
 [*Gpytoolbox* version 0.1.0](https://gpytoolbox.org/0.1.0/) has just been released!! You can install it directly through `pip`:

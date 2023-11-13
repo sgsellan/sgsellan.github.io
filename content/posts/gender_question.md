@@ -2,6 +2,8 @@
 title: "Silvia, how would you ask about name and gender in this form?"
 date: 2021-07-04
 draft: false
+aliases:
+  - /gender_question.html
 ---
 
 In my years in academia as the only trans person in the room<sup>TM</sup>, I have often been asked for or volunteered my advice on how to ask for people's name and gender on official forms like conference surveys, program registrations or award applications. I tend to always reply with a version of the same answer, so in the interest of my own reference and that of rooms without any trans people in them, I post it publicly here.

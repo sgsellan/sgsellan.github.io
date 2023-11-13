@@ -5,6 +5,8 @@ resources:
 - name: "featured-image"
   src: "/images/blender-tutorial/compositing-29.jpg"
 draft: false
+aliases:
+  - /blender_compositing_compatibility.html
 ---
 
 For the most part, you can open and render your Blender 2.9 files using the new

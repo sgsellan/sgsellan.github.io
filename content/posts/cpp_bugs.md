@@ -2,6 +2,8 @@
 title: "Bugs I often write in C++"
 date: 2022-01-27
 draft: false
+aliases:
+  - /cpp_bugs.html
 ---
 
 Every time I try to code a project in C++ I run into the same bugs, and I keep forgetting how to solve them. So, I decided to write this list here for my own reference.

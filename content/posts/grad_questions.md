@@ -2,6 +2,8 @@
 title: "Questions to ask as a prospective graduate student"
 date: 2020-08-03
 draft: false
+aliases:
+  - /grad_questions.html
 ---
 
 <i> May 2021 Update: Here's a <a href="https://twitter.com/DPeharris/status/1367482632964083716">thread</a> from Prof. Pamela E. Harris crowdsourcing suggestions of questions to ask from the specific perspective of students belonging to underrepresented minorities.</i>

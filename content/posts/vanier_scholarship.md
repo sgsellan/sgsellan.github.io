@@ -2,6 +2,8 @@
 title: "My application for the Vanier Canada Graduate Scholarship"
 date: 2021-08-09
 draft: false
+aliases:
+  - /vanier_scholarship.html
 ---
 
 In 2021, I won a [Vanier Canada Graduate Scholarship](https://vanier.gc.ca/en/home-accueil.html). Out of 190 total eligible NSERC applicants, I was ranked 43, with scores of 6.50 in *Academic Excellence*, 6.25 in *Research Potential* and 7.00 in *Leadership* (I don't really know a lot about what these numbers mean). NSERC gave out of 55 scholarships, so I got one.

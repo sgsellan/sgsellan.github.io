@@ -2,6 +2,8 @@
 title: "Blender Course II: Rendering an animation with Blender"
 date: 2021-01-24
 draft: false
+aliases:
+  - /blender_videos.html
 ---
 
 Every few months, because of a deadline coming up, I find myself forgetting and having to look up these steps in old Slack threads and LaTeX comments. Also, it took me a long time to learn these steps because of the lack of a guide like this, so I write this in hopes it may help young students starting out.</h3>

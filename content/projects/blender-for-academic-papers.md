@@ -37,9 +37,9 @@ Over the past three years, I have been learning more and more about using Blende
 
 The course has three parts that you can access here in text format:
 
-1. [Rendering a static figure using the Blender GUI](./blender_figure.html)
-2. [Rendering an animation using the Blender GUI](./blender_videos.html)
-3. [Rendering static figures and animations using Blender scripts](./blender_course_scripting.html)
+1. [Rendering a static figure using the Blender GUI](https://www.silviasellan.com/posts/blender_figure/)
+2. [Rendering an animation using the Blender GUI](https://www.silviasellan.com/posts/blender_videos/)
+3. [Rendering static figures and animations using Blender scripts](https://www.silviasellan.com/posts/blender_course_scripting/)
 
 ## Previous editions
 

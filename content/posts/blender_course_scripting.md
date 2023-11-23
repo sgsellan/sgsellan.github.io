@@ -872,5 +872,3 @@ def plot_point_cloud(path,radius=0.003,color=ourcolor,rotation=(90,0,0)):
     bt.setMat_pointCloud(mesh, ptColor, ptSize)
     return mesh
 ```
-
-#### *Exercise: slices*

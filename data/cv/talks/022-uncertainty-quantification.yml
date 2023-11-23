@@ -1,5 +1,9 @@
 name: Uncertainty Quantification in 3D Geometric Synthesis
 sessions:
+  - venue: University of Zaragoza Graphics and Imaging seminar
+    description: hosted by Prof. Ana Serrano
+    where: Virtual
+    when: November 2023
   - venue: Brown University Graphics seminar
     description: hosted by Prof. Daniel Ritchie
     where: Virtual

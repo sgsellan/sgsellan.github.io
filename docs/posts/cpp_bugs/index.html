@@ -18,7 +18,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.91.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.120.4"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Silvia Sellán" />
   <meta
     name="description"
@@ -92,8 +92,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
-    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -102,8 +102,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.4c31f3cf7e8e609c897dba88aecac0e8db1ebb4e5c841d3f9ffb01d463973678.js"
-      integrity="sha256-TDHzz36OYJyJfbqIrsrA6Nseu05chB0/n/sB1GOXNng="
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
       crossorigin="anonymous"
     ></script>
   
@@ -200,7 +200,7 @@
 
     ,
         "url" : "https:\/\/www.silviasellan.com\/posts\/cpp_bugs\/",
-        "wordCount" : "752",
+        "wordCount" : "762",
         "genre" : [ ],
         "keywords" : [ ]
     }
@@ -283,8 +283,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
@@ -519,86 +519,86 @@ if (!doNotTrack) {
 <p><strong>Symptoms:</strong> The code compiles and runs properly, but the output seems random and changes from one run to the next, despite the code being theoretically deterministic.</p>
 <p><strong>Diagnosis:</strong> This happens because you am declaring a variable and calling it without initializing it. For example, <code>Eigen::Matrix&lt;int,3,5&gt; A;</code> will not create a matrix <code>A</code> of zeros, instead it will fill with entries with garbage from the computer&rsquo;s memory.</p>
 <p><strong>Treatment:</strong> Go variable by variable and ensure that it is being properly initialized after being declared. For example, instead of <code>Eigen::Matrix&lt;int,3,5&gt; A;</code>, write</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="o">&gt;</span> <span class="n">A</span><span class="p">;</span>
-<span class="n">A</span><span class="p">.</span><span class="n">setZero</span><span class="p">();</span>
-</code></pre></div><h3 id="linker-error">Linker error</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">Eigen</span><span class="o">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="o">&gt;</span> <span class="n">A</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">.</span><span class="n">setZero</span><span class="p">();</span>
+</span></span></code></pre></div><h3 id="linker-error">Linker error</h3>
 <p><strong>Symptoms:</strong> The code seems to compile well but breaks just at the end of the compilation process, returning an error like <code>ld: symbol(s) not found for architecture x86_64</code>.</p>
 <p><strong>Diagnosis:</strong> This happens because you are not compiling one of the source files you&rsquo;re using. For example, you wrote <code>main.cpp</code> which itself includes another function you wrote in <code>func.cpp</code>,<code>func.h</code>, but you are only compiling <code>main</code> and not <code>func</code>.</p>
 <p><strong>Treatment:</strong> If you are using CMake (and <code>func</code> is in a path that CMake checks for source code, e.g., <code>include/</code> or <code>/src</code> if you are using CMake best practices), remove all CMake cache and build the project again,</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">rm -rf build
-mkdir build
-<span class="nb">cd</span> build
-cmake ../
-</code></pre></div><p>If you are not using CMake (even though you should) and instead compiling by calling your compiler directly from the terminal like <code>gcc main.cpp -o main</code>, then add <code>func.cpp</code> to the source files being compiled by calling instead <code>gcc main.cpp func.cpp -o main</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rm -rf build
+</span></span><span class="line"><span class="cl">mkdir build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">cmake ../
+</span></span></code></pre></div><p>If you are not using CMake (even though you should) and instead compiling by calling your compiler directly from the terminal like <code>gcc main.cpp -o main</code>, then add <code>func.cpp</code> to the source files being compiled by calling instead <code>gcc main.cpp func.cpp -o main</code>.</p>
 <h3 id="multiple-inclusions">Multiple inclusions</h3>
 <p><strong>Symptoms:</strong> Compiling fails with errors like <code>error: redefinition of ...</code> or <code>... included multiple times</code>.</p>
 <p><strong>Diagnosis:</strong> This happens because, when compiling, the compiler is reaching the same function or variable definition many times. For example, say we have a function <code>main.cpp</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
-<span class="p">{</span>
-    <span class="n">func</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">func2</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div><p>which calls functions <code>func.cpp</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><p>with header file <code>func.h</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></div><p>and
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">func</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">func2</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>which calls functions <code>func.cpp</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span> <span class="p">}</span>
+</span></span></code></pre></div><p>with header file <code>func.h</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><p>and
 <code>func2.cpp</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="p">}</span>
-</code></pre></div><p>with header file <code>func2.h</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></div><p>When the compiler sees an <code>include</code> statement, it will literally just copy that file at that position in the code; and, of course, this works recursively. Therefore, since <code>main</code> is including <code>func.h</code> and <code>func2.h</code>, which in turn also includes <code>func.h</code>, when the compiler starts reading <code>main.cpp</code> and sees</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span></code></pre></div><p>it will interpret it as</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
-</span></code></pre></div><p>and then</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></div><p>which recursively turns into</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></div><p>Thus, even without knowing it, we were defining the same function twice to the compiler&rsquo;s eyes, and that makes it crash.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="nf">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">){</span> <span class="n">func</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="p">}</span>
+</span></span></code></pre></div><p>with header file <code>func2.h</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><p>When the compiler sees an <code>include</code> statement, it will literally just copy that file at that position in the code; and, of course, this works recursively. Therefore, since <code>main</code> is including <code>func.h</code> and <code>func2.h</code>, which in turn also includes <code>func.h</code>, when the compiler starts reading <code>main.cpp</code> and sees</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span></code></pre></div><p>it will interpret it as</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func2.h&#34;</span><span class="cp">
+</span></span></span></code></pre></div><p>and then</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><p>which recursively turns into</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><p>Thus, even without knowing it, we were defining the same function twice to the compiler&rsquo;s eyes, and that makes it crash.</p>
 <p><strong>Treatment:</strong> The best way to be protected against this is always using <a href="https://en.wikipedia.org/wiki/Include_guard">include guards</a>, a smart trick to ensure that the compiler will only enter the main text of each header file once. Basically, envelop <em>every</em> header file you ever write in an if statement like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef UNIQUE_NAME
-</span><span class="cp">#define UNIQUE_NAME
-</span><span class="cp"></span>
-<span class="c1">// header code here
-</span><span class="c1"></span>
-<span class="cp">#endif
-</span></code></pre></div><p>Make sure that <code>UNIQUE_NAME</code> is unique for each header file and it never shares a name with any file or variable or functions ever read by the compiler. For example, you can make them all caps and make sure you never write all caps variable or function names.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifndef UNIQUE_NAME
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define UNIQUE_NAME
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// header code here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></div><p>Make sure that <code>UNIQUE_NAME</code> is unique for each header file and it never shares a name with any file or variable or functions ever read by the compiler. For example, you can make them all caps and make sure you never write all caps variable or function names.</p>
 <p>So, in our example, we would make <code>func.h</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef FUNC
-</span><span class="cp">#define FUNC
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#endif
-</span></code></pre></div><p>and <code>func2.h</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#ifndef FUNC2
-</span><span class="cp">#define FUNC2
-</span><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
-</span><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
-<span class="cp">#endif
-</span></code></pre></div><p>By doing this, we avoid the compiler entering the same code twice and we avoid the error</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifndef FUNC
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define FUNC
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></div><p>and <code>func2.h</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#ifndef FUNC2
+</span></span></span><span class="line"><span class="cl"><span class="cp">#define FUNC2
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;func.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">void</span> <span class="n">func2</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif
+</span></span></span></code></pre></div><p>By doing this, we avoid the compiler entering the same code twice and we avoid the error</p>
 <h3 id="apple-sdk-mismatch">Apple SDK mismatch</h3>
 <p><strong>Symptoms:</strong> The code compiles successfully, but when ran returns an error that references the Apple command line tools, like:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:402:114: error: function does not return string type
-- (nullable instancetype)initWithCString:(const char *)nullTerminatedCString encoding:(NSStringEncoding)encoding NS_FORMAT_ARGUMENT(1);
-                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                     ^                  ~
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h:103:48: note: expanded from macro &#39;NS_FORMAT_ARGUMENT&#39;
-        #define NS_FORMAT_ARGUMENT(A) __attribute__ ((format_arg(A)))
-</code></pre></div><p><strong>Diagnosis:</strong> This (I think!) happens because there is a mismatch between the versions of your operating system and the Apple Command Line Tools. This is caused by Apple itself sometimes (i.e., having the latest version of both does not necessarily solve this).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">CommandLineTools</span><span class="o">/</span><span class="n">SDKs</span><span class="o">/</span><span class="n">MacOSX</span><span class="o">.</span><span class="n">sdk</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Foundation</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Headers</span><span class="o">/</span><span class="n">NSString</span><span class="o">.</span><span class="n">h</span><span class="p">:</span><span class="mi">402</span><span class="p">:</span><span class="mi">114</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">function</span> <span class="n">does</span> <span class="ow">not</span> <span class="k">return</span> <span class="n">string</span> <span class="n">type</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">initWithCString</span><span class="p">:(</span><span class="k">const</span> <span class="n">char</span> <span class="o">*</span><span class="p">)</span><span class="n">nullTerminatedCString</span> <span class="n">encoding</span><span class="p">:(</span><span class="n">NSStringEncoding</span><span class="p">)</span><span class="n">encoding</span> <span class="n">NS_FORMAT_ARGUMENT</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                                                <span class="o">~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span>                                     <span class="o">^</span>                  <span class="o">~</span>
+</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Developer</span><span class="o">/</span><span class="n">CommandLineTools</span><span class="o">/</span><span class="n">SDKs</span><span class="o">/</span><span class="n">MacOSX</span><span class="o">.</span><span class="n">sdk</span><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Foundation</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Headers</span><span class="o">/</span><span class="n">NSObjCRuntime</span><span class="o">.</span><span class="n">h</span><span class="p">:</span><span class="mi">103</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span> <span class="n">note</span><span class="p">:</span> <span class="n">expanded</span> <span class="n">from</span> <span class="n">macro</span> <span class="s1">&#39;NS_FORMAT_ARGUMENT&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#define NS_FORMAT_ARGUMENT(A) __attribute__ ((format_arg(A)))</span>
+</span></span></code></pre></div><p><strong>Diagnosis:</strong> This (I think!) happens because there is a mismatch between the versions of your operating system and the Apple Command Line Tools. This is caused by Apple itself sometimes (i.e., having the latest version of both does not necessarily solve this).</p>
 <p><strong>Treatment:</strong> I solve this by specifying a different compiler, by adding</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">set(CMAKE_CXX_COMPILER &#34;/usr/bin/g++&#34;)
-set(CMAKE_C_COMPILER &#34;/usr/bin/gcc&#34;)
-</code></pre></div><p>to my <code>CMakeLists.txt</code>. I am not really sure why this fixes this, but it does 🤷</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">set(CMAKE_CXX_COMPILER &#34;/usr/bin/g++&#34;)
+</span></span><span class="line"><span class="cl">set(CMAKE_C_COMPILER &#34;/usr/bin/gcc&#34;)
+</span></span></code></pre></div><p>to my <code>CMakeLists.txt</code>. I am not really sure why this fixes this, but it does &#x1f937;</p>
 </div>
     <div class="post__footer">
       
@@ -625,8 +625,8 @@ set(CMAKE_C_COMPILER &#34;/usr/bin/gcc&#34;)
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>

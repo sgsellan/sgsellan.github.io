@@ -18,7 +18,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.91.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.120.4"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Silvia Sellán" />
   <meta
     name="description"
@@ -92,8 +92,8 @@
   
   <script
     type="text/javascript"
-    src="/js/anatole-header.min.46e6a54097480084f8f52c20ca1aa7425b4fad17029a887fd4017b12e311a72d.js"
-    integrity="sha256-RualQJdIAIT49SwgyhqnQltPrRcCmoh/1AF7EuMRpy0="
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
     crossorigin="anonymous"
   ></script>
 
@@ -102,8 +102,8 @@
     
     <script
       type="text/javascript"
-      src="/js/anatole-theme-switcher.min.4c31f3cf7e8e609c897dba88aecac0e8db1ebb4e5c841d3f9ffb01d463973678.js"
-      integrity="sha256-TDHzz36OYJyJfbqIrsrA6Nseu05chB0/n/sB1GOXNng="
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
       crossorigin="anonymous"
     ></script>
   
@@ -283,8 +283,8 @@
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
@@ -515,61 +515,61 @@ if (!doNotTrack) {
     <div class="post__content">
       <h1>Quick 2D Prototyping With Gpytoolbox I: Generating 2D Polylines </h1>
       <p><a href="https://gpytoolbox.org/0.1.0/"><em>Gpytoolbox</em> version 0.1.0</a> has just been released!! You can install it directly through <code>pip</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pip install gpytoolbox
-</code></pre></div><p><em>Gpytoolbox</em> shines when it comes to letting you test out your research ideas on simple 2D geometry before you commit to more complex three-dimensional examples and elaborately optimized implementations. Often, our final algorithm will use triangle meshes to represent surfaces in 3D. This means that, when prototyping in 2D, we will work with its equivalent: curves built by connecting flat segments (<em>edges</em>), which are usually called <strong>polylines</strong>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install gpytoolbox
+</span></span></code></pre></div><p><em>Gpytoolbox</em> shines when it comes to letting you test out your research ideas on simple 2D geometry before you commit to more complex three-dimensional examples and elaborately optimized implementations. Often, our final algorithm will use triangle meshes to represent surfaces in 3D. This means that, when prototyping in 2D, we will work with its equivalent: curves built by connecting flat segments (<em>edges</em>), which are usually called <strong>polylines</strong>.</p>
 <p>In code, polylines are often represented by a matrix of sorted <em>vertex</em> coordinates $V\in\mathbb{R}^{n\times 2}$. Each row contains the coordinates of a single vertex $v_i$, and the $i$-th edge is obtained by connecting the $i$-th vertex to the $i+1$-th vertex.</p>
 <p>To make a simple polyline of a circle, <code>gpytoolbox</code> provides a simple wrapper:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">regular_circle_polyline</span>
-<span class="n">vertices</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">regular_circle_polyline</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># 20 vertices</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># We can plot our polyline using matplotlib</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_4_0.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">regular_circle_polyline</span>
+</span></span><span class="line"><span class="cl"><span class="n">vertices</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">regular_circle_polyline</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="c1"># 20 vertices</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># We can plot our polyline using matplotlib</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_4_0.png" alt="png"></p>
 <p>&hellip;but circles are a very special class of shapes, which are very simple and have a high degree of symmetry. Also, they are very boring to look at. We can get more interesting geometry by using my favourite Gpytoolbox function, <a href="https://gpytoolbox.org/0.1.0/png2poly/"><code>png2poly</code></a>, which reads polylines from <code>.png</code> files you can draw yourself or download from the internet. For example, I drew <a href="https://github.com/sgsellan/gpytoolbox/blob/main/test/unit_tests_data/illustrator.png">this picture</a> on Adobe Illustrator. I can easily load it into Python using <code>png2poly</code>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">png2poly</span>
-<span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;illustrator.png&#34;</span><span class="p">)</span>
-</code></pre></div><p><code>poly</code> now contains a list with every connected polyline in the png file. In our case, this list has four entries:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">))</span>
-</code></pre></div><pre><code>4
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">png2poly</span>
+</span></span><span class="line"><span class="cl"><span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;illustrator.png&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p><code>poly</code> now contains a list with every connected polyline in the png file. In our case, this list has four entries:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">))</span>
+</span></span></code></pre></div><pre><code>4
 </code></pre>
 <p>This may seem counterintuitive, but it makes sense if you think about it for a bit. Since the lines in our png file are so thick, <code>png2poly</code> is duplicating them: it finds one line for the transition from white to red and another one for the one from red to white; then again for white to blue and blue to white. We can visualize all of them:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_10_0.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_10_0.png" alt="png"></p>
 <p>Often, we are interested in only one of these components, so let&rsquo;s just make our vertex matrix be the first entry in the list:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">vertices</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_12_0.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">vertices</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_12_0.png" alt="png"></p>
 <p>A really rich source of interesting 2D geometry that I really like to use is maps. For example, in many of my papers you&rsquo;ll find this Vietnam polyline that comes from <a href="https://github.com/sgsellan/gpytoolbox/blob/main/test/unit_tests_data/vietnam.png">this</a> png file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;vietnam.png&#34;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-b&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-b&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_14_0.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;vietnam.png&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-b&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-b&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_14_0.png" alt="png"></p>
 <p>You might be wondering: what happens if I want a shape with more than one connected component? For example, consider this map of Hawaii:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;hawaii.png&#34;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;There are &#34;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)),</span> <span class="s2">&#34; connected polylines in the image.&#34;</span><span class="p">)</span>
-<span class="c1"># We can plot them in a loop</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</code></pre></div><pre><code>There are  8  connected polylines in the image.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">poly</span> <span class="o">=</span> <span class="n">png2poly</span><span class="p">(</span><span class="s2">&#34;hawaii.png&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;There are &#34;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)),</span> <span class="s2">&#34; connected polylines in the image.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># We can plot them in a loop</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">][:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>There are  8  connected polylines in the image.
 </code></pre>
 <p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_16_1.png" alt="png"></p>
 <p>To combine all the islands into a single polyline, we can can concatenate all the vertices and use an edge list <code>EC</code> that stores which vertices are connected. For a single connected component, this edge list is simple: the first vertex connects to the second vertex, the second vertex connects to the third, etc.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Consider the first island</span>
-<span class="n">first_island_vertices</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># Edge indices</span>
-<span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">edge_indices</span>
-<span class="n">first_island_edges</span> <span class="o">=</span> <span class="n">edge_indices</span><span class="p">(</span><span class="n">first_island_vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># The &#39;closed&#39; argument tells the function to connect the last vertex to the first one</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">first_island_edges</span><span class="p">)</span>
-</code></pre></div><pre><code>[[  0   1]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Consider the first island</span>
+</span></span><span class="line"><span class="cl"><span class="n">first_island_vertices</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Edge indices</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">edge_indices</span>
+</span></span><span class="line"><span class="cl"><span class="n">first_island_edges</span> <span class="o">=</span> <span class="n">edge_indices</span><span class="p">(</span><span class="n">first_island_vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># The &#39;closed&#39; argument tells the function to connect the last vertex to the first one</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">first_island_edges</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[[  0   1]
  [  1   2]
  [  2   3]
  [  3   4]
@@ -677,27 +677,27 @@ if (!doNotTrack) {
  [105 106]
  [106   0]]
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># We can plot the island by looping over the edges:</span>
-<span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">first_island_edges</span><span class="p">:</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">first_island_vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">first_island_vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_19_0.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># We can plot the island by looping over the edges:</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">first_island_edges</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">first_island_vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">first_island_vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_19_0.png" alt="png"></p>
 <p>We can now combine all the islands into a single polyline, while specifying the edges:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">vertices</span> <span class="o">=</span> <span class="n">first_island_vertices</span>
-<span class="n">edges</span> <span class="o">=</span> <span class="n">first_island_edges</span>
-<span class="c1"># Loop over all islands</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)):</span>
-    <span class="n">vertices_i</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">edges_i</span> <span class="o">=</span> <span class="n">edge_indices</span><span class="p">(</span><span class="n">vertices_i</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="c1"># Concatenate the vertices and edges</span>
-    <span class="n">edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">edges</span><span class="p">,</span> <span class="n">edges_i</span> <span class="o">+</span> <span class="n">vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-    <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">vertices</span><span class="p">,</span> <span class="n">vertices_i</span><span class="p">))</span>
-    
-</code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># Plot the result, edge by edge</span>
-<span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_22_0.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">vertices</span> <span class="o">=</span> <span class="n">first_island_vertices</span>
+</span></span><span class="line"><span class="cl"><span class="n">edges</span> <span class="o">=</span> <span class="n">first_island_edges</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Loop over all islands</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">poly</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vertices_i</span> <span class="o">=</span> <span class="n">poly</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edges_i</span> <span class="o">=</span> <span class="n">edge_indices</span><span class="p">(</span><span class="n">vertices_i</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Concatenate the vertices and edges</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">edges</span><span class="p">,</span> <span class="n">edges_i</span> <span class="o">+</span> <span class="n">vertices</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vertices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">vertices</span><span class="p">,</span> <span class="n">vertices_i</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Plot the result, edge by edge</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[</span><span class="n">edge</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_22_0.png" alt="png"></p>
 </div>
     <div class="post__footer">
       
@@ -724,8 +724,8 @@ if (!doNotTrack) {
   
   <script
     type="text/javascript"
-    src="/js/medium-zoom.min.fae9ac8895995fe91958b3954be11e96025824a04770726a3531e119ddd2d576.js"
-    integrity="sha256-&#43;umsiJWZX&#43;kZWLOVS&#43;EelgJYJKBHcHJqNTHhGd3S1XY="
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
   ></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>

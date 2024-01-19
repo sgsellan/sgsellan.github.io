@@ -9,5 +9,6 @@ I am planning to visit several universities in the next few months to talk about
 
 - January 31st - February 1st: University of Waterloo (Waterloo, Canada).
 - February 5th - 16th: Busy. 
-- March 12th - 13th: IST Austria (Vienna, Austria).
+- March 7th - 8th: IST Austria (Vienna, Austria).
+- March 11th - 12th: Caltech (Pasadena, USA).
 - March 18th: Columbia University (New York, USA).

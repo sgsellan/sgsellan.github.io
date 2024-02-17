@@ -16,3 +16,4 @@ I am planning to visit several universities in the next few months to talk about
 - March 11th - 12th: Caltech (Pasadena, USA).
 - March 15th: Brown University (Providence, USA).
 - March 18th: Columbia University (New York, USA).
+- March 25th: Princeton University (Princeton, USA).

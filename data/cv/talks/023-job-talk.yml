@@ -1,0 +1,44 @@
+name: Stochastic Computer Graphics
+sessions:
+  - venue: University of Waterloo Computer Science Seminar
+    description: hosted by Prof. Craig Kaplan
+    where: Waterloo (Canada)
+    when: January 2024
+  - venue: University of Victoria Computer Science Seminar
+    description: hosted by Prof. Teseo Schneider
+    where: Victoria (Canada)
+    when: February 2024
+  - venue: Max Planck Institute for Informatics Seminar
+    description: hosted by Prof. Christopher Theobalt
+    where: Saarbrücken (Germany)
+    when: February 2024
+  - venue: Johns Hopkins University Computer Science Seminar
+    description: hosted by Prof. Misha Kazhdan
+    where: Baltimore (United States)
+    when: February 2024
+  - venue: Institute of Science and Technology Austria
+    description: hosted by Prof. Chris Wojtan
+    where: Vienna (Austria)
+    when: February 2024
+  - venue: Caltech Computer Science Seminar
+    description: hosted by Prof. Aaron Ames
+    where: Pasadena (United States)
+    when: March 2024
+  - venue: Brown University Computer Science Seminar
+    description: hosted by Prof. Daniel Ritchie
+    where: Providence (United States)
+    when: March 2024
+  - venue: Columbia University Computer Science Seminar
+    description: hosted by Prof. Changxi Zheng
+    where: New York City (United States)
+    when: March 2024
+  - venue: MIT Computer Science Seminar
+    description: hosted by Prof. William Freeman
+    where: Cambridge (United States)
+    when: March 2024
+  - venue: Princeton University Computer Science Seminar
+    description: hosted by Prof. Adam Finkelstein
+    where: Princeton (United States)
+    when: March 2024
+
+order: 23

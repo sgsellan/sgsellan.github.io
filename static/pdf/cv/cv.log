@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  24 FEB 2024 13:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  28 FEB 2024 14:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1054,11 +1054,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-) [9] (./cv.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) [9] (./cv.aux) ) 
 Here is how much of TeX's memory you used:
  12175 strings out of 476025
  206715 string characters out of 5790016
@@ -1067,11 +1063,11 @@ Here is how much of TeX's memory you used:
  528852 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,14n,145p,972b,731s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertine
-T.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLiber
-tineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/Lin
-LibertineTI.pfb>
-Output written on cv.pdf (9 pages, 349491 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/libert
+ine/LinLibertineT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/li
+bertine/LinLibertineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
+ic/libertine/LinLibertineTI.pfb>
+Output written on cv.pdf (9 pages, 349495 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

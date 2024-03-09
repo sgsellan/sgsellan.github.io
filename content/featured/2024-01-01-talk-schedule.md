@@ -18,3 +18,4 @@ I am planning to visit several universities in the next few months to talk about
 - March 18th: Columbia University (New York, USA).
 - March 20th - 21st: MIT (Cambridge, USA).
 - March 25th: Princeton University (Princeton, USA).
+- March 28th - 29th: CMU (Pittsburgh, USA).

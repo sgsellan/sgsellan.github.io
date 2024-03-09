@@ -40,5 +40,9 @@ sessions:
     description: hosted by Prof. Adam Finkelstein
     where: Princeton (United States)
     when: March 2024
+  - venue: CMU Computer Science Seminar
+    description: hosted by Prof. Keenan Crane
+    where: Pittsburgh (United States)
+    when: March 2024
 
 order: 23

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  28 FEB 2024 17:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  9 MAR 2024 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -895,7 +895,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2022/08/07 UCS: Unicode data U+0100..U+01FF
 ) [4] [5])
-Underfull \hbox (badness 10000) in paragraph at lines 98--42
+Underfull \hbox (badness 10000) in paragraph at lines 99--42
 
  []
 
@@ -1067,7 +1067,7 @@ Here is how much of TeX's memory you used:
 ine/LinLibertineT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb>
-Output written on cv.pdf (9 pages, 350284 bytes).
+Output written on cv.pdf (9 pages, 350292 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

@@ -1,0 +1,14 @@
+name: "Surface-Filling Curve Flows via Implicit Medial Axes"
+date: 2024-05-02
+venue: 'SIGGRAPH 2024'
+authors:
+  - Yuta Noma
+  - Silvia Sellán
+  - Nicholas Sharp
+  - Karan Singh
+  - Alec Jacobson
+image: '/images/paper-thumbnails/surface-filling-curves.jpg'
+# link: https://www.dgp.toronto.edu/projects/surface-filling-curves/
+pdflink: '/pdf/papers/surface-filling-curves.pdf'
+# codelink: https://github.com/sgsellan/fracture-modes
+description: 'We introduce a fast, robust, and user-controllable algorithm to generate surface-filling curves for interactive design applications. Our geometric flow is orders of mangnitude faster than preivous work, makes minimal assumptions on the input surface and provides tuneable parameters.'

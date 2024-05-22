@@ -145,6 +145,17 @@ Main text font &  \f@size pt \f@family \\
 
 }
 
+\newcommand{\threelinecvitem}[4]{
+  {\bf #1} \hfill {\em \small #2} \\
+  \ifx&#4& % Check if #4 is empty
+    {\small #3}
+  \else
+    {\small #3 } \\ 
+    {\it \small #4}
+  \fi
+
+}
+
 \newcommand{\cvitemtiny}[2]{
     {\bf #1} \hfill {\em \small #2} \\
 
@@ -165,6 +176,9 @@ Main text font &  \f@size pt \f@family \\
 }
 \newcommand{\education}[4]{ % #1: institution, #2: degree, #3: dates, #4: description
 \tinycvitem{#1}{#3}{#2}{#4}
+}
+\newcommand{\appointments}[4]{ % #1: institution, #2: degree, #3: dates, #4: description
+\threelinecvitem{#1}{#3}{#2}{#4}
 }
 \newcommand{\experience}[5]{ % #1: institution, #2: position, #3: dates, #4: supervisor, #5: description
 \tinycvitem{#1}{#3}{#2}{#4}

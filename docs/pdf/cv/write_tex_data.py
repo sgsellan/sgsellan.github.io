@@ -68,6 +68,7 @@ keys_mapping = {
     'academic_service': ['name', 'position', 'dates', 'description'],
     'departmental_service': ['name', 'position', 'dates', 'description'],
     'education': ['institution', 'degree', 'dates', 'description'],
+    'appointments': ['institution', 'department', 'dates', 'position'],
     'experience': ['institution', 'position', 'dates', 'supervisor', 'description'],
     'mentoring': ['name', 'position', 'dates', 'description'],
     'teaching': ['name', 'position', 'dates', 'description'],
@@ -101,6 +102,7 @@ def write_to_tex(filename, data, category):
     category_print = category.replace('_', '')  # Remove underscores from the category name
     with open(filename, 'w') as file:
         for entry in data:
+            # print(entry)
             tex_command = "\\" + category_print
             tex_params = []
 

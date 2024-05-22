@@ -1,0 +1,13 @@
+name: "Reach for the Arcs: \\ Reconstructing Surfaces from SDFs via Tangent Points"
+date: 2024-05-01
+venue: 'SIGGRAPH 2024'
+authors:
+  - Silvia Sellán
+  - Yingying Ren
+  - Christopher Batty
+  - Oded Stein
+image: '/images/paper-thumbnails/reach-for-the-arcs.jpeg'
+link: https://odedstein.com/projects/reach-for-the-arcs/
+pdflink: '/pdf/papers/reach-for-the-arcs.pdf'
+# codelink: https://github.com/sgsellan/fracture-modes
+description: "We introduce an algorithm to reconstruct a mesh from discrete samples of a shape's Signed Distance Function (SDF). A simple geometric reinterpretation of the SDF lets us formulate the problem through a point cloud, from which a surface can be extracted with existing techniques, outperforming commonly used algorithms and imposing no topological or geometric restrictions."

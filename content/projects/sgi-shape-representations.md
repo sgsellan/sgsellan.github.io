@@ -9,7 +9,7 @@ authors:
     affiliation: University of Toronto
 links:
   - name: Slides (keynote, upon request)
-    url: mailto:sgsellan@gcs.toronto.edu
+    url: mailto:sgsellan@mit.edu
   - name: Slides (pdf)
     url: /pdf/courses/sgi-shape-representations.pdf
   - name: Exercises (Github)

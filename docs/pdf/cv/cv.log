@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  13 JUN 2024 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  25 JUN 2024 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -802,6 +802,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+
+ []
+
 ) (./sections/referee_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
@@ -887,12 +892,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
@@ -985,12 +990,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
@@ -1005,12 +1010,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
@@ -1073,7 +1078,7 @@ Here is how much of TeX's memory you used:
 ine/LinLibertineT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/li
 bertine/LinLibertineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
 ic/libertine/LinLibertineTI.pfb>
-Output written on cv.pdf (9 pages, 350522 bytes).
+Output written on cv.pdf (9 pages, 350710 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

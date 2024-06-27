@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  25 JUN 2024 10:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  27 JUN 2024 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -807,6 +807,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+
+ []
+
 ) (./sections/referee_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
@@ -887,12 +892,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
@@ -975,7 +980,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
 
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -990,7 +995,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
@@ -1000,7 +1005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-) (./sections/feedback_teaching.tex) (./sections/mentoring.tex
+) (./sections/feedback_teaching.tex [8]) (./sections/mentoring.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1010,7 +1015,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
@@ -1060,28 +1065,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-) [9] (./cv.aux) ) 
+) [10] (./cv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  12183 strings out of 476025
  206891 string characters out of 5790016
- 1866388 words of memory out of 5000000
+ 1865388 words of memory out of 5000000
  32391 multiletter control sequences out of 15000+600000
  528852 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,14n,145p,959b,731s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/libert
-ine/LinLibertineT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/li
-bertine/LinLibertineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publ
-ic/libertine/LinLibertineTI.pfb>
-Output written on cv.pdf (9 pages, 350710 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertine
+T.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLiber
+tineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/libertine/Lin
+LibertineTI.pfb>
+Output written on cv.pdf (10 pages, 351099 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,9 +1,11 @@
 ---
 title: Meet me at this summer's conferences!
-date: 2024-05-01
+date: 2024-05-02
 image: "/images/paper-thumbnails/reach-for-the-arcs.jpeg"
 description: "What a year!"
 ---
+
+
 
 While I have been pretty busy over the past couple of months, I am very lucky to have incredibly smart, hard-working collaborators, that will give me an excuse to attend a bunch of conferences this summer. Hit me up if you'll be in any of these and want to chat!
 

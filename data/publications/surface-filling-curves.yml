@@ -8,7 +8,7 @@ authors:
   - Karan Singh
   - Alec Jacobson
 image: '/images/paper-thumbnails/surface-filling-curves.jpg'
-# link: https://www.dgp.toronto.edu/projects/surface-filling-curves/
+link: https://www.dgp.toronto.edu/projects/surface-filling-curves/
 pdflink: '/pdf/papers/surface-filling-curves.pdf'
-# codelink: https://github.com/sgsellan/fracture-modes
+codelink: https://github.com/yutanoma/surface-filling-curve-flows
 description: 'We introduce a fast, robust, and user-controllable algorithm to generate surface-filling curves for interactive design applications. Our geometric flow is orders of mangnitude faster than preivous work, makes minimal assumptions on the input surface and provides tuneable parameters.'

@@ -22,7 +22,7 @@ If you join my group as a graduate student or a postdoc, I will expect you to be
 
 This is research that uses applied mathematics to understand the ways we capture, store and study geometric shapes with the help of a computer.
 
-#### (Stochastic) Reconstruction
+<!-- #### (Stochastic) Reconstruction -->
 
 In the world of abstract mathematics, geometric shapes (picture, for example, a sphere) are continuous sets containing infinitely many points in space. To store these shapes inside a computer with finite memory, however (think, for example, of an MRI scan, or the characters of a video game), we need a way of *representing* them. For example, one can represent a shape with a finite set of unstructured points in space (a [*point cloud*](https://en.wikipedia.org/wiki/Point_cloud)), a set of connected triangles (a [*mesh*](https://en.wikipedia.org/wiki/Polygon_mesh)), a bunch of pictures of the shape taken from different angles ([*multiview*](https://openaccess.thecvf.com/content/CVPR2023/papers/Yu_MVImgNet_A_Large-Scale_Dataset_of_Multi-View_Images_CVPR_2023_paper.pdf) representations) or even implicitly as a level-set of a function (like [*signed distance functions*](https://en.wikipedia.org/wiki/Signed_distance_function) or *occupancy fields*). No representation is "the best"; instead, each representation is useful for a different set of geometric tasks. For example, point clouds are easiest to capture (think: the laser scanner on a self-driving car) but harder to analyze, implicit representations are useful for modeling but harder to visualize and render, and meshes are easy to render but harder to design data-driven methods for.
 
@@ -32,12 +32,14 @@ I like thinking of reconstruction problems from this statistical lens: as a set 
 
 My colleagues and I have already looked at some reconstruction tasks from this stochastic lens (e.g., [here](https://bayesrays.github.io), [here](https://odedstein.com/projects/reach-for-the-arcs/), [here](https://odedstein.com/projects/reach-for-the-spheres/), [here](https://www.silviasellan.com/projects/neural-stochastic-screened-psr/) and [here](https://www.dgp.toronto.edu/projects/stochastic-psr/)). However, each of these projects relies on very different statistical tricks and reinterpretations of the reconstruction process. By contrast, a large ambition of mine is to develop a unified stochastic surface representation that can register observations in any form (point cloud, image, etc.) and efficiently respond to statistical queries. I have experimented with this for a while now, with both traditional techniques like Gaussian Processes and Monte Carlo estimation, and neural methods like Bayesian Neural Networks. I haven't really been successful yet, but I am optimistic that we can figure it out together :)
 
-#### Stochastic Geometry Processing
+<!-- #### Stochastic Geometry Processing
+
+
 
 Our work above introduces a stochastic shape representation in the form of distributions over the space of surfaces. So far, we have been concerned with computing this representation from captured point clouds or SDFs, as well as very basic geometric queries like collision probabilities. However, a gap remains between these basic queries and the more complex geometric tasks required in many applications, like the treatment of 3D medical data, 4D scans by autonomous vehicles or physical simulations from scientific applications: think the difference between "the space of possible shapes this organ may take based on an ultrasound data" and "the likelihood that the patient has a specific disease". How can we exploit stochastic shape representations to quantify the uncertainty of these more elaborate tasks?
 
 A particularly intriguing research question in this line of work concerns solving Partial Differential Equations on uncertain domains. From a statistical perspective, this question is one of computing the distribution of possible solutions induced by the distribution of possible domains. A possible answer is the introduction of stochastic discretizations; for example, elements with different (and correlated) existence likelihoods that are accounted for in the usual Finite Element integrations. Another potential answer concerns Monte Carlo strategies that compute PDE solutions based on random walks.
-Finding answers to these questions will enable a vast array of projects in this research line: for example, we can study the distribution of possible physical responses of sparsely captured geometry to inform autonomous vehicle interactions and architectural safety inspections, or the distribution of possible segmentations of a medical scan for use in computer-assisted surgical applications. 
+Finding answers to these questions will enable a vast array of projects in this research line: for example, we can study the distribution of possible physical responses of sparsely captured geometry to inform autonomous vehicle interactions and architectural safety inspections, or the distribution of possible segmentations of a medical scan for use in computer-assisted surgical applications.  -->
 
 
 ### Application-driven geometry processing

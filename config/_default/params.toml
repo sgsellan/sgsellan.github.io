@@ -4,7 +4,7 @@ author = "Silvia Sellán"
 email = "sgsellan@mit.edu"
 #copyright = "2020-2021"
 new = "Hiring graduate students!"
-description = "Current PhD student at the University of Toronto, incoming postdoctoral associate at MIT EECS and future Assistant Professor at Columbia University. Interested in quantifying the statistical uncertainty inherent in many Graphics and Vision tasks."
+description = "Postdoctoral associate at MIT and incoming Assistant Professor of Computer Science at Columbia University, specializing in Geometry Processing."
 pronouns = "she/her, they/them"
 profilePicture = "images/portrait.jpg"
 keywords = ""
@@ -78,7 +78,7 @@ url = "https://twitter.com/sellan_s"
 [[socialIcons]]
 icon = "fas fa-envelope"
 title = "e-mail"
-url = "mailto:sgsellan@cs.toronto.edu"
+url = "mailto:sgsellan@mit.edu"
 
 [mermaid]
 # enable = true

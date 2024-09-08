@@ -14,7 +14,13 @@
 \usepackage[]{multibib}
 % \usepackage{hyperref}
 \usepackage{url}
-\usepackage{libertine}
+% \usepackage{libertine}
+\usepackage[T1]{fontenc}
+% Load the font packages
+\usepackage{ebgaramond}
+% \usepackage{garamond}
+% \usepackage[urw-garamond]{mathdesign}
+% \usepackage[T1]{fontenc}
 
 \definecolor{color1}{HTML}{1D4F91}
 \definecolor{color2}{HTML}{AE2573}
@@ -26,7 +32,7 @@
 \usepackage[utf8x]{inputenc}
 % chemical formulas
 
-\newcommand{\bold}[1]{\textcolor{color1}{\textbf{#1}}}
+% \newcommand{\boldone}[1]{\textcolor{color1}{\textbf{#1}}}
 \newcommand{\boldtwo}[1]{\textcolor{color2}{\textbf{#1}}}
 
 %\renewcommand{\familydefault}{\libertine}
@@ -96,7 +102,7 @@ Main text font &  \f@size pt \f@family \\
 \newcommand{\cvsectiontitle}[1]{%
 \needspace{3\baselineskip} % Ensures there's space for at least 3 lines (can adjust as needed)
 \sectionskip
-  { \color{color1} \Large{  \bf #1}\qquad \centerrule} % Section title
+  { \color{color1} \Large{  \bf  #1}\qquad \centerrule} % Section title
   \smallskip
 
 %   \sectionlineskip
@@ -129,7 +135,7 @@ Main text font &  \f@size pt \f@family \\
 }
 
 \newcommand{\basicpublication}[3]{
-    {\bf #1} \\ %title and year
+    {\textbf{#1}} \\ %title and year
     {\small#2} \\ % authors
     {\small \it #3} % venue
 

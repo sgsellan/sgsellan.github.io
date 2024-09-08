@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  8 SEP 2024 15:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  8 SEP 2024 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,9 +226,12 @@ Package: multibib 2008/12/10 v1.4 Multiple bibliographies for one document.
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2023/texmf-dist/tex/latex/libertine/libertine.sty
-Package: libertine 2022/09/12 (Bob Tennent) Supports Libertine and Biolinum fon
-ts for all LaTeX engines.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ebgaramond/ebgaramond.sty
+Package: ebgaramond 2022/09/10 (Bob Tennent and autoinst) Style file for EB Gar
+amond fonts.
 
 (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
@@ -269,9 +272,9 @@ LaTeX Info: Redefining \textsw on input line 47.
 LaTeX Info: Redefining \textssc on input line 48.
 LaTeX Info: Redefining \textulc on input line 49.
 )
-LaTeX Info: Redefining \oldstylenums on input line 483.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/libertine/LinLibertine_I.tex))
+LaTeX Info: Redefining \oldstylenums on input line 161.
+LaTeX Info: Redefining \textsw on input line 169.
+)
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2022/08/07 v2.3 UCS: Unicode input support
 
@@ -513,17 +516,21 @@ Package zref Info: New property: linegoal on input line 39.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 ))
-LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 3.
+LaTeX Font Info:    Trying to load font information for T1+EBGaramond-OsF on in
+put line 3.
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/libertine/OT1LinuxLibertineT-TLF.
-fd
-File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
-LinuxLibertineT-TLF.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ebgaramond/T1EBGaramond-OsF.fd
+File: T1EBGaramond-OsF.fd 2019/10/22 (autoinst) Font definitions for T1/EBGaram
+ond-OsF.
 )
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <10> not availab
+le
+(Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
+nput line 3.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
 (Font)              scaled to size 10.0pt on input line 3.
- (./cv.aux)
+
+(./cv.aux)
 \openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -618,14 +625,26 @@ Package caption Info: End \AtBeginDocument code.
 Package layouts Warning: Layout scale set to 0.5 on input line 3.
 
 (./header.tex
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <20.74> not avai
+lable
+(Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
+nput line 5.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
 (Font)              scaled to size 20.74pt on input line 5.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <20.74> not avai
+lable
+(Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on inpu
+t line 5.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
 (Font)              scaled to size 20.74pt on input line 5.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2022/08/07 UCS: Unicode data U+0000..U+00FF
 )
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <10> not availab
+le
+(Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on inpu
+t line 12.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
 (Font)              scaled to size 10.0pt on input line 12.
 Package epstopdf Info: Source file: <columbia-logo.eps>
 (epstopdf)                    date: 2024-09-08 14:55:26
@@ -653,28 +672,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
 
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <14.4> not avail
+able
+(Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
+nput line 8.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
 (Font)              scaled to size 14.4pt on input line 8.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <14.4> not avail
+able
+(Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on inpu
+t line 8.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
 (Font)              scaled to size 14.4pt on input line 8.
 (./sections/appointments.tex
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <10> not availa
+ble
+(Font)              Font shape `T1/EBGaramond-OsF/regular/it' tried instead on 
+input line 1.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/it' will be
 (Font)              scaled to size 10.0pt on input line 1.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/it' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' in size <9> not availab
+le
+(Font)              Font shape `T1/EBGaramond-OsF/regular/it' tried instead on 
+input line 1.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/it' will be
 (Font)              scaled to size 9.0pt on input line 1.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <9> not availabl
+e
+(Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
+nput line 1.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
 ) (./sections/education.tex)
 (./sections/publications.tex
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <9> not availabl
+e
+(Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on inpu
+t line 1.
+LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
  [1
 
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc}{/usr/loca
-l/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/usr/local
-/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc} <./columbia
--logo-eps-converted-to.pdf>])
+al/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_tcdnmr.enc}{/usr/loc
+al/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_ljow5q.enc} <./colum
+bia-logo-eps-converted-to.pdf>])
 (./sections/patents.tex) (./sections/software.tex) (./sections/awards.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
@@ -1026,12 +1068,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-) (./sections/feedback_teaching.tex [8]) (./sections/mentoring.tex
+) (./sections/feedback_teaching.tex) (./sections/mentoring.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -1086,28 +1128,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-) [10] (./cv.aux) ) 
+) [9] (./cv.aux) ) 
 Here is how much of TeX's memory you used:
- 12183 strings out of 476025
- 207011 string characters out of 5790016
- 1865388 words of memory out of 5000000
- 32391 multiletter control sequences out of 15000+600000
- 528852 words of font info for 51 fonts, out of 8000000 for 9000
+ 11712 strings out of 476025
+ 197638 string characters out of 5790016
+ 1868388 words of memory out of 5000000
+ 31921 multiletter control sequences out of 15000+600000
+ 584296 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,14n,145p,959b,735s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/liber
-tine/LinLibertineT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/l
-ibertine/LinLibertineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
-lic/libertine/LinLibertineTI.pfb>
-Output written on cv.pdf (10 pages, 331068 bytes).
+ 98i,14n,145p,959b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgara
+mond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
+/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
+e1/public/ebgaramond/EBGaramond-Regular.pfb>
+Output written on cv.pdf (9 pages, 376237 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

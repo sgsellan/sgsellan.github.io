@@ -16,8 +16,8 @@
 \usepackage{url}
 \usepackage{libertine}
 
-\definecolor{color1}{HTML}{001F3F}
-\definecolor{color2}{HTML}{8A360F}
+\definecolor{color1}{HTML}{1D4F91}
+\definecolor{color2}{HTML}{AE2573}
 \definecolor{color3}{HTML}{DAA520}
 % \definecolor{color4}{HTML}{984ea3}
 % \definecolor{color5}{HTML}{ff7f00}

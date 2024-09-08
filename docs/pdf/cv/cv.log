@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  31 AUG 2024 12:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  8 SEP 2024 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,14 +626,25 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 File: uni-0.def 2022/08/07 UCS: Unicode data U+0000..U+00FF
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 8.
-<uoft-logo.png, id=1, 1027.84pt x 368.37625pt>
-File: uoft-logo.png Graphic file (type png)
-<use uoft-logo.png>
-Package pdftex.def Info: uoft-logo.png  used on input line 18.
-(pdftex.def)             Requested size: 187.81454pt x 67.311pt.
+(Font)              scaled to size 10.0pt on input line 12.
+Package epstopdf Info: Source file: <columbia-logo.eps>
+(epstopdf)                    date: 2024-09-08 14:55:26
+(epstopdf)                    size: 1605062 bytes
+(epstopdf)             Output file: <columbia-logo-eps-converted-to.pdf>
+(epstopdf)                    date: 2024-09-08 14:55:41
+(epstopdf)                    size: 32772 bytes
+(epstopdf)             Command: <repstopdf --outfile=columbia-logo-eps-converte
+d-to.pdf columbia-logo.eps>
+(epstopdf)             \includegraphics on input line 19.
+Package epstopdf Info: Output file is already uptodate.
+<columbia-logo-eps-converted-to.pdf, id=1, 1256.695pt x 186.6975pt>
+File: columbia-logo-eps-converted-to.pdf Graphic file (type pdf)
+<use columbia-logo-eps-converted-to.pdf>
+Package pdftex.def Info: columbia-logo-eps-converted-to.pdf  used on input line
+ 19.
+(pdftex.def)             Requested size: 269.49565pt x 40.03662pt.
 )
-Overfull \hbox (18.4pt too wide) in paragraph at lines 2--6
+Overfull \hbox (18.39998pt too wide) in paragraph at lines 2--6
 [][]
  []
 
@@ -662,9 +673,9 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
 {/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
 al/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc}{/usr/loca
 l/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc}{/usr/local
-/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc} <./uoft-log
-o.png>]) (./sections/patents.tex)
-(./sections/software.tex) (./sections/awards.tex
+/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc} <./columbia
+-logo-eps-converted-to.pdf>])
+(./sections/patents.tex) (./sections/software.tex) (./sections/awards.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1083,20 +1094,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 ) [10] (./cv.aux) ) 
 Here is how much of TeX's memory you used:
  12183 strings out of 476025
- 206891 string characters out of 5790016
+ 207011 string characters out of 5790016
  1865388 words of memory out of 5000000
  32391 multiletter control sequences out of 15000+600000
  528852 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,14n,145p,959b,731s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,14n,145p,959b,735s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/liber
 tine/LinLibertineT.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/l
 ibertine/LinLibertineTB.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/pub
 lic/libertine/LinLibertineTI.pfb>
-Output written on cv.pdf (10 pages, 351103 bytes).
+Output written on cv.pdf (10 pages, 331068 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

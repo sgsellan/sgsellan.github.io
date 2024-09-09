@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  8 SEP 2024 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  9 SEP 2024 06:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -663,7 +663,7 @@ Package pdftex.def Info: columbia-logo-eps-converted-to.pdf  used on input line
  19.
 (pdftex.def)             Requested size: 269.49565pt x 40.03662pt.
 )
-Overfull \hbox (18.39998pt too wide) in paragraph at lines 2--6
+Overfull \hbox (17.99998pt too wide) in paragraph at lines 2--6
 [][]
  []
 
@@ -1146,7 +1146,7 @@ Here is how much of TeX's memory you used:
 mond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public
 /ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (9 pages, 376237 bytes).
+Output written on cv.pdf (9 pages, 376219 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream

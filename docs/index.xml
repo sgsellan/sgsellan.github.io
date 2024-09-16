@@ -316,17 +316,6 @@
     </item>
     
     <item>
-      <title>Calendar</title>
-      <link>https://www.silviasellan.com/calendar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.silviasellan.com/calendar/</guid>
-      
-        <description> </description>
-      
-    </item>
-    
-    <item>
       <title>Mesh Math and Beyond</title>
       <link>https://www.silviasellan.com/projects/sgi-shape-representations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -356,6 +345,17 @@
       <guid>https://www.silviasellan.com/projects/paper-writing/</guid>
       
         <description>There are many skills not necessarily related to geometry or math that are required to make a polished SIGGRAPH submission.</description>
+      
+    </item>
+    
+    <item>
+      <title>Silvia&#39;s calendar</title>
+      <link>https://www.silviasellan.com/calendar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/calendar/</guid>
+      
+        <description> </description>
       
     </item>
     

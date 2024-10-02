@@ -23,28 +23,29 @@
   url = "/teaching/"
 
   [[main]]
-  name = "Software"
-  weight = 500
-  identifier = "software"
-  url = "/software/"
-
-  [[main]]
   name = "CV"
   weight = 550
   identifier = "cv"
   url = "/cv/"
 
   [[main]]
-  name = "Food"
+  name = "Calendar"
   weight = 600
-  identifier = "food"
-  url = "https://www.pritirrecetas.com/en/"
+  identifier = "calendar"
+  url = "/calendar/"
 
 
   [[main]]
   name = "Other"
   weight = 700
   identifier = "other"
+
+    [[main]]
+  name = "Food"
+  weight = 705
+  identifier = "food"
+  url = "https://www.pritirrecetas.com/en/"
+  parent = "other"  
 
   [[main]]
   name = "Paper Writing"
@@ -65,4 +66,11 @@
   weight = 730
   identifier = "art"
   url = "/projects/art/"
+  parent = "other"
+
+  [[main]]
+  name = "Software"
+  weight = 740
+  identifier = "software"
+  url = "/software/"
   parent = "other"

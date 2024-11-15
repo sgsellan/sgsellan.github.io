@@ -1,0 +1,12 @@
+name: "Through The Looking Glass: Mirror Schrödinger Bridges"
+date: 2024-10
+venue: 'Under Peer Review'
+authors:
+  - Leticia Mattos Da Silva
+  - Silvia Sellán
+  - Justin Solomon
+image: '/images/paper-thumbnails/mirror-schrodinger.jpg'
+# link: https://bayesrays.github.io
+pdflink: 'https://arxiv.org/pdf/2410.07003'
+# codelink: https://github.com/BayesRays/BayesRays/tree/main
+description: 'We introduce a method to learn a map from a statistical distribution onto itself, allowing us to obtain in-distribution variations of a given input for applications in tasks like generative modeling and others.'

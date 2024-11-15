@@ -44,5 +44,9 @@ sessions:
     description: hosted by Prof. Keenan Crane
     where: Pittsburgh (United States)
     when: March 2024
+  - venue: UMass Amherst Machine Learning and Friends Lunch
+    description: Invited Talk
+    where: Virtual
+    when: October 2024
 
 order: 23

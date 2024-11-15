@@ -1,0 +1,16 @@
+name: "Mesh Simplification for Unfolding"
+date: 2024-11
+venue: 'Computer Graphics Forum (to be presented at Eurographics 2025)'
+authors:
+  - Manas Bhargava
+  - Camille Schreck
+  - Marco Freire
+  - Pierre-Alexandre Hugron
+  - Sylvain Lefebvre
+  - Silvia Sellán* 
+  - Bernd Bickel* (*joint last authors)
+image: '/images/paper-thumbnails/simplification-for-unfolding.jpg'
+link: 'https://manas-avi.github.io/publications/2024/MeshSimplificationForUnfolding/'
+pdflink: '/pdf/papers/simplification-for-unfolding.pdf'
+codelink: 'https://git.ista.ac.at/mbhargav/mesh-simplification-for-unfolding'
+description: 'We propose an algorithm for computationally unfolding 3D shapes isometrically into the plane. Instead of considering this hard problem, we relax the problem and find minimal modifications of the input shape that enable simple unfoldings.'

@@ -14,7 +14,8 @@
       
       <guid>https://www.silviasellan.com/posts/recruitment/</guid>
       
-        <description>Summary: Please apply to join my lab! I will be hiring PhD students in the Fall 2024 application cycle, to start working in Fall 2025, and one or more postdocs to start in late Summer or Fall 2025.</description>
+        <description>&lt;p&gt;&lt;img src=&#34;https://www.silviasellan.com/images/lab-logo/lab-logo-02.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update (December 16th, 2024):&lt;/strong&gt; I am now processing and evaluating all PhD and postdoc applications received over the past few months. Thus, &lt;em&gt;I am no longer accepting new applications for any of these roles&lt;/em&gt;, and anticipate to announce new open positions near the Fall of 2025.&lt;/p&gt;</description>
       
     </item>
     
@@ -25,7 +26,7 @@
       
       <guid>https://www.silviasellan.com/posts/bad-comma/</guid>
       
-        <description>I recently came across this great paper by Tatsuya Amano and colleagues on the effects that being a non-native English speaker can have on one&amp;rsquo;s scientific success.</description>
+        <description>&lt;p&gt;I recently came across this &lt;a href=&#34;https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002184&#34;&gt;great paper&lt;/a&gt; by Tatsuya Amano and colleagues on the effects that being a non-native English speaker can have on one&amp;rsquo;s scientific success. It is a good exploratory study of a topic I have unfortunately thought about often, and I recommend reading it in full.&lt;/p&gt;</description>
       
     </item>
     
@@ -36,7 +37,7 @@
       
       <guid>https://www.silviasellan.com/posts/gpytoolbox-2d-prototyping/</guid>
       
-        <description>Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:</description>
+        <description>&lt;p&gt;&lt;a href=&#34;https://gpytoolbox.org/0.1.0/&#34;&gt;&lt;em&gt;Gpytoolbox&lt;/em&gt; version 0.1.0&lt;/a&gt; has just been released!! You can install it directly through &lt;code&gt;pip&lt;/code&gt;:&lt;/p&gt;</description>
       
     </item>
     
@@ -47,7 +48,7 @@
       
       <guid>https://www.silviasellan.com/posts/gpytoolbox-2d-prototyping-2/</guid>
       
-        <description>Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:</description>
+        <description>&lt;p&gt;&lt;a href=&#34;https://gpytoolbox.org/0.1.0/&#34;&gt;&lt;em&gt;Gpytoolbox&lt;/em&gt; version 0.1.0&lt;/a&gt; has just been released!! You can install it directly through &lt;code&gt;pip&lt;/code&gt;:&lt;/p&gt;</description>
       
     </item>
     
@@ -58,7 +59,7 @@
       
       <guid>https://www.silviasellan.com/posts/gpytoolbox-2d-prototyping-3/</guid>
       
-        <description>Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:</description>
+        <description>&lt;p&gt;&lt;a href=&#34;https://gpytoolbox.org/0.1.0/&#34;&gt;&lt;em&gt;Gpytoolbox&lt;/em&gt; version 0.1.0&lt;/a&gt; has just been released!! You can install it directly through &lt;code&gt;pip&lt;/code&gt;:&lt;/p&gt;</description>
       
     </item>
     
@@ -69,7 +70,10 @@
       
       <guid>https://www.silviasellan.com/posts/blender_course_scripting/</guid>
       
-        <description>Introduction: showing scripting screen in GUI Let&amp;rsquo;s open any Blender file, like our template file, and let&amp;rsquo;s fine-tune it a little bit; for example, by changing the main object&amp;rsquo;s position.</description>
+        <description>&lt;h4 id=&#34;introduction-showing-scripting-screen-in-gui&#34;&gt;Introduction: showing scripting screen in GUI&lt;/h4&gt;
+&lt;p&gt;Let&amp;rsquo;s open any Blender file, like &lt;a href=&#34;https://www.silviasellan.com/images/blender-tutorial/template.blend&#34;&gt;our template
+file&lt;/a&gt;, and let&amp;rsquo;s fine-tune it a little
+bit; for example, by changing the main object&amp;rsquo;s position.&lt;/p&gt;</description>
       
     </item>
     
@@ -80,7 +84,7 @@
       
       <guid>https://www.silviasellan.com/posts/arxiv_compressing/</guid>
       
-        <description>I keep forgetting how to do this well, and most of the tricks I find if I just google don&amp;rsquo;t work for me.</description>
+        <description>&lt;p&gt;I keep forgetting how to do this well, and most of the tricks I find if I just google don&amp;rsquo;t work for me. So, future Silvia, here&amp;rsquo;s what you do:&lt;/p&gt;</description>
       
     </item>
     
@@ -102,7 +106,12 @@
       
       <guid>https://www.silviasellan.com/posts/blender_compositing_compatibility/</guid>
       
-        <description>For the most part, you can open and render your Blender 2.</description>
+        <description>&lt;p&gt;For the most part, you can open and render your Blender 2.9 files using the new
+and improved &lt;a href=&#34;https://www.blender.org/download/&#34;&gt;Blender 3.0&lt;/a&gt;. You may want to
+do this because Blender 3.0&amp;rsquo;s rendering is extremely improved from the previous
+versions or because you started a project on 2.9/2.8 and now want to continue it
+in 3.0. There is only one compatibility issue I have encountered, but it can
+completely destroy your render.&lt;/p&gt;</description>
       
     </item>
     
@@ -113,7 +122,7 @@
       
       <guid>https://www.silviasellan.com/posts/cpp_bugs/</guid>
       
-        <description>Every time I try to code a project in C++ I run into the same bugs, and I keep forgetting how to solve them.</description>
+        <description>&lt;p&gt;Every time I try to code a project in C++ I run into the same bugs, and I keep forgetting how to solve them. So, I decided to write this list here for my own reference.&lt;/p&gt;</description>
       
     </item>
     
@@ -124,7 +133,7 @@
       
       <guid>https://www.silviasellan.com/posts/phd_committee/</guid>
       
-        <description>In my experience, PhD Committee Meetings are an obscure, secretive part of the PhD requirements.</description>
+        <description>&lt;p&gt;In my experience, PhD Committee Meetings are an obscure, secretive part of the PhD requirements. One reason for this is that they vary greatly from student to student and discipline to discipline. Still, it is undeniably yet another way in which people without family/friends in academia are gatekept away from it.&lt;/p&gt;</description>
       
     </item>
     
@@ -135,7 +144,7 @@
       
       <guid>https://www.silviasellan.com/posts/truth_and_reconciliation/</guid>
       
-        <description>Today, September 30th 2021, marks the first National Day for Truth and Reconciliation.</description>
+        <description>&lt;p&gt;Today, September 30th 2021, marks the first &lt;a href=&#34;https://www.canada.ca/en/canadian-heritage/campaigns/national-day-truth-reconciliation.html&#34;&gt;National Day for Truth and Reconciliation&lt;/a&gt;.&lt;/p&gt;</description>
       
     </item>
     
@@ -146,7 +155,7 @@
       
       <guid>https://www.silviasellan.com/posts/vanier_scholarship/</guid>
       
-        <description>In 2021, I won a Vanier Canada Graduate Scholarship. Out of 190 total eligible NSERC applicants, I was ranked 43, with scores of 6.</description>
+        <description>&lt;p&gt;In 2021, I won a &lt;a href=&#34;https://vanier.gc.ca/en/home-accueil.html&#34;&gt;Vanier Canada Graduate Scholarship&lt;/a&gt;. Out of 190 total eligible NSERC applicants, I was ranked 43, with scores of 6.50 in &lt;em&gt;Academic Excellence&lt;/em&gt;, 6.25 in &lt;em&gt;Research Potential&lt;/em&gt; and 7.00 in &lt;em&gt;Leadership&lt;/em&gt; (I don&amp;rsquo;t really know a lot about what these numbers mean). NSERC gave out of 55 scholarships, so I got one.&lt;/p&gt;</description>
       
     </item>
     
@@ -157,7 +166,7 @@
       
       <guid>https://www.silviasellan.com/posts/gender_question/</guid>
       
-        <description>In my years in academia as the only trans person in the roomTM, I have often been asked for or volunteered my advice on how to ask for people&amp;rsquo;s name and gender on official forms like conference surveys, program registrations or award applications.</description>
+        <description>&lt;p&gt;In my years in academia as the only trans person in the room&lt;sup&gt;TM&lt;/sup&gt;, I have often been asked for or volunteered my advice on how to ask for people&amp;rsquo;s name and gender on official forms like conference surveys, program registrations or award applications. I tend to always reply with a version of the same answer, so in the interest of my own reference and that of rooms without any trans people in them, I post it publicly here.&lt;/p&gt;</description>
       
     </item>
     
@@ -168,7 +177,7 @@
       
       <guid>https://www.silviasellan.com/posts/blender_videos/</guid>
       
-        <description>Every few months, because of a deadline coming up, I find myself forgetting and having to look up these steps in old Slack threads and LaTeX comments.</description>
+        <description>&lt;p&gt;Every few months, because of a deadline coming up, I find myself forgetting and having to look up these steps in old Slack threads and LaTeX comments. Also, it took me a long time to learn these steps because of the lack of a guide like this, so I write this in hopes it may help young students starting out.&lt;/h3&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -179,7 +188,7 @@
       
       <guid>https://www.silviasellan.com/posts/siggraph_submission_resources/</guid>
       
-        <description>There are many skills not necessarily related to geometry or math that are required to make a polished SIGGRAPH submission.</description>
+        <description>&lt;p&gt;There are many skills not necessarily related to geometry or math that are required to make a polished SIGGRAPH submission. Every submission season, I end up going through a combination of my memory from the previous season, old Slack threads that I can only find with very specific keywords and trusting that google remembers the last time I searched for these things. No more! I will list the resources here so that I can come back to this site when the deadline approaches and, who knows, maybe you will find it helpful too!&lt;/p&gt;</description>
       
     </item>
     
@@ -190,7 +199,7 @@
       
       <guid>https://www.silviasellan.com/posts/blender_figure/</guid>
       
-        <description>There are a lot of great Blender tutorials online (e.g., the classic donut tutorial by Blender Guru), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films.</description>
+        <description>&lt;p&gt;There are a lot of great Blender tutorials online (e.g., the classic &lt;a href=&#34;https://www.youtube.com/watch?v=TPrnSACiTJ4&#34;&gt;donut tutorial by Blender Guru&lt;/a&gt;), and they are usually aimed at artists or animators who want to generate full scenes from scratch for short films. Therefore they go into depth on how to model a shape, how to pick the best lighting, how to design a material, create textures, etc.&lt;/p&gt;</description>
       
     </item>
     
@@ -201,7 +210,7 @@
       
       <guid>https://www.silviasellan.com/posts/grad_questions/</guid>
       
-        <description>May 2021 Update: Here&amp;rsquo;s a thread from Prof. Pamela E.</description>
+        <description>&lt;p&gt;&lt;i&gt; May 2021 Update: Here&amp;rsquo;s a &lt;a href=&#34;https://twitter.com/DPeharris/status/1367482632964083716&#34;&gt;thread&lt;/a&gt; from Prof. Pamela E. Harris crowdsourcing suggestions of questions to ask from the specific perspective of students belonging to underrepresented minorities.&lt;/i&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -212,7 +221,7 @@
       
       <guid>https://www.silviasellan.com/posts/research_statement/</guid>
       
-        <description>I am committed to making the PhD application process more open and clearer to new students, since it is my view that the unnecessary opaqueness of the status quo mostly serves to discourage minorities from applying and to preserve power in the hands of elites.</description>
+        <description>&lt;p&gt;I am committed to making the PhD application process more open and clearer to new students, since it is my view that the unnecessary opaqueness of the status quo mostly serves to discourage minorities from applying and to preserve power in the hands of elites. Therefore, I share below the personal statement I used when applying to graduate school in 2018, in hopes it may help someone down the road. I added some comments in square brackets to explain my intended purpose for each section.&lt;/p&gt;</description>
       
     </item>
     
@@ -223,7 +232,7 @@
       
       <guid>https://www.silviasellan.com/posts/grad_school/</guid>
       
-        <description>The process of applying to graduate school can be overwhelming, especially given how opaque and expensive it can be, especially if you are not from North America.</description>
+        <description>&lt;p&gt;The process of applying to graduate school can be overwhelming, especially given how opaque and expensive it can be, especially if you are not from North America. I have been asked for advice many times on this so, &lt;i&gt;while I make it clear I don&amp;rsquo;t consider myself an expert on this topic nor do I claim to have all the (or, really, any of) the answers&lt;/i&gt;, I&amp;rsquo;ve decided to gather some resources that may help you if you&amp;rsquo;re thinking about applying:&lt;/p&gt;</description>
       
     </item>
     

@@ -18,7 +18,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.124.1"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.139.4"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Silvia Sellán" />
   <meta
     name="description"
@@ -112,19 +112,25 @@
 
 
   
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.silviasellan.com/images/site-feature-image.png" /><meta name="twitter:title" content="Quick 2D prototyping with Gpytoolbox III: Distances to 2D polylines"/>
-<meta name="twitter:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:"/>
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.silviasellan.com/images/site-feature-image.png">
+  <meta name="twitter:title" content="Quick 2D prototyping with Gpytoolbox III: Distances to 2D polylines">
+  <meta name="twitter:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:">
 
 
 
   
-  <meta property="og:title" content="Quick 2D prototyping with Gpytoolbox III: Distances to 2D polylines" />
-<meta property="og:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.silviasellan.com/posts/gpytoolbox-2d-prototyping-3/" /><meta property="og:image" content="https://www.silviasellan.com/images/site-feature-image.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-03-04T00:00:00+00:00" /><meta property="og:site_name" content="Silvia Sellán" />
+  <meta property="og:url" content="https://www.silviasellan.com/posts/gpytoolbox-2d-prototyping-3/">
+  <meta property="og:site_name" content="Silvia Sellán">
+  <meta property="og:title" content="Quick 2D prototyping with Gpytoolbox III: Distances to 2D polylines">
+  <meta property="og:description" content="Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-03-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-03-04T00:00:00+00:00">
+    <meta property="og:image" content="https://www.silviasellan.com/images/site-feature-image.png">
 
 
 
@@ -142,7 +148,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        Gpytoolbox version 0.1.0 has just been released!! You can install it directly through pip:
+        \u003cp\u003e\u003ca href=\u0022https:\/\/gpytoolbox.org\/0.1.0\/\u0022\u003e\u003cem\u003eGpytoolbox\u003c\/em\u003e version 0.1.0\u003c\/a\u003e has just been released!! You can install it directly through \u003ccode\u003epip\u003c\/code\u003e:\u003c\/p\u003e
 
 
       
@@ -232,10 +238,6 @@
         <p>she/her, they/them</p>
       </div>
       
-        <div class="sidebar__introduction-description-new"><em class="fas fa-star"></em>
-          <span class="sidebar__introduction-new-text">Hiring graduate students! </span><em class="fas fa-star"></em>
-        </div>
-      
       <div class="sidebar__introduction-description">
         <p>Postdoctoral associate at MIT and incoming Assistant Professor of Computer Science at Columbia University, specializing in Geometry Processing.</p>
       </div>
@@ -286,18 +288,7 @@
     src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
     integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
-  ></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-KB4LKK966Y', { 'anonymize_ip': false });
-}
-</script>
-</div>
+  ></script></div>
 </aside>
       <main
         
@@ -540,14 +531,14 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_29_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_29_0.png" alt="png"></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Consider a poing in space</span>
 </span></span><span class="line"><span class="cl"><span class="n">point</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Visualize it</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_30_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_30_0.png" alt="png"></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Now, we call the function that computes its squared distance to the polyline</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">squared_distance</span>
 </span></span><span class="line"><span class="cl"><span class="n">sqrd</span><span class="p">,</span> <span class="n">ind</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">squared_distance</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">F</span><span class="o">=</span><span class="n">edges</span><span class="p">)</span>
@@ -562,7 +553,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices_of_closest_edge</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">vertices_of_closest_edge</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_33_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_33_0.png" alt="png"></p>
 <p>It also includes a parameter <code>t</code>, that tells us where along that edge the closest polyline point lays. We can use it to calculate said closest point:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Find the closest point on the polyline</span>
 </span></span><span class="line"><span class="cl"><span class="n">closest_point</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">[</span><span class="n">edges</span><span class="p">[</span><span class="n">ind</span><span class="p">,</span><span class="mi">0</span><span class="p">],:]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">t</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">vertices</span><span class="p">[</span><span class="n">edges</span><span class="p">[</span><span class="n">ind</span><span class="p">,</span><span class="mi">1</span><span class="p">],:]</span> <span class="o">-</span> <span class="n">vertices</span><span class="p">[</span><span class="n">edges</span><span class="p">[</span><span class="n">ind</span><span class="p">,</span><span class="mi">0</span><span class="p">],:])</span>
@@ -576,7 +567,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
 </span></span></code></pre></div><pre><code>The closest point is  [200.97159662 105.31480424]
 </code></pre>
-<p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_35_1.png"></p>
+<p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_35_1.png" alt="png"></p>
 <p>Using <code>squared_distance</code> we can find the distance of many points to the polyline at the same time:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Often, it helps to normalize the polyline</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">normalize_points</span>
@@ -591,7 +582,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">sqrd</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_37_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_37_0.png" alt="png"></p>
 <p>You may have noticed that computation took some time. That&rsquo;s because, for each point in the set, <code>squared_distance</code> is going through every single edge in the polyline to check if it&rsquo;s the closest. This performance hit will be significant, especially if the shape is very complex:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Let&#39;s begin by loading the image into a polyline</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">gpytoolbox</span> <span class="kn">import</span> <span class="n">png2poly</span><span class="p">,</span> <span class="n">edge_indices</span>
@@ -609,7 +600,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">sqrd</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_39_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_39_0.png" alt="png"></p>
 <p>A way of getting around this bad performance without resorting to approximations is to use an AABB tree to represent the polyline. An AABB tree a hierarchical data structure that tells <code>squared_distance</code> not to waste time checking edges that are very far from the query point. We can tell <code>squared_distance</code> to do this by passing the argument <code>use_aabb</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Compute the squared distance to the polyline</span>
 </span></span><span class="line"><span class="cl"><span class="n">sqrd</span><span class="p">,</span> <span class="n">ind</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">squared_distance</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="n">F</span><span class="o">=</span><span class="n">edges</span><span class="p">,</span> <span class="n">use_aabb</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -619,7 +610,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">sqrd</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_41_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_41_0.png" alt="png"></p>
 <p>That was much faster, wasn&rsquo;t it? We&rsquo;ll cover hierarchical data structures in another tutorial. For now, let&rsquo;s just learn that it&rsquo;s a way to make our distance computation faster.</p>
 <p>However, some times, distances on their own are not enough. A very common representation used today is <em>Signed Distance Functions</em>. These measure the same distance we measured above, but add a minus sign if the point is <em>inside</em> the polyline. It may be tempting to think that, by computing unsigned distances like above, we&rsquo;re already 90% of the way there to signed distances. However, it turns out that reliably computing the sign of a given query point (this is known sometimes as an <em>inside/outside query</em>) is far from trivial. Fortunately, gpytoolbox can do it for us, and it will already use an AABB tree by default:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Compute signed distances</span>
@@ -630,7 +621,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">sdist</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;RdBu&#39;</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">sdist</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">vmax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">sdist</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="c1"># using a divergent colormap and centering it makes sense for signed distances, where &#34;zero&#34; is the surface</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_43_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_43_0.png" alt="png"></p>
 <p>Often, you will want to compute these distances for all the points in a grid, which we can construct using numpy and gpytoolbox:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Build a grid</span>
 </span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
@@ -645,7 +636,7 @@ if (!doNotTrack) {
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vertices</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vertices</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;-k&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p><img alt="png" src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_45_0.png"></p>
+</span></span></code></pre></div><p><img src="/images/gpytoolbox-tutorial/tutorial-2d-prototyping_45_0.png" alt="png"></p>
 </div>
     <div class="post__footer">
       
@@ -675,16 +666,5 @@ if (!doNotTrack) {
     src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
     integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
-  ></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-KB4LKK966Y', { 'anonymize_ip': false });
-}
-</script>
-</body>
+  ></script></body>
 </html>

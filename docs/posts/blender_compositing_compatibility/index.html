@@ -18,7 +18,7 @@
   </title>
 
   
-  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.124.1"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.139.4"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="author" content="Silvia Sellán" />
   <meta
     name="description"
@@ -112,19 +112,25 @@
 
 
   
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://www.silviasellan.com/images/site-feature-image.png" /><meta name="twitter:title" content="PSA: Update your compositing nodes for 3.0"/>
-<meta name="twitter:description" content="For the most part, you can open and render your Blender 2."/>
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.silviasellan.com/images/site-feature-image.png">
+  <meta name="twitter:title" content="PSA: Update your compositing nodes for 3.0">
+  <meta name="twitter:description" content="For the most part, you can open and render your Blender 2.9 files using the new and improved Blender 3.0. You may want to do this because Blender 3.0’s rendering is extremely improved from the previous versions or because you started a project on 2.9/2.8 and now want to continue it in 3.0. There is only one compatibility issue I have encountered, but it can completely destroy your render.">
 
 
 
   
-  <meta property="og:title" content="PSA: Update your compositing nodes for 3.0" />
-<meta property="og:description" content="For the most part, you can open and render your Blender 2." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.silviasellan.com/posts/blender_compositing_compatibility/" /><meta property="og:image" content="https://www.silviasellan.com/images/site-feature-image.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-03-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-03-03T00:00:00+00:00" /><meta property="og:site_name" content="Silvia Sellán" />
+  <meta property="og:url" content="https://www.silviasellan.com/posts/blender_compositing_compatibility/">
+  <meta property="og:site_name" content="Silvia Sellán">
+  <meta property="og:title" content="PSA: Update your compositing nodes for 3.0">
+  <meta property="og:description" content="For the most part, you can open and render your Blender 2.9 files using the new and improved Blender 3.0. You may want to do this because Blender 3.0’s rendering is extremely improved from the previous versions or because you started a project on 2.9/2.8 and now want to continue it in 3.0. There is only one compatibility issue I have encountered, but it can completely destroy your render.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-03-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-03-03T00:00:00+00:00">
+    <meta property="og:image" content="https://www.silviasellan.com/images/site-feature-image.png">
 
 
 
@@ -142,7 +148,7 @@
         "alternativeHeadline": "",
         "description": "
       
-        For the most part, you can open and render your Blender 2.
+        \u003cp\u003eFor the most part, you can open and render your Blender 2.9 files using the new\nand improved \u003ca href=\u0022https:\/\/www.blender.org\/download\/\u0022\u003eBlender 3.0\u003c\/a\u003e. You may want to\ndo this because Blender 3.0\u0026rsquo;s rendering is extremely improved from the previous\nversions or because you started a project on 2.9\/2.8 and now want to continue it\nin 3.0. There is only one compatibility issue I have encountered, but it can\ncompletely destroy your render.\u003c\/p\u003e
 
 
       
@@ -232,10 +238,6 @@
         <p>she/her, they/them</p>
       </div>
       
-        <div class="sidebar__introduction-description-new"><em class="fas fa-star"></em>
-          <span class="sidebar__introduction-new-text">Hiring graduate students! </span><em class="fas fa-star"></em>
-        </div>
-      
       <div class="sidebar__introduction-description">
         <p>Postdoctoral associate at MIT and incoming Assistant Professor of Computer Science at Columbia University, specializing in Geometry Processing.</p>
       </div>
@@ -286,18 +288,7 @@
     src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
     integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
-  ></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-KB4LKK966Y', { 'anonymize_ip': false });
-}
-</script>
-</div>
+  ></script></div>
 </aside>
       <main
         
@@ -534,22 +525,22 @@ completely destroy your render.</p>
 <p>Say your Blender 2.8/2.9 file used compositing nodes, like <a href="/images/blender-tutorial/template-old.blend">my Blender 2.9
 template paper figure file</a>. The
 compositing view in Blender 2.9 may look like this:</p>
-<p><img src="/images/blender-tutorial/compositing-29.jpg"></p>
+<p><img src="/images/blender-tutorial/compositing-29.jpg" alt=""></p>
 <p>As you can see, we are passing &ldquo;Noisy Image&rdquo; from our render to the &ldquo;Denoiser&rdquo;
 node. However, if we open this same file in Blender 3.0, we see the following:</p>
-<p><img src="/images/blender-tutorial/compositing-30-bad.jpg"></p>
+<p><img src="/images/blender-tutorial/compositing-30-bad.jpg" alt=""></p>
 <p>The &ldquo;Noisy Image&rdquo; output has disappeared! And therefore nothing is going into
 our &ldquo;Denoise&rdquo; node. This is (I think) because Blender 3.0 no longer does
 denoising as post-processing in the compositing step; instead, you can turn on
 &ldquo;Denoise&rdquo; in the Render Output panel. If we choose to render the image, we will
 get empty RGB channels, because no RGB channels are entering the denoiser:</p>
-<p><img src="/images/blender-tutorial/compositing-bad-render.png"></p>
+<p><img src="/images/blender-tutorial/compositing-bad-render.png" alt=""></p>
 <p>Fixing this is simple: just circunvent the denoising node and connect the
 &ldquo;Image&rdquo; output from the Render node with the &ldquo;Image&rdquo; input of the next node in
 the chain; in my case, the &ldquo;Bright/Contrast&rdquo; one:</p>
-<p><img src="/images/blender-tutorial/compositing-30-good.jpg"></p>
+<p><img src="/images/blender-tutorial/compositing-30-good.jpg" alt=""></p>
 <p>And we can render and composit to get the expected result:</p>
-<p><img src="/images/blender-tutorial/compositing-good-render.png"></p>
+<p><img src="/images/blender-tutorial/compositing-good-render.png" alt=""></p>
 </div>
     <div class="post__footer">
       
@@ -579,16 +570,5 @@ the chain; in my case, the &ldquo;Bright/Contrast&rdquo; one:</p>
     src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
     integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
     crossorigin="anonymous"
-  ></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB4LKK966Y"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-KB4LKK966Y', { 'anonymize_ip': false });
-}
-</script>
-</body>
+  ></script></body>
 </html>

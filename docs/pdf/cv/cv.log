@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  19 DEC 2024 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  10 APR 2025 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -647,10 +647,10 @@ t line 12.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
 (Font)              scaled to size 10.0pt on input line 12.
 Package epstopdf Info: Source file: <columbia-logo.eps>
-(epstopdf)                    date: 2024-09-08 20:55:26
+(epstopdf)                    date: 2024-09-08 14:55:26
 (epstopdf)                    size: 1605062 bytes
 (epstopdf)             Output file: <columbia-logo-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-09-08 20:55:41
+(epstopdf)                    date: 2024-09-08 14:55:41
 (epstopdf)                    size: 32772 bytes
 (epstopdf)             Command: <repstopdf --outfile=columbia-logo-eps-converte
 d-to.pdf columbia-logo.eps>
@@ -742,14 +742,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2022/08/07 UCS: Unicode data U+2000..U+20FF
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
  []
@@ -759,7 +757,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--8
 
  []
 
-[2]
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2022/08/07 UCS: Unicode data U+2000..U+20FF
+)
 Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
  []
@@ -799,7 +799,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--16
 
  []
 
-) (./sections/other_publications.tex) (./sections/experience.tex [3])
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+
+ []
+
+) (./sections/other_publications.tex) [3] (./sections/experience.tex)
 (./sections/academic_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
@@ -885,7 +895,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--17
 
  []
 
-) (./sections/referee_service.tex
+) [4] (./sections/referee_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -925,7 +935,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--8
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
  []
@@ -990,10 +1000,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
 
-) (./sections/talks.tex
+) (./sections/talks.tex [5]
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2022/08/07 UCS: Unicode data U+0100..U+01FF
-) [5] [6])
+) [6])
 Underfull \hbox (badness 10000) in paragraph at lines 103--58
 
  []
@@ -1003,7 +1013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
 
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
@@ -1028,7 +1038,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
  []
@@ -1133,7 +1143,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
  []
 
-) (./sections/feedback_mentoring.tex) [9] (./sections/volunteering.tex
+) (./sections/feedback_mentoring.tex [9]) (./sections/volunteering.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1166,7 +1176,7 @@ Here is how much of TeX's memory you used:
 amond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
 pe1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (10 pages, 378126 bytes).
+Output written on cv.pdf (10 pages, 378244 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

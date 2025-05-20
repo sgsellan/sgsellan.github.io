@@ -1,13 +1,13 @@
-# name: "Stochastic Poisson Surface Reconstruction with One Solve using Geometric Gaussian Processes"
-# date: 2025-01
-# venue: 'Under Peer Review'
-# authors:
-#   - Sidhanth Holalkere
-#   - David Bindel
-#   - Silvia Sellán
-#   - Alexander Terenin
-# # image: '/images/paper-thumbnails/mirror-schrodinger.jpg'
-# # link: https://bayesrays.github.io
-# pdflink: 'https://arxiv.org/abs/2503.19136'
-# # codelink: https://github.com/BayesRays/BayesRays/tree/main
-# # description: 'We introduce a method to learn a map from a statistical distribution onto itself, allowing us to obtain in-distribution variations of a given input for applications in tasks like generative modeling and others.'
+name: "Stochastic Poisson Surface Reconstruction with One Solve using Geometric Gaussian Processes"
+date: 2025-01
+venue: 'ICML 2025'
+authors:
+  - Sidhanth Holalkere
+  - David Bindel
+  - Silvia Sellán
+  - Alexander Terenin
+image: '/images/paper-thumbnails/periodic-stochastic-psr.png'
+# link: https://bayesrays.github.io
+pdflink: 'https://arxiv.org/abs/2503.19136'
+# codelink: https://github.com/BayesRays/BayesRays/tree/main
+# description: 'We introduce a method to learn a map from a statistical distribution onto itself, allowing us to obtain in-distribution variations of a given input for applications in tasks like generative modeling and others.'

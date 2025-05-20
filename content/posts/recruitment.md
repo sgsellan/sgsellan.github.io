@@ -1,7 +1,7 @@
 ---
 title: "Apply to work with me at Columbia University!"
 date: 2024-07-08
-draft: false
+draft: true
 hidesidebar: true
 aliases:
   - /recruitment.html
@@ -9,7 +9,7 @@ aliases:
 
 ![](/images/lab-logo/lab-logo-02.png)
 
-**Update (December 16th, 2024):** I am now processing and evaluating all PhD and postdoc applications received over the past few months. Thus, *I am no longer accepting new applications for any of these roles*, and anticipate to announce new open positions near the Fall of 2025. 
+**Update (December 16th, 2024):** *I am no longer accepting new applications for any of these roles*, and anticipate to announce new open positions near the Fall of 2025. 
 
 **Summary:** *Please apply to join my lab! I will be hiring PhD students in the Fall 2024 application cycle, to start working in Fall 2025, and one or more postdocs to start in late Summer or Fall 2025. **Prospective PhD Students:** Please feel free to [email me](mailto:sgs2195@columbia.edu) with any questions, and apply through the [Columbia Engineering PhD application website](https://www.gradengineering.columbia.edu/graduate-admissions/apply)! **Prospective postdocs:** please [email me](mailto:sgs2195@columbia.edu) with your CV and a one-page research plan.*
 

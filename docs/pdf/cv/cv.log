@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  21 MAY 2025 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  21 MAY 2025 15:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1173,11 +1173,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-) [10] (./cv.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+) [10] (./cv.aux) ) 
 Here is how much of TeX's memory you used:
  11712 strings out of 476025
  197638 string characters out of 5790016
@@ -1186,10 +1182,10 @@ Here is how much of TeX's memory you used:
  584296 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,14n,145p,959b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-
-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramond/EBGa
-ramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgara
-mond/EBGaramond-Regular.pfb>
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgar
+amond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
+c/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
+pe1/public/ebgaramond/EBGaramond-Regular.pfb>
 Output written on cv.pdf (10 pages, 378302 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)

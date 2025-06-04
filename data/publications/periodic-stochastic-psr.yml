@@ -8,6 +8,6 @@ authors:
   - Alexander Terenin
 image: '/images/paper-thumbnails/periodic-stochastic-psr.png'
 # link: https://bayesrays.github.io
-pdflink: '/pdf/papers/periodic-stochastic-psr.pdf''
-codelink: https://github.com/sholalkere/GeoSPSR
+pdflink: '/pdf/papers/periodic-stochastic-psr.pdf'
+codelink: 'https://github.com/sholalkere/GeoSPSR'
 # description: 'We introduce a method to learn a map from a statistical distribution onto itself, allowing us to obtain in-distribution variations of a given input for applications in tasks like generative modeling and others.'

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  27 JUN 2025 13:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  27 JUN 2025 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1023,7 +1023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--58
 
  []
 
-(./sections/news.tex) [7] (./sections/organizing.tex
+(./sections/news.tex [7]) (./sections/organizing.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1191,7 +1191,7 @@ Here is how much of TeX's memory you used:
 amond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
 pe1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (10 pages, 378299 bytes).
+Output written on cv.pdf (10 pages, 378311 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

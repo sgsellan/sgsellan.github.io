@@ -1,11 +1,12 @@
 ---
-title: Exciting news!
+title: New job!
 date: 2024-05-03
 # image: "images/lab-logo/lab-logo-01.png"
-description: " am moving to Columbia University to start a new research lab as an Assistant Professor. Stay tuned for updates"
+description: "I am moving to Columbia University to start a new research lab as an Assistant Professor. Stay tuned for updates!"
 ---
 
 ![](images/lab-logo/lab-logo-02.png)
+
 
 I am moving to Columbia University to start a new research lab as an Assistant Professor. Stay tuned for updates!
 <!-- , and that means I'm looking to hire several graduate students this season. See [this blog post](./posts/recruitment/) for more information, and please feel free to [email me](mailto:silviasellan@cs.columbia.edu) if you are thinking of starting a PhD position soon and think we could be a good fit! -->

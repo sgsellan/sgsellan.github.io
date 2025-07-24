@@ -805,7 +805,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
 
-) (./sections/funding.tex
+)
+
+LaTeX Warning: Reference `linegoal.3' on page 2 undefined on input line 20.
+
+
+Package linegoal Warning: \linegoal value on page 2 has changed 
+(linegoal)                since last run. Please rerun to get 
+(linegoal)                the correct value on input line 20.
+
+
+Overfull \hbox (136.43979pt too wide) in paragraph at lines 20--20
+[]\T1/EBGaramond-OsF/bold/n/14.4 Research Fund-ing [][]
+ []
+
+(./sections/funding.tex
 ! Extra }, or forgotten $.
 \basicaward ... {\small #3 } \,|\, {\em \small #4}
                                                    \\ \ifx &#5& \else {\em \...
@@ -814,10 +828,10 @@ l.1 ...chool of Engineering}{$85,000}{2025-2026}{}
 ? X
  
 Here is how much of TeX's memory you used:
- 11052 strings out of 476025
- 189739 string characters out of 5790016
+ 11018 strings out of 476025
+ 189158 string characters out of 5790016
  1862388 words of memory out of 5000000
- 31297 multiletter control sequences out of 15000+600000
+ 31263 multiletter control sequences out of 15000+600000
  576570 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,14n,145p,574b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s

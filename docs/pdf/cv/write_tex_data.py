@@ -65,6 +65,7 @@ for subdir in additional_dirs:
 
 keys_mapping = {
     'awards': ['name', 'agency', 'amount', 'dates', 'description'],
+    'funding': ['name', 'agency', 'amount', 'dates', 'description'],
     'academic_service': ['name', 'position', 'dates', 'description'],
     'departmental_service': ['name', 'position', 'dates', 'description'],
     'education': ['institution', 'degree', 'dates', 'description'],

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  22 JUL 2025 21:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  24 JUL 2025 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,20 +704,11 @@ nput line 1.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
 ) (./sections/education.tex)
-(./sections/publications.tex
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <9> not availabl
-e
-(Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on inpu
-t line 1.
-LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
-(Font)              scaled to size 9.0pt on input line 1.
- [1
+Overfull \hbox (1.46745pt too wide) in paragraph at lines 16--16
+[]\T1/EBGaramond-OsF/bold/n/14.4 Awards [][]  
+ []
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_tcdnmr.enc}{/usr/loc
-al/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_ljow5q.enc} <./colum
-bia-logo-eps-converted-to.pdf>])
-(./sections/patents.tex) (./sections/software.tex) (./sections/awards.tex
+(./sections/awards.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -747,7 +738,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
  []
@@ -799,7 +790,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--16
 
  []
 
+[1
 
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_tcdnmr.enc}{/usr/loc
+al/texlive/2023/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_ljow5q.enc} <./colum
+bia-logo-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 17--17
 
  []
@@ -814,392 +810,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
 
-) (./sections/other_publications.tex) [3] (./sections/experience.tex)
-(./sections/academic_service.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 18--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
-
- []
-
-) (./sections/referee_service.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
-
- []
-
-) (./sections/departmental_service.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
-
- []
-
-) (./sections/talks.tex [5]
-(/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-1.def
-File: uni-1.def 2022/08/07 UCS: Unicode data U+0100..U+01FF
-) [6])
-Underfull \hbox (badness 10000) in paragraph at lines 103--58
-
- []
-
-(./sections/news.tex [7]) (./sections/organizing.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--9
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
-
- []
-
-) (./sections/teaching.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--6
-
- []
-
-) (./sections/feedback_teaching.tex [8]) (./sections/mentoring.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--7
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--9
-
- []
-
-) (./sections/feedback_mentoring.tex [9]) (./sections/volunteering.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--3
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
-
- []
-
-) [10] (./cv.aux) ) 
+)
+Overfull \hbox (63.04306pt too wide) in paragraph at lines 20--20
+[]\T1/EBGaramond-OsF/bold/n/14.4 Research Fund-ing [][]
+ []
+
+(./sections/funding.tex
+! Undefined control sequence.
+l.1 \funding
+            {Donation}{Adobe Inc.}{}{2025}{}
+? X
+ 
 Here is how much of TeX's memory you used:
- 11712 strings out of 476025
- 197638 string characters out of 5790016
- 1869388 words of memory out of 5000000
- 31921 multiletter control sequences out of 15000+600000
- 584296 words of font info for 52 fonts, out of 8000000 for 9000
+ 11035 strings out of 476025
+ 189561 string characters out of 5790016
+ 1863388 words of memory out of 5000000
+ 31286 multiletter control sequences out of 15000+600000
+ 574295 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,14n,145p,959b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgar
-amond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
-c/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
-pe1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (10 pages, 378374 bytes).
+ 98i,14n,145p,574b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Bo
+ld.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramond/EBGara
+mond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramo
+nd/EBGaramond-Regular.pfb>
+Output written on cv.pdf (1 page, 334629 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 29 PDF objects out of 1000 (max. 8388607)
+ 17 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

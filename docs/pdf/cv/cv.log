@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  24 JUL 2025 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  24 JUL 2025 12:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -805,117 +805,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.3' on page 2 undefined on input line 20.
-
-
-Package linegoal Warning: \linegoal value on page 2 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 20.
-
-
-Overfull \hbox (136.43979pt too wide) in paragraph at lines 20--20
-[]\T1/EBGaramond-OsF/bold/n/14.4 Research Fund-ing [][]
- []
-
-(./sections/funding.tex
+) (./sections/funding.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.4' on page 2 undefined on input line 24.
-
-
-Package linegoal Warning: \linegoal value on page 2 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 24.
-
-
-Overfull \hbox (103.65103pt too wide) in paragraph at lines 24--24
-[]\T1/EBGaramond-OsF/bold/n/14.4 Publications [][]
- []
-
-(./sections/publications.tex
+) (./sections/publications.tex
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <9> not availabl
 e
 (Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on inpu
 t line 1.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
- [2])
-
-LaTeX Warning: Reference `linegoal.5' on page 3 undefined on input line 28.
-
-
-Package linegoal Warning: \linegoal value on page 3 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 28.
-
-
-Overfull \hbox (73.39673pt too wide) in paragraph at lines 28--28
-[]\T1/EBGaramond-OsF/bold/n/14.4 Patents [][]
- []
-
-(./sections/patents.tex)
-
-LaTeX Warning: Reference `linegoal.6' on page 3 undefined on input line 32.
-
-
-Package linegoal Warning: \linegoal value on page 3 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 32.
-
-
-Overfull \hbox (82.51189pt too wide) in paragraph at lines 32--32
-[]\T1/EBGaramond-OsF/bold/n/14.4 Software [][]
- []
-
-(./sections/software.tex)
-
-LaTeX Warning: Reference `linegoal.7' on page 3 undefined on input line 38.
-
-
-Package linegoal Warning: \linegoal value on page 3 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 38.
-
-
-Overfull \hbox (142.28616pt too wide) in paragraph at lines 38--38
-[]\T1/EBGaramond-OsF/bold/n/14.4 Other Pub-li-ca-tions [][]
- []
-
-(./sections/other_publications.tex [3])
-
-LaTeX Warning: Reference `linegoal.8' on page 4 undefined on input line 42.
-
-
-Package linegoal Warning: \linegoal value on page 4 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 42.
-
-
-Overfull \hbox (189.51808pt too wide) in paragraph at lines 42--42
-[]\T1/EBGaramond-OsF/bold/n/14.4 Other Re-search Ex-pe-ri-ence [][]
- []
-
-(./sections/experience.tex)
-
-LaTeX Warning: Reference `linegoal.9' on page 4 undefined on input line 46.
-
-
-Package linegoal Warning: \linegoal value on page 4 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 46.
-
-
-Overfull \hbox (131.0686pt too wide) in paragraph at lines 46--46
-[]\T1/EBGaramond-OsF/bold/n/14.4 Academic Ser-vice [][]
- []
-
-(./sections/academic_service.tex
+ [2]) (./sections/patents.tex)
+(./sections/software.tex) (./sections/other_publications.tex [3])
+(./sections/experience.tex) (./sections/academic_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1010,21 +914,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--19
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.10' on page 5 undefined on input line 50.
-
-
-Package linegoal Warning: \linegoal value on page 5 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 50.
-
-
-Overfull \hbox (118.9438pt too wide) in paragraph at lines 50--50
-[]\T1/EBGaramond-OsF/bold/n/14.4 Referee Ser-vice [][]
- []
-
-(./sections/referee_service.tex
+) (./sections/referee_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1109,21 +999,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--17
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.11' on page 5 undefined on input line 54.
-
-
-Package linegoal Warning: \linegoal value on page 5 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 54.
-
-
-Overfull \hbox (157.33415pt too wide) in paragraph at lines 54--54
-[]\T1/EBGaramond-OsF/bold/n/14.4 Departmental Ser-vice [][]
- []
-
-(./sections/departmental_service.tex
+) (./sections/departmental_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1148,21 +1024,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.12' on page 5 undefined on input line 58.
-
-
-Package linegoal Warning: \linegoal value on page 5 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 58.
-
-
-Overfull \hbox (60.75352pt too wide) in paragraph at lines 58--58
-[]\T1/EBGaramond-OsF/bold/n/14.4 Talks [][]
- []
-
-(./sections/talks.tex [5]
+) (./sections/talks.tex [5]
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2022/08/07 UCS: Unicode data U+0100..U+01FF
 ) [6] [7])
@@ -1170,34 +1032,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--62
 
  []
 
-
-LaTeX Warning: Reference `linegoal.13' on page 8 undefined on input line 63.
-
-
-Package linegoal Warning: \linegoal value on page 8 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 63.
-
-
-Overfull \hbox (61.8191pt too wide) in paragraph at lines 63--63
-[]\T1/EBGaramond-OsF/bold/n/14.4 News [][]
- []
-
-(./sections/news.tex)
-
-LaTeX Warning: Reference `linegoal.14' on page 8 undefined on input line 67.
-
-
-Package linegoal Warning: \linegoal value on page 8 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 67.
-
-
-Overfull \hbox (97.50229pt too wide) in paragraph at lines 67--67
-[]\T1/EBGaramond-OsF/bold/n/14.4 Organizing [][]
- []
-
-(./sections/organizing.tex
+(./sections/news.tex) (./sections/organizing.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1257,21 +1092,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.15' on page 8 undefined on input line 71.
-
-
-Package linegoal Warning: \linegoal value on page 8 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 71.
-
-
-Overfull \hbox (83.17429pt too wide) in paragraph at lines 71--71
-[]\T1/EBGaramond-OsF/bold/n/14.4 Teaching [][]
- []
-
-(./sections/teaching.tex
+) (./sections/teaching.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1301,35 +1122,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.16' on page 9 undefined on input line 75.
-
-
-Package linegoal Warning: \linegoal value on page 9 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 75.
-
-
-Overfull \hbox (140.51494pt too wide) in paragraph at lines 75--75
-[]\T1/EBGaramond-OsF/bold/n/14.4 Teaching Feed-back [][]
- []
-
-(./sections/feedback_teaching.tex)
-
-LaTeX Warning: Reference `linegoal.17' on page 9 undefined on input line 79.
-
-
-Package linegoal Warning: \linegoal value on page 9 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 79.
-
-
-Overfull \hbox (93.84468pt too wide) in paragraph at lines 79--79
-[]\T1/EBGaramond-OsF/bold/n/14.4 Mentoring [][]
- []
-
-(./sections/mentoring.tex
+) (./sections/feedback_teaching.tex) (./sections/mentoring.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1374,35 +1167,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
  []
 
-)
-
-LaTeX Warning: Reference `linegoal.18' on page 10 undefined on input line 83.
-
-
-Package linegoal Warning: \linegoal value on page 10 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 83.
-
-
-Overfull \hbox (151.18533pt too wide) in paragraph at lines 83--83
-[]\T1/EBGaramond-OsF/bold/n/14.4 Mentoring Feed-back [][]
- []
-
-(./sections/feedback_mentoring.tex)
-
-LaTeX Warning: Reference `linegoal.19' on page 10 undefined on input line 87.
-
-
-Package linegoal Warning: \linegoal value on page 10 has changed 
-(linegoal)                since last run. Please rerun to get 
-(linegoal)                the correct value on input line 87.
-
-
-Overfull \hbox (107.10701pt too wide) in paragraph at lines 87--87
-[]\T1/EBGaramond-OsF/bold/n/14.4 Volunteering [][]
- []
-
-(./sections/volunteering.tex
+) (./sections/feedback_mentoring.tex) (./sections/volunteering.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1424,16 +1189,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
 ) [10] (./cv.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  11719 strings out of 476025
  197774 string characters out of 5790016
- 1869388 words of memory out of 5000000
+ 1868388 words of memory out of 5000000
  31926 multiletter control sequences out of 15000+600000
  584296 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1442,7 +1204,7 @@ Here is how much of TeX's memory you used:
 Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramond/EBGa
 ramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgara
 mond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (10 pages, 378269 bytes).
+Output written on cv.pdf (10 pages, 378334 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

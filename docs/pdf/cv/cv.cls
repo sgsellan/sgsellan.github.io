@@ -174,6 +174,9 @@ Main text font &  \f@size pt \f@family \\
 \newcommand{\awards}[5]{ % #1: name, #2: agency, #3: amount, #4: dates, #5: description
 \basicaward{#1}{#4}{#2}{#3}{#5}
 }
+\newcommand{\funding}[5]{ % #1: name, #2: agency, #3: amount, #4: dates, #5: description
+\basicaward{#1}{#4}{#2}{#3}{#5}
+}
 \newcommand{\academicservice}[4]{ % #1: name, #2: position, #3: dates, #4: description
 \basiccvitem{#1}{#3}{#2}{#4}{}
 }

@@ -30,7 +30,7 @@ Do not let this page discourage you: if your question is not listed here, I trul
 
 Hello! You likely clicked the “email” icon on my website. I get many emails on similar topics, so please scroll down to see if your question is already answered. If not (or if your situation is truly exceptional) **you’ll find my email address at the bottom of this page**. Don’t be discouraged! Genuine questions are always welcome.
 
-# Frequently asked questions
+## Frequently asked questions
 
 > **Hi! I am a Columbia Undergraduate / Master's / PhD student who would like to enrol in your course, but I am waitlisted. Can you let me in?**
 
@@ -60,5 +60,5 @@ If there is an available PhD position, feel free to [email me](mailto:silviasell
 
 
 
-Please note that my first name is spelled "Silvia" (with an "i") and my last name is spelled "Sellán" (with an acute accent over the "a"). I do not mean to seem rude, but **I may delete your email without reading it if you do not take the time to spell my name correctly.**
+Please note that my first name is spelled "Silvia" (the second letter is an "i", not a "y") and my last name is spelled "Sellán" (with an acute accent over the "a"). I do not mean to seem rude, but **I may delete your email without reading it if you do not take the time to spell my name correctly.**
 This is my email address: [silviasellan@cs.columbia.edu](mailto:silviasellan@cs.columbia.edu)  

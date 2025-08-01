@@ -1,7 +1,7 @@
 
 title = "Silvia Sellán"
 author = "Silvia Sellán"
-email = "https://www.silviasellan.com/projects/faq/"
+email = "silviasellan@cs.columbia.edu"
 #copyright = "2020-2021"
 # new = "Hiring graduate students!"
 description = "Assistant Professor of Computer Science at Columbia University, specializing in Geometry Processing."
@@ -78,7 +78,7 @@ url = "https://twitter.com/sellan_s"
 [[socialIcons]]
 icon = "fas fa-envelope"
 title = "e-mail"
-url = "mailto:silviasellan@cs.columbia.edu"
+url = "https://www.silviasellan.com/projects/faq/"
 
 [mermaid]
 # enable = true

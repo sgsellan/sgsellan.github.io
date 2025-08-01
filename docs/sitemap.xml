@@ -95,9 +95,15 @@
   </url><url>
     <loc>https://www.silviasellan.com/categories/</loc>
   </url><url>
+    <loc>https://www.silviasellan.com/teaching/coms-4160/</loc>
+  </url><url>
+    <loc>https://www.silviasellan.com/projects/faq/</loc>
+  </url><url>
     <loc>https://www.silviasellan.com/cv/</loc>
   </url><url>
     <loc>https://www.silviasellan.com/projects/sgi-shape-representations/</loc>
+  </url><url>
+    <loc>https://www.silviasellan.com/teaching/sgi-shape-representations/</loc>
   </url><url>
     <loc>https://www.silviasellan.com/projects/neural-stochastic-screened-psr/</loc>
   </url><url>
@@ -118,7 +124,5 @@
     <loc>https://www.silviasellan.com/tags/</loc>
   </url><url>
     <loc>https://www.silviasellan.com/teaching/</loc>
-  </url><url>
-    <loc>https://www.silviasellan.com/projects/new-students/</loc>
   </url>
 </urlset>

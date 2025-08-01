@@ -324,11 +324,91 @@ completely destroy your render.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>COMS 4160: Introduction to Computer Graphics</title>
+      <link>https://www.silviasellan.com/teaching/coms-4160/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/teaching/coms-4160/</guid>
+      
+        <description>&lt;head&gt;
+  &lt;meta charset=&#34;UTF-8&#34;&gt;
+  &lt;title&gt;Assignments Table&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+&lt;pre&gt;&lt;code&gt;table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+th, td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+th {
+  background-color: #004080;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f9ff;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://www.silviasellan.com/projects/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/projects/faq/</guid>
+      
+        <description>&lt;!-- Hello! You have likely reached this site because you clicked on the &#34;email&#34; icon on my website. I am looking forward to receiving your email! Lately, I have been inundated with emails that fall into very similar categories, so I encourage you to scroll down this website and see if your question is already answered to your satisfaction here. If it is, great! I saved us both some time. *If it isn&#39;t, or you believe your circumstances are so exceptional as to merit an exception to these answers, please keep scrolling, and **find my email address at the very bottom of this page.***
+Do not let this page discourage you: if your question is not listed here, I truly encourage you to reach out. --&gt;
+&lt;p&gt;Hello! You likely clicked the “email” icon on my website. I get many emails on similar topics, so please scroll down to see if your question is already answered. If not (or if your situation is truly exceptional) &lt;strong&gt;you’ll find my email address at the bottom of this page&lt;/strong&gt;. Don’t be discouraged! Genuine questions are always welcome.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Mesh Math and Beyond</title>
       <link>https://www.silviasellan.com/projects/sgi-shape-representations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.silviasellan.com/projects/sgi-shape-representations/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mesh Math and Beyond</title>
+      <link>https://www.silviasellan.com/teaching/sgi-shape-representations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.silviasellan.com/teaching/sgi-shape-representations/</guid>
       
         <description></description>
       
@@ -370,17 +450,6 @@ completely destroy your render.&lt;/p&gt;</description>
 &amp;src=c_43f225c25c90dfb37858bb2f5ccf001d4b7ed68696fca73162641e2354fedea1@group.calendar.google.com
 &amp;color=%B9D9EB&amp;color=%B9D9EB&amp;color=%B9D9EB&amp;color=%B9D9EB&amp;mode=WEEK&#34; 
 style=&#34;border:solid 2px #777&#34; width=&#34;1000&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt;&lt;/iframe&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Thinking of going to graduate school?</title>
-      <link>https://www.silviasellan.com/projects/new-students/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.silviasellan.com/projects/new-students/</guid>
-      
-        <description>&lt;p&gt;&lt;strong&gt;UPDATE (Summer 2024):&lt;/strong&gt; &lt;em&gt;I have now accepted a job as an Assistant Professor at Columbia University, and will be hiring my own graduate students soon. Please check out &lt;a href=&#34;https://www.silviasellan.com/posts/recruitment/&#34;&gt;this page&lt;/a&gt; if you are interested in working with me!&lt;/em&gt; I have decided to keep this page as it was when I was a graduate student, in case it can still be helpful to other prospective students, but given the conflict of interest caused by me being on the other side of admissions from here onwards, I will no longer respond to individual request for advice on application documents.&lt;/p&gt;</description>
       
     </item>
     

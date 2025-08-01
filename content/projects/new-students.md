@@ -1,6 +1,6 @@
 ---
 title: "Thinking of going to graduate school?"
-draft: false
+draft: true
 hidesidebar: false
 hidenavbar: false
 ---

@@ -54,12 +54,12 @@
   url = "/projects/paper-writing/"
   parent = "other"  
 
-  [[main]]
-  name = "New Students"
-  weight = 720
-  identifier = "new-students"
-  url = "/projects/new-students/"
-  parent = "other"
+#  [[main]]
+#  name = "New Students"
+#  weight = 720
+#  identifier = "new-students"
+#  url = "/projects/new-students/"
+#  parent = "other"
 
   [[main]]
   name = "Art?"

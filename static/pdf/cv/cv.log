@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  15 AUG 2025 10:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  15 AUG 2025 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,16 +825,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-) (./sections/publications.tex
+)
+Overfull \hbox (57.02399pt too wide) in paragraph at lines 24--24
+[]\T1/EBGaramond-OsF/bold/n/14.4 Students and Post-docs [][]
+ []
+
+(./sections/mentoring.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--2
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+
+ []
+
+)
+Overfull \hbox (30.2543pt too wide) in paragraph at lines 28--28
+[]\T1/EBGaramond-OsF/bold/n/14.4 Publications [][]
+ []
+
+(./sections/publications.tex
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/b/n' in size <9> not availabl
 e
 (Font)              Font shape `T1/EBGaramond-OsF/bold/n' tried instead on inpu
 t line 1.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/bold/n' will be
 (Font)              scaled to size 9.0pt on input line 1.
- [2]) (./sections/patents.tex)
-(./sections/software.tex) (./sections/other_publications.tex [3])
-(./sections/experience.tex) (./sections/academic_service.tex
+ [2])
+Overfull \hbox (22.21783pt too wide) in paragraph at lines 32--32
+[]\T1/EBGaramond-OsF/bold/n/14.4 Patents [][]  
+ []
+
+(./sections/patents.tex) (./sections/software.tex) [3]
+(./sections/other_publications.tex)
+Overfull \hbox (58.44948pt too wide) in paragraph at lines 44--44
+[]\T1/EBGaramond-OsF/bold/n/14.4 Other Re-search Ex-pe-ri-ence [][]
+ []
+
+(./sections/experience.tex)
+Overfull \hbox (12.1248pt too wide) in paragraph at lines 48--48
+[]\T1/EBGaramond-OsF/bold/n/14.4 Academic Ser-vice [][]
+ []
+
+(./sections/academic_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -859,7 +903,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
 
-
+[4]
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
@@ -889,7 +933,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
  []
@@ -1014,7 +1058,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--17
 
  []
 
-) (./sections/departmental_service.tex
+) [5]
+Overfull \hbox (96.58063pt too wide) in paragraph at lines 56--56
+[]\T1/EBGaramond-OsF/bold/n/14.4 Departmental Ser-vice [][]
+ []
+
+(./sections/departmental_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1039,15 +1088,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 
  []
 
-) [5] (./sections/talks.tex
+)
+Overfull \hbox (30.26741pt too wide) in paragraph at lines 60--60
+[]\T1/EBGaramond-OsF/bold/n/14.4 Talks [][]  
+ []
+
+(./sections/talks.tex
 (/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2022/08/07 UCS: Unicode data U+0100..U+01FF
 ) [6] [7])
-Underfull \hbox (badness 10000) in paragraph at lines 103--62
+Underfull \hbox (badness 10000) in paragraph at lines 103--64
 
  []
 
-(./sections/news.tex) (./sections/organizing.tex
+(./sections/news.tex)
+Overfull \hbox (14.328pt too wide) in paragraph at lines 69--69
+[]\T1/EBGaramond-OsF/bold/n/14.4 Organizing [][]
+ []
+
+(./sections/organizing.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1102,7 +1161,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
  []
@@ -1122,7 +1181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
@@ -1137,17 +1196,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-) (./sections/feedback_teaching.tex) (./sections/mentoring.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--1
-
+)
+Overfull \hbox (46.67026pt too wide) in paragraph at lines 77--77
+[]\T1/EBGaramond-OsF/bold/n/14.4 Teaching Feed-back [][]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--2
-
- []
-
-) (./sections/feedback_mentoring.tex [9]) (./sections/volunteering.tex
+(./sections/feedback_teaching.tex) [9] (./sections/volunteering.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
  []
@@ -1167,20 +1221,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 
  []
 
-) [10] (./cv.aux) ) 
+) [10] (./cv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 11719 strings out of 476025
- 197774 string characters out of 5790016
- 1868388 words of memory out of 5000000
- 31926 multiletter control sequences out of 15000+600000
+ 11714 strings out of 476025
+ 197618 string characters out of 5790016
+ 1869388 words of memory out of 5000000
+ 31924 multiletter control sequences out of 15000+600000
  584296 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,14n,145p,959b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgar
-amond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
-c/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
-pe1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (10 pages, 377949 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-
+Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgaramond/EBGa
+ramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/ebgara
+mond/EBGaramond-Regular.pfb>
+Output written on cv.pdf (10 pages, 377277 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

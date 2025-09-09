@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  7 SEP 2025 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  8 SEP 2025 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -748,14 +748,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
  []
 
-(/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-32.def
-File: uni-32.def 2022/08/07 UCS: Unicode data U+2000..U+20FF
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 
  []
 
-
+(/usr/local/texlive/2023/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2022/08/07 UCS: Unicode data U+2000..U+20FF
+)
 Underfull \hbox (badness 10000) in paragraph at lines 11--11
 
  []
@@ -802,6 +802,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--18
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
  []
 
@@ -1190,7 +1195,7 @@ Here is how much of TeX's memory you used:
 amond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
 pe1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (10 pages, 377560 bytes).
+Output written on cv.pdf (10 pages, 377632 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream

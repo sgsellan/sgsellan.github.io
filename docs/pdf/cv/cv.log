@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  20 NOV 2025 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.11.26)  12 DEC 2025 10:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -969,6 +969,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--21
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+
+ []
+
 ) (./sections/referee_service.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
@@ -1014,7 +1019,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
 
  []
@@ -1024,7 +1029,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--11
 
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 12--12
 
  []
@@ -1117,12 +1122,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
 
  []
@@ -1201,7 +1206,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--4
 Here is how much of TeX's memory you used:
  11712 strings out of 476025
  197583 string characters out of 5790016
- 1866388 words of memory out of 5000000
+ 1867388 words of memory out of 5000000
  31922 multiletter control sequences out of 15000+600000
  584296 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1210,7 +1215,7 @@ Here is how much of TeX's memory you used:
 amond/EBGaramond-Bold.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/publi
 c/ebgaramond/EBGaramond-Italic.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
 pe1/public/ebgaramond/EBGaramond-Regular.pfb>
-Output written on cv.pdf (10 pages, 377896 bytes).
+Output written on cv.pdf (10 pages, 377976 bytes).
 PDF statistics:
  58 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
